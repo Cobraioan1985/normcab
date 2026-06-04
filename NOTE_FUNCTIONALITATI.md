@@ -106,10 +106,83 @@ Secțiuni rând:
 
 ---
 
+---
+
+## Tabelele A.1.5 – A.1.13 — Editare inline generică (sesiunea 2026-06-04)
+
+### Ce s-a implementat
+
+Același mecanism de editare inline + persistență localStorage ca la A.1.4, extins la toate tabelele de sarcini admisibile:
+
+| Tabel | Tensiune | Pozare |
+|-------|----------|--------|
+| A.1.5 | 0,6/1 kV | aer |
+| A.1.6 | 3,6/6 kV | pământ |
+| A.1.7 | 3,6/6 kV | aer |
+| A.1.8 | 6/10 kV | pământ |
+| A.1.9 | 6/10 kV | aer |
+| A.1.10 | 12/20 kV | pământ |
+| A.1.11 | 12/20 kV | aer |
+| A.1.12 | 18/30 kV | pământ |
+| A.1.13 | 18/30 kV | aer |
+
+### Arhitectură generică
+
+Față de A.1.4 (tabel dinamic JS), tabelele A.1.5–A.1.13 sunt HTML static. Editarea se inițializează **la prima deschidere** a panoului, prin funcția `initTabelEdit(name)`.
+
+### Configurație DB (TABEL_EDIT_CFG)
+
+Coloanele sincronizate cu `DB` pentru calcule (0-indexed):
+
+| Tabel | Material | Col | Izolație |
+|-------|----------|-----|---------|
+| A.1.5 | Cu+Al | 2 | HR_nrad, HR_rad |
+| A.1.5 | Cu | 8 | PVC |
+| A.1.5 | Cu+Al | 18 | XLPE |
+| A.1.6 | Cu+Al | 2 | HR_nrad |
+| A.1.6 | Cu+Al | 5 | PVC |
+| A.1.6 | Cu | 11 | HR_rad |
+| A.1.7 | Al | 2 | HR_nrad |
+| A.1.7 | Cu+Al | 11 | HR_rad |
+| A.1.7 | Al | 8 | PVC |
+| A.1.8-A.1.9 | Cu+Al | 2 | HR_nrad |
+| A.1.10 | Cu | 2 | HR_nrad |
+| A.1.10 | Cu | 6 | HR_rad |
+| A.1.11 | Cu | 2 | HR_nrad |
+| A.1.11 | Cu | 6 | HR_rad |
+| A.1.11 | Cu | 10 | XLPE |
+| A.1.12-A.1.13 | Cu+Al | 2 | HR_nrad |
+| A.1.12-A.1.13 | Cu+Al | 6 | HR_rad |
+| A.1.12-A.1.13 | Cu+Al | 10 | XLPE |
+
+*Celelalte coloane se salvează în localStorage dar nu au corespondent direct în DB.*
+
+### Funcții JS adăugate (după `showPanelA14`)
+
+| Funcție/Obiect | Scop |
+|----------------|------|
+| `TABEL_EDIT_CFG` | Configurație per-tabel (tensiune, pozare, secțiuni, mapare DB) |
+| `tabelLoadOv(key)` | Citește override-uri din localStorage |
+| `tabelSaveOv(key, ov)` | Scrie override-uri în localStorage |
+| `tabelApplyToDB(cfg, ov)` | Aplică override-uri în obiectul `DB` |
+| `initTabelEdit(name)` | Inițializează editarea unui panou static (la prima deschidere) |
+| `window.saveTabel(name)` | Validează, salvează, actualizează DB |
+| `window.resetTabel(name)` | Resetează la valorile normativului |
+
+### Structura localStorage
+
+```
+Chei: normcab_a15_ov, normcab_a16_ov, ... normcab_a113_ov
+Format: { "cu_5_2": "150", "al_0_18": "140", ... }
+Prefix: cu_ / al_  |  Indici: {prefix}_{rowInSection}_{colIndex}
+```
+
+---
+
 ## TODO / Planificat
 
 - [ ] Autentificare admin pentru drepturi de editare (utilizatorii obișnuiți pot doar vizualiza)
-- [ ] Extindere editare la celelalte tabele (A.1.5 – A.1.13, factori corecție)
+- [ ] Extindere editare la factori de corecție (A.1.14 – A.1.26)
 - [ ] Indicator global în navbar când există valori modificate față de normativ
 - [ ] Export modificări ca patch JSON aplicabil la alte instanțe
 
