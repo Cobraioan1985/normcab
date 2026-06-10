@@ -4,7 +4,6 @@
 # Arhiva versiuni vechi + Python venv
 Arhiva/
 
-# Conversatii Chat - fisiere mari (PDF-uri, arhiva)
-Conversatii Chat/Fisiere/*.pdf
+# Conversatii Chat - exclude doar fisiere redundante
 Conversatii Chat/Aplicatie.txt
 Conversatii Chat/nte007_app_29.html
