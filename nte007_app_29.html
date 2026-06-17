@@ -2877,82 +2877,29 @@ document.addEventListener('click', function(e){
 
 
 // ═══ Dispunere symbols — inject on open, remove on close ═══
-var _dispSymbols = null;
+var _dispSymbolsMap = null;
 
-function getDispSymbols(){
-  if(_dispSymbols) return _dispSymbols;
-  function svgA(){return '<svg viewBox="-1 -1 22 22" width="20" height="20"><circle cx="10" cy="10" r="8" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="10" cy="5.8" r="1.5" fill="#fff"/><circle cx="6.4" cy="12.1" r="1.5" fill="#fff"/><circle cx="13.6" cy="12.1" r="1.5" fill="#fff"/></svg>';}
-  function svgBull(){return '<svg viewBox="-1 -1 22 22" width="20" height="20"><circle cx="10" cy="10" r="8" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="10" cy="10" r="4.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="10" cy="10" r="1.5" fill="#fff"/></svg>';}
-  function svgB(){return '<svg viewBox="-1 -1 24 23" width="22" height="21"><circle cx="11" cy="5.5" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="11" cy="5.5" r="2.3" fill="#fff"/><circle cx="5.5" cy="15" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="5.5" cy="15" r="2.3" fill="#fff"/><circle cx="16.5" cy="15" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="16.5" cy="15" r="2.3" fill="#fff"/></svg>';}
-  function svgC(){return '<svg viewBox="-1 -1 35 18" width="33" height="16"><circle cx="5.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="5.5" cy="5.1" r="1.1" fill="#fff"/><circle cx="2.99" cy="9.45" r="1.1" fill="#fff"/><circle cx="8.01" cy="9.45" r="1.1" fill="#fff"/><circle cx="16.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="16.5" cy="5.1" r="1.1" fill="#fff"/><circle cx="13.99" cy="9.45" r="1.1" fill="#fff"/><circle cx="19.01" cy="9.45" r="1.1" fill="#fff"/><circle cx="27.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="27.5" cy="5.1" r="1.1" fill="#fff"/><circle cx="24.99" cy="9.45" r="1.1" fill="#fff"/><circle cx="30.01" cy="9.45" r="1.1" fill="#fff"/></svg>';}
-  function svgD(){return '<svg viewBox="-1 -1 25 15" width="23" height="13"><circle cx="6.5" cy="6.5" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="6.5" cy="3.3" r="1.1" fill="#fff"/><circle cx="3.73" cy="8.1" r="1.1" fill="#fff"/><circle cx="9.27" cy="8.1" r="1.1" fill="#fff"/><circle cx="17.5" cy="6.5" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="17.5" cy="6.5" r="2.3" fill="#fff"/></svg>';}
-  function svgE(){return '<svg viewBox="-1 -1 35 18" width="33" height="16"><circle cx="5.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="5.5" cy="8" r="2.3" fill="#fff"/><circle cx="16.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="16.5" cy="8" r="2.3" fill="#fff"/><circle cx="27.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="27.5" cy="8" r="2.3" fill="#fff"/></svg>';}
-  function s6(s){return '<sup style="font-size:7px;line-height:1;vertical-align:top">6)</sup>'+s;}
-  function s4(s){return '<sup style="font-size:7px;line-height:1;vertical-align:top">4)</sup>'+s;}
-  _dispSymbols=[
-    svgA(),    // 0: 65°C Plumb – singur
-    svgA(),    // 1: 70°C Plumb col1 – singur
-    svgA(),    // 2: 70°C Plumb col2 – singur
-    svgB(),    // 3: 70°C Plumb col3 – trefoi
-    svgC(),    // 4: 70°C Plumb col4 – plan
-    svgA(),    // 5: 65°C Al – singur
-    svgB(),    // 6: 70°C Al col1 – trefoi
-    svgC(),    // 7: 70°C Al col2 – plan
-    svgA(),    // 8: PVC col1 – singur
-    svgB(),    // 9: PVC col2 – trefoi
-    svgC(),    // 10: PVC col3 – plan
-    svgA(),    // 11: PE col1 – singur
-    svgB(),    // 12: PE col2 – trefoi
-    svgC(),    // 13: PE col3 – plan
-    svgA(),    // 14: XLPE col1 – singur
-    svgB(),    // 15: XLPE col2 – trefoi
-    svgC(),    // 16: XLPE col3 – plan
-    svgA(), // 17: a110 col0 – singur
-    svgA(), // 18: a110 col1 – singur
-    svgB(), // 19: a110 col2 – trefoi
-    svgE(), // 20: a110 col3 – plan (3×bull)
-    svgB(), // 21: a110 col4 – trefoi
-    svgE(), // 22: a110 col5 – plan (3×bull)
-    svgB(), // 23: a110 col6 – trefoi
-    svgE(), // 24: a110 col7 – plan (3×bull)
-    svgB(), // 25: a110 col8 – trefoi
-    svgE(), // 26: a110 col9 – plan (3×bull)
-    svgA(), // 27: a111 col0 – singur
-    svgA(), // 28: a111 col1 – singur
-    svgB(), // 29: a111 col2 – trefoi
-    svgE(), // 30: a111 col3 – plan (3×bull)
-    svgB(), // 31: a111 col4 – trefoi
-    svgE(), // 32: a111 col5 – plan (3×bull)
-    svgB(), // 33: a111 col6 – trefoi
-    svgE(), // 34: a111 col7 – plan (3×bull)
-    svgB(), // 35: a111 col8 – trefoi
-    svgE(), // 36: a111 col9 – plan (3×bull)
-    svgA(), // 37: a112 col0 – singur
-    svgA(), // 38: a112 col1 – singur
-    svgB(), // 39: a112 col2 – trefoi
-    svgE(), // 40: a112 col3 – plan (3×bull)
-    svgB(), // 41: a112 col4 – trefoi
-    svgE(), // 42: a112 col5 – plan (3×bull)
-    svgB(), // 43: a112 col6 – trefoi
-    svgE(), // 44: a112 col7 – plan (3×bull)
-    svgB(), // 45: a112 col8 – trefoi
-    svgE(), // 46: a112 col9 – plan (3×bull)
-    svgA(), // 47: a113 col0 – singur
-    svgA(), // 48: a113 col1 – singur
-    svgB(), // 49: a113 col2 – trefoi
-    svgE(), // 50: a113 col3 – plan (3×bull)
-    svgB(), // 51: a113 col4 – trefoi
-    svgE(), // 52: a113 col5 – plan (3×bull)
-    svgB(), // 53: a113 col6 – trefoi
-    svgE(), // 54: a113 col7 – plan (3×bull)
-    svgB(), // 55: a113 col8 – trefoi
-    svgE(), // 56: a113 col9 – plan (3×bull)
-  ];
-  return _dispSymbols;
+function getDispSymbolsMap(){
+  if(_dispSymbolsMap) return _dispSymbolsMap;
+  var A='<svg viewBox="-1 -1 22 22" width="20" height="20"><circle cx="10" cy="10" r="8" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="10" cy="5.8" r="1.5" fill="#fff"/><circle cx="6.4" cy="12.1" r="1.5" fill="#fff"/><circle cx="13.6" cy="12.1" r="1.5" fill="#fff"/></svg>';
+  var Bull='<svg viewBox="-1 -1 22 22" width="20" height="20"><circle cx="10" cy="10" r="8" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="10" cy="10" r="4.0" fill="#fff"/></svg>';
+  var B='<svg viewBox="-1 -1 24 23" width="22" height="21"><circle cx="11" cy="5.5" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="11" cy="5.5" r="2.3" fill="#fff"/><circle cx="5.5" cy="15" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="5.5" cy="15" r="2.3" fill="#fff"/><circle cx="16.5" cy="15" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="16.5" cy="15" r="2.3" fill="#fff"/></svg>';
+  var C='<svg viewBox="-1 -1 35 18" width="33" height="16"><circle cx="5.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="5.5" cy="5.1" r="1.1" fill="#fff"/><circle cx="2.99" cy="9.45" r="1.1" fill="#fff"/><circle cx="8.01" cy="9.45" r="1.1" fill="#fff"/><circle cx="16.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="16.5" cy="5.1" r="1.1" fill="#fff"/><circle cx="13.99" cy="9.45" r="1.1" fill="#fff"/><circle cx="19.01" cy="9.45" r="1.1" fill="#fff"/><circle cx="27.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="27.5" cy="5.1" r="1.1" fill="#fff"/><circle cx="24.99" cy="9.45" r="1.1" fill="#fff"/><circle cx="30.01" cy="9.45" r="1.1" fill="#fff"/></svg>';
+  var D='<svg viewBox="-1 -1 25 15" width="23" height="13"><circle cx="6.5" cy="6.5" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="6.5" cy="3.3" r="1.1" fill="#fff"/><circle cx="3.73" cy="8.1" r="1.1" fill="#fff"/><circle cx="9.27" cy="8.1" r="1.1" fill="#fff"/><circle cx="17.5" cy="6.5" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="17.5" cy="6.5" r="2.3" fill="#fff"/></svg>';
+  var E='<svg viewBox="-1 -1 35 18" width="33" height="16"><circle cx="5.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="5.5" cy="8" r="2.3" fill="#fff"/><circle cx="16.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="16.5" cy="8" r="2.3" fill="#fff"/><circle cx="27.5" cy="8" r="5.5" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="27.5" cy="8" r="2.3" fill="#fff"/></svg>';
+  var s14=[D,B,C,D,B,C,Bull,A,D,B,C,A,D,Bull,D,B,C];
+  var s18=[A,A,A,B,E,A,B,E,A,B,E,A,B,E,A,B,E];
+  var s10=[A,A,B,E,B,E,B,E,B,E];
+  _dispSymbolsMap={
+    a14:s14, a15:s14,
+    a18:s18, a19:s18,
+    a110:s10, a111:s10, a112:s10, a113:s10
+  };
+  return _dispSymbolsMap;
 }
 
 function injectDispSymbols(){
-  var syms=getDispSymbols();
+  var syms=getDispSymbolsMap()['a14'];
   var panel=document.getElementById('panel-a14');
   var root=panel||document;
   syms.forEach(function(svg,i){
@@ -2962,7 +2909,7 @@ function injectDispSymbols(){
 }
 
 function injectDispSymbolsPanel(name){
-  var syms=getDispSymbols();
+  var syms=(getDispSymbolsMap()[name])||[];
   var panel=document.getElementById('panel-'+name);
   if(!panel)return;
   syms.forEach(function(svg,i){
