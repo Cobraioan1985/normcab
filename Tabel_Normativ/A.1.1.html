@@ -4,15 +4,111 @@
     <span style="color:rgba(147,197,253,0.65);font-size:10px;font-style:italic;white-space:nowrap">NTE 007/08/00 · Anexa 1 · p.11</span>
     <button onclick="togglePanel('a11')" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.55);font-size:20px;line-height:1;padding:0 2px 0 8px">&times;</button>
   </div>
-  <div style="padding:6px 14px;background:var(--blue-bg);border-bottom:1px solid var(--border);font-size:10.5px;color:var(--blue-text);display:flex;align-items:center;gap:6px;flex-shrink:0">
-    <svg viewBox="0 0 24 24" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
-    Celulele cu fundal albastru deschis sunt editabile. Click → modifici, Enter → confirmi, Esc → anulezi.
-    <button onclick="resetA11()" style="margin-left:auto;font-size:10px;padding:2px 9px;border:1px solid var(--border-s);border-radius:4px;background:none;cursor:pointer;color:var(--text2);font-family:inherit;white-space:nowrap">&#8635; Resetează normativ</button>
-  </div>
   <div style="flex:1;overflow:auto;padding:14px 16px">
-    <table id="tbl-a11" style="width:100%;border-collapse:collapse;font-size:11.5px"></table>
+    <table style="width:100%;border-collapse:collapse;font-size:11.5px">
+      <thead>
+        <tr>
+          <th rowspan="2" style="background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:center;vertical-align:middle;border:1px solid rgba(255,255,255,0.3);width:36px">Nr.</th>
+          <th rowspan="2" style="background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:left;vertical-align:middle;border:1px solid rgba(255,255,255,0.3);width:200px">Tipul constructiv al<br>cablului</th>
+          <th rowspan="2" style="background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:center;vertical-align:middle;border:1px solid rgba(255,255,255,0.3);width:160px">După prevederile VDE</th>
+          <th rowspan="2" style="background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:center;vertical-align:middle;border:1px solid rgba(255,255,255,0.3);width:110px">Temperatura de<br>funcționare<br>maxim admisă,<br>în °C</th>
+          <th colspan="2" style="background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:center;vertical-align:middle;border:1px solid rgba(255,255,255,0.3)">Creșterea de temperatură<br>la pozarea în</th>
+          <th rowspan="2" style="background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:center;vertical-align:middle;border:1px solid rgba(255,255,255,0.3);width:120px">Rezistența termică<br>specifică a izolației<br>K · m/W</th>
+        </tr>
+        <tr>
+          <th style="background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:center;vertical-align:middle;border:1px solid rgba(255,255,255,0.3);width:90px">pământ<br>în °C</th>
+          <th style="background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:center;vertical-align:middle;border:1px solid rgba(255,255,255,0.3);width:90px">aer<br>în °C</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="background:#e8eef8;color:#0d3d7a;font-weight:700;font-size:11px;padding:4px 6px;text-align:center;vertical-align:middle;border:1px solid #888">—</td>
+          <td style="background:#e8eef8;color:#0d3d7a;font-weight:700;font-size:11px;padding:4px 6px;text-align:center;vertical-align:middle;border:1px solid #888">1</td>
+          <td style="background:#e8eef8;color:#0d3d7a;font-weight:700;font-size:11px;padding:4px 6px;text-align:center;vertical-align:middle;border:1px solid #888">2</td>
+          <td style="background:#e8eef8;color:#0d3d7a;font-weight:700;font-size:11px;padding:4px 6px;text-align:center;vertical-align:middle;border:1px solid #888">3</td>
+          <td style="background:#e8eef8;color:#0d3d7a;font-weight:700;font-size:11px;padding:4px 6px;text-align:center;vertical-align:middle;border:1px solid #888">4</td>
+          <td style="background:#e8eef8;color:#0d3d7a;font-weight:700;font-size:11px;padding:4px 6px;text-align:center;vertical-align:middle;border:1px solid #888">5</td>
+          <td style="background:#e8eef8;color:#0d3d7a;font-weight:700;font-size:11px;padding:4px 6px;text-align:center;vertical-align:middle;border:1px solid #888">6</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">1</td>
+          <td style="padding:5px 8px;border:1px solid #999;vertical-align:middle;font-size:11.5px;color:#111">Cablu cu XLPE</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:10.5px;color:#111">DIN 57272/VDE 0272<br>DIN 57273/ VDE 0273</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">90</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">—</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">—</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">3,50</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">2</td>
+          <td style="padding:5px 8px;border:1px solid #999;vertical-align:middle;font-size:11.5px;color:#111">Cablu cu PE</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:10.5px;color:#111">DIN 57273/ VDE 0273</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">70</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">—</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">—</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">3,50</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">3</td>
+          <td style="padding:5px 8px;border:1px solid #999;vertical-align:middle;font-size:11.5px;color:#111">Cablu cu PVC</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:10.5px;color:#111">DIN 57265/ VDE 0265<br>VDE 0271</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">70</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">—</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">—</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">6,0<sup>4)</sup></td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">—</td>
+          <td colspan="6" style="padding:5px 10px;border:1px solid #999;vertical-align:middle;font-size:11.5px;font-weight:700;font-style:italic;background:#f0f0ee;color:#111">Cablu cu hârtie impregnată</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">4</td>
+          <td style="padding:5px 8px;border:1px solid #999;vertical-align:middle;font-size:11.5px;color:#111;border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp neradial<br>0,6/1 ÷ 3,6/6 kV</td>
+          <td rowspan="6" style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:10.5px;color:#111">VDE 0255</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">80</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">65</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">55</td>
+          <td rowspan="6" style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">6,0</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">5</td>
+          <td style="padding:5px 8px;border:1px solid #999;vertical-align:middle;font-size:11.5px;color:#111;border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp neradial<br>6/10 kV</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">65</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">45</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">35</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">6</td>
+          <td style="padding:5px 8px;border:1px solid #999;vertical-align:middle;font-size:11.5px;color:#111;border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp radial<br>0,6/1 ÷ 3,6/6 kV</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">80</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">65</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">55</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">7</td>
+          <td style="padding:5px 8px;border:1px solid #999;vertical-align:middle;font-size:11.5px;color:#111;border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp radial<br>6/10 kV</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">70</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">55</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">45</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">8</td>
+          <td style="padding:5px 8px;border:1px solid #999;vertical-align:middle;font-size:11.5px;color:#111;border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp radial<br>12/20 kV</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">65</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">45</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">35</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 6px;border:1px solid #999;text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle">9</td>
+          <td style="padding:5px 8px;border:1px solid #999;vertical-align:middle;font-size:11.5px;color:#111;border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp radial<br>18/30 kV</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">60</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">40</td>
+          <td style="padding:5px 8px;border:1px solid #999;text-align:center;vertical-align:middle;font-size:11.5px;color:#111">30</td>
+        </tr>
+      </tbody>
+    </table>
     <div style="margin-top:10px;font-size:10.5px;color:var(--text2);line-height:1.7">
-      <sup>*)</sup> Rezistența termică specifică a izolației cu PVC este de 6,0 K·m/W pentru cabluri cu U<sub>0</sub>/U &le; 0,6/1 kV și 5,0 K·m/W pentru cabluri cu U<sub>0</sub>/U = 6/10 kV.<br>
-      Condiții normale de funcționare și indicații pentru condiții de funcționare sunt cuprinse în tabelul A.1.2.
+      <sup>4)</sup> Este valabil, de asemenea, și pentru toate mantalele din PVC și învelișurile de protecție din iută cu masă vâscoasă.<br>
+      Condiții normale de funcționare și indicații pentru condiții de funcționare sunt cuprinse în tabelele A.1.2 și A.1.3.
     </div>
   </div>

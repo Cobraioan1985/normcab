@@ -434,7 +434,10 @@ table tr.dimmed td{color:var(--text3)}
             <span class="tbl-num">A.1.1</span>Temperaturi funcționare și rezistențe termice
           </button>
           <button class="nav-dropdown-item" onclick="openTabelPanel('a12')">
-            <span class="tbl-num">A.1.2/3</span>Condiții funcționare (pământ / aer)
+            <span class="tbl-num">A.1.2</span>Condiții de funcționare (pământ)
+          </button>
+          <button class="nav-dropdown-item" onclick="openTabelPanel('a13')">
+            <span class="tbl-num">A.1.3</span>Condiții de funcționare (aer)
           </button>
           <button class="nav-dropdown-item" onclick="openTabelPanel('a14')">
             <span class="tbl-num">A.1.4</span>Sarcina admisibilă 0,6/1 kV (pământ)
@@ -697,8 +700,11 @@ table tr.dimmed td{color:var(--text3)}
 
 
 
-<!-- PANEL: TABEL A.1.2 / A.1.3 -->
+<!-- PANEL: TABEL A.1.2 -->
 <div id="panel-a12" style="display:none;position:fixed;top:52px;bottom:0;left:0;right:0;margin:0 auto;z-index:200;width:fit-content;max-width:100vw;background:var(--surface);border:1px solid var(--border);border-radius:4px 4px 0 0;box-shadow:0 0 32px rgba(13,61,122,0.18);flex-direction:column;overflow:hidden"><div style="padding:20px;text-align:center;color:#888;font-size:13px">Se încarcă...</div></div>
+
+<!-- PANEL: TABEL A.1.3 -->
+<div id="panel-a13" style="display:none;position:fixed;top:52px;bottom:0;left:0;right:0;margin:0 auto;z-index:200;width:fit-content;max-width:100vw;background:var(--surface);border:1px solid var(--border);border-radius:4px 4px 0 0;box-shadow:0 0 32px rgba(13,61,122,0.18);flex-direction:column;overflow:hidden"><div style="padding:20px;text-align:center;color:#888;font-size:13px">Se încarcă...</div></div>
 <div id="panel-a14" style="display:none;position:fixed;top:52px;bottom:0;left:0;right:0;margin:0 auto;z-index:200;width:fit-content;max-width:100vw;background:var(--surface);border:1px solid var(--border);border-radius:4px 4px 0 0;box-shadow:0 0 32px rgba(13,61,122,0.18);flex-direction:column;overflow:hidden"><div style="padding:20px;text-align:center;color:#888;font-size:13px">Se încarcă...</div></div>
 
 <div id="panel-a15" style="display:none;position:fixed;top:52px;bottom:0;left:0;right:0;margin:0 auto;z-index:200;width:fit-content;max-width:100vw;background:var(--surface);border:1px solid var(--border);border-radius:4px 4px 0 0;box-shadow:0 0 32px rgba(13,61,122,0.18);flex-direction:column;overflow:hidden"><div style="padding:20px;text-align:center;color:#888;font-size:13px">Se încarcă...</div></div>
@@ -2584,215 +2590,6 @@ function onDUmaxInput(inputId, badgeId, hintId, tenStr, calcFn) {
 }
 
 
-// =================== TABEL A.1.1 ===================
-// NTE 007/08/00, Anexa 1, p.11 — structura exacta din normativ
-var A11_DEFAULT=[
-  {t:'data', tip:'Cablu cu XLPE', vde:'DIN 57272/VDE 0272\nDIN 57273/ VDE 0273', tf:'90', dp:'—', da:'—', rts:'3,50'},
-  {t:'data', tip:'Cablu cu PE',   vde:'DIN 57273/ VDE 0273',                      tf:'70', dp:'—', da:'—', rts:'3,50'},
-  {t:'data', tip:'Cablu cu PVC',  vde:'DIN 57265/ VDE 0265\nVDE 0271',            tf:'70', dp:'—', da:'—', rts:'6,0*)'},
-  {t:'sub1', tip:'Cablu cu câmp neradial', sub:[
-    {tip:'0,6/1 ÷ 3,6/6 kV', vde:'VDE 0255', tf:'80', dp:'65', da:'55', rts:'6,0'},
-    {tip:'6/10 kV',           vde:'VDE 0255', tf:'65', dp:'45', da:'35', rts:'6,0'}
-  ]},
-  {t:'sub1', tip:'Cablu cu câmp radial', sub:[
-    {tip:'0,6/1 ÷ 3,6/6 kV', vde:'VDE 0255', tf:'80', dp:'65', da:'55', rts:'6,0'},
-    {tip:'6/10 kV',           vde:'VDE 0255', tf:'70', dp:'55', da:'45', rts:'6,0'},
-    {tip:'12/20 kV',          vde:'VDE 0255', tf:'65', dp:'45', da:'35', rts:'6,0'},
-    {tip:'18/30 kV',          vde:'VDE 0255', tf:'60', dp:'40', da:'30', rts:'6,0'}
-  ]}
-];
-var A11_DATA=JSON.parse(JSON.stringify(A11_DEFAULT));
-var A11_DATA=JSON.parse(JSON.stringify(A11_DEFAULT));
-
-function renderA11(){
-  var tbl=document.getElementById('tbl-a11');
-  if(!tbl) return;
-  var B='border:1px solid #999';
-  var BK='border:1px solid #666';
-  var NH='background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:center;vertical-align:middle;'+BK;
-  var NHL='background:#0d3d7a;color:#fff;font-weight:700;font-size:11px;padding:6px 8px;text-align:left;vertical-align:middle;'+BK;
-  var TD='padding:5px 8px;'+B+';vertical-align:middle;font-size:11.5px;color:#111';
-  var TDC=TD+';text-align:center';
-  var NR='padding:3px 4px;'+B+';text-align:center;font-size:10px;color:#aaa;background:#fafaf8;vertical-align:middle';
-  var NRH='background:#e8eef8;color:#0d3d7a;font-weight:700;font-size:11px;padding:4px 6px;text-align:center;vertical-align:middle;'+BK;
-  var EC='background:#dbeafe;outline:none;width:100%;text-align:center;padding:1px 3px;font-family:inherit;font-size:11.5px;border:none;cursor:text;border-radius:2px';
-
-  function makeCell(val,ri,field){
-    return '<td style="'+TDC+'"><div contenteditable="true" class="a11-cell" data-row="'+ri+'" data-sub="-1" data-field="'+field+'" style="'+EC+'">'+escH(val)+'</div></td>';
-  }
-  function makeSubCell(val,ri,si,field){
-    return '<td style="'+TDC+'"><div contenteditable="true" class="a11-cell" data-row="'+ri+'" data-sub="'+si+'" data-field="'+field+'" style="'+EC+'">'+escH(val)+'</div></td>';
-  }
-
-  // ── HEADER (2 rânduri + rând numere coloane) ──────────────────────────
-  // Max coloane: 7 (Nr | Tip constructiv | VDE | Temp | ΔT pamant | ΔT aer | ρ)
-  var html='<thead>'
-    // Header rând 1
-    +'<tr>'
-    +'<th rowspan="2" style="'+NH+';width:36px">Nr.</th>'
-    +'<th rowspan="2" style="'+NHL+';width:175px">Tipul constructiv al<br>cablului</th>'
-    +'<th rowspan="2" style="'+NH+';width:150px">După prevederile VDE</th>'
-    +'<th rowspan="2" style="'+NH+';width:105px">Temperatura de<br>funcționare<br>maxim admisă,<br>în °C</th>'
-    +'<th colspan="2" style="'+NH+'">Creșterea de temperatură<br>la pozarea în</th>'
-    +'<th rowspan="2" style="'+NH+';width:110px">Rezistența termică<br>specifică a izolației<br>K · m/W</th>'
-    +'</tr>'
-    // Header rând 2
-    +'<tr>'
-    +'<th style="'+NH+';width:90px">pământ<br>în °C</th>'
-    +'<th style="'+NH+';width:90px">aer<br>în °C</th>'
-    +'</tr>'
-    +'</thead>'
-
-    // ── BODY ──────────────────────────────────────────────────────────
-    +'<tbody>'
-    // Rând numerotare coloane
-    +'<tr>'
-    +'<td style="'+NRH+'">—</td>'
-    +'<td style="'+NRH+'">1</td>'
-    +'<td style="'+NRH+'">2</td>'
-    +'<td style="'+NRH+'">3</td>'
-    +'<td style="'+NRH+'">4</td>'
-    +'<td style="'+NRH+'">5</td>'
-    +'<td style="'+NRH+'">6</td>'
-    +'</tr>'
-
-    // Rând 1: XLPE
-    +'<tr>'
-    +'<td style="'+NR+'">1</td>'
-    +'<td style="'+TD+'">Cablu cu XLPE</td>'
-    +'<td style="'+TDC+';font-size:10.5px">DIN 57272/VDE 0272<br>DIN 57273/ VDE 0273</td>'
-    +makeCell(A11_DATA[0].tf, 0, 'tf')
-    +makeCell(A11_DATA[0].dp, 0, 'dp')
-    +makeCell(A11_DATA[0].da, 0, 'da')
-    +makeCell(A11_DATA[0].rts, 0, 'rts')
-    +'</tr>'
-
-    // Rând 2: PE
-    +'<tr>'
-    +'<td style="'+NR+'">2</td>'
-    +'<td style="'+TD+'">Cablu cu PE</td>'
-    +'<td style="'+TDC+';font-size:10.5px">DIN 57273/ VDE 0273</td>'
-    +makeCell(A11_DATA[1].tf, 1, 'tf')
-    +makeCell(A11_DATA[1].dp, 1, 'dp')
-    +makeCell(A11_DATA[1].da, 1, 'da')
-    +makeCell(A11_DATA[1].rts, 1, 'rts')
-    +'</tr>'
-
-    // Rând 3: PVC
-    +'<tr>'
-    +'<td style="'+NR+'">3</td>'
-    +'<td style="'+TD+'">Cablu cu PVC</td>'
-    +'<td style="'+TDC+';font-size:10.5px">DIN 57265/ VDE 0265<br>VDE 0271</td>'
-    +makeCell(A11_DATA[2].tf, 2, 'tf')
-    +makeCell(A11_DATA[2].dp, 2, 'dp')
-    +makeCell(A11_DATA[2].da, 2, 'da')
-    +makeCell(A11_DATA[2].rts, 2, 'rts')
-    +'</tr>'
-
-    // Rând grup: Cablu cu hârtie impregnată (colspan=6, fără nr)
-    +'<tr>'
-    +'<td style="'+NR+'">—</td>'
-    +'<td colspan="6" style="'+TD+';font-weight:700;font-style:italic;background:#f0f0ee;'
-    +'padding:5px 10px;color:#111">Cablu cu hârtie impregnată</td>'
-    +'</tr>'
-
-    // Rândurile 4-9: hârtie — VDE 0255 rowspan=6, ρ=6,0 rowspan=6
-    // Rând 4: câmp neradial 0,6/1÷3,6/6 kV
-    +'<tr>'
-    +'<td style="'+NR+'">4</td>'
-    +'<td style="'+TD+';border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp neradial<br>0,6/1 ÷ 3,6/6 kV</td>'
-    +'<td rowspan="6" style="'+TDC+';font-size:10.5px;vertical-align:middle">VDE 0255</td>'
-    +makeSubCell(A11_DATA[3].sub[0].tf, 3, 0, 'tf')
-    +makeSubCell(A11_DATA[3].sub[0].dp, 3, 0, 'dp')
-    +makeSubCell(A11_DATA[3].sub[0].da, 3, 0, 'da')
-    +'<td rowspan="6" style="'+TDC+';vertical-align:middle"><div contenteditable="true" class="a11-cell" data-row="3" data-sub="0" data-field="rts" style="'+EC+'">'+escH(A11_DATA[3].sub[0].rts)+'</div></td>'
-    +'</tr>'
-
-    // Rând 5: câmp neradial 6/10 kV
-    +'<tr>'
-    +'<td style="'+NR+'">5</td>'
-    +'<td style="'+TD+';border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp neradial<br>6/10 kV</td>'
-    +makeSubCell(A11_DATA[3].sub[1].tf, 3, 1, 'tf')
-    +makeSubCell(A11_DATA[3].sub[1].dp, 3, 1, 'dp')
-    +makeSubCell(A11_DATA[3].sub[1].da, 3, 1, 'da')
-    +'</tr>'
-
-    // Rând 6: câmp radial 0,6/1÷3,6/6 kV
-    +'<tr>'
-    +'<td style="'+NR+'">6</td>'
-    +'<td style="'+TD+';border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp radial<br>0,6/1 ÷ 3,6/6 kV</td>'
-    +makeSubCell(A11_DATA[4].sub[0].tf, 4, 0, 'tf')
-    +makeSubCell(A11_DATA[4].sub[0].dp, 4, 0, 'dp')
-    +makeSubCell(A11_DATA[4].sub[0].da, 4, 0, 'da')
-    +'</tr>'
-
-    // Rând 7: câmp radial 6/10 kV
-    +'<tr>'
-    +'<td style="'+NR+'">7</td>'
-    +'<td style="'+TD+';border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp radial<br>6/10 kV</td>'
-    +makeSubCell(A11_DATA[4].sub[1].tf, 4, 1, 'tf')
-    +makeSubCell(A11_DATA[4].sub[1].dp, 4, 1, 'dp')
-    +makeSubCell(A11_DATA[4].sub[1].da, 4, 1, 'da')
-    +'</tr>'
-
-    // Rând 8: câmp radial 12/20 kV
-    +'<tr>'
-    +'<td style="'+NR+'">8</td>'
-    +'<td style="'+TD+';border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp radial<br>12/20 kV</td>'
-    +makeSubCell(A11_DATA[4].sub[2].tf, 4, 2, 'tf')
-    +makeSubCell(A11_DATA[4].sub[2].dp, 4, 2, 'dp')
-    +makeSubCell(A11_DATA[4].sub[2].da, 4, 2, 'da')
-    +'</tr>'
-
-    // Rând 9: câmp radial 18/30 kV
-    +'<tr>'
-    +'<td style="'+NR+'">9</td>'
-    +'<td style="'+TD+';border-left:3px solid #1455a4;padding-left:12px">Cablu cu câmp radial<br>18/30 kV</td>'
-    +makeSubCell(A11_DATA[4].sub[3].tf, 4, 3, 'tf')
-    +makeSubCell(A11_DATA[4].sub[3].dp, 4, 3, 'dp')
-    +makeSubCell(A11_DATA[4].sub[3].da, 4, 3, 'da')
-    +'</tr>'
-
-    +'</tbody>';
-
-  tbl.innerHTML=html;
-
-  // Wire editable cells
-  document.querySelectorAll('.a11-cell').forEach(function(el){
-    el.addEventListener('focus',function(){
-      this.style.background='#fff3cd';
-      this.style.outline='2px solid #f59e0b';
-    });
-    el.addEventListener('blur',function(){
-      var ri=parseInt(this.dataset.row), si=parseInt(this.dataset.sub), field=this.dataset.field;
-      var val=this.textContent.trim();
-      if(si>=0) A11_DATA[ri].sub[si][field]=val;
-      else A11_DATA[ri][field]=val;
-      this.style.background='#d1fae5';
-      this.style.outline='none';
-      var self=this;
-      setTimeout(function(){self.style.background='#dbeafe';},700);
-    });
-    el.addEventListener('keydown',function(e){
-      if(e.key==='Enter'){e.preventDefault();this.blur();}
-      if(e.key==='Escape'){
-        var ri=parseInt(this.dataset.row),si=parseInt(this.dataset.sub),field=this.dataset.field;
-        var orig=si>=0?A11_DEFAULT[ri].sub[si][field]:A11_DEFAULT[ri][field];
-        this.textContent=orig;
-        this.style.background='#dbeafe';
-        this.style.outline='none';
-        this.blur();
-      }
-    });
-  });
-}
-
-function resetA11(){
-  if(!confirm('Resetezi toate valorile la cele din normativ?')) return;
-  A11_DATA=JSON.parse(JSON.stringify(A11_DEFAULT));
-  renderA11();
-}
-// renderA11 is called directly from togglePanel
 
 
 
@@ -2816,7 +2613,7 @@ function toggleTabeleMenu(e){
 
 var _panelLoaded = {};
 var _panelFileMap = {
-  'a11':'A.1.1','a12':'A.1.2','a14':'A.1.4','a15':'A.1.5','a16':'A.1.6','a17':'A.1.7',
+  'a11':'A.1.1','a12':'A.1.2','a13':'A.1.3','a14':'A.1.4','a15':'A.1.5','a16':'A.1.6','a17':'A.1.7',
   'a18':'A.1.8','a19':'A.1.9','a110':'A.1.10','a111':'A.1.11','a112':'A.1.12',
   'a113':'A.1.13','a114':'A.1.14','a115':'A.1.15','a116':'A.1.16','a117':'A.1.17',
   'a118':'A.1.18','a119':'A.1.19','a120':'A.1.20','a121':'A.1.21','a122':'A.1.22',
@@ -3601,8 +3398,6 @@ function togglePanel(name){
   document.getElementById('overlay-backdrop').style.display='block';
   var _btn=document.getElementById(btnId);
   if(_btn) _btn.classList.add('active-panel');
-  // Render specialized panels on open
-  if(name==='a11') setTimeout(renderA11,30);
 }
 function closeAllPanels(silent){
   var _tabeleBtn=document.getElementById('btn-tabele-nte');
