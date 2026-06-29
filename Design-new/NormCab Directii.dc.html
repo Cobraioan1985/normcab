@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'IBM Plex Sans',-apple-system,sans-serif;background:#d9dce2;color:#0a1f3d;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+</style>
+</helmet>
+
+<div style="padding:48px 40px 80px;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:64px">
+
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5a6a85">NormCab · Dimensionare cabluri NTE 007/08/00</div>
+    <div style="font-size:15px;color:#3d5070;max-width:760px;line-height:1.5">Trei direcții vizuale ale aceleiași aplicații — același conținut (tab <b>Sarcină admisibilă</b> + rezultat + bara salvare/raport), densitate echilibrată, paleta NormCab rafinată pentru confort vizual. Desktop + tabletă.</div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- VARIANT A — DOCUMENT NORMATIV -->
+  <!-- ============================================================ -->
+  <div data-screen-label="Direcția A">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;background:#103a6b;color:#fff;padding:3px 10px;border-radius:5px">A</span>
+      <span style="font-size:17px;font-weight:700;color:#10243f">Document normativ</span>
+      <span style="font-size:13px;color:#5a6a85">Rail lateral pe capitole · fundal hârtie cald · tabele cu liniatură fină · cifre tabulare</span>
+    </div>
+
+    <div style="background:#f7f6f2;border:1px solid #cfc9bd;border-radius:10px;overflow:hidden;box-shadow:0 12px 40px -16px rgba(20,30,50,.28);display:flex;min-height:680px">
+      <!-- rail -->
+      <aside style="width:236px;flex-shrink:0;background:#10243f;color:#cdd7e6;padding:20px 0;display:flex;flex-direction:column">
+        <div style="padding:0 20px 18px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:14px">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:26px;height:26px;border-radius:6px;background:#d9920b;display:flex;align-items:center;justify-content:center;font-weight:700;color:#10243f;font-size:14px">N</div>
+            <div>
+              <div style="font-size:15px;font-weight:700;color:#fff;letter-spacing:.2px">NormCab</div>
+              <div style="font-size:10px;color:#8295b0;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">NTE 007/08/00</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#6f82a0;padding:0 20px 8px">Module de calcul</div>
+        <a style="display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:13.5px;background:rgba(217,146,11,.14);color:#fff;border-left:3px solid #d9920b;font-weight:600">Sarcină admisibilă</a>
+        <a style="display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:13.5px;color:#aeb9cb;border-left:3px solid transparent">Căderi de tensiune</a>
+        <a style="display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:13.5px;color:#aeb9cb;border-left:3px solid transparent">Secțiune economică</a>
+        <a style="display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:13.5px;color:#aeb9cb;border-left:3px solid transparent">Protecție suprasarcină</a>
+        <a style="display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:13.5px;color:#aeb9cb;border-left:3px solid transparent">Stabilitate termică</a>
+        <a style="display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:13.5px;color:#aeb9cb;border-left:3px solid transparent">Forțe electrodinamice</a>
+        <a style="display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:13.5px;color:#aeb9cb;border-left:3px solid transparent">Pierderi P / energie</a>
+        <a style="display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:13.5px;color:#aeb9cb;border-left:3px solid transparent">Pozare · Tragere</a>
+        <div style="margin-top:auto;padding:14px 20px 0;border-top:1px solid rgba(255,255,255,.1)">
+          <div style="font-size:10px;color:#6f82a0;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Proiect activ</div>
+          <div style="font-size:12.5px;color:#dbe3ee;line-height:1.4">LEA 20 kV · Stație Est<br><span style="color:#8295b0">7 calcule salvate</span></div>
+        </div>
+      </aside>
+
+      <!-- working area -->
+      <main style="flex:1;padding:26px 30px;overflow:hidden">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid #d6cfc1;padding-bottom:14px;margin-bottom:20px">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5px;color:#9a8f78;text-transform:uppercase">Cap. A.1 — Sarcina admisibilă a cablurilor</div>
+            <h1 style="font-size:23px;font-weight:700;color:#10243f;margin-top:3px;letter-spacing:-.3px">Sarcină admisibilă &amp; recomandare secțiune</h1>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9a8f78;text-align:right">§ A.1.14 – A.1.24</div>
+        </div>
+
+        <!-- form -->
+        <div style="border:1px solid #d6cfc1;border-radius:8px;background:#fff;padding:18px 20px;margin-bottom:18px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#103a6b;margin-bottom:14px;display:flex;align-items:center;gap:7px"><span style="width:3px;height:12px;background:#d9920b;border-radius:2px"></span>Configurație cablu</div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px dashed #e0d9ca">
+            <span style="font-size:10.5px;color:#5a6a85;font-weight:600;text-transform:uppercase;letter-spacing:.3px">Iz bază (sarcină admisibilă)</span>
+            <div style="display:inline-flex;border:1px solid #cfc9bd;border-radius:7px;overflow:hidden">
+              <span style="padding:6px 13px;font-size:12.5px;font-weight:600;background:#103a6b;color:#fff">Conform NTE 007 · A.1.4–A.1.13</span>
+              <span style="padding:6px 13px;font-size:12.5px;color:#3d5070;background:#fff">Utilizator</span>
+            </div>
+            <span style="font-size:11.5px;color:#9a8f78;font-family:'IBM Plex Mono',monospace">factorii A.1.14–A.1.24 se aplică în ambele cazuri</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px 16px">
+            <div style="display:flex;flex-direction:column;gap:5px"><label style="font-size:10.5px;color:#5a6a85;font-weight:600;text-transform:uppercase;letter-spacing:.3px">Tensiune Uo/U</label><div style="height:34px;border:1px solid #cfc9bd;border-radius:6px;background:#faf9f6;padding:0 11px;display:flex;align-items:center;font-size:13px;justify-content:space-between">12/20 kV <span style="color:#9a8f78">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><label style="font-size:10.5px;color:#5a6a85;font-weight:600;text-transform:uppercase;letter-spacing:.3px">Izolație</label><div style="height:34px;border:1px solid #cfc9bd;border-radius:6px;background:#faf9f6;padding:0 11px;display:flex;align-items:center;font-size:13px;justify-content:space-between">XLPE · 90°C <span style="color:#9a8f78">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><label style="font-size:10.5px;color:#5a6a85;font-weight:600;text-transform:uppercase;letter-spacing:.3px">Conductor</label><div style="height:34px;border:1px solid #cfc9bd;border-radius:6px;background:#faf9f6;padding:0 11px;display:flex;align-items:center;font-size:13px;justify-content:space-between">Cupru <span style="color:#9a8f78">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><label style="font-size:10.5px;color:#5a6a85;font-weight:600;text-transform:uppercase;letter-spacing:.3px">Mod pozare</label><div style="height:34px;border:1px solid #cfc9bd;border-radius:6px;background:#faf9f6;padding:0 11px;display:flex;align-items:center;font-size:13px;justify-content:space-between">În pământ · treflă <span style="color:#9a8f78">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><label style="font-size:10.5px;color:#5a6a85;font-weight:600;text-transform:uppercase;letter-spacing:.3px">Curent sarcină I</label><div style="height:34px;border:1.5px solid #103a6b;border-radius:6px;background:#fff;padding:0 11px;display:flex;align-items:center;font-size:13px;font-weight:600" class="mono">280 A</div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><label style="font-size:10.5px;color:#5a6a85;font-weight:600;text-transform:uppercase;letter-spacing:.3px">Secțiune</label><div style="height:34px;border:1px solid #cfc9bd;border-radius:6px;background:#faf9f6;padding:0 11px;display:flex;align-items:center;font-size:13px;justify-content:space-between;color:#103a6b">auto (recomandare) <span style="color:#9a8f78">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><label style="font-size:10.5px;color:#5a6a85;font-weight:600;text-transform:uppercase;letter-spacing:.3px">Temp. sol</label><div style="height:34px;border:1px solid #cfc9bd;border-radius:6px;background:#faf9f6;padding:0 11px;display:flex;align-items:center;font-size:13px;justify-content:space-between">20°C (ref) <span style="color:#9a8f78">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px;justify-content:flex-end"><button style="height:34px;border:none;border-radius:6px;background:#103a6b;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Calculează</button></div>
+          </div>
+        </div>
+
+        <!-- result -->
+        <div style="border:1px solid #d6cfc1;border-top:3px solid #103a6b;border-radius:8px;background:#fff;overflow:hidden">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:#faf9f6;border-bottom:1px solid #ece7db;flex-wrap:wrap;gap:12px">
+            <div>
+              <div style="font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#5a6a85;margin-bottom:3px">Secțiune recomandată</div>
+              <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:34px;font-weight:700;color:#10243f;line-height:1">95</span><span style="font-size:16px;color:#5a6a85">mm² Cupru</span></div>
+              <div style="font-size:12px;color:#5a6a85;margin-top:4px">XLPE · 12/20 kV · în pământ · treflă · 1 sistem</div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+              <span style="background:#e3f2e4;color:#1d5b2a;font-size:11.5px;font-weight:600;padding:4px 11px;border-radius:99px">✓ Verifică I ≥ 280 A</span>
+              <span class="mono" style="font-size:12px;color:#9a8f78">rezervă +6,4%</span>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ece7db;border-bottom:1px solid #ece7db">
+            <div style="background:#fff;padding:13px 16px"><div style="font-size:10px;text-transform:uppercase;letter-spacing:.3px;color:#5a6a85;font-weight:600;margin-bottom:4px">Iz corectat</div><div class="mono" style="font-size:18px;font-weight:600;color:#1d5b2a">298 A</div></div>
+            <div style="background:#fff;padding:13px 16px"><div style="font-size:10px;text-transform:uppercase;letter-spacing:.3px;color:#5a6a85;font-weight:600;margin-bottom:4px">Iz tabel (bază)</div><div class="mono" style="font-size:18px;font-weight:600;color:#10243f">320 A</div></div>
+            <div style="background:#fff;padding:13px 16px"><div style="font-size:10px;text-transform:uppercase;letter-spacing:.3px;color:#5a6a85;font-weight:600;margin-bottom:4px">Factor total f</div><div class="mono" style="font-size:18px;font-weight:600;color:#10243f">0,93</div></div>
+            <div style="background:#fff;padding:13px 16px"><div style="font-size:10px;text-transform:uppercase;letter-spacing:.3px;color:#5a6a85;font-weight:600;margin-bottom:4px">Densitate j</div><div class="mono" style="font-size:18px;font-weight:600;color:#10243f">2,95 A/mm²</div></div>
+          </div>
+          <div style="padding:14px 20px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#103a6b;margin-bottom:9px">Verificare pe secțiuni standardizate</div>
+            <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+              <thead><tr style="border-bottom:1.5px solid #c9c2b3">
+                <th style="text-align:left;padding:6px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#5a6a85;font-weight:700">S [mm²]</th>
+                <th style="text-align:right;padding:6px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#5a6a85;font-weight:700">Iz bază [A]</th>
+                <th style="text-align:right;padding:6px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#5a6a85;font-weight:700">Iz corectat [A]</th>
+                <th style="text-align:right;padding:6px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#5a6a85;font-weight:700">Rezervă</th>
+                <th style="text-align:center;padding:6px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#5a6a85;font-weight:700">Stare</th>
+              </tr></thead>
+              <tbody class="mono">
+                <tr style="border-bottom:1px solid #efeadf;color:#a99e88"><td style="padding:6px 8px">50</td><td style="text-align:right;padding:6px 8px">215</td><td style="text-align:right;padding:6px 8px">200</td><td style="text-align:right;padding:6px 8px">−28,6%</td><td style="text-align:center;padding:6px 8px"><span style="color:#a23b32">NU</span></td></tr>
+                <tr style="border-bottom:1px solid #efeadf;color:#a99e88"><td style="padding:6px 8px">70</td><td style="text-align:right;padding:6px 8px">265</td><td style="text-align:right;padding:6px 8px">246</td><td style="text-align:right;padding:6px 8px">−12,1%</td><td style="text-align:center;padding:6px 8px"><span style="color:#a23b32">NU</span></td></tr>
+                <tr style="background:#fbf3e0;border-bottom:1px solid #f0e3c2"><td style="padding:8px;font-weight:700;color:#8a5a06">95 ★</td><td style="text-align:right;padding:8px;color:#10243f">320</td><td style="text-align:right;padding:8px;font-weight:700;color:#10243f">298</td><td style="text-align:right;padding:8px;color:#1d5b2a">+6,4%</td><td style="text-align:center;padding:8px"><span style="background:#1d5b2a;color:#fff;padding:2px 9px;border-radius:99px;font-size:10.5px;font-weight:600">RECOMANDAT</span></td></tr>
+                <tr style="border-bottom:1px solid #efeadf;color:#3d5070"><td style="padding:6px 8px">120</td><td style="text-align:right;padding:6px 8px">365</td><td style="text-align:right;padding:6px 8px">339</td><td style="text-align:right;padding:6px 8px">+21,1%</td><td style="text-align:center;padding:6px 8px"><span style="color:#1d5b2a">OK</span></td></tr>
+                <tr style="color:#3d5070"><td style="padding:6px 8px">150</td><td style="text-align:right;padding:6px 8px">410</td><td style="text-align:right;padding:6px 8px">381</td><td style="text-align:right;padding:6px 8px">+36,1%</td><td style="text-align:center;padding:6px 8px"><span style="color:#1d5b2a">OK</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- action bar -->
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-top:1px solid #ece7db;background:#faf9f6;flex-wrap:wrap">
+            <div style="font-size:11.5px;color:#9a8f78;font-family:'IBM Plex Mono',monospace">A.1.14–A.1.24 · factori de pozare conform NTE 007</div>
+            <div style="display:flex;gap:9px">
+              <button style="height:36px;padding:0 16px;border:1px solid #103a6b;background:#fff;color:#103a6b;border-radius:7px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">+ Salvează în proiect</button>
+              <button style="height:36px;padding:0 16px;border:1px solid #cfc9bd;background:#fff;color:#3d5070;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">Raport PDF</button>
+              <button style="height:36px;padding:0 16px;border:1px solid #cfc9bd;background:#fff;color:#3d5070;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">Export XLSX</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- VARIANT B — SAAS MODERN -->
+  <!-- ============================================================ -->
+  <div data-screen-label="Direcția B">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;background:#2563c9;color:#fff;padding:3px 10px;border-radius:5px">B</span>
+      <span style="font-size:17px;font-weight:700;color:#10243f">SaaS modern</span>
+      <span style="font-size:13px;color:#5a6a85">Top bar + tab-uri pastilă · carduri cu umbră fină · input / rezultat pe două coloane · metric tiles</span>
+    </div>
+
+    <div style="background:#eef2f8;border:1px solid #d4ddeb;border-radius:14px;overflow:hidden;box-shadow:0 12px 40px -16px rgba(20,40,80,.3);min-height:680px;display:flex;flex-direction:column">
+      <!-- top bar -->
+      <header style="background:#fff;border-bottom:1px solid #e2e8f2;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:13px">
+          <div style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#2563c9,#103a6b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:15px">N</div>
+          <div style="font-size:16px;font-weight:700;color:#10243f;letter-spacing:-.2px">NormCab</div>
+          <div style="width:1px;height:22px;background:#e2e8f2;margin:0 4px"></div>
+          <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:#3d5070;background:#f3f6fb;border:1px solid #e2e8f2;padding:5px 12px;border-radius:8px">📁 LEA 20 kV · Stație Est <span style="color:#90a0b8">▾</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="font-size:12.5px;color:#5a6a85">7 calcule salvate</span>
+          <button style="height:34px;padding:0 14px;background:#f59e0b;color:#3a2600;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Generează raport</button>
+          <div style="width:32px;height:32px;border-radius:50%;background:#dbe5f3;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#2563c9">RC</div>
+        </div>
+      </header>
+
+      <!-- pill tabs -->
+      <div style="padding:16px 24px 0;background:#eef2f8">
+        <div style="display:flex;gap:4px;background:#dfe7f3;border:1px solid #d0dbeb;border-radius:11px;padding:4px;width:fit-content">
+          <span style="padding:7px 15px;font-size:13px;font-weight:600;background:#fff;color:#103a6b;border-radius:8px;box-shadow:0 1px 3px rgba(20,40,80,.12)">Sarcină admisibilă</span>
+          <span style="padding:7px 15px;font-size:13px;color:#5a6a85">Căderi tensiune</span>
+          <span style="padding:7px 15px;font-size:13px;color:#5a6a85">Secțiune economică</span>
+          <span style="padding:7px 15px;font-size:13px;color:#5a6a85">Stabilitate termică</span>
+          <span style="padding:7px 15px;font-size:13px;color:#5a6a85">Pierderi</span>
+          <span style="padding:7px 15px;font-size:13px;color:#5a6a85">Pozare</span>
+        </div>
+      </div>
+
+      <!-- body two-col -->
+      <div style="display:grid;grid-template-columns:1fr 1.05fr;gap:18px;padding:18px 24px 24px">
+        <!-- inputs -->
+        <div style="background:#fff;border:1px solid #e2e8f2;border-radius:13px;padding:20px 22px;box-shadow:0 1px 2px rgba(20,40,80,.04)">
+          <div style="font-size:15px;font-weight:700;color:#10243f;margin-bottom:3px">Configurație cablu</div>
+          <div style="font-size:12.5px;color:#7a8aa3;margin-bottom:14px">Parametrii de intrare pentru dimensionare</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid #eef2f8">
+            <span style="font-size:12px;color:#3d5070;font-weight:600">Iz bază:</span>
+            <div style="display:inline-flex;background:#eef2f8;border:1px solid #d8e0ed;border-radius:9px;padding:3px">
+              <span style="padding:6px 12px;font-size:12.5px;font-weight:600;background:#fff;color:#103a6b;border-radius:6px;box-shadow:0 1px 2px rgba(20,40,80,.1)">NTE 007 · A.1.4–A.1.13</span>
+              <span style="padding:6px 12px;font-size:12.5px;color:#5a6a85">Utilizator</span>
+            </div>
+            <span style="font-size:11px;color:#90a0b8">factori A.1.14–A.1.24 în ambele cazuri</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:12px;color:#3d5070;font-weight:500">Tensiune Uo/U</label><div style="height:38px;border:1px solid #d8e0ed;border-radius:9px;background:#f7f9fc;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px">12/20 kV <span style="color:#a0aec0">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:12px;color:#3d5070;font-weight:500">Izolație</label><div style="height:38px;border:1px solid #d8e0ed;border-radius:9px;background:#f7f9fc;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px">XLPE · 90°C <span style="color:#a0aec0">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:12px;color:#3d5070;font-weight:500">Conductor</label><div style="height:38px;border:1px solid #d8e0ed;border-radius:9px;background:#f7f9fc;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px">Cupru <span style="color:#a0aec0">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:12px;color:#3d5070;font-weight:500">Mod pozare</label><div style="height:38px;border:1px solid #d8e0ed;border-radius:9px;background:#f7f9fc;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px">În pământ · treflă <span style="color:#a0aec0">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:12px;color:#3d5070;font-weight:500">Curent sarcină I</label><div style="height:38px;border:2px solid #2563c9;border-radius:9px;background:#fff;padding:0 12px;display:flex;align-items:center;font-size:13.5px;font-weight:600" class="mono">280 A</div></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:12px;color:#3d5070;font-weight:500">Secțiune</label><div style="height:38px;border:1px solid #d8e0ed;border-radius:9px;background:#f7f9fc;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px;color:#2563c9">auto <span style="color:#a0aec0">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:12px;color:#3d5070;font-weight:500">Temp. sol</label><div style="height:38px;border:1px solid #d8e0ed;border-radius:9px;background:#f7f9fc;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px">20°C ref <span style="color:#a0aec0">▾</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label style="font-size:12px;color:#3d5070;font-weight:500">Sisteme paralel</label><div style="height:38px;border:1px solid #d8e0ed;border-radius:9px;background:#f7f9fc;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px">1 sistem <span style="color:#a0aec0">▾</span></div></div>
+          </div>
+          <button style="margin-top:18px;width:100%;height:42px;background:linear-gradient(135deg,#2563c9,#1a4ba3);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;box-shadow:0 4px 12px -3px rgba(37,99,201,.5)">Calculează dimensiunea</button>
+        </div>
+
+        <!-- result -->
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="background:#fff;border:1px solid #e2e8f2;border-radius:13px;overflow:hidden;box-shadow:0 1px 2px rgba(20,40,80,.04)">
+            <div style="padding:20px 22px;background:linear-gradient(135deg,#103a6b,#1a4ba3);color:#fff">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between">
+                <div>
+                  <div style="font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:#9fc0ef;margin-bottom:6px">Secțiune recomandată</div>
+                  <div style="display:flex;align-items:baseline;gap:8px"><span class="mono" style="font-size:40px;font-weight:700;line-height:1">95</span><span style="font-size:17px;color:#bcd2f2">mm² Cupru</span></div>
+                </div>
+                <span style="background:#22c55e;color:#04230f;font-size:12px;font-weight:700;padding:5px 12px;border-radius:99px">✓ OK</span>
+              </div>
+              <div style="font-size:12.5px;color:#bcd2f2;margin-top:8px">XLPE · 12/20 kV · în pământ · treflă · 1 sistem · I = 280 A</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:16px 18px">
+              <div style="background:#f0fdf4;border:1px solid #c7ecd2;border-radius:10px;padding:12px 14px"><div style="font-size:10.5px;text-transform:uppercase;letter-spacing:.3px;color:#3d7a52;font-weight:600;margin-bottom:5px">Iz corectat</div><div class="mono" style="font-size:21px;font-weight:700;color:#15803d">298 A</div><div style="font-size:11px;color:#3d7a52;margin-top:2px">rezervă +6,4%</div></div>
+              <div style="background:#f3f6fb;border:1px solid #e2e8f2;border-radius:10px;padding:12px 14px"><div style="font-size:10.5px;text-transform:uppercase;letter-spacing:.3px;color:#5a6a85;font-weight:600;margin-bottom:5px">Factor total f</div><div class="mono" style="font-size:21px;font-weight:700;color:#10243f">0,93</div><div style="font-size:11px;color:#7a8aa3;margin-top:2px">temp·sol·grupare</div></div>
+              <div style="background:#f3f6fb;border:1px solid #e2e8f2;border-radius:10px;padding:12px 14px"><div style="font-size:10.5px;text-transform:uppercase;letter-spacing:.3px;color:#5a6a85;font-weight:600;margin-bottom:5px">Iz tabel bază</div><div class="mono" style="font-size:21px;font-weight:700;color:#10243f">320 A</div><div style="font-size:11px;color:#7a8aa3;margin-top:2px">NTE 007 · A.1.x</div></div>
+              <div style="background:#f3f6fb;border:1px solid #e2e8f2;border-radius:10px;padding:12px 14px"><div style="font-size:10.5px;text-transform:uppercase;letter-spacing:.3px;color:#5a6a85;font-weight:600;margin-bottom:5px">Densitate j</div><div class="mono" style="font-size:21px;font-weight:700;color:#10243f">2,95</div><div style="font-size:11px;color:#7a8aa3;margin-top:2px">A/mm²</div></div>
+            </div>
+            <div style="padding:0 18px 16px">
+              <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+                <thead><tr>
+                  <th style="text-align:left;padding:7px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#7a8aa3;font-weight:700;border-bottom:1px solid #e2e8f2">S [mm²]</th>
+                  <th style="text-align:right;padding:7px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#7a8aa3;font-weight:700;border-bottom:1px solid #e2e8f2">Iz cor. [A]</th>
+                  <th style="text-align:right;padding:7px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#7a8aa3;font-weight:700;border-bottom:1px solid #e2e8f2">Rezervă</th>
+                  <th style="text-align:center;padding:7px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#7a8aa3;font-weight:700;border-bottom:1px solid #e2e8f2">Stare</th>
+                </tr></thead>
+                <tbody class="mono">
+                  <tr style="color:#aab4c4"><td style="padding:6px 8px;border-bottom:1px solid #f0f3f8">70</td><td style="text-align:right;padding:6px 8px;border-bottom:1px solid #f0f3f8">246</td><td style="text-align:right;padding:6px 8px;border-bottom:1px solid #f0f3f8">−12,1%</td><td style="text-align:center;padding:6px 8px;border-bottom:1px solid #f0f3f8"><span style="color:#dc2626">NU</span></td></tr>
+                  <tr style="background:#ecfdf3"><td style="padding:8px;border-radius:7px 0 0 7px;font-weight:700;color:#15803d">95 ★</td><td style="text-align:right;padding:8px;font-weight:700;color:#10243f">298</td><td style="text-align:right;padding:8px;color:#15803d">+6,4%</td><td style="text-align:center;padding:8px;border-radius:0 7px 7px 0"><span style="background:#22c55e;color:#fff;padding:2px 9px;border-radius:99px;font-size:10px;font-weight:700">REC.</span></td></tr>
+                  <tr style="color:#3d5070"><td style="padding:6px 8px;border-bottom:1px solid #f0f3f8">120</td><td style="text-align:right;padding:6px 8px;border-bottom:1px solid #f0f3f8">339</td><td style="text-align:right;padding:6px 8px;border-bottom:1px solid #f0f3f8">+21,1%</td><td style="text-align:center;padding:6px 8px;border-bottom:1px solid #f0f3f8"><span style="color:#15803d">OK</span></td></tr>
+                  <tr style="color:#3d5070"><td style="padding:6px 8px">150</td><td style="text-align:right;padding:6px 8px">381</td><td style="text-align:right;padding:6px 8px">+36,1%</td><td style="text-align:center;padding:6px 8px"><span style="color:#15803d">OK</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px">
+            <button style="flex:1;height:42px;background:#103a6b;color:#fff;border:none;border-radius:10px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit">+ Salvează în proiect</button>
+            <button style="height:42px;padding:0 18px;background:#fff;color:#3d5070;border:1px solid #d8e0ed;border-radius:10px;font-size:13.5px;font-weight:500;cursor:pointer;font-family:inherit">PDF</button>
+            <button style="height:42px;padding:0 18px;background:#fff;color:#3d5070;border:1px solid #d8e0ed;border-radius:10px;font-size:13.5px;font-weight:500;cursor:pointer;font-family:inherit">XLSX</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- VARIANT C — CONSOLĂ INGINEREASCĂ -->
+  <!-- ============================================================ -->
+  <div data-screen-label="Direcția C">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;background:#0d2a52;color:#f59e0b;padding:3px 10px;border-radius:5px">C</span>
+      <span style="font-size:17px;font-weight:700;color:#10243f">Consolă inginerească</span>
+      <span style="font-size:13px;color:#5a6a85">Rail navy închis cu iconuri · readout tabular monospace · stare colorată · densitate de instrument</span>
+    </div>
+
+    <div style="background:#0d2a52;border:1px solid #0a1f3d;border-radius:12px;overflow:hidden;box-shadow:0 12px 40px -16px rgba(10,20,40,.45);min-height:680px;display:flex">
+      <!-- icon rail -->
+      <aside style="width:72px;flex-shrink:0;background:#0a1f3d;display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:6px">
+        <div style="width:40px;height:40px;border-radius:9px;background:#f59e0b;display:flex;align-items:center;justify-content:center;font-weight:700;color:#0a1f3d;font-size:17px;margin-bottom:10px">N</div>
+        <div style="width:48px;height:46px;border-radius:9px;background:rgba(245,158,11,.16);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:1px solid rgba(245,158,11,.4)"><span style="font-size:17px">⚡</span><span style="font-size:8px;color:#f5c97a;font-weight:600">Iz</span></div>
+        <div style="width:48px;height:46px;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6f86ab"><span style="font-size:17px">📉</span><span style="font-size:8px;font-weight:600">ΔU</span></div>
+        <div style="width:48px;height:46px;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6f86ab"><span style="font-size:17px">💰</span><span style="font-size:8px;font-weight:600">Sec</span></div>
+        <div style="width:48px;height:46px;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6f86ab"><span style="font-size:17px">🛡️</span><span style="font-size:8px;font-weight:600">Prot</span></div>
+        <div style="width:48px;height:46px;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6f86ab"><span style="font-size:17px">🔥</span><span style="font-size:8px;font-weight:600">Term</span></div>
+        <div style="width:48px;height:46px;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6f86ab"><span style="font-size:17px">🧲</span><span style="font-size:8px;font-weight:600">Fed</span></div>
+        <div style="width:48px;height:46px;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6f86ab"><span style="font-size:17px">🧵</span><span style="font-size:8px;font-weight:600">Poz</span></div>
+      </aside>
+
+      <!-- main console -->
+      <main style="flex:1;background:#f4f6f9;display:flex;flex-direction:column">
+        <!-- console header -->
+        <div style="background:#11203a;color:#dbe4f0;padding:13px 22px;display:flex;align-items:center;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px">
+            <span class="mono" style="color:#7d93b5;font-size:11px">MODUL</span>
+            <span style="font-weight:600;color:#fff">Sarcină admisibilă</span>
+            <span style="color:#4a5d7d">/</span>
+            <span style="color:#9fb2d0">recomandare secțiune</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px">
+            <span class="mono" style="font-size:11.5px;color:#7d93b5">PROIECT: LEA 20kV · Stație Est</span>
+            <span style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:#5fd38a"><span style="width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 6px #34d399"></span>7 salvate</span>
+          </div>
+        </div>
+
+        <div style="padding:20px 22px;display:flex;flex-direction:column;gap:16px;flex:1">
+          <!-- input strip -->
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:9px;padding:14px 16px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+              <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:#0d2a52">▸ Parametri intrare</div>
+              <button style="height:32px;padding:0 18px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">RUN ▸</button>
+            </div>
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:11px;flex-wrap:wrap">
+              <span class="mono" style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Iz bază</span>
+              <div style="display:inline-flex;border:1px solid #cdd6e4;border-radius:5px;overflow:hidden">
+                <span class="mono" style="padding:5px 11px;font-size:11.5px;font-weight:600;background:#0d2a52;color:#f59e0b">NTE007 · A.1.4–A.1.13</span>
+                <span class="mono" style="padding:5px 11px;font-size:11.5px;color:#33455f;background:#fff">UTILIZATOR</span>
+              </div>
+              <span class="mono" style="font-size:10px;color:#94a3b8">factori A.1.14–A.1.24 în ambele</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">
+              <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Uo/U</label><div class="mono" style="height:32px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">12/20kV</div></div>
+              <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Izolație</label><div class="mono" style="height:32px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">XLPE</div></div>
+              <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Cond.</label><div class="mono" style="height:32px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Cu</div></div>
+              <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Pozare</label><div class="mono" style="height:32px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Sol/tref</div></div>
+              <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">I sarcină</label><div class="mono" style="height:32px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">280 A</div></div>
+              <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Secțiune</label><div class="mono" style="height:32px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px;color:#0d6cb4">AUTO</div></div>
+            </div>
+          </div>
+
+          <!-- readout grid -->
+          <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;flex:1">
+            <!-- big readout -->
+            <div style="background:#0d2a52;border-radius:9px;padding:20px;color:#fff;display:flex;flex-direction:column">
+              <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Secțiune recomandată</div>
+              <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:54px;font-weight:700;line-height:.9;color:#f59e0b">95</span><span style="font-size:16px;color:#9fb2d0">mm²</span></div>
+              <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">Cupru · XLPE</div>
+              <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:9px">
+                <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11.5px;color:#9fb2d0">Iz corectat</span><span class="mono" style="font-size:15px;font-weight:600;color:#5fd38a">298 A</span></div>
+                <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11.5px;color:#9fb2d0">Curent cerut</span><span class="mono" style="font-size:15px;font-weight:600;color:#fff">280 A</span></div>
+                <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11.5px;color:#9fb2d0">Rezervă</span><span class="mono" style="font-size:15px;font-weight:600;color:#5fd38a">+6,4%</span></div>
+              </div>
+              <div style="margin-top:auto;padding-top:16px"><span style="display:block;text-align:center;background:#15803d;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px">✓ VERIFICARE TRECUTĂ</span></div>
+            </div>
+
+            <!-- table + factors -->
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div style="background:#fff;border:1px solid #d3dbe7;border-radius:9px;overflow:hidden;flex:1">
+                <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">Verificare secțiuni · NTE 007 A.1.14–A.1.24</div>
+                <table style="width:100%;border-collapse:collapse;font-size:12.5px" class="mono">
+                  <thead><tr style="background:#f6f8fb">
+                    <th style="text-align:left;padding:7px 14px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">S mm²</th>
+                    <th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">Iz bază</th>
+                    <th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">Iz cor.</th>
+                    <th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">Rezervă</th>
+                    <th style="text-align:center;padding:7px 14px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">Stare</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr style="border-top:1px solid #eef1f6;color:#a0aab8"><td style="padding:7px 14px">50</td><td style="text-align:right;padding:7px 10px">215</td><td style="text-align:right;padding:7px 10px">200</td><td style="text-align:right;padding:7px 10px">−28,6%</td><td style="text-align:center;padding:7px 14px"><span style="color:#dc2626;font-weight:600">✕ NU</span></td></tr>
+                    <tr style="border-top:1px solid #eef1f6;color:#a0aab8"><td style="padding:7px 14px">70</td><td style="text-align:right;padding:7px 10px">265</td><td style="text-align:right;padding:7px 10px">246</td><td style="text-align:right;padding:7px 10px">−12,1%</td><td style="text-align:center;padding:7px 14px"><span style="color:#dc2626;font-weight:600">✕ NU</span></td></tr>
+                    <tr style="border-top:1px solid #d8b45a;background:#fef6e2"><td style="padding:9px 14px;font-weight:700;color:#8a5a06">95 ★</td><td style="text-align:right;padding:9px 10px;color:#10243f">320</td><td style="text-align:right;padding:9px 10px;font-weight:700;color:#10243f">298</td><td style="text-align:right;padding:9px 10px;color:#15803d;font-weight:600">+6,4%</td><td style="text-align:center;padding:9px 14px"><span style="background:#0d2a52;color:#f59e0b;padding:3px 10px;border-radius:4px;font-size:10px;font-weight:700">REC</span></td></tr>
+                    <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">120</td><td style="text-align:right;padding:7px 10px">365</td><td style="text-align:right;padding:7px 10px">339</td><td style="text-align:right;padding:7px 10px;color:#15803d">+21,1%</td><td style="text-align:center;padding:7px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
+                    <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">150</td><td style="text-align:right;padding:7px 10px">410</td><td style="text-align:right;padding:7px 10px">381</td><td style="text-align:right;padding:7px 10px;color:#15803d">+36,1%</td><td style="text-align:center;padding:7px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- factors strip -->
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+                <div style="background:#fff;border:1px solid #d3dbe7;border-radius:7px;padding:9px 12px"><div style="font-size:9.5px;text-transform:uppercase;letter-spacing:.3px;color:#6a7b96;font-weight:600">f temp</div><div class="mono" style="font-size:15px;font-weight:600;color:#10243f">0,93</div></div>
+                <div style="background:#fff;border:1px solid #d3dbe7;border-radius:7px;padding:9px 12px"><div style="font-size:9.5px;text-transform:uppercase;letter-spacing:.3px;color:#6a7b96;font-weight:600">f sol ρ</div><div class="mono" style="font-size:15px;font-weight:600;color:#10243f">1,00</div></div>
+                <div style="background:#fff;border:1px solid #d3dbe7;border-radius:7px;padding:9px 12px"><div style="font-size:9.5px;text-transform:uppercase;letter-spacing:.3px;color:#6a7b96;font-weight:600">f grupare</div><div class="mono" style="font-size:15px;font-weight:600;color:#10243f">1,00</div></div>
+                <div style="background:#fff;border:1px solid #0d2a52;border-radius:7px;padding:9px 12px"><div style="font-size:9.5px;text-transform:uppercase;letter-spacing:.3px;color:#6a7b96;font-weight:600">f total</div><div class="mono" style="font-size:15px;font-weight:700;color:#0d2a52">0,93</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- action bar -->
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:2px">
+            <div class="mono" style="font-size:11px;color:#7a8aa3">θ_max=90°C · ρ_sol=1,0 K·m/W · 1 sistem</div>
+            <div style="display:flex;gap:9px">
+              <button style="height:36px;padding:0 16px;background:#0d2a52;color:#fff;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">+ Salvează în proiect</button>
+              <button style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">Raport PDF</button>
+              <button style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">XLSX</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- DIAGRAMĂ FLUX DE CALCUL (HELP) — overlay -->
+  <!-- ============================================================ -->
+  <div data-screen-label="Diagramă calcul">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;background:#15803d;color:#fff;padding:3px 10px;border-radius:5px">?</span>
+      <span style="font-size:17px;font-weight:700;color:#10243f">Diagramă flux de calcul (Help)</span>
+      <span style="font-size:13px;color:#5a6a85">overlay deschis din butonul „Diagramă calcul" · ajutor vizual pentru utilizatori noi</span>
+    </div>
+
+    <!-- backdrop -->
+    <div style="background:radial-gradient(120% 80% at 50% 0%,#16335f,#0a1f3d);border-radius:14px;padding:28px;display:flex;justify-content:center;box-shadow:0 12px 40px -16px rgba(10,20,40,.5)">
+      <!-- panel -->
+      <div style="width:100%;max-width:880px;background:#f7f8fb;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -12px rgba(0,0,0,.45)">
+        <!-- panel header -->
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:#10243f;color:#fff">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:30px;height:30px;border-radius:8px;background:#f59e0b;display:flex;align-items:center;justify-content:center;color:#10243f;font-size:16px">⤳</div>
+            <div>
+              <div style="font-size:16px;font-weight:700">Diagramă flux de calcul</div>
+              <div style="font-size:11.5px;color:#9fb2d0">Cum lucrează NormCab — de la datele de intrare la raport</div>
+            </div>
+          </div>
+          <div style="width:30px;height:30px;border-radius:7px;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:#cdd7e6;font-size:16px;cursor:pointer">✕</div>
+        </div>
+
+        <!-- flow -->
+        <div style="padding:26px 30px 30px;display:flex;flex-direction:column;align-items:stretch;max-width:680px;margin:0 auto">
+
+          <!-- 1 INPUT -->
+          <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;overflow:hidden;box-shadow:0 1px 2px rgba(20,40,80,.05)">
+            <div style="display:flex;align-items:center;gap:11px;padding:12px 16px;background:#eef2f8;border-bottom:1px solid #e2e8f2">
+              <div style="width:24px;height:24px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">1</div>
+              <div style="font-size:13.5px;font-weight:700;color:#10243f">Date de intrare <span style="font-weight:400;color:#7a8aa3">— introduse de utilizator</span></div>
+            </div>
+            <div style="padding:13px 16px;display:flex;flex-wrap:wrap;gap:7px">
+              <span style="font-size:12px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:4px 11px;border-radius:99px">Tensiune Uo/U</span>
+              <span style="font-size:12px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:4px 11px;border-radius:99px">Izolație</span>
+              <span style="font-size:12px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:4px 11px;border-radius:99px">Conductor</span>
+              <span style="font-size:12px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:4px 11px;border-radius:99px">Mod pozare</span>
+              <span style="font-size:12px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:4px 11px;border-radius:99px">Curent sarcină I</span>
+              <span style="font-size:12px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:4px 11px;border-radius:99px">Lungime traseu</span>
+              <span style="font-size:12px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:4px 11px;border-radius:99px">cos φ</span>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:center;padding:6px 0"><div style="width:30px;height:30px;border-radius:50%;background:#fef3dd;border:1px solid #f0d089;display:flex;align-items:center;justify-content:center;color:#b9810a;font-size:13px">▼</div></div>
+
+          <!-- 2 BRANCH -->
+          <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;overflow:hidden;box-shadow:0 1px 2px rgba(20,40,80,.05)">
+            <div style="display:flex;align-items:center;gap:11px;padding:12px 16px;background:#eef2f8;border-bottom:1px solid #e2e8f2">
+              <div style="width:24px;height:24px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">2</div>
+              <div style="font-size:13.5px;font-weight:700;color:#10243f">Sursă sarcină admisibilă <span style="font-weight:400;color:#7a8aa3">— Iz bază (alegere)</span></div>
+            </div>
+            <div style="padding:14px 16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative">
+              <div style="border:1.5px solid #103a6b;background:#f5f9ff;border-radius:9px;padding:11px 13px">
+                <div style="font-size:12.5px;font-weight:700;color:#103a6b;margin-bottom:3px">A · Conform NTE 007</div>
+                <div style="font-size:11.5px;color:#5a6a85;line-height:1.5">Citire automată din tabelele <b>A.1.4 – A.1.13</b></div>
+              </div>
+              <div style="border:1.5px solid #b9810a;background:#fffbf2;border-radius:9px;padding:11px 13px">
+                <div style="font-size:12.5px;font-weight:700;color:#8a5a06;margin-bottom:3px">B · Conform utilizator</div>
+                <div style="font-size:11.5px;color:#5a6a85;line-height:1.5">Valoare Iz introdusă manual în sesiunea de calcul</div>
+              </div>
+            </div>
+            <div style="text-align:center;font-size:11px;color:#7a8aa3;padding:0 16px 12px">↘  ambele ramuri continuă identic  ↙</div>
+          </div>
+
+          <div style="display:flex;justify-content:center;padding:6px 0"><div style="width:30px;height:30px;border-radius:50%;background:#fef3dd;border:1px solid #f0d089;display:flex;align-items:center;justify-content:center;color:#b9810a;font-size:13px">▼</div></div>
+
+          <!-- 3 FACTORS -->
+          <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;overflow:hidden;box-shadow:0 1px 2px rgba(20,40,80,.05)">
+            <div style="display:flex;align-items:center;gap:11px;padding:12px 16px;background:#eef2f8;border-bottom:1px solid #e2e8f2">
+              <div style="width:24px;height:24px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">3</div>
+              <div style="font-size:13.5px;font-weight:700;color:#10243f">Factori de corecție <span style="font-weight:400;color:#7a8aa3">— A.1.14 – A.1.24 · se aplică în ambele cazuri</span></div>
+            </div>
+            <div style="padding:13px 16px;display:flex;flex-wrap:wrap;gap:7px">
+              <span style="font-size:12px;background:#eef2f8;border:1px solid #dbe3ef;color:#3d5070;padding:4px 11px;border-radius:99px">Temp. sol / aer</span>
+              <span style="font-size:12px;background:#eef2f8;border:1px solid #dbe3ef;color:#3d5070;padding:4px 11px;border-radius:99px">Rezistivitate sol ρ</span>
+              <span style="font-size:12px;background:#eef2f8;border:1px solid #dbe3ef;color:#3d5070;padding:4px 11px;border-radius:99px">Grupare circuite</span>
+              <span style="font-size:12px;background:#eef2f8;border:1px solid #dbe3ef;color:#3d5070;padding:4px 11px;border-radius:99px">Pozare în țeavă</span>
+              <span style="font-size:12px;background:#eef2f8;border:1px solid #dbe3ef;color:#3d5070;padding:4px 11px;border-radius:99px">Grad de încărcare</span>
+              <span style="font-size:12px;background:#10243f;color:#fff;padding:4px 11px;border-radius:99px;font-weight:600">→ f total</span>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:center;padding:6px 0"><div style="width:30px;height:30px;border-radius:50%;background:#fef3dd;border:1px solid #f0d089;display:flex;align-items:center;justify-content:center;color:#b9810a;font-size:13px">▼</div></div>
+
+          <!-- 4 CALC -->
+          <div style="background:#10243f;border-radius:11px;padding:14px 18px;display:flex;align-items:center;gap:14px;justify-content:center">
+            <div style="width:24px;height:24px;border-radius:50%;background:#f59e0b;color:#10243f;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">4</div>
+            <div class="mono" style="font-size:15px;font-weight:600;color:#fff">Iz corectat = Iz bază × f total</div>
+          </div>
+
+          <div style="display:flex;justify-content:center;padding:6px 0"><div style="width:30px;height:30px;border-radius:50%;background:#fef3dd;border:1px solid #f0d089;display:flex;align-items:center;justify-content:center;color:#b9810a;font-size:13px">▼</div></div>
+
+          <!-- 5 CHECKS -->
+          <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;overflow:hidden;box-shadow:0 1px 2px rgba(20,40,80,.05)">
+            <div style="display:flex;align-items:center;gap:11px;padding:12px 16px;background:#eef2f8;border-bottom:1px solid #e2e8f2">
+              <div style="width:24px;height:24px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">5</div>
+              <div style="font-size:13.5px;font-weight:700;color:#10243f">Verificări &amp; module de calcul</div>
+            </div>
+            <div style="padding:13px 16px;display:flex;flex-wrap:wrap;gap:7px">
+              <span style="font-size:12px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:4px 11px;border-radius:99px">Termic · Iz ≥ I</span>
+              <span style="font-size:12px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:4px 11px;border-radius:99px">Cădere ΔU</span>
+              <span style="font-size:12px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:4px 11px;border-radius:99px">Stabilitate termică I²t</span>
+              <span style="font-size:12px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:4px 11px;border-radius:99px">Protecție IB≤IN≤IZ</span>
+              <span style="font-size:12px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:4px 11px;border-radius:99px">Secțiune economică</span>
+              <span style="font-size:12px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:4px 11px;border-radius:99px">Forțe electrodinamice</span>
+              <span style="font-size:12px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:4px 11px;border-radius:99px">Pierderi P / energie</span>
+              <span style="font-size:12px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:4px 11px;border-radius:99px">Pozare · tragere</span>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:center;padding:6px 0"><div style="width:30px;height:30px;border-radius:50%;background:#fef3dd;border:1px solid #f0d089;display:flex;align-items:center;justify-content:center;color:#b9810a;font-size:13px">▼</div></div>
+
+          <!-- 6 RESULT -->
+          <div style="background:#fff;border:1.5px solid #15803d;border-radius:11px;padding:13px 16px;display:flex;align-items:center;gap:13px">
+            <div style="width:24px;height:24px;border-radius:50%;background:#15803d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">6</div>
+            <div style="flex:1"><div style="font-size:13.5px;font-weight:700;color:#10243f">Rezultat — secțiune recomandată + verdict</div><div style="font-size:11.5px;color:#7a8aa3">ex. 95 mm² Cupru · Iz 298 A ≥ 280 A · rezervă +6,4%</div></div>
+            <span style="background:#22c55e;color:#fff;font-size:11px;font-weight:700;padding:4px 11px;border-radius:99px">✓ OK</span>
+          </div>
+
+          <div style="display:flex;justify-content:center;padding:6px 0"><div style="width:30px;height:30px;border-radius:50%;background:#fef3dd;border:1px solid #f0d089;display:flex;align-items:center;justify-content:center;color:#b9810a;font-size:13px">▼</div></div>
+
+          <!-- 7 SAVE + 8 REPORTS -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;padding:13px 16px;display:flex;align-items:center;gap:12px">
+              <div style="width:24px;height:24px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">7</div>
+              <div><div style="font-size:13px;font-weight:700;color:#10243f">Salvează în proiect</div><div style="font-size:11px;color:#7a8aa3">calculul intră în proiectul activ</div></div>
+            </div>
+            <div style="background:#10243f;border-radius:11px;padding:13px 16px;display:flex;align-items:center;gap:12px">
+              <div style="width:24px;height:24px;border-radius:50%;background:#f59e0b;color:#10243f;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">8</div>
+              <div><div style="font-size:13px;font-weight:700;color:#fff">Rapoarte</div><div style="font-size:11px;color:#9fb2d0">PDF (final) · XLSX (editabil) — per modul + general</div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

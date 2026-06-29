@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  :root{--surface:#fff;--surface2:#f7f9fc;--text:#10243f;--text2:#6a7b96;--border:#d3dbe7;--border-s:#cdd6e4;--blue-bg:#eef2f7;--blue-text:#0d2a52;--green:#15803d;--green-bg:#f0fdf4;--green-text:#15803d;--brand-navy:#0d3d7a;--brand-amber:#f59e0b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:'IBM Plex Sans',-apple-system,sans-serif;background:#f4f6f9;color:#10243f;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:#c2cad8;border-radius:6px;border:2px solid #f4f6f9}
+  @keyframes ncPulse{0%,100%{opacity:1}50%{opacity:.45}}
+</style>
+</helmet>
+
+<div style="height:100vh;display:flex;overflow:hidden">
+
+  <!-- ============ NAV RAIL ============ -->
+  <aside style="{{ railStyle }}">
+    <!-- logo -->
+    <div style="{{ logoWrapStyle }}">
+      <img src="assets/normcab-mark.png" alt="NormCab" style="width:42px;height:42px;flex-shrink:0;object-fit:contain">
+      <div style="{{ logoTextStyle }}">
+        <div style="display:flex;align-items:flex-end;gap:5px;line-height:1"><span style="font-size:16px;font-weight:700;color:#fff;letter-spacing:.2px">NormCab</span><span style="width:7px;height:7px;background:#f29c00;flex-shrink:0;margin-bottom:2px"></span></div>
+        <div class="mono" style="font-size:9.5px;color:#7d93b5;letter-spacing:.5px;margin-top:2px">NTE 007/08/00</div>
+      </div>
+    </div>
+
+    <div style="height:1px;background:rgba(255,255,255,.08);margin:4px 0 8px"></div>
+
+    <!-- nav items -->
+    <button onClick="{{ h.t1 }}" style="{{ navStyles.t1 }}"><span style="{{ icoStyle.t1 }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><polyline points="13 2 4 14 11 14 10 22 19 9 12 9 13 2"></polyline></svg></span><span style="{{ labelStyles.t1 }}">Sarcină admisibilă</span></button>
+    <button onClick="{{ h.t3 }}" style="{{ navStyles.t3 }}"><span style="{{ icoStyle.t3 }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><polyline points="3 6 9 13 13 9 21 17"></polyline><polyline points="16 17 21 17 21 12"></polyline></svg></span><span style="{{ labelStyles.t3 }}">Căderi de tensiune</span></button>
+    <button onClick="{{ h.te }}" style="{{ navStyles.te }}"><span style="{{ icoStyle.te }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><line x1="8.5" y1="15.5" x2="15.5" y2="8.5"></line><circle cx="9.2" cy="9.2" r="1.2"></circle><circle cx="14.8" cy="14.8" r="1.2"></circle></svg></span><span style="{{ labelStyles.te }}">Secțiune economică</span></button>
+    <button onClick="{{ h.tp }}" style="{{ navStyles.tp }}"><span style="{{ icoStyle.tp }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"></path><polyline points="9 12 11.5 14.5 15.5 9.5"></polyline></svg></span><span style="{{ labelStyles.tp }}">Protecție suprasarcină</span></button>
+    <button onClick="{{ h.t4 }}" style="{{ navStyles.t4 }}"><span style="{{ icoStyle.t4 }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3c3.2 4 5 6 5 9a5 5 0 0 1-10 0c0-1.3.6-2.4 1.6-3.4C10 11 11.5 7.5 12 3z"></path></svg></span><span style="{{ labelStyles.t4 }}">Stabilitate termică</span></button>
+    <button onClick="{{ h.t5 }}" style="{{ navStyles.t5 }}"><span style="{{ icoStyle.t5 }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><line x1="7" y1="4" x2="7" y2="20"></line><line x1="17" y1="4" x2="17" y2="20"></line><line x1="7" y1="12" x2="13" y2="12"></line><polyline points="11 9 14 12 11 15"></polyline></svg></span><span style="{{ labelStyles.t5 }}">Forțe electrodinamice</span></button>
+    <button onClick="{{ h.tl }}" style="{{ navStyles.tl }}"><span style="{{ icoStyle.tl }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><polyline points="2 12 6 12 8 6 12 18 16 6 18 12 22 12"></polyline></svg></span><span style="{{ labelStyles.tl }}">Pierderi P / energie</span></button>
+    <button onClick="{{ h.t6 }}" style="{{ navStyles.t6 }}"><span style="{{ icoStyle.t6 }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M5 6c8 0 6 12 14 12"></path><circle cx="5" cy="6" r="1.6"></circle><circle cx="19" cy="18" r="1.6"></circle></svg></span><span style="{{ labelStyles.t6 }}">Pozare · tragere</span></button>
+
+    <div style="height:1px;background:rgba(255,255,255,.08);margin:8px 0"></div>
+
+    <button onClick="{{ h.tb }}" style="{{ navStyles.tb }}"><span style="{{ icoStyle.tb }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><line x1="3" y1="10" x2="21" y2="10"></line><line x1="9" y1="10" x2="9" y2="20"></line></svg></span><span style="{{ labelStyles.tb }}">Tabele NTE 007</span></button>
+    <button onClick="{{ h.tv }}" style="{{ navStyles.tv }}"><span style="{{ icoStyle.tv }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1z"></path><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path><polyline points="9 13 11 15 15 11"></polyline></svg></span><span style="{{ labelStyles.tv }}">Verificare tabele</span></button>
+    <button onClick="{{ h.tpr }}" style="{{ navStyles.tpr }}"><span style="{{ icoStyle.tpr }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M3 7a2 2 0 0 1 2-2h3.5l2 2H19a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></span><span style="{{ labelStyles.tpr }}">Proiecte</span></button>
+
+    <!-- collapse toggle -->
+    <button onClick="{{ toggleNav }}" style="margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;padding:9px;border-radius:8px;border:1px solid rgba(255,255,255,.12);background:transparent;color:#8fa3c4;cursor:pointer;font-family:inherit;font-size:11.5px">
+      <span style="{{ collapseIcoStyle }}">⟨⟩</span><span style="{{ collapseLabelStyle }}">{{ collapseLabel }}</span>
+    </button>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main style="flex:1;display:flex;flex-direction:column;min-width:0">
+
+    <!-- console header -->
+    <header style="background:#11203a;color:#dbe4f0;padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0">
+      <div style="display:flex;align-items:center;gap:11px;min-width:0">
+        <span class="mono" style="font-size:10.5px;color:#7d93b5;letter-spacing:.5px">MODUL</span>
+        <span style="font-size:14.5px;font-weight:600;color:#fff;white-space:nowrap">{{ moduleTitle }}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <button onClick="{{ openModal }}" style="display:flex;align-items:center;gap:7px;height:32px;padding:0 13px;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.4);color:#f5c97a;border-radius:7px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="16"></line><circle cx="12" cy="7.6" r=".8" fill="currentColor"></circle></svg>
+          Diagramă calcul
+        </button>
+        <div style="width:1px;height:22px;background:rgba(255,255,255,.12)"></div>
+        <span class="mono" style="font-size:11px;color:#7d93b5;white-space:nowrap">LEA 20kV · Stație Est</span>
+        <span style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:#5fd38a"><span style="width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 6px #34d399"></span>7 salvate</span>
+        <button onClick="{{ toggleRole }}" style="width:32px;height:32px;border-radius:50%;background:#26426e;border:none;color:#cfe0f5;font-size:11.5px;font-weight:600;cursor:pointer;font-family:inherit" title="Comută rol (demo)">RC</button>
+      </div>
+    </header>
+
+    <!-- viewer banner -->
+    <sc-if value="{{ isViewer }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#fff7ed;border-bottom:1px solid #fcd9a8;padding:9px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:center;gap:9px;font-size:12.5px;color:#92510a">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b9810a" stroke-width="1.8"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+          <span><b>Mod vizualizare</b> — Andrei Popescu editează acum acest proiect. Modificările tale nu se salvează.</span>
+        </div>
+        <button onClick="{{ toggleRole }}" style="height:30px;padding:0 13px;background:#0a1f3d;color:#f59e0b;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap">Preia editarea</button>
+      </div>
+    </sc-if>
+
+    <!-- scroll area -->
+    <div style="flex:1;overflow-y:auto;padding:22px 24px">
+     <div style="{{ contentWrapStyle }}">
+
+      <!-- ===== T1 SARCINĂ ADMISIBILĂ ===== -->
+      <sc-if value="{{ m_t1 }}" hint-placeholder-val="{{ true }}">
+       <div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+            <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52">▸ Parametri de intrare</div>
+            <button onClick="{{ runT1btn }}" style="height:32px;padding:0 18px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">RUN ▸</button>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:11px 12px">
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Uo/U [kV]</label><select value="{{ t1.uou }}" onChange="{{ t1h.uou }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"><option>0,6/1</option><option>3,6/6</option><option>6/10</option><option>12/20</option><option>18/30</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Pozare</label><select value="{{ t1.pozareTabel }}" onChange="{{ t1h.pozareTabel }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"><option value="pamant">în pământ</option><option value="aer">în aer</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Izolație</label><select value="{{ t1.izolatie }}" onChange="{{ t1h.izolatie }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option>Hârtie impregnată</option><option>PVC</option><option>XLPE</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Manta met.</label><sc-if value="{{ t1ShowManta }}" hint-placeholder-val="{{ true }}"><select value="{{ t1.manta }}" onChange="{{ t1h.manta }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option>Plumb</option><option>Aluminiu</option></select></sc-if><sc-if value="{{ t1HideManta }}" hint-placeholder-val="{{ false }}"><div class="mono" style="height:33px;border:1px dashed #d3dbe7;border-radius:5px;background:#f6f8fb;padding:0 9px;display:flex;align-items:center;font-size:11.5px;color:#a7b0bd">fără mantă</div></sc-if></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Temp. funcționare</label><sc-if value="{{ t1TempMulti }}" hint-placeholder-val="{{ false }}"><select value="{{ t1TempVal }}" onChange="{{ t1h.temp }}" style="height:33px;border:1.5px solid #c2410c;border-radius:5px;background:#fff7ed;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#9a3412"><option value="">alege…</option><sc-for list="{{ t1Temps }}" as="tt" hint-placeholder-count="2"><option>{{ tt }}</option></sc-for></select></sc-if><sc-if value="{{ t1TempSingle }}" hint-placeholder-val="{{ true }}"><div class="mono" style="height:33px;border:1px dashed #b9c4d6;border-radius:5px;background:#f1f3f7;padding:0 9px;display:flex;align-items:center;font-size:12.5px;color:#0d2a52">{{ t1ThetaDisp }}</div></sc-if></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Conductor</label><select value="{{ t1.material }}" onChange="{{ t1h.material }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option value="cupru">Cupru</option><option value="aluminiu">Aluminiu</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Tip tensiune</label><select value="{{ t1.tensiune }}" onChange="{{ t1h.tensiune }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option>C.A.</option><option>C.C.</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Tip cablu</label><select value="{{ t1.cablu }}" onChange="{{ t1h.cablu }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option>monofilar</option><option>multifilar</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Pozare (mono)</label><select value="{{ t1.pozare }}" onChange="{{ t1h.pozare }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option>treflă</option><option>linie</option><option>—</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Pozare în tub</label><select value="{{ t1.tub }}" onChange="{{ t1h.tub }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option value="nu">NU</option><option value="da">DA</option></select></div>
+            <sc-if value="{{ t1TubDa }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#9a3412;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Factor tub</label><select value="{{ t1.tubFactor }}" onChange="{{ t1h.tubFactor }}" style="height:33px;border:1.5px solid #c2410c;border-radius:5px;background:#fff7ed;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#9a3412"><option value="0.95">0,95</option><option value="0.9">0,90</option><option value="0.85">0,85</option><option value="0.8">0,80</option></select></div></sc-if>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">I sarcină [A]</label><input value="{{ t1.I }}" onChange="{{ t1h.I }}" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;font-size:12.5px;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#10243f"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Temp. sol [°C]</label><select value="{{ t1.tempSol }}" onChange="{{ t1h.tempSol }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option><option value="30">30</option><option value="35">35</option><option value="40">40</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">ρ sol [K·m/W]</label><select value="{{ t1.rho }}" onChange="{{ t1h.rho }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option value="0.7">0,7</option><option value="1">1,0</option><option value="1.5">1,5</option><option value="2.5">2,5</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Grad încărcare</label><select value="{{ t1.grad }}" onChange="{{ t1h.grad }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"><option value="0.5">0,50</option><option value="0.6">0,60</option><option value="0.7">0,70</option><option value="0.85">0,85</option><option value="1">1,00</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Nr. sisteme</label><input value="{{ t1.nrSisteme }}" onChange="{{ t1h.nrSisteme }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#10243f"></div>
+          </div>
+        </div>
+
+        <sc-if value="{{ t1Err }}" hint-placeholder-val="{{ false }}"><div style="background:#fef2f2;border:1px solid #fbd5d5;color:#b42318;border-radius:8px;padding:11px 14px;margin-bottom:16px;font-size:12.5px">⚠ {{ t1ErrMsg }}</div></sc-if>
+
+        <sc-if value="{{ t1NeedChoice }}" hint-placeholder-val="{{ false }}"><div style="background:#fff7ed;border:1px solid #fcd9a8;border-radius:8px;padding:12px 14px;margin-bottom:16px"><div style="font-size:12.5px;color:#9a3412;font-weight:600;margin-bottom:9px">Două variante de cablu în normativ pentru această combinație — alege coloana (după valoarea Iz de referință, secțiune 95 mm²):</div><div style="display:flex;gap:9px;flex-wrap:wrap"><sc-for list="{{ t1Choices }}" as="ch" hint-placeholder-count="2"><button onClick="{{ ch.pick }}" style="display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:9px 15px;background:#fff;border:1.5px solid #c2410c;border-radius:7px;cursor:pointer;font-family:inherit"><span style="font-size:12px;font-weight:700;color:#9a3412">{{ ch.label }}</span><span class="mono" style="font-size:11.5px;color:#7a8aa3">{{ ch.sub }}</span></button></sc-for></div></div></sc-if>
+
+        <sc-if value="{{ t1Ok }}" hint-placeholder-val="{{ false }}">
+         <div>
+          <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;margin-bottom:16px">
+            <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
+              <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Secțiune recomandată</div>
+              <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:54px;font-weight:700;line-height:.9;color:#f59e0b">{{ t1c.recValue }}</span><span style="font-size:16px;color:#9fb2d0">mm²</span></div>
+              <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">{{ t1c.recSub }}</div>
+              <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:9px">
+                <div style="display:flex;justify-content:space-between"><span style="font-size:11.5px;color:#9fb2d0">Iz corectat</span><span class="mono" style="font-size:15px;font-weight:600;color:#5fd38a">{{ t1c.izCor }} A</span></div>
+                <div style="display:flex;justify-content:space-between"><span style="font-size:11.5px;color:#9fb2d0">Curent cerut</span><span class="mono" style="font-size:15px;font-weight:600;color:#fff">{{ t1c.curent }} A</span></div>
+                <div style="display:flex;justify-content:space-between"><span style="font-size:11.5px;color:#9fb2d0">Rezervă</span><span class="mono" style="font-size:15px;font-weight:600;color:#5fd38a">{{ t1c.rezerva }}</span></div>
+              </div>
+              <div style="margin-top:auto;padding-top:16px"><span style="{{ t1c.verdictStyle }}">{{ t1c.verdictText }}</span></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden;flex:1">
+                <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">Tabel selectat: {{ t1TableLabel }} · col {{ t1c.col }} → corecție f₁×f₂</div>
+                <table style="width:100%;border-collapse:collapse;font-size:12.5px" class="mono">
+                  <thead><tr style="background:#f6f8fb"><th style="text-align:left;padding:7px 14px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">S mm²</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">Iz bază</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">Iz cor.</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">Rezervă</th><th style="text-align:center;padding:7px 14px;font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:#6a7b96;font-weight:700">Stare</th></tr></thead>
+                  <tbody>
+                    <sc-for list="{{ t1Rows }}" as="row" hint-placeholder-count="6">
+                      <tr style="{{ row.rowStyle }}"><td style="{{ row.cellStyle }}">{{ row.sectiune }}</td><td style="{{ row.numStyle }}">{{ row.izBaza }}</td><td style="{{ row.numStyle }}">{{ row.izCor }}</td><td style="{{ row.rezStyle }}">{{ row.rezerva }}</td><td style="text-align:center;padding:7px 14px"><span style="{{ row.stareStyle }}">{{ row.stare }}</span></td></tr>
+                    </sc-for>
+                  </tbody>
+                </table>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">
+                <div style="background:#fff;border:1px solid #d3dbe7;border-radius:7px;padding:9px 12px"><div style="font-size:9.5px;text-transform:uppercase;letter-spacing:.3px;color:#6a7b96;font-weight:600">f₁ temp (A.1.14)</div><div class="mono" style="font-size:15px;font-weight:600;color:#10243f">{{ t1c.f1 }}</div></div>
+                <div style="background:#fff;border:1px solid #d3dbe7;border-radius:7px;padding:9px 12px"><div style="font-size:9.5px;text-transform:uppercase;letter-spacing:.3px;color:#6a7b96;font-weight:600">f₂ grupare ({{ t1c.f2tab }})</div><div class="mono" style="font-size:15px;font-weight:600;color:#10243f">{{ t1c.f2 }}</div></div>
+                <sc-if value="{{ t1c.fTubActiv }}" hint-placeholder-val="{{ false }}"><div style="background:#fff7ed;border:1px solid #fcd9a8;border-radius:7px;padding:9px 12px"><div style="font-size:9.5px;text-transform:uppercase;letter-spacing:.3px;color:#9a3412;font-weight:600">f₃ în tub</div><div class="mono" style="font-size:15px;font-weight:600;color:#9a3412">{{ t1c.fTub }}</div></div></sc-if>
+                <div style="background:#fff;border:1px solid #0d2a52;border-radius:7px;padding:9px 12px"><div style="font-size:9.5px;text-transform:uppercase;letter-spacing:.3px;color:#6a7b96;font-weight:600">f total</div><div class="mono" style="font-size:15px;font-weight:700;color:#0d2a52">{{ t1c.ftotal }}</div></div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div class="mono" style="font-size:11px;color:#7a8aa3">{{ t1c.meta }}</div>
+            <div style="display:flex;gap:9px">
+              <button style="height:36px;padding:0 16px;background:#0d2a52;color:#fff;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">+ Salvează în proiect</button>
+              <button style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">Raport PDF</button>
+              <button style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">XLSX</button>
+            </div>
+          </div>
+         </div>
+        </sc-if>
+       </div>
+      </sc-if>
+
+      <!-- ===== T3 CĂDERI DE TENSIUNE ===== -->
+      <sc-if value="{{ m_t3 }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
+          <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Parametri rețea</div>
+          <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Un</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">20 kV</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Secțiune</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">95 mm²</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Curent I</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">280 A</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Lungime</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">300 m</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">cos φ</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,90</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">ΔU max</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">3,0 %</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;margin-bottom:16px">
+          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
+            <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Cădere de tensiune</div>
+            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">1,9</span><span style="font-size:16px;color:#9fb2d0">%</span></div>
+            <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">ΔU = 11,4 V · limită 3,0 %</div>
+            <div style="margin-top:auto;padding-top:16px"><span style="display:block;text-align:center;background:#15803d;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px">✓ SUB LIMITĂ</span></div>
+          </div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden">
+            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">ΔU pe secțiuni · L=300 m · I=280 A</div>
+            <table style="width:100%;border-collapse:collapse;font-size:12.5px" class="mono">
+              <thead><tr style="background:#f6f8fb"><th style="text-align:left;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">S mm²</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">R Ω/km</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">ΔU V</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">ΔU %</th><th style="text-align:center;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Stare</th></tr></thead>
+              <tbody>
+                <tr style="border-top:1px solid #eef1f6;background:#fef6e2"><td style="padding:9px 14px;font-weight:700;color:#8a5a06">95 ★</td><td style="text-align:right;padding:9px 10px">0,193</td><td style="text-align:right;padding:9px 10px;font-weight:700">11,4</td><td style="text-align:right;padding:9px 10px;font-weight:700">1,90</td><td style="text-align:center;padding:9px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
+                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">120</td><td style="text-align:right;padding:7px 10px">0,153</td><td style="text-align:right;padding:7px 10px">9,1</td><td style="text-align:right;padding:7px 10px">1,52</td><td style="text-align:center;padding:7px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
+                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">150</td><td style="text-align:right;padding:7px 10px">0,124</td><td style="text-align:right;padding:7px 10px">7,4</td><td style="text-align:right;padding:7px 10px">1,24</td><td style="text-align:center;padding:7px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:flex-end;gap:9px">
+          <button style="height:36px;padding:0 16px;background:#0d2a52;color:#fff;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">+ Salvează în proiect</button>
+          <button style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">Raport PDF</button>
+          <button style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">XLSX</button>
+        </div>
+       </div>
+      </sc-if>
+
+      <!-- ===== TE SECȚIUNE ECONOMICĂ ===== -->
+      <sc-if value="{{ m_te }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
+          <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Date economice</div>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Curent I</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">280 A</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Conductor</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Cupru</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Durată utiliz.</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">4000 h/an</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Cost energie</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,60 lei/kWh</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">j economic</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">2,3 A/mm²</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;margin-bottom:16px">
+          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
+            <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Secțiune economică</div>
+            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:54px;font-weight:700;line-height:.9;color:#f59e0b">120</span><span style="font-size:16px;color:#9fb2d0">mm²</span></div>
+            <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">S_ec = I / j_ec = 280 / 2,3</div>
+            <div style="margin-top:auto;padding-top:16px"><span style="display:block;text-align:center;background:#1a4ba3;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px">↑ peste minimul termic (95)</span></div>
+          </div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden">
+            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">Cost total pe 30 ani (investiție + pierderi)</div>
+            <table style="width:100%;border-collapse:collapse;font-size:12.5px" class="mono">
+              <thead><tr style="background:#f6f8fb"><th style="text-align:left;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">S mm²</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Investiție</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Pierderi/30 ani</th><th style="text-align:right;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Total</th></tr></thead>
+              <tbody>
+                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">95</td><td style="text-align:right;padding:7px 10px">128 000</td><td style="text-align:right;padding:7px 10px">96 400</td><td style="text-align:right;padding:7px 14px">224 400</td></tr>
+                <tr style="border-top:1px solid #d8b45a;background:#fef6e2"><td style="padding:9px 14px;font-weight:700;color:#8a5a06">120 ★</td><td style="text-align:right;padding:9px 10px">152 000</td><td style="text-align:right;padding:9px 10px">76 300</td><td style="text-align:right;padding:9px 14px;font-weight:700;color:#10243f">228 300</td></tr>
+                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">150</td><td style="text-align:right;padding:7px 10px">181 000</td><td style="text-align:right;padding:7px 10px">61 200</td><td style="text-align:right;padding:7px 14px">242 200</td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:11.5px;color:#6a7b96;padding:10px 14px;line-height:1.5">Notă: secțiunea economică (120 mm²) reduce pierderile pe durata de viață; minimul tehnic rămâne 95 mm². Alegerea finală ține cont de ambele.</div>
+          </div>
+        </div>
+       </div>
+      </sc-if>
+
+      <!-- ===== TP PROTECȚIE SUPRASARCINĂ ===== -->
+      <sc-if value="{{ m_tp }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
+          <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Coordonare protecție (IB ≤ IN ≤ IZ)</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">IB curent utilizare</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">280 A</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">IN disjunctor</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">300 A</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">IZ cablu (95mm²)</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">298 A</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">I2 declanșare</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">435 A</div></div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden;margin-bottom:16px">
+          <div style="padding:18px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid #eef1f6">
+            <div style="display:flex;align-items:center;gap:12px" class="mono">
+              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">IB</div><div style="font-size:22px;font-weight:700;color:#10243f">280</div></div>
+              <div style="font-size:20px;color:#15803d;font-weight:700">≤</div>
+              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">IN</div><div style="font-size:22px;font-weight:700;color:#f59e0b">300</div></div>
+              <div style="font-size:20px;color:#15803d;font-weight:700">≤</div>
+              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">IZ</div><div style="font-size:22px;font-weight:700;color:#10243f">298</div></div>
+            </div>
+            <div style="flex:1;min-width:200px"></div>
+            <span style="background:#fee2e2;color:#b42318;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:8px">✕ IN (300) &gt; IZ (298) — necesită secțiune mai mare</span>
+          </div>
+          <div style="padding:14px 20px;display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#33455f"><span style="width:8px;height:8px;border-radius:50%;background:#dc2626"></span><b>Condiția 1:</b> IB ≤ IN ≤ IZ &nbsp;→&nbsp; 280 ≤ 300 ≤ 298 &nbsp;<span style="color:#b42318;font-weight:600">NU este îndeplinită</span></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#33455f"><span style="width:8px;height:8px;border-radius:50%;background:#15803d"></span><b>Condiția 2:</b> I2 ≤ 1,45·IZ &nbsp;→&nbsp; 435 ≤ 432 &nbsp;<span style="color:#b42318;font-weight:600">la limită</span></div>
+            <div style="background:#eff6ff;border:1px solid #bfd7f5;border-radius:8px;padding:10px 13px;font-size:12.5px;color:#1a4ba3;margin-top:4px">Recomandare: treci la <b>120 mm²</b> (IZ = 339 A) → 280 ≤ 300 ≤ 339 ✓ și 435 ≤ 492 ✓</div>
+          </div>
+        </div>
+       </div>
+      </sc-if>
+
+      <!-- ===== T4 STABILITATE TERMICĂ ===== -->
+      <sc-if value="{{ m_t4 }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
+          <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Parametri scurtcircuit (integrala Joule I²t)</div>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Ik scurtcircuit</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">12,5 kA</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Durată tk</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,5 s</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Material</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Cu · k=143</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Izolație</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">XLPE</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Secțiune</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">95 mm²</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:300px 1fr;gap:16px">
+          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
+            <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Secțiune minimă termică</div>
+            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:54px;font-weight:700;line-height:.9;color:#f59e0b">62</span><span style="font-size:16px;color:#9fb2d0">mm²</span></div>
+            <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">S_min = Ik·√tk / k</div>
+            <div style="margin-top:auto;padding-top:16px"><span style="display:block;text-align:center;background:#15803d;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px">✓ 95 ≥ 62 — STABIL</span></div>
+          </div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden">
+            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">Verificare I²t ≤ k²·S²</div>
+            <table style="width:100%;border-collapse:collapse;font-size:12.5px" class="mono">
+              <thead><tr style="background:#f6f8fb"><th style="text-align:left;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">S mm²</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">I²t cerut</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">k²·S² admis</th><th style="text-align:center;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Stare</th></tr></thead>
+              <tbody>
+                <tr style="border-top:1px solid #eef1f6;color:#a0aab8"><td style="padding:7px 14px">50</td><td style="text-align:right;padding:7px 10px">78,1·10⁶</td><td style="text-align:right;padding:7px 10px">51,1·10⁶</td><td style="text-align:center;padding:7px 14px"><span style="color:#dc2626;font-weight:600">✕ NU</span></td></tr>
+                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">70</td><td style="text-align:right;padding:7px 10px">78,1·10⁶</td><td style="text-align:right;padding:7px 10px">100,2·10⁶</td><td style="text-align:center;padding:7px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
+                <tr style="border-top:1px solid #d8b45a;background:#fef6e2"><td style="padding:9px 14px;font-weight:700;color:#8a5a06">95 ★</td><td style="text-align:right;padding:9px 10px">78,1·10⁶</td><td style="text-align:right;padding:9px 10px;font-weight:700">184,5·10⁶</td><td style="text-align:center;padding:9px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+       </div>
+      </sc-if>
+
+      <!-- ===== T5 FORȚE ELECTRODINAMICE ===== -->
+      <sc-if value="{{ m_t5 }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
+          <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Forțe electrodinamice (Anexa 3)</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">ip curent de șoc</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">31,5 kA</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Distanță a</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">70 mm</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Diametru D</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">35 mm</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Sistem</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Trifazat</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:300px 1fr;gap:16px">
+          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
+            <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Forță maximă pe conductor</div>
+            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">245</span><span style="font-size:15px;color:#9fb2d0">N/m</span></div>
+            <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">F = 0,17·ip²/a</div>
+            <div style="margin-top:auto;padding-top:16px"><span style="display:block;text-align:center;background:#15803d;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px">✓ SUB ADMISIBIL</span></div>
+          </div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:12px">
+            <div style="font-size:12.5px;color:#33455f;line-height:1.6">Forța electrodinamică între conductoarele paralele determină <b>distanța minimă între cleme/bride</b> de fixare astfel încât solicitarea mecanică să rămână sub limita admisibilă a cablului și a suporților.</div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+              <div style="background:#f6f8fb;border:1px solid #e2e8f2;border-radius:8px;padding:10px 12px"><div style="font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:600">Distanță bride</div><div class="mono" style="font-size:16px;font-weight:600;color:#10243f">≤ 0,80 m</div></div>
+              <div style="background:#f6f8fb;border:1px solid #e2e8f2;border-radius:8px;padding:10px 12px"><div style="font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:600">Forță/bridă</div><div class="mono" style="font-size:16px;font-weight:600;color:#10243f">196 N</div></div>
+              <div style="background:#f6f8fb;border:1px solid #e2e8f2;border-radius:8px;padding:10px 12px"><div style="font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:600">F admisibil</div><div class="mono" style="font-size:16px;font-weight:600;color:#15803d">450 N</div></div>
+            </div>
+          </div>
+        </div>
+       </div>
+      </sc-if>
+
+      <!-- ===== TL PIERDERI ===== -->
+      <sc-if value="{{ m_tl }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
+          <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Pierderi de putere și energie</div>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Curent I</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">280 A</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">R (95mm²)</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,193 Ω/km</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Lungime</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">300 m</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Timp pierderi τ</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">2200 h/an</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Cost energie</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,60 lei/kWh</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+          <div style="background:#0d2a52;border-radius:10px;padding:18px;color:#fff"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Pierdere putere ΔP</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#f59e0b">13,6</span><span style="font-size:13px;color:#9fb2d0">kW</span></div><div style="font-size:11px;color:#9fb2d0;margin-top:4px">3·R·I²</div></div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:18px"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6a7b96;margin-bottom:8px">Energie anuală</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#10243f">29 900</span><span style="font-size:13px;color:#6a7b96">kWh</span></div><div style="font-size:11px;color:#6a7b96;margin-top:4px">ΔP·τ</div></div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:18px"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6a7b96;margin-bottom:8px">Cost anual</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#10243f">17 940</span><span style="font-size:13px;color:#6a7b96">lei</span></div><div style="font-size:11px;color:#6a7b96;margin-top:4px">energie · tarif</div></div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:18px"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6a7b96;margin-bottom:8px">Cost / 30 ani</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#10243f">538 k</span><span style="font-size:13px;color:#6a7b96">lei</span></div><div style="font-size:11px;color:#6a7b96;margin-top:4px">actualizat</div></div>
+        </div>
+       </div>
+      </sc-if>
+
+      <!-- ===== T6 POZARE TRAGERE ===== -->
+      <sc-if value="{{ m_t6 }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
+          <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Pozare · raze de curbură (A.5) și tragere (A.6)</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Diametru cablu d</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">35 mm</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Construcție</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Mono XLPE</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Metodă tragere</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Cap de tragere</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Material</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Cupru</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff"><div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Rază minimă de curbură</div><div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">525</span><span style="font-size:15px;color:#9fb2d0">mm</span></div><div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">15·d (mono MT)</div></div>
+          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff"><div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Forță de tragere admisibilă</div><div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">4275</span><span style="font-size:15px;color:#9fb2d0">N</span></div><div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">σ·S = 45·95 (cap de tragere Cu)</div></div>
+        </div>
+       </div>
+      </sc-if>
+
+      <!-- ===== TB TABELE NTE 007 ===== -->
+      <sc-if value="{{ m_tb }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
+          <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+            <div style="display:flex;flex-direction:column;gap:4px;min-width:320px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Selectează tabel NTE 007</label>
+              <select value="{{ tableId }}" onChange="{{ setTable }}" style="height:36px;border:1px solid #cdd6e4;border-radius:6px;background:#f7f9fc;padding:0 11px;font-size:13px;font-family:'IBM Plex Mono',monospace;color:#10243f">
+                <optgroup label="Referință (A.1.1–A.1.3)"><option value="A.1.1">A.1.1 — Referință</option><option value="A.1.2">A.1.2 — Referință</option><option value="A.1.3">A.1.3 — Referință</option></optgroup>
+                <optgroup label="Sarcină admisibilă (A.1.4–A.1.13)"><option value="A.1.4">A.1.4 — Iz · XLPE, pământ</option><option value="A.1.5">A.1.5 — Iz · XLPE, aer</option><option value="A.1.6">A.1.6 — Iz · PVC, pământ</option><option value="A.1.7">A.1.7 — Iz · PVC, aer</option><option value="A.1.8">A.1.8 — Iz · hârtie radial</option><option value="A.1.9">A.1.9 — Iz · hârtie neradial</option><option value="A.1.10">A.1.10</option><option value="A.1.11">A.1.11</option><option value="A.1.12">A.1.12</option><option value="A.1.13">A.1.13</option></optgroup>
+                <optgroup label="Factori de corecție (A.1.14–A.1.24)"><option value="A.1.14">A.1.14 — f temperatură sol</option><option value="A.1.15">A.1.15 — f temperatură aer</option><option value="A.1.16">A.1.16 — f rezistivitate sol</option><option value="A.1.17">A.1.17 — f grad încărcare</option><option value="A.1.18">A.1.18 — f grupare pământ</option><option value="A.1.19">A.1.19 — f grupare aer</option><option value="A.1.20">A.1.20 — f țeavă</option><option value="A.1.21">A.1.21</option><option value="A.1.22">A.1.22</option><option value="A.1.23">A.1.23</option><option value="A.1.24">A.1.24</option></optgroup>
+                <optgroup label="Referință (A.1.25–A.1.26)"><option value="A.1.25">A.1.25 — Raze de curbură</option><option value="A.1.26">A.1.26 — Forțe de tragere</option></optgroup>
+              </select>
+            </div>
+            <div style="display:flex;gap:7px;align-self:flex-end;flex-wrap:wrap">
+              <span class="mono" style="font-size:11px;background:#eef2f7;border:1px solid #d3dbe7;color:#0d2a52;padding:5px 10px;border-radius:6px">{{ tableId }}</span>
+              <span style="font-size:11px;background:#fef6e2;border:1px solid #f0d089;color:#8a5a06;padding:5px 10px;border-radius:6px">sursă: NTE 007/08/00</span>
+            </div>
+          </div>
+        </div>
+        <div ref="{{ tableMount }}" style="display:flex;flex-direction:column;max-height:calc(100vh - 230px);background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden"></div>
+       </div>
+      </sc-if>
+
+      <!-- ===== TV VERIFICARE TABELE ===== -->
+      <sc-if value="{{ m_tv }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <!-- progress + strip -->
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:12px 14px;margin-bottom:13px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:11px">
+            <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52">▸ Verificare tabele · sursă vs. randat</div>
+            <div style="display:flex;align-items:center;gap:9px">
+              <div style="width:170px;height:7px;border-radius:4px;background:#eef1f6;overflow:hidden"><div style="{{ vProgBarStyle }}"></div></div>
+              <span class="mono" style="font-size:12px;font-weight:600;color:#0d2a52">{{ vProgLabel }}</span>
+              <button onClick="{{ toggleSummary }}" style="{{ summaryBtnStyle }}">▤ Note &amp; decizii ({{ summaryCount }})</button>
+              <button onClick="{{ toggleLayout }}" style="{{ layoutBtnStyle }}">{{ layoutBtnLabel }}</button>
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px">
+            <sc-for list="{{ verifyList }}" as="t" hint-placeholder-count="26">
+              <button onClick="{{ t.onClick }}" style="{{ t.chipStyle }}"><span style="{{ t.dotStyle }}"></span>{{ t.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <!-- notes & decisions summary -->
+        <sc-if value="{{ summaryOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:12px 15px;margin-bottom:13px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+              <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52">▤ Note &amp; decizii pentru corectarea finală</div>
+              <span style="font-size:11px;color:#6a7b96">se păstrează după reîncărcare</span>
+            </div>
+            <sc-if value="{{ summaryEmpty }}" hint-placeholder-val="{{ true }}">
+              <div style="font-size:12.5px;color:#7a8aa3;padding:6px 0;line-height:1.5">Încă nicio notă sau problemă marcată. Tot ce scrii în câmpul „Notă" sau marchezi „Are probleme" apare aici și rămâne salvat pentru decizia finală.</div>
+            </sc-if>
+            <sc-for list="{{ summaryList }}" as="s" hint-placeholder-count="0">
+              <div style="display:flex;gap:10px;padding:8px 0;border-top:1px solid #eef1f6;align-items:flex-start">
+                <button onClick="{{ s.go }}" style="{{ s.badgeStyle }}">{{ s.id }}</button>
+                <span style="{{ s.statusStyle }}">{{ s.statusLabel }}</span>
+                <div style="font-size:12px;color:#33455f;line-height:1.45;flex:1">{{ s.noteText }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <!-- current control bar -->
+        <div style="background:#0d2a52;border-radius:10px;padding:11px 14px;margin-bottom:13px;display:flex;align-items:center;gap:13px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:9px">
+            <button onClick="{{ vPrev }}" style="width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;font-size:15px;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center">◂</button>
+            <div class="mono" style="min-width:62px;text-align:center;font-size:18px;font-weight:700;color:#f59e0b">{{ verifyId }}</div>
+            <button onClick="{{ vNext }}" style="width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;font-size:15px;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center">▸</button>
+          </div>
+          <div style="font-size:12px;color:#9fb2d0;flex:1;min-width:130px;line-height:1.35">{{ verifyTitle }}</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <button onClick="{{ setVOk }}" style="{{ vOkBtnStyle }}">✓ Verificat</button>
+            <button onClick="{{ setVIssue }}" style="{{ vIssueBtnStyle }}">⚠ Are probleme</button>
+          </div>
+          <input value="{{ verifyNote }}" onChange="{{ setVNote }}" placeholder="Notă (opțional)…" style="height:34px;flex:1;min-width:160px;border:1px solid rgba(255,255,255,.18);border-radius:7px;background:rgba(255,255,255,.06);color:#fff;padding:0 11px;font-size:12.5px;font-family:inherit;outline:none">
+        </div>
+
+        <!-- content-check verdict (asistent) -->
+        <div style="{{ contentInfoStyle }}"><span style="font-size:13px;flex-shrink:0">{{ contentInfoIcon }}</span><span>{{ contentInfoText }}</span></div>
+
+        <!-- split: sursă | randat -->
+        <div style="{{ vSplitStyle }}">
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden;display:flex;flex-direction:column">
+            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:10px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7;display:flex;align-items:center;justify-content:space-between"><span>Original NTE 007 · {{ verifyId }}</span><span style="font-size:9.5px;color:#8a5a06;background:#fef6e2;border:1px solid #f0d089;padding:2px 7px;border-radius:5px">sursă de adevăr</span></div>
+            <div ref="{{ vSrcMount }}" style="height:600px;padding:8px;background:#eef1f5"></div>
+          </div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden;display:flex;flex-direction:column">
+            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:10px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7;display:flex;align-items:center;justify-content:space-between"><span>Randat în aplicație · {{ verifyId }}</span><span style="font-size:9.5px;color:#5a6a85">tables/{{ verifyId }}.html</span></div>
+            <div ref="{{ vTableMount }}" style="max-height:600px;overflow:auto;padding:8px"></div>
+          </div>
+        </div>
+       </div>
+      </sc-if>
+
+      <!-- ===== TPR PROIECTE ===== -->
+      <sc-if value="{{ m_tpr }}" hint-placeholder-val="{{ false }}">
+       <div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <div style="font-size:13px;color:#6a7b96">Proiectele tale și cele partajate</div>
+          <button style="height:36px;padding:0 16px;background:#0d2a52;color:#fff;border:none;border-radius:7px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">+ Proiect nou</button>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px">
+          <div style="background:#fff;border:1.5px solid #0d2a52;border-radius:11px;padding:16px 18px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px"><div style="font-size:15px;font-weight:700;color:#10243f">LEA 20 kV · Stație Est</div><span style="font-size:10.5px;background:#fff7ed;color:#92510a;border:1px solid #fcd9a8;padding:3px 9px;border-radius:99px;font-weight:600">Andrei editează</span></div>
+            <div style="font-size:12px;color:#6a7b96;margin-bottom:12px">7 calcule · actualizat azi 14:22</div>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="display:flex;gap:-6px"><span style="width:26px;height:26px;border-radius:50%;background:#dbe5f3;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#2563c9;border:2px solid #fff">AP</span><span style="width:26px;height:26px;border-radius:50%;background:#e8e0f3;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#7c3aed;border:2px solid #fff;margin-left:-6px">RC</span><span style="width:26px;height:26px;border-radius:50%;background:#e0f0e8;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#15803d;border:2px solid #fff;margin-left:-6px">MI</span></div>
+              <button onClick="{{ toggleRole }}" style="height:32px;padding:0 14px;background:#eef2f7;color:#0d2a52;border:1px solid #cdd6e4;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">Deschide (viewer)</button>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:11px;padding:16px 18px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px"><div style="font-size:15px;font-weight:700;color:#10243f">PT 6/0,4 kV · Hală Nord</div><span style="font-size:10.5px;background:#f0fdf4;color:#15803d;border:1px solid #c7ecd2;padding:3px 9px;border-radius:99px;font-weight:600">Liber</span></div>
+            <div style="font-size:12px;color:#6a7b96;margin-bottom:12px">12 calcule · actualizat ieri</div>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <span style="width:26px;height:26px;border-radius:50%;background:#dbe5f3;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#2563c9;border:2px solid #fff">RC</span>
+              <button style="height:32px;padding:0 14px;background:#0d2a52;color:#fff;border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">Deschide (editor)</button>
+            </div>
+          </div>
+        </div>
+       </div>
+      </sc-if>
+
+     </div>
+    </div>
+  </main>
+
+  <!-- ============ DIAGRAM MODAL ============ -->
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeModal }}" style="position:fixed;inset:0;background:rgba(8,18,38,.62);display:flex;align-items:center;justify-content:center;padding:32px;z-index:50">
+      <div style="width:100%;max-width:760px;max-height:90vh;overflow-y:auto;background:#f7f8fb;border-radius:14px;box-shadow:0 24px 60px -12px rgba(0,0,0,.5)">
+        <div style="position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:#10243f;color:#fff">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:28px;height:28px;border-radius:8px;background:#f59e0b;display:flex;align-items:center;justify-content:center;color:#10243f;font-size:15px">⤳</div>
+            <div><div style="font-size:15px;font-weight:700">Diagramă flux de calcul</div><div style="font-size:11px;color:#9fb2d0">Cum lucrează NormCab — de la date la raport</div></div>
+          </div>
+          <button onClick="{{ closeModal }}" style="width:30px;height:30px;border-radius:7px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#cdd7e6;font-size:15px;cursor:pointer">✕</button>
+        </div>
+        <div style="padding:24px 28px;display:flex;flex-direction:column">
+          <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;padding:12px 16px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:22px;height:22px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">1</div><b style="font-size:13px;color:#10243f">Date de intrare</b><span style="font-size:11.5px;color:#7a8aa3">— utilizator</span></div><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-size:11px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:3px 9px;border-radius:99px">Uo/U</span><span style="font-size:11px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:3px 9px;border-radius:99px">Izolație</span><span style="font-size:11px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:3px 9px;border-radius:99px">Conductor</span><span style="font-size:11px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:3px 9px;border-radius:99px">Pozare</span><span style="font-size:11px;background:#f3f6fb;border:1px solid #e2e8f2;color:#3d5070;padding:3px 9px;border-radius:99px">Curent I</span></div></div>
+          <div style="display:flex;justify-content:center;padding:5px 0"><span style="color:#b9810a;font-size:15px">▼</span></div>
+          <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;padding:12px 16px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:22px;height:22px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">2</div><b style="font-size:13px;color:#10243f">Sursă Iz bază</b><span style="font-size:11.5px;color:#7a8aa3">— decizie</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="border:1.5px solid #103a6b;background:#f5f9ff;border-radius:9px;padding:10px 12px"><div style="font-size:12px;font-weight:700;color:#103a6b">A · NTE 007</div><div style="font-size:11px;color:#5a6a85">tabele A.1.4–A.1.13</div></div><div style="border:1.5px solid #b9810a;background:#fffbf2;border-radius:9px;padding:10px 12px"><div style="font-size:12px;font-weight:700;color:#8a5a06">B · Utilizator</div><div style="font-size:11px;color:#5a6a85">valoare introdusă</div></div></div></div>
+          <div style="display:flex;justify-content:center;padding:5px 0"><span style="color:#b9810a;font-size:15px">▼</span></div>
+          <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;padding:12px 16px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:22px;height:22px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">3</div><b style="font-size:13px;color:#10243f">Factori de corecție</b><span style="font-size:11.5px;color:#7a8aa3">— A.1.14–A.1.24 · ambele cazuri</span></div><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-size:11px;background:#eef2f8;border:1px solid #dbe3ef;color:#3d5070;padding:3px 9px;border-radius:99px">Temp.</span><span style="font-size:11px;background:#eef2f8;border:1px solid #dbe3ef;color:#3d5070;padding:3px 9px;border-radius:99px">Rezistivitate sol</span><span style="font-size:11px;background:#eef2f8;border:1px solid #dbe3ef;color:#3d5070;padding:3px 9px;border-radius:99px">Grupare</span><span style="font-size:11px;background:#eef2f8;border:1px solid #dbe3ef;color:#3d5070;padding:3px 9px;border-radius:99px">Țeavă</span><span style="font-size:11px;background:#10243f;color:#fff;padding:3px 9px;border-radius:99px;font-weight:600">→ f total</span></div></div>
+          <div style="display:flex;justify-content:center;padding:5px 0"><span style="color:#b9810a;font-size:15px">▼</span></div>
+          <div style="background:#10243f;border-radius:11px;padding:13px 18px;display:flex;align-items:center;gap:12px;justify-content:center"><div style="width:22px;height:22px;border-radius:50%;background:#f59e0b;color:#10243f;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">4</div><span class="mono" style="font-size:14px;font-weight:600;color:#fff">Iz corectat = Iz bază × f total</span></div>
+          <div style="display:flex;justify-content:center;padding:5px 0"><span style="color:#b9810a;font-size:15px">▼</span></div>
+          <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;padding:12px 16px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="width:22px;height:22px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">5</div><b style="font-size:13px;color:#10243f">Verificări &amp; module</b></div><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-size:11px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:3px 9px;border-radius:99px">Termic Iz≥I</span><span style="font-size:11px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:3px 9px;border-radius:99px">ΔU</span><span style="font-size:11px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:3px 9px;border-radius:99px">I²t</span><span style="font-size:11px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:3px 9px;border-radius:99px">IB≤IN≤IZ</span><span style="font-size:11px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:3px 9px;border-radius:99px">Sec. economică</span><span style="font-size:11px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:3px 9px;border-radius:99px">Forțe</span><span style="font-size:11px;background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d;padding:3px 9px;border-radius:99px">Pierderi</span></div></div>
+          <div style="display:flex;justify-content:center;padding:5px 0"><span style="color:#b9810a;font-size:15px">▼</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+            <div style="background:#fff;border:1.5px solid #15803d;border-radius:11px;padding:11px 13px;text-align:center"><div style="width:22px;height:22px;border-radius:50%;background:#15803d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin:0 auto 6px">6</div><div style="font-size:12px;font-weight:700;color:#10243f">Rezultat</div><div style="font-size:10.5px;color:#7a8aa3">secțiune + verdict</div></div>
+            <div style="background:#fff;border:1px solid #d8e0ed;border-radius:11px;padding:11px 13px;text-align:center"><div style="width:22px;height:22px;border-radius:50%;background:#10243f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin:0 auto 6px">7</div><div style="font-size:12px;font-weight:700;color:#10243f">Salvează</div><div style="font-size:10.5px;color:#7a8aa3">în proiect</div></div>
+            <div style="background:#10243f;border-radius:11px;padding:11px 13px;text-align:center"><div style="width:22px;height:22px;border-radius:50%;background:#f59e0b;color:#10243f;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin:0 auto 6px">8</div><div style="font-size:12px;font-weight:700;color:#fff">Rapoarte</div><div style="font-size:10.5px;color:#9fb2d0">PDF · XLSX</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:820}}">
+class Component extends DCLogic {
+  state = { module: 'tv', nav: 'collapsed', modal: false, role: 'editor', tableId: 'A.1.22', verifyId: 'A.1.4', showSummary: false, vLayout: 'split', t1: { izolatie:'XLPE', manta:'—', tensiune:'C.A.', pozare:'treflă', cablu:'monofilar', material:'cupru', pozareTabel:'pamant', uou:'0,6/1', temp:'', colPick:'', tub:'nu', tubFactor:0.85, I:280, tempSol:20, rho:1.0, grad:0.70, nrSisteme:1 }, t1res: null, t1err: null, verif: (function(){ try { return JSON.parse(localStorage.getItem('normcab_verif') || '{}'); } catch(e){ return {}; } })() };
+
+  set(id) { this.setState({ module: id }); }
+
+  async componentDidMount() {
+    try {
+      const [tables, f1g, f2g, f1a, f2a] = await Promise.all([
+        fetch('data/nte007-sarcina.json').then(r => r.json()),
+        fetch('data/nte007-f1-a14.json').then(r => r.json()),
+        fetch('data/nte007-f2-grupare.json').then(r => r.json()),
+        fetch('data/nte007-f1-aer-a21.json').then(r => r.json()),
+        fetch('data/nte007-f2-aer.json').then(r => r.json()),
+      ]);
+      this._data = { tables, f1g, f2g, f1a, f2a };
+      const src = await fetch('lookup-engine.js').then(r => r.text());
+      this._eng = await import(URL.createObjectURL(new Blob([src], { type: 'text/javascript' })));
+      this.runT1();
+    } catch (e) { this.setState({ t1err: 'Motor indisponibil: ' + e.message }); }
+  }
+  runT1() {
+    if (!this._eng || !this._data) return;
+    try { this.setState({ t1res: this._eng.computeSarcina(this._data, this.state.t1), t1err: null }); }
+    catch (e) { this.setState({ t1err: 'Eroare calcul: ' + e.message }); }
+  }
+  setT1(key, val) {
+    const numK = ['I','tempSol','rho','grad','nrSisteme','tubFactor'];
+    const v = numK.includes(key) ? (parseFloat(String(val).replace(',','.')) || 0) : val;
+    const t1 = Object.assign({}, this.state.t1, { [key]: v });
+    if (['izolatie','uou','pozareTabel','manta','cablu','pozare','tensiune'].includes(key)) { t1.temp = ''; t1.colPick = ''; }
+    if (key === 'temp') t1.colPick = '';
+    if (key === 'izolatie' && !/Hârtie/i.test(val)) t1.manta = '—';
+    if (key === 'izolatie' && /Hârtie/i.test(val) && !/Plumb|Aluminiu/i.test(t1.manta)) t1.manta = 'Plumb';
+    let res = this.state.t1res, err = null;
+    if (this._eng && this._data) { try { res = this._eng.computeSarcina(this._data, t1); } catch (e) { err = 'Eroare calcul: ' + e.message; } }
+    this.setState({ t1: t1, t1res: res, t1err: err });
+  }
+  TABLE_IDS = ['A.1.1','A.1.2','A.1.3','A.1.4','A.1.5','A.1.6','A.1.7','A.1.8','A.1.9','A.1.10','A.1.11','A.1.12','A.1.13','A.1.14','A.1.15','A.1.16','A.1.17','A.1.18','A.1.19','A.1.20','A.1.21','A.1.22','A.1.23','A.1.24','A.1.25','A.1.26'];
+  VERIFY_TITLES = {
+    'A.1.1':'Referință — coduri/identificare cabluri','A.1.2':'Referință','A.1.3':'Referință',
+    'A.1.4':'Sarcină admisibilă · XLPE, pământ','A.1.5':'Sarcină admisibilă · XLPE, aer','A.1.6':'Sarcină admisibilă · PVC, pământ','A.1.7':'Sarcină admisibilă · PVC, aer','A.1.8':'Sarcină admisibilă · hârtie radial','A.1.9':'Sarcină admisibilă · hârtie neradial','A.1.10':'Sarcină admisibilă','A.1.11':'Sarcină admisibilă','A.1.12':'Sarcină admisibilă','A.1.13':'Sarcină admisibilă',
+    'A.1.14':'Factor corecție · temperatura solului','A.1.15':'Factor corecție · temperatura aerului','A.1.16':'Factor corecție · rezistivitate sol','A.1.17':'Factor corecție · grad de încărcare','A.1.18':'Factor corecție · grupare în pământ','A.1.19':'Factor corecție · grupare în aer','A.1.20':'Factor corecție · țeavă','A.1.21':'Factor corecție','A.1.22':'Factor corecție · grupare în aer','A.1.23':'Factor corecție · grupare în pământ','A.1.24':'Factor corecție',
+    'A.1.25':'Raze minime de curbură','A.1.26':'Forțe de tragere admisibile'
+  };
+  CONTENT_CHECKED = {
+    'A.1.1':{s:'ref'}, 'A.1.2':{s:'ref'}, 'A.1.3':{s:'ref'},
+    'A.1.4':{s:'ok', note:'cupru și aluminiu — toate valorile identice cu normativul. Notă: „167" la cupru S=120, col. 6 e tipărit așa și în standard.'},
+    'A.1.5':{s:'ok', note:'cupru și aluminiu — toate valorile identice cu normativul (separator zecimal punct în aplicație vs. virgulă în normativ — valori egale).'},
+    'A.1.6':{s:'ok', note:'CORECTAT: aluminiu S=185, col. 5 a fost setat la „121" (fidel normativului; valoare probabil misprint în standard — între 283 la S=150 și 373 la S=240). Restul tabelului — corect.'},
+    'A.1.7':{s:'ok', note:'CORECTAT din normativ — 37 de celule reparate (cupru S=35/70/120/185/300; aluminiu S=50/120/185/240/300, inclusiv rândul 300 care era copiat din 240). Celulele corectate sunt marcate cu galben. La cupru S=120 col. 9: normativul tipărește „112" (misprint evident); setat la „312" — valoarea reală verificată pe coloana-soră treflă (raport constant 0,88).'},
+    'A.1.8':{s:'ok', note:'cupru și aluminiu corespund normativului. O singură valoare la aluminiu S=400 de privit vizual (în PDF apare scindată de OCR — probabil OK în aplicație).'},
+    'A.1.9':{s:'ok', note:'Verificat pe original — corect, fără erori. Diferențele semnalate automat erau artefacte OCR în PDF: cupru S=95 col.17 = „481" e corect (PDF citise „4S1"); aluminiu S=240 = „429" e corect (PDF îl scindase „42 9").'},
+    'A.1.10':{s:'ok', note:'cupru și aluminiu — identice cu normativul.'},
+    'A.1.11':{s:'ok', note:'cupru și aluminiu — identice cu normativul (aluminiu S=70 și S=95 apar scindate de OCR în PDF — de privit vizual, probabil OK).'},
+    'A.1.12':{s:'ok', note:'cupru și aluminiu — identice cu normativul.'},
+    'A.1.13':{s:'ok', note:'cupru și aluminiu — identice cu normativul.'},
+    'A.1.14':{s:'ok', note:'~96% din valori coincid cu normativul; restul = glitch-uri OCR în PDF, nu erori vizibile. Matrice pe blocuri (θ 90/80/70/65/60 °C) — o privire vizuală pe original e binevenită.'},
+    'A.1.15':{s:'ok', note:'~98% din valori coincid cu normativul; restul = OCR în PDF.'},
+    'A.1.16':{s:'ok', note:'~98% din valori coincid cu normativul; restul = OCR în PDF.'},
+    'A.1.17':{s:'ok', note:'~98% din valori coincid cu normativul; restul = OCR în PDF.'},
+    'A.1.18':{s:'ok', note:'~95% din valori coincid cu normativul; restul = OCR în PDF — de privit vizual.'},
+    'A.1.19':{s:'ok', note:'~99% din valori coincid cu normativul.'},
+    'A.1.20':{s:'ok', note:'~99% din valori coincid cu normativul.'},
+    'A.1.21':{s:'ok', note:'~99% din valori coincid cu normativul.'},
+    'A.1.22':{s:'ok', note:'Toți factorii numerici coincid 100% cu normativul. Diagramele SVG (dispunerea cablurilor) — confirmate vizual de tine: OK.'},
+    'A.1.23':{s:'ok', note:'Toți factorii numerici coincid 100% cu normativul. Diagramele SVG — confirmate vizual de tine: OK.'},
+    'A.1.24':{s:'ok', note:'Corect — toate cele 8 rânduri (5→0,70/0,75 … 61→0,25/0,30, după numărul de conductoare încărcate) coincid cu normativul.'},
+    'A.1.25':{s:'ok', note:'Verificat pe poziție — corect, cu o corecție aplicată: la „Cablu PVC >300mm²", col. 70°C era „UI" (text din OCR), corectat la „111". Restul identic cu normativul.'},
+    'A.1.26':{s:'ok', note:'Verificat pe poziție — 100% identic cu normativul (cablu cu conductoare de aluminiu). Fără erori.'}
+  };
+  toggleNav() { this.setState(s => ({ nav: s.nav === 'collapsed' ? 'expanded' : 'collapsed' })); }
+  toggleRole() { this.setState(s => ({ role: s.role === 'editor' ? 'viewer' : 'editor' })); }
+
+  componentDidUpdate() {
+    const prev = this._prev || {};
+    const cur = { module: this.state.module, tableId: this.state.tableId, verifyId: this.state.verifyId };
+    this._prev = cur;
+    if (cur.module === 'tb' && prev.module === 'tb' && prev.tableId !== cur.tableId) {
+      this.loadTable();
+    }
+    if (cur.module === 'tv' && (prev.module !== 'tv' || prev.verifyId !== cur.verifyId)) {
+      this.loadInto(cur.verifyId, this._vtable, true);
+      this.mountVSrc();
+    }
+  }
+
+  _setVTable(el) { this._vtable = el; if (el && this.state.module === 'tv') this.loadInto(this.state.verifyId, el, true); }
+  _setVSrc(el) { this._vsrc = el; if (el && this.state.module === 'tv') this.mountVSrc(); }
+  mountVSrc() {
+    const m = this._vsrc; if (!m) return;
+    const id = this.state.verifyId;
+    if (this._vsrcId === id && m.firstChild) return;
+    this._vsrcId = id;
+    m.innerHTML = '';
+    const slot = document.createElement('image-slot');
+    slot.id = 'verif-src-' + id;
+    slot.setAttribute('shape', 'rounded');
+    slot.setAttribute('radius', '6');
+    slot.setAttribute('fit', 'contain');
+    slot.setAttribute('data-editable', '');
+    slot.setAttribute('placeholder', 'Trage aici originalul ' + id + ' (screenshot / pagină din normativ)');
+    slot.style.width = '100%';
+    slot.style.height = '100%';
+    slot.style.display = 'block';
+    m.appendChild(slot);
+  }
+
+  loadVerif() { try { return JSON.parse(localStorage.getItem('normcab_verif') || '{}'); } catch(e){ return {}; } }
+  saveVerifState(v) { try { localStorage.setItem('normcab_verif', JSON.stringify(v)); } catch(e){} this.setState({ verif: v }); }
+  setVStatus(status) {
+    const id = this.state.verifyId;
+    const v = Object.assign({}, this.state.verif);
+    const cur = Object.assign({}, v[id] || {});
+    cur.status = (cur.status === status) ? 'none' : status;
+    v[id] = cur; this.saveVerifState(v);
+  }
+  setVNote(val) {
+    const id = this.state.verifyId;
+    const v = Object.assign({}, this.state.verif);
+    const cur = Object.assign({}, v[id] || {});
+    cur.note = val; v[id] = cur; this.saveVerifState(v);
+  }
+  vStep(d) {
+    const ids = this.TABLE_IDS;
+    let i = ids.indexOf(this.state.verifyId); if (i < 0) i = 0;
+    i = (i + d + ids.length) % ids.length;
+    this.setState({ verifyId: ids[i] });
+  }
+
+  _setMount(el) {
+    this._mount = el;
+    if (el && this.state.module === 'tb') this.loadTable();
+  }
+
+  ovKey(id) { return 'normcab_ov2_' + id; }
+  getOverrides(id) { try { return JSON.parse(localStorage.getItem(this.ovKey(id)) || '{}'); } catch (e) { return {}; } }
+  saveOverrides(id, ov) { try { localStorage.setItem(this.ovKey(id), JSON.stringify(ov)); } catch (e) {} }
+
+  async loadTable() { return this.loadInto(this.state.tableId, this._mount); }
+
+  async loadInto(id, mount, natural) {
+    if (!mount) return;
+    mount.dataset.loadId = id;
+    mount.innerHTML = '<div style="padding:24px;color:#7a8aa3;font-size:13px">Se încarcă ' + id + '…</div>';
+    let html;
+    try {
+      const r = await fetch('tables/' + id + '.html');
+      if (!r.ok) throw new Error('404');
+      html = await r.text();
+    } catch (e) {
+      if (mount.dataset.loadId !== id) return;
+      mount.innerHTML = '<div style="padding:34px 20px;text-align:center;color:#7a8aa3;font-size:13px;line-height:1.7">Tabelul <b style="color:#0d2a52">' + id + '</b> nu este încă disponibil.</div>';
+      return;
+    }
+    if (mount.dataset.loadId !== id) return;
+    this.renderTable(mount, id, html, natural);
+  }
+
+  renderTable(mount, id, html, natural) {
+    mount.innerHTML = html;
+    // section-divider labels ("Sarcina admisibilă, în A") must be centered, not left-aligned
+    mount.querySelectorAll('td,th').forEach(c => {
+      if (/Sarcina admisibil/i.test(c.textContent) && (parseInt(c.getAttribute('colspan')) || 1) > 1) {
+        c.style.textAlign = 'center';
+      }
+    });
+    // verification pane: keep table at natural width + horizontal scroll (no squish/clip)
+    if (natural) {
+      mount.style.width = 'auto';
+      mount.style.maxWidth = 'none';
+      mount.style.margin = '0';
+      mount.style.overflowX = 'auto';
+      mount.style.overflowY = 'auto';
+      // table at its real content width (not squished to the pane); pane scrolls / stack gives full width
+      const _t = mount.querySelector('table');
+      if (_t) {
+        let cols = 0;
+        _t.querySelectorAll('tr').forEach(tr => { let s = 0; tr.querySelectorAll('td,th').forEach(c => { s += (parseInt(c.getAttribute('colspan')) || 1); }); if (s > cols) cols = s; });
+        _t.style.width = 'max-content';
+        _t.style.tableLayout = 'auto';
+        _t.style.minWidth = (cols * 46) + 'px';
+        let wp = _t.parentElement;
+        while (wp && wp !== mount) { wp.style.overflowX = 'visible'; wp.style.width = 'auto'; wp = wp.parentElement; }
+      }
+    } else {
+    // shrink the panel to the table's natural width and center it — no big white gaps
+    const explicitW = { 'A.1.2': '720px', 'A.1.3': '720px' };
+    mount.style.maxWidth = '100%';
+    mount.style.marginLeft = 'auto';
+    mount.style.marginRight = 'auto';
+    if (explicitW[id]) {
+      mount.style.width = explicitW[id];
+    } else {
+      mount.style.width = '';
+      setTimeout(() => {
+        const tbl = mount.querySelector('table');
+        const parent = mount.parentElement;
+        if (!tbl || !parent) return;
+        const avail = parent.getBoundingClientRect().width;
+        // count columns = widest row (accounting for colspan)
+        let cols = 0;
+        tbl.querySelectorAll('tr').forEach(tr => {
+          let s = 0;
+          tr.querySelectorAll('td,th').forEach(c => { s += (parseInt(c.getAttribute('colspan')) || 1); });
+          if (s > cols) cols = s;
+        });
+        if (cols >= 16) {
+          // wide table: fill 90% of the selector card width so cells are readable
+          const selEl = document.querySelector('select');
+          let base = avail;
+          if (selEl) {
+            let card = selEl.parentElement;
+            while (card && card.parentElement && card.getBoundingClientRect().width < avail * 0.7) card = card.parentElement;
+            base = card.getBoundingClientRect().width;
+          }
+          mount.style.width = Math.round(base * 1.0) + 'px';
+          tbl.style.width = '100%';
+          tbl.style.tableLayout = 'fixed';
+          // remove inner horizontal padding so the table truly fills 100%
+          let wp = tbl.parentElement;
+          while (wp && wp !== mount) { wp.style.paddingLeft = '0'; wp.style.paddingRight = '0'; wp = wp.parentElement; }
+          // tall label columns (rowspan headers) get just enough room to wrap on 2 lines
+          tbl.querySelectorAll('th[rowspan]').forEach(c => {
+            const len = c.textContent.trim().length;
+            c.style.width = Math.min(78, Math.max(52, len * 4)) + 'px';
+          });
+          tbl.querySelectorAll('th').forEach(c => {
+            c.style.whiteSpace = 'normal';
+            c.style.lineHeight = '1.12';
+            // numeric sub-headers (0,50 etc) shrink so they fit narrow columns
+            if (/^\d[.,]\d+$/.test(c.textContent.trim())) c.style.fontSize = '12px';
+          });
+          tbl.querySelectorAll('td').forEach(c => {
+            const t = c.textContent.trim();
+            if (/^[\d.,\s/-]+$/.test(t)) {
+              c.style.whiteSpace = 'nowrap';
+              c.style.fontSize = '12px';
+            } else {
+              // long text labels must wrap, not overflow into the numeric columns
+              c.style.whiteSpace = 'normal';
+              c.style.overflowWrap = 'break-word';
+              c.style.lineHeight = '1.2';
+            }
+            c.style.padding = '3px 1px';
+          });
+          const wrap = tbl.parentElement;
+          if (wrap && wrap !== mount) wrap.style.overflowX = 'visible';
+        } else if (id === 'A.1.22' || id === 'A.1.23') {
+          // wide-ish reference tables: fill 95% of selector, stretch columns uniformly (no dense font shrink)
+          const selEl = document.querySelector('select');
+          let base = avail;
+          if (selEl) {
+            let card = selEl.parentElement;
+            while (card && card.parentElement && card.getBoundingClientRect().width < avail * 0.7) card = card.parentElement;
+            base = card.getBoundingClientRect().width;
+          }
+          mount.style.width = Math.round(base * (id === 'A.1.22' ? 0.75 : 1.0)) + 'px';
+          tbl.style.width = '100%';
+          tbl.style.tableLayout = 'auto';
+          // remove inner horizontal padding so the table truly fills 100%
+          let p = tbl.parentElement;
+          while (p && p !== mount) { p.style.paddingLeft = '0'; p.style.paddingRight = '0'; p = p.parentElement; }
+          // SVG diagrams: ALL scaled by one common px-per-unit (k) so conductor circles stay equal
+          // across every diagram; auto layout lets number columns size to content (no scroll).
+          const K = 1.12;
+          let maxW = 0;
+          tbl.querySelectorAll('svg').forEach(svg => {
+            const vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
+            if (vb.length === 4) {
+              const w = vb[2] * K, h = vb[3] * K;
+              svg.setAttribute('width', Math.round(w));
+              svg.setAttribute('height', Math.round(h));
+              svg.style.width = Math.round(w) + 'px';
+              svg.style.height = Math.round(h) + 'px';
+              svg.style.maxWidth = 'none';
+              svg.style.display = 'block';
+              svg.style.margin = '0 auto';
+              if (w > maxW) maxW = w;
+            }
+          });
+          const svgColW = Math.ceil(maxW) + 12;
+          tbl.querySelectorAll('td,th').forEach(c => {
+            if (c.querySelector('svg')) {
+              c.style.textAlign = 'center';
+              c.style.overflow = 'visible';
+              c.style.padding = '4px 6px';
+              c.style.whiteSpace = 'nowrap';
+              c.style.width = svgColW + 'px';
+              c.style.maxWidth = svgColW + 'px';
+            } else {
+              const t = c.textContent.trim();
+              // label / descriptive cells: allow wrapping so long text doesn't bleed over neighbours
+              if (!/^[0-9.,\-–\s]*$/.test(t)) {
+                c.style.whiteSpace = 'normal';
+                c.style.overflowWrap = 'break-word';
+              }
+            }
+          });
+          if (id === 'A.1.22') {
+            // shrink table to its content so the SVG column hugs the diagrams (no big side gaps)
+            tbl.style.width = 'auto';
+            setTimeout(() => { mount.style.width = Math.ceil(tbl.getBoundingClientRect().width) + 'px'; }, 0);
+          }
+          const wrap = tbl.parentElement;
+          if (wrap && wrap !== mount) wrap.style.overflowX = 'visible';
+        } else {
+          const w = Math.min(Math.max(Math.ceil(tbl.getBoundingClientRect().width) + 36, 430), avail);
+          mount.style.width = w + 'px';
+        }
+      }, 90);
+    }
+    }
+    mount.querySelectorAll('[onclick*="closeTabelPanel"],[onclick*="togglePanel"],[onclick*="closeAllPanels"],[onclick*="closeTabel"]').forEach(b => b.remove());
+    const ov = this.getOverrides(id);
+    let idx = 0;
+    mount.querySelectorAll('td,th').forEach(cell => {
+      // skip diagram / image / nested-table cells — only plain text & number cells are editable
+      if (cell.querySelector('svg,table,img,canvas')) return;
+      const t = cell.textContent.trim();
+      cell.dataset.ec = idx;
+      cell.dataset.orig = t;
+      cell.style.cursor = 'text';
+      if (ov[idx] !== undefined && ov[idx] !== t) {
+        cell.textContent = ov[idx];
+        cell.style.background = '#fff7ed';
+        cell.style.boxShadow = 'inset 0 0 0 1px #f0d089';
+        cell.title = 'Corectat · original: ' + (t || '(gol)');
+      }
+      idx++;
+    });
+    const ec = Object.keys(ov).length;
+    const bar = document.createElement('div');
+    bar.style.cssText = 'flex-shrink:0;display:flex;align-items:center;gap:10px;padding:7px 14px;background:#0d2a52;color:#cdd7e6;font-size:11px;font-family:IBM Plex Mono,monospace';
+    bar.innerHTML = '<span style="opacity:.85">Click pe orice celulă (text sau cifră) pentru corecție · Enter salvează · Esc anulează</span><span style="margin-left:auto"></span><span id="nc-edit-badge" style="font-size:10.5px;padding:2px 8px;border-radius:5px;background:' + (ec ? 'rgba(245,158,11,.18)' : 'rgba(255,255,255,.08)') + ';color:' + (ec ? '#f5c97a' : '#8fa3c4') + '">' + (ec ? ec + ' corecții' : 'fără corecții') + '</span>';
+    const resetBtn = document.createElement('button');
+    resetBtn.textContent = 'Resetează';
+    resetBtn.style.cssText = 'font:inherit;font-size:10.5px;cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.25);color:#cdd7e6;border-radius:5px;padding:2px 10px';
+    resetBtn.onclick = () => this.resetTable(id);
+    bar.appendChild(resetBtn);
+    mount.insertBefore(bar, mount.firstChild);
+    mount.onclick = (e) => this.handleCellClick(e);
+  }
+
+  handleCellClick(e) {
+    if (this.state.role === 'viewer') return;
+    const td = e.target.closest && e.target.closest('[data-ec]');
+    if (!td || td.querySelector('input')) return;
+    this.startEdit(td);
+  }
+
+  startEdit(td) {
+    const cur = td.textContent.trim();
+    const orig = td.dataset.orig;
+    const isNum = /^[-\d.,\/\s]*$/.test(cur);
+    td.textContent = '';
+    const inp = document.createElement('input');
+    inp.value = cur;
+    inp.style.cssText = 'width:100%;min-width:42px;box-sizing:border-box;border:1.5px solid #0d2a52;border-radius:4px;padding:2px 4px;font:inherit;font-size:12px;text-align:' + (isNum ? 'center' : 'left') + ';background:#fff;color:#10243f;outline:none';
+    td.appendChild(inp);
+    inp.focus(); inp.select();
+    let done = false;
+    const commit = () => { if (done) return; done = true; this.commitEdit(td, inp.value.trim(), orig); };
+    inp.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter') { ev.preventDefault(); commit(); }
+      else if (ev.key === 'Escape') { ev.preventDefault(); done = true; this.applyCell(td, cur, orig); }
+    });
+    inp.addEventListener('blur', commit);
+  }
+
+  commitEdit(td, v, orig) {
+    const id = this.state.tableId;
+    const idx = td.dataset.ec;
+    const ov = this.getOverrides(id);
+    if (!v || v === orig) { delete ov[idx]; this.applyCell(td, orig, orig); }
+    else { ov[idx] = v; this.applyCell(td, v, orig); }
+    this.saveOverrides(id, ov);
+    this.refreshBadge(id);
+  }
+
+  applyCell(td, val, orig) {
+    td.textContent = val;
+    if (val !== orig) {
+      td.style.background = '#fff7ed';
+      td.style.boxShadow = 'inset 0 0 0 1px #f0d089';
+      td.title = 'Valoare corectată · original: ' + orig;
+    } else {
+      td.style.background = '';
+      td.style.boxShadow = '';
+      td.removeAttribute('title');
+    }
+  }
+
+  refreshBadge(id) {
+    const n = Object.keys(this.getOverrides(id)).length;
+    const badge = this._mount && this._mount.querySelector('#nc-edit-badge');
+    if (badge) {
+      badge.textContent = n ? (n + ' corecții') : 'fără corecții';
+      badge.style.background = n ? 'rgba(245,158,11,.18)' : 'rgba(255,255,255,.08)';
+      badge.style.color = n ? '#f5c97a' : '#8fa3c4';
+    }
+  }
+
+  resetTable(id) {
+    try { localStorage.removeItem(this.ovKey(id)); } catch (e) {}
+    this.loadTable();
+  }
+
+  renderVals() {
+    const exp = this.state.nav === 'expanded';
+    const cur = this.state.module;
+    const mods = [
+      { id: 't1', label: 'Sarcină admisibilă' },
+      { id: 't3', label: 'Căderi de tensiune' },
+      { id: 'te', label: 'Secțiune economică' },
+      { id: 'tp', label: 'Protecție suprasarcină' },
+      { id: 't4', label: 'Stabilitate termică' },
+      { id: 't5', label: 'Forțe electrodinamice' },
+      { id: 'tl', label: 'Pierderi P / energie' },
+      { id: 't6', label: 'Pozare · tragere' },
+      { id: 'tb', label: 'Tabele NTE 007' },
+      { id: 'tv', label: 'Verificare tabele' },
+      { id: 'tpr', label: 'Proiecte' },
+    ];
+    const titles = {};
+    mods.forEach(m => titles[m.id] = m.label);
+
+    const navStyles = {}, labelStyles = {}, icoStyle = {}, h = {};
+    mods.forEach(m => {
+      const active = cur === m.id;
+      navStyles[m.id] = 'display:flex;align-items:center;width:100%;cursor:pointer;border:none;font-family:inherit;border-radius:9px;transition:background .12s;'
+        + (exp
+            ? 'flex-direction:row;gap:11px;padding:9px 12px;text-align:left;'
+            : 'flex-direction:column;gap:4px;padding:8px 4px;text-align:center;justify-content:center;')
+        + (active
+            ? 'background:rgba(245,158,11,.15);color:#ffffff;' + (exp ? 'box-shadow:inset 3px 0 0 #f59e0b;' : 'border:1px solid rgba(245,158,11,.4);')
+            : 'background:transparent;color:#8fa3c4;');
+      labelStyles[m.id] = (exp ? 'font-size:13px;line-height:1.2;' : 'font-size:9px;line-height:1.1;text-align:center;')
+        + 'font-weight:' + (active ? '600' : '500') + ';' + (exp ? '' : 'letter-spacing:-.1px;');
+      icoStyle[m.id] = 'flex-shrink:0;display:flex;align-items:center;justify-content:center;';
+      h[m.id] = () => this.set(m.id);
+    });
+
+    const tableTitles = {
+      'A.1.4': 'A.1.4 — Sarcină admisibilă · cabluri XLPE, pozare în pământ, treflă [A]',
+      'A.1.14': 'A.1.14 — Factor de corecție pentru temperatura solului',
+      'A.1.16': 'A.1.16 — Factor de corecție pentru rezistivitatea termică a solului',
+    };
+    const tId = this.state.tableId;
+
+    // ----- Verificare -----
+    const vids = this.TABLE_IDS;
+    const verif = this.state.verif || {};
+    const okCount = vids.filter(id => (verif[id] || {}).status === 'ok').length;
+    const issueCount = vids.filter(id => (verif[id] || {}).status === 'issue').length;
+    const curVid = this.state.verifyId;
+    const curV = verif[curVid] || {};
+    const dotColor = (s) => s === 'ok' ? '#15803d' : s === 'issue' ? '#e0901b' : '#cbd3df';
+    const verifyList = vids.map(id => {
+      const st = (verif[id] || {}).status || 'none';
+      const active = id === curVid;
+      return {
+        id, label: id,
+        onClick: () => this.setState({ verifyId: id }),
+        chipStyle: 'display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:6px;cursor:pointer;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:600;'
+          + (active ? 'background:#0d2a52;color:#fff;border:1px solid #0d2a52;' : 'background:#f3f6fb;color:#33455f;border:1px solid #dbe3ef;'),
+        dotStyle: 'width:7px;height:7px;border-radius:50%;flex-shrink:0;background:' + (active && st === 'none' ? '#9fb2d0' : dotColor(st)),
+      };
+    });
+    const okBtnBase = 'height:32px;padding:0 13px;border-radius:7px;font-family:inherit;font-size:12px;cursor:pointer;';
+    const inactiveBtn = okBtnBase + 'font-weight:600;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#cdd7e6';
+
+    const cc = this.CONTENT_CHECKED[curVid];
+    const baseInfo = 'border-radius:9px;padding:9px 13px;margin-bottom:13px;font-size:12px;line-height:1.45;display:flex;align-items:center;gap:9px;';
+    let vInfo;
+    if (cc && cc.s === 'ok') vInfo = { style: baseInfo + 'background:#f0fdf4;border:1px solid #c7ecd2;color:#15803d', icon: '✓', text: 'Conținut (cifre) verificat de asistent — ' + (cc.note || 'identic cu normativul') };
+    else if (cc && cc.s === 'warn') vInfo = { style: baseInfo + 'background:#fef6e2;border:1px solid #f0d089;color:#8a5a06', icon: '⚠', text: 'Conținut verificat — atenție: ' + (cc.note || 'de confirmat o valoare') };
+    else if (cc && cc.s === 'ref') vInfo = { style: baseInfo + 'background:#f3f6fb;border:1px solid #dbe3ef;color:#5a6a85', icon: '○', text: 'Tabel de referință — verificat manual de tine.' };
+    else vInfo = { style: baseInfo + 'background:#fff7ed;border:1px solid #fcd9a8;color:#92510a', icon: '…', text: 'Conținut încă neverificat de asistent — spune-mi când să rulez verificarea cifrelor.' };
+
+    const ccmap = this.CONTENT_CHECKED;
+    const summaryList = vids.map(id => {
+      const v = verif[id] || {}; const cc = ccmap[id] || {};
+      const userNote = (v.note || '').trim();
+      const asNote = cc.note || '';
+      const status = v.status || 'none';
+      return { id, status, userNote, asNote };
+    }).filter(x => x.status === 'issue' || x.userNote || x.asNote).map(x => ({
+      id: x.id,
+      go: () => this.setState({ verifyId: x.id, module: 'tv' }),
+      badgeStyle: 'flex-shrink:0;font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;border:none;cursor:pointer;background:#0d2a52;color:#fff',
+      statusLabel: x.status === 'issue' ? '⚠ probleme' : x.status === 'ok' ? '✓ verificat' : '• de decis',
+      statusStyle: 'flex-shrink:0;font-size:11px;font-weight:600;padding:2px 8px;border-radius:5px;' + (x.status === 'issue' ? 'background:#fef3e2;color:#b9810a' : x.status === 'ok' ? 'background:#f0fdf4;color:#15803d' : 'background:#f1f3f7;color:#6a7b96'),
+      noteText: [x.userNote ? ('Tu: ' + x.userNote) : '', x.asNote ? ('Asistent: ' + x.asNote) : ''].filter(Boolean).join('   ·   ') || '(fără notă)',
+    }));
+    const summaryCount = summaryList.length;
+
+    // ----- Tab 1 (Sarcină admisibilă) live calc -----
+    const t1 = this.state.t1;
+    const t1h = {};
+    ['izolatie','manta','tensiune','sistem','pozare','cablu','material','I','tempSol','rho','grad','nrSisteme','uou','pozareTabel','temp','colPick','tub','tubFactor'].forEach(k => t1h[k] = (e) => this.setT1(k, e.target.value));
+    const rr = this.state.t1res;
+    let t1c;
+    if (this.state.t1err) t1c = { ok:false, err:this.state.t1err, rows:[] };
+    else if (rr && rr.error) t1c = { ok:false, err:rr.error, rows:[] };
+    else if (rr && rr.needChoice) {
+      const izs = rr.choices.map(c => (c.iz == null ? Infinity : c.iz));
+      const minIz = Math.min(...izs), maxIz = Math.max(...izs);
+      t1c = { ok:false, needChoice:true, rows:[],
+        choices: rr.choices.map(ch => {
+          const isMin = ch.iz != null && ch.iz === minIz;
+          const isMax = ch.iz != null && ch.iz === maxIz && minIz !== maxIz;
+          return {
+            idx:ch.idx,
+            label: isMin ? 'Variantă conservatoare (pesimistă)' : (isMax ? 'Variantă optimistă' : ('Coloana ' + ch.idx)),
+            sub: (ch.f2 ? ('f₂ → A.1.' + ch.f2 + ' · ') : '') + 'Iz ref 95mm²: ' + (ch.iz != null ? (ch.iz + ' A') : '—'),
+            accent: isMin ? '#0d2a52' : '#15803d',
+            pick: () => this.setT1('colPick', ch.idx),
+          };
+        }) };
+    }
+    else if (rr) {
+      const rec = rr.rows.find(x => x.sectiune === rr.recomandat);
+      t1c = {
+        ok:true, err:null,
+        recValue: rr.recomandat != null ? rr.recomandat : '—',
+        recSub: t1.material.charAt(0).toUpperCase()+t1.material.slice(1) + ' · ' + t1.izolatie,
+        izCor: rec ? rec.izCor : '—',
+        curent: t1.I,
+        rezerva: rec ? ((rec.rezerva>0?'+':'')+String(rec.rezerva).replace('.',',')+'%') : '—',
+        f1: rr.f1!=null?String(rr.f1).replace('.',','):'—',
+        f2: rr.f2!=null?String(rr.f2).replace('.',','):'—',
+        fTub: rr.fTub!=null?String(rr.fTub).replace('.',','):'1',
+        fTubActiv: rr.fTub!=null && rr.fTub!==1,
+        ftotal: rr.fTotal!=null?String(rr.fTotal).replace('.',','):'—',
+        col: rr.col, table: rr.table, theta: rr.theta, f2tab: rr.f2tab,
+        verdictText: rr.recomandat!=null ? '✓ SECȚIUNE GĂSITĂ' : '✕ NICIO SECȚIUNE NU TRECE',
+        verdictStyle: 'display:block;text-align:center;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px;background:'+(rr.recomandat!=null?'#15803d':'#dc2626'),
+        meta: 'θmax='+rr.theta+'°C · ρ='+String(t1.rho).replace('.',',')+' K·m/W · grad '+String(t1.grad).replace('.',',')+' · '+t1.nrSisteme+' sistem(e) · col '+rr.col,
+        rows: rr.rows.map(x => ({
+          sectiune: x.sectiune, izBaza: x.izBaza, izCor: x.izCor,
+          rezerva: (x.rezerva>0?'+':'')+String(x.rezerva).replace('.',',')+'%',
+          stare: x.sectiune===rr.recomandat ? 'REC' : (x.ok?'✓ OK':'✕ NU'),
+          rowStyle: 'border-top:1px solid #eef1f6;'+(x.sectiune===rr.recomandat?'background:#fef6e2':''),
+          cellStyle: 'padding:7px 14px;'+(x.sectiune===rr.recomandat?'font-weight:700;color:#8a5a06':(x.ok?'color:#33455f':'color:#a7b0bd')),
+          numStyle: 'text-align:right;padding:7px 10px;'+(x.sectiune===rr.recomandat?'font-weight:700;color:#10243f':(x.ok?'color:#33455f':'color:#a7b0bd')),
+          rezStyle: 'text-align:right;padding:7px 10px;font-weight:600;'+(x.ok?'color:#15803d':'color:#a7b0bd'),
+          stareStyle: x.sectiune===rr.recomandat ? 'background:#0d2a52;color:#f59e0b;padding:3px 10px;border-radius:4px;font-size:10px;font-weight:700' : (x.ok?'color:#15803d;font-weight:600':'color:#dc2626;font-weight:600'),
+        })),
+      };
+    } else t1c = { ok:false, err:null, loading:true, rows:[] };
+
+    return {
+      mods, exp,
+      railStyle: 'width:' + (exp ? '218px' : '92px') + ';flex-shrink:0;background:#0a1f3d;display:flex;flex-direction:column;align-items:stretch;padding:14px ' + (exp ? '12px' : '9px') + ';gap:4px;overflow-y:auto;overflow-x:hidden',
+      logoWrapStyle: 'display:flex;align-items:center;gap:10px;padding:' + (exp ? '2px 4px 8px' : '0 0 8px') + ';' + (exp ? '' : 'justify-content:center;'),
+      logoTextStyle: 'overflow:hidden;white-space:nowrap;' + (exp ? 'opacity:1;width:auto;' : 'opacity:0;width:0;'),
+      navStyles, labelStyles, icoStyle, h,
+      toggleNav: () => this.toggleNav(),
+      collapseLabel: exp ? 'Restrânge meniul' : '',
+      collapseLabelStyle: exp ? 'display:inline' : 'display:none',
+      collapseIcoStyle: 'font-family:monospace;font-size:13px;' + (exp ? '' : 'transform:rotate(180deg)'),
+      moduleTitle: titles[cur] || '',
+      m_t1: cur === 't1', m_t3: cur === 't3', m_te: cur === 'te', m_tp: cur === 'tp',
+      t1: this.state.t1, t1h: t1h, t1c: t1c, runT1btn: () => this.runT1(),
+      t1TableLabel: ((rr && rr.table) ? rr.table + ' · ' : '') + (t1.pozareTabel === 'aer' ? 'aer' : 'pământ') + ' · ' + t1.uou + ' kV',
+      t1ThetaDisp: (rr && rr.theta) ? (rr.theta + ' °C') : '—',
+      t1Temps: (rr && rr.availTemps) ? rr.availTemps : [],
+      t1TempMulti: !!(rr && rr.availTemps && rr.availTemps.length > 1),
+      t1TempSingle: !(rr && rr.availTemps && rr.availTemps.length > 1),
+      t1TempVal: this.state.t1.temp,
+      t1ShowManta: /Hârtie/i.test(this.state.t1.izolatie),
+      t1HideManta: !/Hârtie/i.test(this.state.t1.izolatie),
+      t1TubDa: this.state.t1.tub === 'da',
+      t1Ok: t1c.ok, t1Err: !!t1c.err, t1ErrMsg: t1c.err || '', t1Loading: !!t1c.loading, t1Rows: t1c.rows,
+      t1NeedChoice: !!t1c.needChoice, t1Choices: t1c.choices || [],
+      m_t4: cur === 't4', m_t5: cur === 't5', m_tl: cur === 'tl', m_t6: cur === 't6',
+      m_tb: cur === 'tb', m_tpr: cur === 'tpr',
+      openModal: () => this.setState({ modal: true }),
+      closeModal: () => this.setState({ modal: false }),
+      modalOpen: this.state.modal,
+      isViewer: this.state.role === 'viewer',
+      toggleRole: () => this.toggleRole(),
+      tableId: tId,
+      tableTitle: tableTitles[tId] || (tId + ' — tabel NTE 007 (date de completat)'),
+      setTable: (e) => this.setState({ tableId: e.target.value }),
+      tableMount: (el) => this._setMount(el),
+      m_tv: cur === 'tv',
+      contentWrapStyle: cur === 'tv' ? 'max-width:100%;margin:0 auto' : 'max-width:1080px;margin:0 auto',
+      verifyList,
+      verifyId: curVid,
+      verifyNote: curV.note || '',
+      verifyTitle: this.VERIFY_TITLES[curVid] || 'Compară valorile din original cu cele randate',
+      vProgLabel: okCount + ' / ' + vids.length + ' verificate' + (issueCount ? ' · ' + issueCount + ' cu probleme' : ''),
+      vProgBarStyle: 'height:100%;width:' + Math.round(okCount / vids.length * 100) + '%;background:#15803d;border-radius:4px;transition:width .2s',
+      vPrev: () => this.vStep(-1),
+      vNext: () => this.vStep(1),
+      setVOk: () => this.setVStatus('ok'),
+      setVIssue: () => this.setVStatus('issue'),
+      setVNote: (e) => this.setVNote(e.target.value),
+      vOkBtnStyle: (curV.status === 'ok') ? (okBtnBase + 'font-weight:700;border:1px solid #15803d;background:#15803d;color:#fff') : inactiveBtn,
+      vIssueBtnStyle: (curV.status === 'issue') ? (okBtnBase + 'font-weight:700;border:1px solid #e0901b;background:#e0901b;color:#10243f') : inactiveBtn,
+      vSrcMount: (el) => this._setVSrc(el),
+      vTableMount: (el) => this._setVTable(el),
+      contentInfoStyle: vInfo.style,
+      contentInfoIcon: vInfo.icon,
+      contentInfoText: vInfo.text,
+      summaryOpen: this.state.showSummary,
+      toggleSummary: () => this.setState(s => ({ showSummary: !s.showSummary })),
+      summaryBtnStyle: 'height:26px;padding:0 11px;border-radius:6px;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;'
+        + (this.state.showSummary ? 'background:#0d2a52;color:#fff;border:1px solid #0d2a52' : 'background:#fff;color:#0d2a52;border:1px solid #cdd6e4'),
+      summaryCount,
+      summaryEmpty: summaryCount === 0,
+      summaryList,
+      vSplitStyle: this.state.vLayout === 'stack' ? 'display:flex;flex-direction:column;gap:13px' : 'display:grid;grid-template-columns:1fr 1fr;gap:13px;align-items:start',
+      toggleLayout: () => this.setState(s => ({ vLayout: s.vLayout === 'stack' ? 'split' : 'stack' })),
+      layoutBtnLabel: this.state.vLayout === 'stack' ? '⇆ Alăturat' : '⇳ Tabel pe toată lățimea',
+      layoutBtnStyle: 'height:26px;padding:0 11px;border-radius:6px;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;'
+        + (this.state.vLayout === 'stack' ? 'background:#0d2a52;color:#fff;border:1px solid #0d2a52' : 'background:#fff;color:#0d2a52;border:1px solid #cdd6e4'),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,3092 @@
+NTE 007/08/00
+NORMATIV
+PENTRU PROIECTAREA Şl EXECUTAREA
+REŢELELOR DE CABLURI ELECTRICE
+NTE 007/08/00
+Elaborator: S.C. Electrica S.A.
+Executant: CI_SEE srl
+Aprobat prin Ordinul nr. 38 din 20. 03. 2008 al preşedintelui ANRE
+Înlocuieşte: PE 107/95
+Bucureşti – 2008
+Dr.ing. Cornel TOADER
+Drd.ing. Laurenţiu LIPAN
+Pagina 1 din 73
+
+-- 1 of 73 --
+
+NTE 007/08/00
+NORMATIV PENTRU PROIECTAREA Şl EXECUTAREA REŢELELOR DE CABLURI
+ELECTRICE
+CUPRINS
+I. SCOP 6
+II. DOMENIUL DE APLICARE 6
+III. TERMINOLOGIE, CLASIFICARE ŞI ABREVIERI 7
+IV. ACTE NORMATIVE DE REFERINŢĂ 19
+V. REGULI PRIVIND REALIZAREA REŢELELOR DE CABLURI 20
+VI. ALEGEREA ŞI VERIFICAREA CABLURILOR 25
+VII. INSTALAREA CABLURILOR 35
+VIII. AMENAJĂRI CONSTRUCTIVE ŞI INSTALAŢII ANEXE ÎN GOSPODĂRIILE DE
+CABLURI 55
+IX. DOTAREA GOSPODĂRIILOR DE CABLURI CU MIJLOACE
+ŞI INSTALAŢII DE PREVENIRE ŞI STINGERE A INCENDIILOR 62
+X. ACESORII PENTRU CABLURI. MARCAREA ŞI ÎNCERCAREA
+CABLURILOR 66
+XI. MĂSURI PRIVIND PROTECŢIA MEDIULUI 67
+ANEXE
+Anexa 1. Valori recomandate pentru sarcina admisibilă a cablurilor cu tensiuni nominale
+Uo/U până la 18/30kV 69
+Anexa 2. Căderi de tensiune. Relaţii de calcul. Tabele 100
+Anexa 3. Eforturi electrodinamice. Relaţii de calcul. Tabele 107
+Anexa 4. Diferenţe de nivel maxim admisibile la pozarea cablurilor 109
+Anexa 5. Raze minime de curbură admisibile la pozarea şi manevrarea cablurilor 110
+Anexa 6. Tragerea mecanizată a cablurilor. Metode de tragere, eforturi admisibile 111
+Anexa 7. Rezistenţa termică specifică a solului 116
+Anexa 8. Instalaţia fixă cu apă pulverizată pentru stingerea prin răcire a incendiilor
+în gospodăria de cabluri 117
+Anexa 9. Calculul ventilării încăperilor de cabluri 119
+Anexa 10. Lista obiectivelor din ramura energiei electrice şi termice care au
+gospodării importante de cabluri 157
+Pagina 2 din 73
+
+-- 2 of 73 --
+
+NTE 007/08/00
+Anexa 11. Simbolurile utilizate pentru denumirea unor materiale electroizolante.
+Simbolurile utilizate pentru cabluri electrice 158
+Anexa 12. Ghid pentru alegerea cablurilor de înaltă tensiune 161
+Anexa 13. Date tehnice principale necesare întocmirii unei cereri de ofertă pentru
+cabluri electrice 168
+Anexa 14. Influenţa cablurilor de energie electrică asupra cablurilor de comandă,
+control şi a cablurilor de telecomunicaţii 169
+Anexa 15. Exemple de calcul 183
+Anexa 16. Lista standardelor naţionale, internaţionale şi prescripţii conexe 199
+BIBLIOGRAFIE 202
+Pagina 3 din 73
+
+-- 3 of 73 --
+
+NTE 007/08/00
+NORMATIV PENTRU PROIECTAREA Şl EXECUTAREA REŢELELOR DE CABLURI
+ELECTRICE
+I. SCOP
+Art. 1. Normativul are drept scop stabilirea:
+a) condiţiilor şi principiilor de dimensionare şi construire a liniilor subterane de energie electrică;
+b) modului de instalare a liniilor electrice subterane şi delimitarea zonelor de protecţie şi de
+siguranţă
+c) realizarea de amenajări constructive şi instalaţii anexe în gospodăriile de cabluri.
+II. DOMENIU DE APLICARE
+Art. 2. Prezentul normativ se aplică la proiectarea şi executarea liniilor electrice în cablu cu tensiuni până
+la 400 kV inclusiv, aparţinând operatorilor economici din sectorul energiei electrice.
+Art. 3. Prezentul normativ nu se aplică la:
+a) gospodăriile de cabluri din centralele nuclearo-electrice, cu excepţia părţii clasice (părţile comune,
+staţia de evacuare a puterii etc.);
+b) gospodăriile de cabluri ale instalaţiilor miniere subterane;
+c) gospodăriile de cabluri din construcţii şi incinte încadrate în categoriile A şi B de pericol de
+incendiu (numai în măsura în care contravin prescripţiilor specifice care reglementează proiectarea
+şi execuţia instalaţiilor electrice în medii cu pericol de explozie);
+d) instalaţiile de cabluri de pe mijloacele de transport terestre, aeriene şi navale;
+e) instalaţii de telecomunicaţii, ceasoficare şi radioficare;
+f) instalaţii electrice specifice exploatării feroviare;
+g) galerii comune circulabile pentru reţelele edilitare;
+h) instalaţiile care necesită cabluri mobile (poduri rulante, macarale mobile etc.).
+Art. 4. Adaptarea liniilor electrice în cablu şi a gospodăriilor de cabluri existente la prevederile acestui
+normativ se va face numai în măsura în care exploatarea lor prezintă pericole evidente de incendiu sau
+accidente de persoane (a se vedea Art. 82); orice adaptare la noile prevederi se va face din iniţiativa
+unităţii de exploatare, pe baza unui studiu tehnico-economic.
+Art. 5. (1) Aplicarea prezentului normativ se face cu respectarea prevederilor tuturor normelor din
+sectorul energiei electrice şi/sau din legislaţia sectoarelor adiacente, referitoare la linii subterane şi la
+încadrarea lor în mediul înconjurător.
+(2) Cerinţele din prezentul normativ sunt minimale.
+Art.6. În normativ se folosesc următoarele moduri de indicare a gradului de obligativitate a prevederilor
+conţinute:
+Pagina 4 din 73
+
+-- 4 of 73 --
+
+NTE 007/08/00
+- “trebuie”, “este necesar”, “urmează”: indică obligativitatea strictă a respectării prevederilor în
+cauză;
+- “de regulă”: indică faptul că prevederea respectivă trebuie să fie aplicată în majoritatea cazurilor;
+nerespectarea unei astfel de prevederi trebuie să fie temeinic justificată în proiect;
+- “se recomandă”: indică o rezolvare preferabilă, care trebuie să fie avută în vedere la soluţionarea
+problemei; nerespectarea unei astfel de prevederi nu trebuie justificată în proiect;
+- “se admite”: indică o soluţie satisfăcătoare, care poate fi aplicată în cazuri particulare, fiind
+obligatorie justificarea ei în proiect.
+III. TERMINOLOGIE, CLASIFICARE ŞI ABREVIERI
+Art.7. În sensul prezentului normativ, termenii şi expresiile utilizate se definesc în tabelul de mai jos.
+Termen Definitie
+Agresivitate a mediului
+Stare a mediului natural, impurificat sau nu cu substanţe, care,
+în condiţii de exploatare, produce efectul de coroziune al
+metalului din care sunt realizate componentele LEC
+Apropiere a LEC de un obiect oarecare Situaţie de vecinătate în care LEC nu traversează obiectul
+respectiv
+Armătură
+Înveliş constituit din benzi metalice sau fire metalice
+destinate, de regulă, să protejeze cablul de efectele mecanice
+externe
+Armături de protecţie
+Dispozitive cu rol de protejare a conductoarelor şi a
+suprafeţelor izolatoarelor contra atingerii directe cu arcul
+electric ce poate apare datorită unor supratensiuni, de reducere
+a perturbaţiilor electromagnetice şi de uniformizare a
+câmpului electric în lungul lanţului de izolatoare
+Aviz de amplasament
+Răspuns scris care se dă de către operatorul de reţea la cererea
+unui solicitant şi care precizează poziţia acestuia faţă de
+propunerea de amplasament a obiectivului solicitat
+Blindaj
+Benzi sau fire, de regulă metalice, aplicate peste o manta
+pentru a-i permite să suporte solicitări mecanice datorate în
+special presiunii interne
+Bloc de cabluri
+Elementul de construcţie prevăzut cu canale interioare pentru
+pozarea în ele a cablurilor (de exemplu, blocuri din beton de
+tip „canalizări telefonice” cu 4 canale cilindrice, grupuri de
+tuburi din metal, beton, azbociment, material plastic etc.)
+Branşament electric Instalaţie de racordare la joasă tensiune
+Pagina 5 din 73
+
+-- 5 of 73 --
+
+NTE 007/08/00
+Termen Definitie
+Tipul
+constructiv
+al cablului
+Cablu (izolat)
+Ansamblu constituit din:
+- un conductor sau mai multe conductoare izolate;
+- învelişurile lor individuale (dacă există);
+- protecţia ansamblului (dacă există);
+- învelişul (învelişurile) de protecţie (dacă există).
+Cablu cu un conductor
+(monoconductor) Cablu format dintr-un singur conductor izolat 1)
+Cablu multiconductor Cablu care conţine mai mult de un conductor izolat 2)
+Cablu cu centură
+Cablu multiconductor a cărui izolaţie este formată din două
+părţi, una aplicată pe fiecare conductor şi alta-pe ansamblul
+conductoarelor
+Cablu cu câmp radial Cablu în care izolaţia fiecărui conductor este acoperită cu un
+ecran individual
+Cablu cu câmp neradial Cablu cu mai multe conductoare fără ecran individual (de
+exemplu, cablu cu ecran colectiv)
+Cablu cu ecran colectiv Cablu având un ecran de protecţie dispus în jurul
+conductoarelor, concentric cu axa cablului
+Cablu cu trei mantale din
+plumb
+Cablu trifazat la care fiecare conductor este acoperit peste
+izolaţie cu o manta din plumb sau aliaj de plumb
+Mod de
+utilizare
+Cablu de energie
+Cablu de înaltă tensiune (110÷400kV), medie tensiune
+(6÷35kV) sau joasă tensiune (sub 1kV) folosit în circuitele
+primare ale instalaţiilor de producere, transport, distribuţie şi
+utilizare a energiei electrice, în curent alternativ sau continuu
+Cablu de circuite
+secundare
+Cablu folosit în instalaţiile de comandă, măsură, semnalizare,
+blocaj, reglaj, protecţie şi automatizare, având tensiunea de
+serviciu mai mică de 400V. În această categorie sunt cuprinse
+şi cabluri pentru teleprotecţie, teleconducere, utilizate în
+instalaţiile de telesemnalizare, telemăsură, telecomenzi şi
+teleprotecţie, având tensiunea de serviciu, de regulă, mai mică
+de 60V.
+În sensul prezentului normativ, în această categorie se includ
+şi cablurile pentru racordarea unor receptoare deservite sau în
+directă legătură cu aceste instalaţii, dacă intensitatea curenţilor
+maximi de durată absorbiţi nu depăşeşte 10A, cum ar fi:
+- dispozitive de acţionare ale aparatelor primare;
+- vane, ventile şi clapele cu acţionare electrică
+Pagina 6 din 73
+
+-- 6 of 73 --
+
+NTE 007/08/00
+Termen Definitie
+Comportar
+e la foc
+Cablu fără întârziere la
+propagarea flăcării
+Cablu pentru care o epruvetă, luată din acesta şi supusă un
+timp determinat acţiunii unei flăcări de iniţiere, continuă să
+ardă, flacăra proprie propagându-se până la distrugerea
+epruvetei. Acest cablu nu corespunde condiţiilor cerute de SR
+EN 60332-1-1:2005. Pentru cabluri cu conductoare subţiri, a
+căror secţiune este sub 0,5mm2 se va vedea SR EN 332-2-
+1:2005
+Cablu cu întârziere la
+propagarea flăcării
+Cablu care, supus un timp determinat acţiunii unei flăcări de
+iniţiere, continuă să ardă, flacăra proprie propagându-se pe o
+lungime determinată, după care se stinge. Acest cablu trebuie
+să corespundă condiţiilor cerute de SR EN 60332-1-1:2005.
+Pentru cabluri cu conductoare subţiri a căror secţiune este sub
+0,5mm2 se va vedea SR EN 332-2-1:2005
+Cablu rezistent la foc
+Cablu care continuă să funcţioneze normal în timpul şi după
+un foc prelungit, presupunând că amplitudinea focului este
+suficientă pentru a distruge materialul organic al cablului în
+zona în care este aplicată flacăra. Acest cablu trebuie să
+corespundă condiţiilor cerute de CEI 60331
+Canal de cabluri
+Construcţia deschisă pentru cabluri acoperită cu placi
+detaşabile, destinată montării (luxurilor de cabluri, de regulă,
+fără spaţiu de circulaţie în interiorul acesteia, prevăzută cu
+spaţiu de montaj şi exploatare
+Categorie de comportare la foc a
+mănunchiurilor de cabluri
+Există trei categorii de comportări la foc, în funcţie de
+volumul de material combustibil pe metru de mănunchi de
+cablu:
+- categoria A corespunde unui volum de material combustibil
+de 7 litri pe metru;
+- categoria B corespunde unui volum de material combustibil
+de 3,5 litri pe metru;
+- categoria C corespunde unui volum de material combustibil
+de 1,5 litri pe metru.
+Măsurile de protecţie la instalarea cablului în mănunchi se
+stabilesc în funcţie de categoria de incendiu a mănunchiului
+de cabluri (A, B sau C).
+Încercarea pentru stabilirea categoriei privind comportarea la
+foc a cablurilor cu întârziere la propagarea flăcării în cazul
+Pagina 7 din 73
+
+-- 7 of 73 --
+
+NTE 007/08/00
+Termen Definitie
+instalării acestora în mănunchi (grupe) pe acelaşi rastel, se
+efectuează conform SR EN 50266.
+Categorie de pericol de incendiu a unei
+construcţii de producţie şi depozitare
+Noţiune prin care se caracterizează riscul de incendiu al unei
+încăperi, compartiment sau construcţie de producţie şi/sau
+depozitare, în funcţie de proprietăţile fizico-chimice ale
+materialelor prelucrate sau depozitate; se definesc cinci
+categorii de pericol de incendiu, de la A şi B (risc foarte mare
+de incendiu) până la E (risc mic de incendiu)
+Cazuri excepţionale sau obligate
+Acele cazuri în care, din considerente tehnico-economice, nu
+se pot aplica prevederile normativului şi se admite o soluţie
+satisfăcătoare, cu justificarea acesteia în proiect
+Cămin de cablu
+Construcţie amenajată în cadrul reţelelor de cabluri pozate în
+pământ, destinată amplasării manşoanelor de legătură şi a
+manşoanelor de derivaţie de pe cabluri
+Cămin de tragere
+Construcţie deschisă (acoperită cu capac corespunzător)
+amplasată la anumite distanţe pe traseele de cabluri. în scopul
+uşurării tragerii cablurilor
+Coloana electrică Constituie legătura dintre echipamentul firidei şi contorul
+abonatului
+Compresor Dispozitiv utilizat pentru a permite expansiunea uleiului sau a
+materialului de impregnare la extremităţile cablurilor
+Conductorul unui cablu Parte a unui cablu a cărei funcţiune este de a conduce curentul
+Conductor monofilar Conductor constituit dintr-un singur fir3)
+Conductor multifilar (conductor funie) Conductor constituit dintr-un număr de fire care, în general,
+toate sau o parte dintre ele au o formă elicoidală4)
+Conductor flexibil Conductor multifilar, constituit din fire suficient de subţiri şi
+asamblate astfel, încât să poată fi utilizat într-un cablu flexibil
+Conductor profilat Conductor a cărui secţiune transversală este diferită de un cerc
+Conductor în formă de sector Conductor a cărei secţiune transversală se apropie de forma
+unui sector de cerc
+Conductor compactizat
+Conductor multifilar la care interstiţiile dintre fire au fost
+reduse prin comprimare mecanică, trefilare sau printr-o
+alegere corespunzătoare a formei şi a dispunerii firelor5)
+Conductor ecran
+Conductor sau cablu cu un conductor, pozat paralel cu un
+cablu sau cu un fascicul de cabluri şi care el însuşi face parte
+dintr-un circuit închis în care pot circula curenţi induşi, al
+căror câmp magnetic se opune celui produs de curenţii care
+circulă în cabluri
+Curent maxim admisibil de durată al Sarcina maximă pe care o poate suporta cablul, fără a se
+Pagina 8 din 73
+
+-- 8 of 73 --
+
+NTE 007/08/00
+Termen Definitie
+cablurilor depăşi temperatura maximă admisibilă de lucru, în regim de
+durată, la o anumită temperatură a mediului ambiant
+Distanţă de protecţie Distanţa minimă care delimitează zona de protecţie a
+capacităţii energetice, măsurată, în proiecţie orizontală, de la
+limita sa exterioară, de o parte şi de alta sau împrejurul
+acesteia
+Distanţă de siguranţă Distanţa minimă care delimitază zona de siguranţă a
+capacităţii energetice, măsurată în proiecţie orizontală sau
+verticală între limita exterioară a acesteia şi punctul cel mai
+apropiat al unei instalaţii sau construcţii; distanţa de siguranţă
+cuprinde şi distanţa de protecţie
+Ecranul unui cablu
+Este constituit din stratul conductor având funcţia de a impune
+configuraţia câmpului electric în interiorul izolaţiei. El poate
+permite, de asemenea, realizarea unei suprafeţe netede la
+limita izolaţiei şi contribuie la eliminarea golurilor din acest
+loc
+Ecran pe conductor Ecran electric constituit din material metalic şi/sau nemetalic
+(semiconductor) care acoperă conductorul
+Ecran pe învelişul izolant Ecran electric constituit din material nemetalic
+(semiconductor) şi/sau metalic care acoperă învelişul izolant
+Ecranul de protecţie (a unui cablu)
+Înveliş metalic dispus în junii cablului şi legat la pământ, în
+scopul menţinerii câmpului electric în interiorul lui şi/sau
+protejării cablului de influenţele electrice externe6)
+Estacadă de cabluri
+Construcţia deschisă destinată pozării supraterane a cablurilor.
+în cazul în care estacada se foloseşte şi pentru susţinerea de
+conducte tehnologice sau de utilităţi, ea se numeşte estacadă
+tehnologică sau estacadă comună.
+Firida (nişa) de branşament
+Reprezintă componenta branşamentului în care se realizează
+conexiunea între racordul elctric şi coloanele electrice şi unde
+se montează echipamentele electrice de protecţie la
+suprasarcină ale coloanelor electrice
+Flux de cabluri
+Grup de cabluri7) pozat în unul din următoarele moduri:
+- în acelaşi şanţ, în cazul cablurilor montate în pământ;
+- pe acelaşi stelaj, estacadă, pardoseală, radier sau perete,
+în cazul cablurilor montate în aer liber
+Fluxuri separate de cabluri Reprezintă grupurile de cabluri pozate într-unul din moduri:
+- trasee amplasate distinct, de exemplu: în tuneluri sau
+canale separate, fluxuri pozate în pământ la distanţe între
+Pagina 9 din 73
+
+-- 9 of 73 --
+
+NTE 007/08/00
+Termen Definitie
+ele de minimum 0,5m etc.;
+- fluxuri pe acelaşi traseu între care se realizează separări
+prin: pereţi, tuburi de protecţie etc. rezistente la foc pe o
+durată de minimum 1,5 ore;
+- fluxuri dispuse de o parte şi de alta a spaţiilor de
+circulaţie cu o lăţime minimă de 1m, la construcţiile cu
+cabluri sau încăperi tehnologice;
+- fluxuri amplasate în puţuri de cabluri sau pe estacade de
+cabluri, dacă distanţa dintre fluxuri este cel puţin 1m,
+respectiv 0,5m.
+Gospodărie de cabluri
+Este constituită din ansamblul reţelelor de cabluri, inclusiv
+elementele de montare, precum şi instalaţiile aferente de
+iluminat, ventilaţie, semnalizare şi de stingere a incendiilor,
+care deserveşte un obiectiv industrial şi care se compune din:
+reţele interioare; reţele exterioare
+Galerie edilitară
+Construcţie subterană pentru amplasarea în comun a reţelelor
+tehnico-edilitare, energetice, telefonice, care permite
+circulaţia în lungul galeriei, în scopul montării şi exploatării
+reţelelor electrice8)
+Instalaţie de racordare
+Instalaţie electrică realitată între punctul de racordare la
+reţeaua electrică şi punctul de delimitare dintre operatorul de
+reţea şi utilizator
+Izolaţie a unui cablu Ansamblul de materiale izolante care fac parte dintr-un cablu,
+a căror funcţiune specifică este de a rezista la tensiune
+Izolaţie a unui conductor Izolaţie aplicată pe un conductor sau pe ecranul conductorului
+Izolaţie din bandă înfăşurată Izolaţie constituită din benzi aplicate în elice în straturi
+concentrice
+Izolaţie de hârtie impregnată
+Izolaţie constituită din straturi de hârtie impregnată cu un
+material izolant (mase migratoare, nemigratoare, cu sau fără
+presiune de ulei sau de gaz etc.).
+Izolaţie extrudată Izolaţie care constă în general, dintr-un strat de material
+termoplastic sau reticulat şi obţinut prin extrudare
+Izolaţie minerală Izolaţie constituită dintr-o pudră minerală comprimată
+Încăpere închisă de cabluri
+Construcţie închisă, specială pentru cabluri, cu înălţimea
+liberă de 1,8m şi spaţii de circulaţie, întreţinere şi
+supraveghere (subsolurile, podurile, puţurile şi tunelurile de
+cabluri); nu intră în această categorie canalele care sunt
+construcţii deschise de cabluri, acoperite cu dale
+Pagina 10 din 73
+
+-- 10 of 73 --
+
+NTE 007/08/00
+Termen Definitie
+Înveliş comun
+Înveliş nemetalic care acoperă ansamblul conductoarelor (şi
+materialul de umplutură, dacă există) unui cablu
+multiconductor şi peste care se aplică învelişul de protecţie
+Jgheab de cabluri
+Construcţie închisă destinată montării cablurilor de circuite
+secundare, realizată din materiale incombustibile, cu
+posibilităţi de acces la cabluri şi cu ieşirile de cabluri protejate
+mecanic, eventual şi etanşate (de exemplu împotriva
+pătrunderii prafului de cărbune)
+Manta Înveliş tubular continuu şi uniform din material metalic sau
+nemetalic, aplicat, de regulă, prin extrudare
+Manta externă Manta nemetalică aplicată peste un înveliş constituind
+protecţia externă a cablului
+Manşon de legătură Acesoriu care asigură legătura între două cabluri pentru a
+forma un circuit continuu
+Manşon mixt Accesoriu care asigură legătura între două cabluri care au
+tipuri diferite de izolaţie
+Manşon de derivaţie Accesoriu care asigură legarea unui cablu derivat la un cablu
+principal
+Manşon de stopare
+Manşon dotat cu un dispozitiv rezistent la presiune, care
+permite separarea fluidelor sau materialelor izolante a două
+cabluri
+Material(e) de umplutură Materialul(ele) utilizat(e) pentru umplerea intervalelor dintre
+conductoare într-un cablu multiconductor
+Mănunchi distinct de cabluri Mănunchi de cabluri care se află la o distanţă de cel puţin
+0,15m faţă de mănunchiurile (grupele) de cabluri învecinate.
+Nivel închis de cabluri Încăpere închisă de cabluri (ex: pod, subsol etc.) amplasată, de
+regulă, sub o cameră de comandă, respectiv sub o staţie de
+conexiuni de tip interior10, 11)
+Nivel deschis de cabluri Spaţiu circulabil de sub clădiri, amplasat la sol, liber pe cel
+puţin două laturi, destinate pozării aeriene a cablurilor
+Placă sau paravan de protecţie
+Placă sau paravan care serveşte la protejarea termică,
+mecanica sau împotriva arcului electric al cablurilor. Atunci
+când plăcile nu se montează în pământ, ele trebuie să fie din
+materiale incombustibile
+Podest de cabluri (pod fals de cabluri)
+Construcţie deschisă, acoperită cu plăci detaşabile, destinată
+protejării cablurilor situate deasupra planşeului, astfel
+realizată încât să permită circulaţia deasupra construcţiei
+precum şi întreţinerea şi supravegherea cablurilor şi
+instalaţiilor din încăpere
+Pagina 11 din 73
+
+-- 11 of 73 --
+
+NTE 007/08/00
+Termen Definitie
+Puţ de cabluri Încăpere (construcţie) închisă destinată realizării fluxurilor
+verticale de cabluri
+Racord electric Instalaţie de racordare la medie şi înaltă tensiune
+Rastel de cabluri
+Element de susţinere a cablurilor pozate în acelaşi plan
+(orizontal, vertical sau oblic); un rastel de cabluri este
+constituit dintr-un şir de console metalice sau din alt material
+incombustibil şi, după caz, echipat cu scăriţe sau pat continuu
+pentru pozarea cablurilor, realizate din materiale
+incombustibile
+Rezervor de presiune Rezervor destinat să preia variaţiile de volum ale uleiului care
+impregnează cablurile cu ulei fluid
+Reţea de cabluri
+Ansamblu de cabluri destinat transportului, distribuţiei şi
+utilizării energiei electrice la consumatorii industriali, similari
+şi publici
+Reţea electrică de transport Reţeau electrică prin care se vehiculează energie electrică la
+tensiuni de 220 ÷ 400 kV
+Reţele electrice de distribuţie publică Reţele electrice de distribuţie din localităţi, inclusiv cele de
+iluminat public
+Reţele electrice de distribuţie ale
+consumatorilor industriali
+Reţele electrice care conectează receptoarele electrice din
+incinta consumatorilor industriali la staţia de transformare sau
+la posturile de transformare proprii ale consumatorilor
+Reţele electrice interioare Reţele electrice amplasate în interiorul construcţiilor11)
+Reţele exterioare Reţele electrice amplasate în exteriorul construcţiilor12)
+Separator
+Strat subţire de material utilizat ca barieră pentru evitarea
+interacţiunilor nocive între două componente ale unui cablu,
+de exemplu-între conductor şi izolaţie sau între izolaţie şi
+manta
+Separare transversală rezistentă la foc
+Construcţie care serveşte la protecţia împotriva propagării
+focului, filmului, gazelor şi a apei, asigurând etanşarea trecerii
+cablurilor şi a conductoarelor electrice prin elementele de
+construcţie sau la segmentarea canalelor de cabluri
+Stelaj de cabluri Ansamblu constituit din mai multe rastele de cabluri
+suprapuse sau alăturate
+Caracteristici
+termice
+Temperatură maximă a
+conductorului în regim
+permanent
+Valoarea maximă a temperaturii în conductor rezultată prin
+însumarea temperaturii mediului ambiant şi a
+supratemperaturii datorată curentului de sarcină
+Temperatură maximă a
+conductorului la
+scurtcircuit
+Temperatura cea mai ridicată a conductorului, ce se poate
+admite la sfârşitul unui scurtcircuit, având o durată de până la
+5s inclusiv
+Tensiune maximă de serviciu Valoarea efectivă maximă a tensiunii între faze care poate să
+Pagina 12 din 73
+
+-- 12 of 73 --
+
+NTE 007/08/00
+Termen Definitie
+apară în condiţii normale de funcţionare în orice punct al
+liniei, într-un moment oarecare
+Tensiune nominală
+Tensiunea pentru care a fost proiectat cablul şi la care se referă
+caracteristicile de funcţionare şi de încercare ale cablurilor.
+Tensiunea nominală se exprimă prin valorile Uo/U, în care:
+- Uo reprezintă tensiunea nominală (valoare efectivă)
+între un conductor şi învelişul metalic al cablului sau
+pământ;
+- U reprezintă tensiunea nominală (valoare efectivă)
+între două conductoare (faze) ale cablului;
+- Um reprezintă tensiunea cea mai ridicată (valoare
+efectivă) între două conductoare oarecare, pentru care a
+fost proiectat cablul.
+U = Uo • 3 , în curent alternativ trifazat 14)
+U = 2 • Uo, în curent alternativ monofazat sau în curent
+continuu14)
+Terminal de cablu
+Dispozitiv instalat la extremitatea unui cablu, pentru a asigura
+legătura electrică cu alte părţi ale unei reţele şi a menţine
+izolaţia până la punctul de conectare
+Terminal etanş
+Terminal care asigură etanşeitatea la extremitatea unui cablu
+în raport cu mediul ambiant şi menţine, dacă este necesar,
+presiunea cablului
+Tub de protecţie Elementul care serveşte la protejarea mecanică a cablurilor
+Tunel (galerie) de cabluri
+Construcţie închisă pentru cabluri, de regulă subterană,
+destinată montării fluxurilor de cabluri şi prevăzută cu spaţii
+de circulaţie pentru pozare, întreţinere şi supraveghere
+Zonă de protecţie aferentă capacităţii
+energetice
+Zona adiacentă capacităţii energetice sau unor componente ale
+acesteia, extinsă în spaţiu, în care se instituie restricţii privind
+accesul persoanelor şi regimul construcţiilor; această zonă se
+instituie pentru a proteja capacitatea energetică şi pentru a
+asigura accesul personalului pentru exploatare şi mentenanţă
+Zonă de siguranţă aferentă capacităţii
+energetice
+Zona adiacentă capacităţii energetice sau unor componente ale
+acesteia, extinsă în spaţiu, în care se instituie restricţii şi
+interdicţii, în scopul asigurării funcţionării normale a
+capacităţii energetice şi pentru evitarea punerii în pericol a
+persoanelor bunurilor şi mediului din vecinătate; zona de
+siguranţă cuprinde şi zona de protecţie
+Pagina 13 din 73
+
+-- 13 of 73 --
+
+NTE 007/08/00
+Termen Definitie
+Zonă de siguranţă comună Zona unde pot coexista mai multe obiective care nu
+impietează unul asupra celuilalt nici în ceea ce priveşte
+siguranţa în funcţionare şi nici privitor la exploatarea şi
+mentenanţa acestora
+LEA Linie electrică aeriană
+LEC Linie electrică în cablu (subterană)
+LTc Linie de telecomunicaţii
+PE Prescripţie tehnică energetică
+Un Tensiune nominală
+Um Tensiune maximă de serviciu
+JT joasă tensiune
+MT medie tensiune
+PT post de transformare
+SEN Sistem Electroenergetic Naţional
+SR Standard Român
+CEI Comisia Electrotehnică Internaţională
+NTE Normă Tehnică Energetică
+A.N.R.E. Autoritatea Naţională de Reglementare în domeniul Energiei
+A.N.M. Administraţia Naţională de Meteorologie
+M.A.P.M. Ministerul Apelor şi Protecţiei Mediului
+1) Termenul cablu monofilar este utilizat în special pentru a desemna cablul care constituie una din
+fazele unui sistem polifazat;
+2) Termenul de cablu multiconductor este utilizat în special pentru a desemna cablul care constituie
+fazele unui sistem polifazat (de exemplu, cablu trifazat);
+3) Conductorul monofilar poate fi circular sau profilat; conform SR CEI 60050-46 se înlocuieşte
+„fir” cu „sârmă”
+4) Conductorul multifilar poate fi circular sau profilat;
+5) Termenul franţuzesc „âme en pavés” înseamnă un conductor compactizat de un tip particular cu
+o secţiune mare şi compus dintr-un număr redus de profile mari;
+6) Învelişurile metalice, armăturile şi conductoarele concentrice legate la pământ pot servi de ca
+ecran de protecţie
+7) Se consideră flux mare de cabluri atunci când conţine peste 20 de cabluri;
+8) Galeria edilitară este compusă din:
+- corpul galeriei;
+- reţelele pozate în galerie (mobilare);
+- construcţii şi instalaţii anexe de deservire: acces, iluminat, ventilare, epuizment;
+- În galeriile edilitare pot fi pozate teoretic toate tipurile de reţele subterane utilizate într-o
+localitate: apă, canalizare, gaze, energie termică, reţele electrice şi de telecomunicaţii; în aceeaşi
+galerie se pot poza reţele de acelaşi tip cu funcţiuni diferite (artere sau conducte de serviciu
+Pagina 14 din 73
+
+-- 14 of 73 --
+
+NTE 007/08/00
+pentru apă). Sunt numeroase exemplele de galerii în care sunt pozate oricare din tipurile de reţele
+enumerate mai sus. Problemele tehnice care se pun se referă la:
+- dotarea de care dispune galeria edilitară din punct de vedere al depistării pierderilor, asigurării
+temperaturilor, ventilării şi posibilităţii de izolare termică a unor tronsoane;
+- siguranţa pe care o prezintă reţetele pozate în galerie.
+- din punct de vedere al importanţei şi al măsurilor de protecţie împotriva incendiilor, gospodăriile
+de cabluri pot fi: normale; importante sunt cele care, în caz de avarie, pot duce la pagube
+materiale însemnate sau pierderi de vieţi omeneşti; în documentaţia de proiectare se vor
+nominaliza gospodăriile sau încăperile importante de cabluri la care se adopţi măsurile
+suplimentare de protecţie împotriva incendiilor potrivit prevederilor de la Art. 77 ÷ 82 (anexa 9,
+obiective ce au gospodării sau încăperi importante de cabluri).
+9) Dotarea corespunzătoare a galeriei este oportun ca reţelele de gaze şi reţelele de canalizare de
+ape uzate să se pozeze independent sau galeria să fie compartimentată;
+10) Încăperile în care fluxurile de cabluri nu sunt separate pe toate părţile prin elemente de
+construcţie de instalaţiile tehnologice, inclusiv cele electrice, se consideră „încăperi sau
+subsoluri tehnologice” şi nu se încadrează în categoria de „construcţii speciale pentru cabluri”;
+11) Reţele interioare - realizate în interiorul construcţiilor amenajate special pentru cabluri (poduri,
+tuneluri, canale, subsoluri, puţuri sau galerii de cabluri) sau în încăperi tehnologice (hale, săli de
+maşini, săli de cazane etc.);
+12) Reţele exterioare - realizate în exteriorul construcţiilor şi anume, pe estacade, pe pereţii
+clădirilor, în pământ, fin şanţuri sau tuburi de protecţie, în canale etc.
+13) În cuprinsul normativului, încăperile tehnologice au fost incluse uneori sub denumirea de „spaţiu
+de producţie sau tehnologic”, atunci când s-a făcut referire şi la spaţii exterioare clădirilor din
+incintă;
+14) Egalitatea este determinată de caracteristicile constructive ale cablurilor.
+Pagina 15 din 73
+
+-- 15 of 73 --
+
+NTE 007/08/00
+IV. ACTE NORMATIVE DE REFERINŢĂ
+Legea nr.13/2007 Legea energiei electrice
+Legea 18/1998 Legea fondului funciar
+Legea 213/1998 Legea privind proprietatea publică şi regimul juridic al acesteia
+Legea 137/2002 Legea protecţiei mediului
+Legea 107/2004 Legea Apelor
+Legea 26/1996 Codul Silvic
+Legea 528/2002
+Aprobarea O.G. 22/1999 privind administrarea porturilor şi a căilor
+navigabile şi desfăşurarea activităţilor de transport naval în porturi şi pe căi
+navigabile
+Legea 333/2003 Legea privind paza obiectivelor, bunurilor, valorilor şi protecţia persoanelor
+Legea 307/ 2006 Legea privind apărarea împotriva incendiilor
+Ordonanţa 43/ 1998 Ordonanţa privind regimul juridic al drumurilor
+H.G.R. nr.918/2002
+Stabilirea procedurii-cadru de evaluare a impactului asupra mediului si
+pentru aprobarea listei proiectelor publice sau private supuse acestei
+proceduri
+Decizia A.N.R.E.
+61/1999
+Norme tehnice privind delimitarea zonelor de protecţie şi de siguranţă
+ale capacităţilor energetice.
+O.M.A.P.M. nr.
+860/2002
+Aprobarea Procedurii de evaluare a impactului asupra mediului si de emitere
+a acordului de mediu
+Ordin M.A.P.M. nr.
+863/2002
+Aprobarea ghidurilor metodologice aplicabile etapelor procedurii-cadru de
+evaluare a impactului asupra mediului
+O.M.T. 119/2003 Stabilirea servituţilor aeronautice civile şi a zonelor cu servituţi aeronautice
+civile (RACR-SACZ)
+O.M.T. 494/ 2002 Regulamentul de navigaţie pe sectorul românesc al Dunării
+O.M.T. nr. 571/ 1997
+Norme tehnice privind proiectarea şi amplasarea construcţiilor, instalaţiilor
+şi panourilor publicitare în zona drumurilor, pe poduri, pasaje, viaducte şi
+tuneluri rutiere
+O.M.M.S.S. 508/2002
+M.S.F. 933/2002 Norme generale de protecţia muncii
+Ordinul M.M.S.S.
+nr. 275/ 2002
+Norme specifice de protecţia muncii pentru transportul şi distribuţia energiei
+electrice
+Ordinul M.E.C.
+nr. 58/ 2004
+Aprobarea Normelor tehnice pentru proiectarea, executarea şi exploatarea
+sistemelor de alimentare a cu gaze naturale I 6
+Ordinul M.T.C.T. nr.
+176/ 2005
+Aprobarea Normativului pentru proiectarea, executarea verificarea şi
+exploatarea instalaţiilor electrice în zone cu pericol de explozie NP 099-04
+Ordinul ANRE nr.
+45/2006
+Regulament privind stabilirea soluţiilor de racordare a utilizatorilor la
+reţelele electrice de interes public
+Decizia ANRE nr.
+101/2000 Codul Tehnic al Reţelelor Electrice de Distribuţie
+Pagina 16 din 73
+
+-- 16 of 73 --
+
+NTE 007/08/00
+Ordinul ANRE nr.
+20/2004, completat cu
+Ordinul 35/2004
+Codul Tehnic al Reţelelor Electrice de Transport
+Ordinul ANRE nr. 4/
+2007
+Norma tehnică privind delimitarea zonelor de protecţie şi de siguranţă
+aferente capacităţilor energetice, cu modificări
+NTE 001/03/00 Normativ privind alegerea izolaţiei, coordonarea izolaţiei şi protecţia
+instalaţiilor electroenergetice împotriva supratensiunilor
+NTE 002/03/00 Normativ de încercări si măsurători pentru sistemele de protecţii, comanda-
+control si automatizări din partea electrica a centralelor si staţiilor
+NTE 003/04/00 Normativ pentru construcţia liniilor aeriene de energie electrica cu tensiuni
+peste 1000V
+NTE 005/06 /00 Normativ privind metodele şi elementele de calcul al siguranţei in funcţionare
+a instalaţiilor energetice
+NTE 006/06/00 Normativ privind metodologia de calcul al curenţilor de scurtcircuit in
+reţelele electrice cu tensiunea sub 1kV
+V. REGULI PRIVIND REALIZAREA REŢELELOR DE CABLURI
+V.1. Prevederi generale
+Art.8. Traseele de cabluri trebuie alese în aşa fel încât să se realizeze legăturile cele mai scurte, în
+concordanţă cu organizarea întregii gospodării sau reţele de cabluri şi cu extinderile previzibile, să se
+evite pe cât posibil zonele cu pericol de incendiu sau zonele în care integritatea cablului este periclitată
+prin deteriorări mecanice, prin agenţi corosivi, pozare în apă, vibraţii, supraîncălzire sau prin arc electric
+provocat de alte cabluri.
+Totodată, se va asigura accesul la cabluri pentru lucrări de montaj, mentenanţă, şi pentru
+intervenţii în caz de incendiu.
+Art.9. Pentru dimensionarea raţională a instalaţiilor de racordare şi de distribuţie a energiei
+electrice prin cabluri, puterea cerută de consumatori se determină pe bază de calcul, ţinând seama de
+perspectiva de dezvoltare a consumului pentru următorii 3 - 10 ani.
+Art.10. Soluţiile de racordare a consumatorilor se determină în conformitate cu prevederile
+Regulamentulut privind stabilirea soluţiilor de racordare a utilizatorilor la reţelele electrice de interes
+public, aprobat prin Ordinul 45/2006 al ANRE, ale Normativului pentru proiectarea şi executarea
+instalaţiilor de conexiuni şi distribuţie cu tensiuni până la 1000 V c.a. în unităţile energetice – PE 102 şi
+ale Normativului pentru proiectarea instalaţiilor electrice de servicii proprii de curent alternativ ale
+centralelor termoelectrice şi de termoficare – PE 113.
+Art.11. Pentru reducerea consumului de cabluri la tensiunea de distribuţie şi utilizare, se
+promovează soluţii de racordare cu pătrunderea tensiunii înalte şi cu amplasarea staţiilor, posturilor de
+transformare şi a tablourilor de distribuţie cât mai aproape de centrul de consum, pe baza unor calcule de
+optimizare.
+Pagina 17 din 73
+
+-- 17 of 73 --
+
+NTE 007/08/00
+Art.12. Instalaţiile definitive pentru racordarea viitorilor consumatori vor fi folosite cât mai mult
+de către constructor, încă de la deschiderea şantierelor. Instalaţiile electrice pentru organizarea şantierelor
+vor putea fi alimentate din reţelele definitive de cabluri, în condiţiile prevăzute de Normativul pentru
+proiectarea şi executarea instalaţiilor electrice cu tensiuni până la 1000 V c.a. şi 1500 V c.c. - I 7.
+Art.13. Determinarea secţiunii cablurilor de toate categoriile se face pe baza cunoaşterii cât mai
+precise a puterii absorbite de consumatori şi a determinării cât mai exacte a coeficienţilor de cerere şi de
+simultaneitate.
+V.2. Instalaţii de racordare a consumatorilor industriali şi similari
+Art.14. Instalaţiile de racordare a consumatorilor industriali şi similari se realizeză, de regulă, cu
+LEA.
+Se admite realizarea acestor instalaţii de racordare cu LEC, cu justificare tehnico-economică, în
+situaţiile:
+a) reţele de racordare pentru transportul unor puteri care depăşesc capacitatea de transport a unei linii
+aeriene sau a căror realizare conduce la creşterea suprafeţelor de teren necesare obiectivului
+proiectat;
+b) reţele amplasate în zone aglomerate, în care traseul aerian ar împiedica circulaţia, desfăşurarea
+normală a activităţilor sau ar prezenta pericol pentru personal;
+c) reţele amplasate în zone de influenţă ale unor instalaţii de transporturi (căi ferate electrificate,
+aeroporturi) sau de telecomunicaţii (antenele staţiilor de radio, televiziune etc.);
+d) reţele amplasate în zone cu pericol de explozie;
+e) reţele amplasate în zona cu atmosferă corosivă sau cu depuneri periculoase pentru materialele
+folosite la LEA;
+f) reţele cu lungimea traseului mai mică de 50m;
+g) reţele pentru racordarea unor receptori ai instalaţiilor de stingere a incendiilor în cazurile
+prevăzute de normativele în vigoare.
+În cazurile de mai sus, reţeaua de distribuţie se va realiza, de regulă, prin pozarea totală sau
+parţială a cablurilor direct în pământ, conform soluţiilor de instalare prevăzute la Art. 59.
+V.3. Reţele de distribuţie în incinta obiectivelor
+Art.15. În incintele obiectivelor, inclusiv în incintele centralelor electrice, reţelele de distribuţie se
+realizează pe baza principiilor arătate la Art. 14.
+În cazurile în care rezultă ca necesară realizarea reţelelor de distribuţie în cablu, acestea se
+instalează, de regulă, direct în pământ (a se vedea Art. 15) sau aerian, folosind drept suporturi de susţinere
+clădiri sau elemente de construcţii aferente instalaţiilor tehnologice şi care urmează a fi verificate pentru
+Pagina 18 din 73
+
+-- 18 of 73 --
+
+NTE 007/08/00
+noile condiţii (a se vedea Art. 58).
+La compararea soluţiilor în vederea stabilirii variantei optime, se ţine seama de posibilităţile de
+realizare a soluţiilor (natura solului, suprafeţele de teren disponibile, construcţiile de susţinere necesare),
+precum şi de lungimea traseelor şi secţiunilor necesare în funcţie de modul de pozare. În cazul în care
+instalarea cablurilor pe elementele de construcţii cu altă destinaţie nu este posibilă sau conduce la lungirea
+traseelor, se pot avea în vedere soluţii cu estacade speciale pentru cabluri (de construcţie uşoară şi, de
+preferinţă, din elemente prefabricate), niveluri deschise de cabluri sau alte soluţii de pozare aeriană
+(suspendare pe cabluri de tracţiune etc.).
+Art.16. În cazuri justificate tehnico-economic se admite construirea de canale şi galerii pentru
+cabluri, soluţia urmând a se realiza cu respectarea prevederilor Art. 57 şi 67.
+Art.17. Pe porţiuni scurte, când există pericole de deteriorări mecanice (de exemplu, subtraversări
+de căi de circulaţie etc.), cablurile se pozează în tuburi sau blocuri de protecţie, conform soluţiilor de
+instalare prevăzute la Art. 61, 62.
+Art.18. În spaţiile electrice de exterior cablurile se vor poza direct în pământ; se pot avea în
+vedere şi următoarele soluţii:
+a) pozarea în canale de cabluri prefabricate fără rastele (în cazul fluxurilor mari de cabluri de circuite
+secundare);
+b) pozarea în canale de cabluri cu rastele (în cazul fluxurilor mari de cabluri de energie şi de circuite
+secundare);
+c) pozarea combinată, în pământ – pentru cablurile de energie, în canale prefabricate fără rastele-
+pentru cablurile de circuite secundare etc.
+V.4. Reţele de distribuţie publică
+Art.19. Soluţiile de realizare a reţelelor de distribuţie publică în localităţi (aerian - cu conductoare
+neizolate, izolate sau torsadate, sau subteran - în cablu) se stabilesc în funcţie de soluţia urbanistică a
+localităţii, densitatea de consum, soluţiile adoptate pentru celelalte utilităţi etc.
+În cazurile în care rezultă ca necesară aplicarea soluţiei de realizare a reţelei electrice de distribuţie
+în cabluri subterane, acestea se pozează direct în pământ (conform soluţiilor prevăzute la Art. 59, Art. 60),
+în tuburi şi blocuri de cabluri (în cazurile şi în condiţiile prevăzute la Art. 62) sau în galerii edilitare
+comune cu alte utilităţi, atunci când în zona respectivă se adoptă astfel de soluţii (conform normativelor
+privind galeriile edilitare comune).
+V.4. Reţele interioare
+V.4.1. Reţele de cabluri în spaţii de producţie
+Pagina 19 din 73
+
+-- 19 of 73 --
+
+NTE 007/08/00
+Art.20. Reţelele de cabluri în spaţiile (încăperile) tehnologice se realizează, de regulă, aerian,
+folosind pentru susţineri elemente de construcţie ale halelor, platformelor şi construcţiile aferente
+utilajelor tehnologice etc., conform soluţiilor indicate la Art. 57.
+Se vor evita, pe cât posibil, fluxuri cu un număr mare de cabluri, realizându-se aceste grupuri de
+cabluri în fluxuri paralele, separate prin plăci de protecţie sau distanţate între ele.
+În cazuri deosebite, în care specificul echipamentului sau liniei tehnologice impune pozarea
+fluxurilor mari de cabluri în canale sau tuneluri, sau în cazul unor extinderi în instalaţii existente care
+obligă la folosirea canalelor sau galeriilor de cabluri, soluţia va fi justificată tehnico-economic.
+V.4.2. Reţele de cabluri în spaţii de producţie electrică
+Art.21. Pentru realizarea reţelelor de cabluri aferente instalaţiilor electrice amplasate în spaţii de
+producţie electrică (de exemplu: staţii electrice interioare, camere de comandă etc.) se examinează cel
+puţin următoarele soluţii:
+a) pozarea cablurilor în podeţe de cabluri
+b) pozarea cablurilor în canale vizitabile.
+Se evită realizarea unor construcţii speciale pentru cabluri electrice deasupra încăperilor aferente
+instalaţiilor electrice.
+La instalaţii electrice interioare şi la camere de comandă cu un volum mare de instalaţii şi,
+respectiv, de cabluri de conexiuni, în cazurile în care ta urma analizei rezultă că nu pot fi evitate subsoluri
+sau poduri de cabluri, acestea vor fi limitate ca volum construit la strictul necesar asigurării condiţiilor
+prevăzute de prezentul normativ (a se vedea Art. 57).
+V.5. Reguli privitoare la realizarea branşamentelor electrice
+Art.22. Prevederile prezentului normativ se aplică şi la proiectarea branşamentelor electrice subterane
+de joasă tensiune destinate alimentării cu energie electrică a consumatorilor care solicită puteri electrice mici
+(până la 50 kW) pentru instalaţiile de utilizare.
+Părţile principale ale branşamentului electric subteran sunt: branşamentul propriu-zis (cablul);
+firida (nişa) de branşament; coloana electrică.
+Branşamentele subterane se pot racorda direct din cablul principal de alimentare, cu ajutorul unui
+manşon de derivaţie, dintr-o firidă (cazul blocurilor de locuinţe sau al imobilelor cu mai multe
+apartamente), sau dintr-o reţea aeriană pentru alimentarea unor consumatori la care nu se pot realiza
+branşamente aeriene.
+Utilizarea branşamentelor subterane se impune în special în zone urbane clădite şi sistematizate,
+unde reţeaua aeriană şi respectiv branşamentele aeriene nu sunt indicate.
+Principalele condiţii tehnice care trebuie avute în vedere la proiectarea branşamentelor electrice
+subterane sunt următoarele:
+Pagina 20 din 73
+
+-- 20 of 73 --
+
+NTE 007/08/00
+a) traseul cablurilor se alege, de regulă, astfel încât să se realizeze legătura cea mai scurtă, în
+concordanţă cu reţeaua existentă de cabluri; totodată se are în vedere asigurarea accesului la
+cabluri pentru lucrări ulterioare de reparaţii şi eventualele înlocuiri de cabluri;
+b) razele de curbură ale cablurilor trebuie să aibă valorile minime exprimate prin diametrul exterior al
+cablului;
+c) la pozarea cablurilor pentru branşamente alături de alte cabluri electrice trebuie să fie respectate
+distanţele prescrise de reglementările în vigoare;
+d) la pozarea cablurilor în paralel cu conducte subterane electrice trebuie să fie respectate
+distanţele minime în plan orizontal;
+e) la intrarea în clădiri se poate reduce adâncimea de pozare, pe porţiuni scurte (sub 5m).
+f) la subtraversarea drumurilor şi la intrarea în clădiri, cablurile vor fi protejate în tuburi de
+PVC; tuburile trebuie să aibă un diametru interior egal 1,5 x diametrul exterior al cablului.
+g) la pozarea cablurilor în apropiere de clădiri, pomi, şine de tramvai, se vor respecta distanţele
+minime indicate în reglementările în vigoare.
+h) subtraversarea străzilor din localităţi se va efectua prin montarea cablului de branşament într-un
+tub de protecţie din PVC, a cărei lungime va depăşi cu 1m limita bordurii;
+i) la intersecţia unui cablu de branşament cu reţelele de cabluri, se va avea în vedere păstrarea
+unei distanţe de protecţie pe verticală. De regulă, cablul de branşament va supratraversa
+cablul cât tensiune mai mare, cu condiţia menţinerii adâncimilor de pozare.
+j) intersecţia cablurilor de branşament cu reţeaua de conducte subterane se realizează prin
+respectarea următoarelor distanţe pe verticală:
+- h = 250 mm faţă de conducte de apă şi canalizare;
+- h = 500 mm faţă de conducte cu fluide combustibile şi conducte de termoficare.
+Distanţa de protecţie se poate reduce la 25 mm cu următoarele condiţii:
+- protejarea cablului în zona intersecţiei şi câte 500mm de o parte şi de alta a acesteia, în cazul
+conductelor cu fluide combustibile;
+- întărirea izolaţiei termice la conductele de termoficare în zona intersecţiei piua câte 1m de o
+parte şi de alta a acesteia.
+La intersecţia cu conducte pozate la adâncimi mai mari de 1 m, cablul de branşament va
+supratraversa conductele.
+k) la pozarea cablurilor de branşament pe stâlpii reţelelor electrice aeriene, se va prevedea
+introducerea cablurilor în tub de protecţie pe o porţiune de 2m deasupra solului pentru
+protecţia împotriva deteriorărilor mecanice; tubul de protecţie poate fi din PVC sau
+metalic.
+VI. ALEGEREA ŞI VERIFICAREA CABLURILOR
+Pagina 21 din 73
+
+-- 21 of 73 --
+
+NTE 007/08/00
+VI.1 Condiţii generale
+Art.23. Alegerea şi verificarea cablurilor electrice se face pe baza unor analize tehnico-
+economice, ţinând seama de datele de mai jos. Anexa 12 conţine un ghid pentru alegerea cablurilor de
+înaltă tensiune, elaborat pe baza SR CEI 60183 +A1:1999.
+Art.24. Pentru alimentarea receptoarelor se au în vedere următoarele date:
+a) natura curentului (curent continuu, curent alternativ - monofazat, bifazat sau trifazat);
+b) tensiunea nominală U a reţelei (valoarea efectivă a tensiunii între faze, în curent alternativ
+trifazat);
+c) tensiunea nominală Uo între fiecare conductor şi pământ;
+d) tensiunea maximă de serviciu, Um a reţelei (valoarea efectivă maximă a tensiunii între faze
+care poate să apară în condiţii normale de funcţionare în orice punct al liniei, într-un moment
+oarecare);
+Um reprezintă valoarea eficace cea mai ridicată a tensiunii (între faze, în cazul curentului
+alternativ trifazat) care apare în condiţiile normale de exploatare, în orice moment şi în orice punct
+al reţelei; ea exclude variaţiile tranzitorii de tensiune (cum sunt cele provocate prin manevre în
+reţea) şi variaţiile temporare de tensiune datorită condiţiilor de funcţionare anormale a reţelei (cum
+sunt cele provocate de defect sau la conectarea bruscă de sarcini importante);
+e) modul de tratare a neutrului reţelei;
+f) supratensiuni;
+g) puterea transportată şi regimul de sarcină (regim permanent, regim ciclic, suprasarcină);
+h) factorul de putere;
+i) căderea de tensiune admisă la receptoare;
+j) verificarea la scurtcircuit;
+k) secţiunea economică;
+l) categoria consumatorilor.
+Art.25. Pentru instalarea cablurilor se au în vedere următoarele elemente:
+a) modul de pozare (în aer liber - expus sau nu radiaţiei directe solare, în pământ, în şanţuri, în
+canale, în tuburi etc.);
+b) caracteristicile termice ale mediului (temperatura mediului ambiant, temperatura solului la
+adâncimea de pozare, rezistenţa termică specifică a solului etc.);
+c) apropieri de alte cabluri sau surse de căldură (numărul de cabluri, puterea transportată,
+amplasarea în spaţiu faţă de sursele respective etc.);
+d) agresivitatea mediului (natura solului, pozarea sub apă, contactul cu produse chimice,
+coroziunea electrolitică);
+e) pericole de incendiu sau explozie;
+f) alte condiţii (trasee verticale sau cu denivelări importante, subtraversări de căi de circulaţie,
+eforturi mecanice).
+Pagina 22 din 73
+
+-- 22 of 73 --
+
+NTE 007/08/00
+Art.26. Datele caracteristice privind cablurile şi accesoriile sunt:
+a) tipul cablului (armat sau nearmat, ecranat sau neecranat, cu câmp radial sau nu etc.)
+b) numărul de conductoare
+c) natura materialului conductor (aluminiu, cupru)
+d) natura materialului izolant (PVC, PE, XLPE etc.)
+e) comportarea la foc
+f) tipul terminalelor (de exterior, de interior, natura materialului de umplere, risc de poluare
+atmosferică etc.)
+g) lungimea totală a cablului
+h) manşoane de legătură, derivaţie sau de stopare (loc de instalare, protecţii mecanice, chimice
+etc.)
+i) condiţii de legare la pământ (asigurarea continuităţii, legarea la pământ a armăturilor, modul
+de legare la pământ a ecranelor etc.).
+VI.2 Condiţii electrice
+VI.2.1. Nivelul de izolaţie
+Art.27. Nivelul de izolaţie a cablurilor este caracterizat de valorile tensiunilor nominale ale
+cablurilor (Uo şi U) şi de valorile rigidităţii dielectrice.
+(1) Tensiunile nominale ale cablurilor se aleg în funcţie de tensiunea nominală şi tensiunea cea
+mai ridicată a reţelei, conform Tabelului 1.
+În cazul cablurilor de energie, valorile indicate în tabel sunt valabile pentru reţele care, în caz de
+defect la pământ, sunt deconectate automat. Se admite justificat deconectarea manuală şi funcţionarea cu
+o fază la pământ un timp scurt, strict necesar identificării circuitului defect, fiind cunoscut faptul că
+funcţionarea cu o punere la pământ reduce durata de viaţă a cablului.
+Pagina 23 din 73
+
+-- 23 of 73 --
+
+NTE 007/08/00
+Tabelul 1. Tensiuni nominale ale cablurilor.
+Tensiunea reţelei (între faze)
+nominală (kV) cea mai ridicată (kV)
+Tensiunea nominală a
+cablului, Uo / U (kV)
+≤ 1 ≤ 1,2 ≤ 0,6/1
+6 7,2 3,6/6
+10 12 6/10
+20 24 12/20
+30 36 18/30
+110 123 64/110
+220 245 127/220
+400 420 231/400
+NOTĂ: Pentru cabluri de circuite secundare funcţionând la tensiuni nominale sub 60V (cu excepţia celor
+ale secundarelor transformatoarelor de măsura) şi care nu sunt supuse influenţelor instalaţiilor de
+energie, pot fi folosite cabluri cu tensiuni nominale mai mici decât cele din tabelul 1 (coloana 1) în
+condiţiile în care tensiunea minimă de încercare este 500V, 50Hz, 1 min.
+(2) Rigiditatea dielectrică a cablurilor caracterizează nivelul de izolaţie la supratensiuni şi are
+valorile indicate în standardele şi normele interne de produs, în funcţie de tensiunea cea mai ridicată a
+reţelei.
+Pentru cablurile de energie cu tensiuni nominale mai mari de 1 kV, verificarea nivelului de ţinere
+a izolaţiei se face conform SR EN 60071 (standard pe părţi) şi Normativului pentru alegerea izolaţiei,
+coordonarea izolaţiei şi protecţia instalaţiilor electroenergetice împotriva supratensiunilor - NTE
+001/03/00.
+Rigiditatea dielectrică a cablurilorde circuite secundare supuse influenţei instalaţiilor de energie,
+se verifică la supratensiunile induse prin cuplaj de la aceste instalaţii, conform STAS 832.
+VI.2.2. Alegerea materialului conductoarelor
+Art.28. (1) Cablurile de energie se prevăd cu conductoare de aluminiu sau cupru; în mod special
+se prevăd conductoare din cupru în următoarele situaţii:
+a) la circuitele care alimentează receptoarele de importanţă deosebită (de exemplu: instalaţii
+de prevenire şi stingere a incendiilor, consumatorii de siguranţă, cum ar fi circuitele vitale de
+curent alternativ din centralele electrice sau receptoarele de curent continuu cu funcţie de
+protecţie tehnologică, absorbind curenţi de durată mai mari de 10A etc.), atunci când secţiunea
+conductoarelor (din aluminiu) ar rezulta mai mică de 10mm2;
+b) la circuitele care alimentează receptoarele în medii cu pericol de explozie, în cazurile
+indicate în prescripţiile de proiectare specifice acestor medii;
+Pagina 24 din 73
+
+-- 24 of 73 --
+
+NTE 007/08/00
+c) la încăperi sau spaţii exterioare cu mediu corosiv, în cazurile în care stabilitatea chimică a
+aluminiului nu este corespunzătoare şi numai dacă instalaţiile nu pot fi realizate în execuţie
+etanşă la agenţii corosivi respectivi;
+d) în instalaţiile de protecţie prin legare la pământ sau la nul, în cazurile menţionate în
+standardele specifice acestor instalaţii.
+(2) Cablurile circuitelor secundare se prevăd, de regulă, cu conductoare din cupru, cu următoarele
+excepţii, când se prevăd cu conductoare din aluminiu:
+a) la circuitele de alimentare cu curent operativ a tablourilor de circuite scundare, atunci când
+secţiunea conductoarelor (din aluminiu) rezultă egală sau mai mare de 10mm2;
+b) la circuitele unor receptoare electrice (de exemplu: vane, ventile, clapete etc.) prevăzute
+numai cu comandă locală şi care nu fac parte din sistemul de automatizare a instalaţiei
+respective sau din instalaţiile de prevenire şi stingere a incendiilor.
+NOTĂ. Contactele legăturilor demontabile ale cablurilor cu conductoare din aluminiu la
+echipamente electrice (maşini, aparate, şir de cleme) se realizează prin presare, cu ajutorul
+pieselor elastice care asigură; păstrarea în timp a presiunii de contact (şaibe elastice, şir de
+cleme cu arc etc.).
+(3) Cablurile de circuite secundare utilizate pentru teleprotecţie, teleconducere, se prevăd cu
+conductoare din cupru sau cu fibră optică.
+VI.2.3. Alegerea şi verificarea secţiunii conductoarelor
+Art.29. Secţiunea conductoarelor active ale unui cablu se determină ca cea mai mare secţiune
+(tehnică sau economică) rezultată în urma efectuării calculelor de dimensionare şi verificare a
+următoarelor criterii: curentul maxim de durată, solicitarea termică la scurtcircuit, căderea de tensiune,
+secţiunea economică.
+1. Alegerea secţiunii tehnice (st) în funcţie de curentul maxim de durată se face în conformitate cu
+indicaţiile fabricantului de cabluri, în funcţie de materialul conductorului şi al izolaţiei, regimul de
+sarcină, modul de pozare, condiţiile de răcire etc.
+La cablurile cu tensiuni nominale Uo/U până la 18/30kV, în situaţiile în care nu se dispune de
+prescripţiile furnizorului de cabluri, se pot utiliza indicaţiile din Anexa 1. Se menţionează că Anexa 1 a
+fost elaborată pe baza standardului german DIN 57298 Teil 2/VDE 0298 Teil 2/11.79.
+2. Secţiunea tehnică (st) a conductoarelor cablurilor se verifică la solicitări termice datorate
+curenţilor de scurtcircuit, potrivit prevederilor instrucţiunilor PE 103.
+3. Secţiunea tehnică (st) a conductoarelor cablurilor se verifică la căderea de tensiune de la punctul
+de racord şi până la ultimul receptor. Relaţiile de calcul pentru determinarea căderilor de tensiune sunt
+indicate în Anexa 2.
+Pagina 25 din 73
+
+-- 25 of 73 --
+
+NTE 007/08/00
+Căderea de tensiune în raport cu tensiunea nominală de utilizare nu trebuie să depăşească valorile
+maxime admise de receptoare în punctele de delimitare; valoarea tensiunii în 95 % din săptămână nu
+trebuie să aibă o abatere mai mare de ± 10 % din tensiunea contractată de consumator.
+La dimensionarea circuitelor pentru instalaţiile electrice de energie se admit căderi de tensiune
+superioare celor indicate mai sus în timpul pornirii motoarelor, dar nu mai mari decât valorile maxime
+admise de motoarele respective, indicate de fabricant. Dacă nu se dispune de date precise, în calcule se
+poate considera o cădere de tensiune de 12%.
+NOTĂ. Căderile de tensiune admise la bornele motoarelor de joasă şi medic tensiune din centralele
+electrice sunt indicate în normativele PE 113 şi PE 137. în cazul receptoarelor de circuite secundare,
+verificarea se va face în regim normal, în regim de avarie (pentru receptoarele alimentate de la baterii
+de acumulatoare) şi în regim de pornire a motoarelor; valoarea căderilor de tensiune nu va fi mai mare
+decât cea admisă de receptoarele respective.
+4. Secţiunea economică (sec) este secţiunea conductoarelor pentru care se realizează un regim
+optim economic, corespunzător unor cheltuieli totale minime (constituite din cheltuieli de investiţii şi
+cheltuieli de exploatare datorate, în principal, pierderilor de energie) pentru linia respectivă, într-o
+perioadă de funcţionare dată.
+Determinarea secţiunii economice a conductoarelor se face potrivit instrucţiunilor Metodologiei
+pentru determinarea secţiunii economice a conductoarelor în instalaţii electrice de distribuţie de 1 – 110
+kV - NTE 401/03/00.
+VI.2.3. Alegerea tipului de izolaţie
+Art.30. Alegerea tipului de izolaţie a cablurilor comportă studierea şi compararea unui număr
+mare de date şi parametri cum ar fi: performanţele dielectrice, regimurile termice, comportarea în timp,
+comportarea la foc, posibilităţile de realizare de trasee cu denivelări, tehnologiile de montaj, costurile de
+investiţii etc.
+Având în vedere experienţa acumulată până în prezent, pentru cazurile cele mai uzuale, se fac
+următoarele recomandări de alegere a izolaţiei:
+- izolaţie din PVC, în cazul cablurilor de 1 ÷ 10 kV;
+- izolaţie din polietilenă (PE), de preferinţă polietilenă reticulată (XLPE), în cazul cablurilor cu
+tensiunea cuprinsă în domeniul (10 ÷ 30 kV).
+Alegerea altor tipuri de izolaţii pentru cablurile de joasă tensiune, determinată de condiţii speciale
+(solicitări mecanice, temperatură, pericol de incendiu etc.), precum şi alegerea izolaţiei cablurilor de
+înaltă tensiune (110 ÷ 400 kV), trebuie să facă obiectul unor analize speciale tehnico - economice.
+Pentru cablurile de circuite secundare se recomandă alegerea unei izolaţii sintetice (PVC, PE,
+etc.).
+Pagina 26 din 73
+
+-- 26 of 73 --
+
+NTE 007/08/00
+VI.2.3. Criterii de alegere şi verificare a învelişurilor mecanice ale cablurilor
+Art.31. Cablurile electrice se prevăd cu ecrane metalice sau învelişuri metalice cu rol de ecran (de
+exemplu: învelişuri din plumb sau aluminiu prevăzute pentru etanşeizare), pentru cazul în care rezultă
+necesară asigurarea funcţiilor indicate la Art. 7.
+Astfel, cablurile de energie de medie şi înaltă tensiune se prevăd, de regulă, cu învelişuri metalice
+care au rol de ecran. Cablurile cu ecran comun peste izolaţia conductoarelor (cu câmp neradial) se pot
+utiliza până la tensiunea de 6 kV inclusiv.
+La cablurile de energie, ecranele metalice sau învelişurile metalice care au rol de ecran se vor
+verifica la efectele termice datorate curenţilor de scurtcircuit monofazat, pe baza valorilor admisibile (şi
+eventual, a metodologiei de calcul) indicate de firma furnizoare a cablului.
+Învelişurile de etanşeizare pot servi drept conductor de nul în reţele de joasă tensiune pentru cazul
+în care sunt garantate de fabricant pentru acest mod de utilizare şi dacă se asigură secţiunea echivalentă
+necesară, potrivit standardelor în vigoare, pentru conductorul de nul.
+VI.3 Condiţii mecanice
+VI.3.1. Secţiuni minime ale conductoarelor
+Art.32. Secţiunile, respective diametrele minime admise din punct de vedere mecanic ale
+conductoarelor cablurilor pozate în condiţii normale de exploatare, verificate la condiţiile prevăzute la
+Art. 27 ÷ 31 (Condiţii electrice), sunt:
+a) la cablurile de energie, secţiuni minime de 1,5 mm2 în cazul conductoarelor din cupru şi de 4 mm2
+în cazul conductoarelor din aluminiu;
+b) la cablurile de circuite secundare, cu conductoare din cupru, secţiuni minime de 1 mm2, cu
+următoarele excepţii:
+- la circuitele unde condiţiile electrice (de exemplu: încărcare, cădere de tensiune), mecanice
+(exemplu: vibraţii) sau fizico - chimice (exemplu: agenţi corosivi) impun secţiuni mai mari;
+- la circuitele de circuite secundare din obiectivele cu gospodării de cabluri importante
+(menţionate în Anexa 9) realizate cu cabluri având conductoare monofilare, unde secţiunea
+minimă este de 1,5 mm2; în cazul utilizării cablurilor cu conductoare multifilare (liţate),
+secţiunea minimă este de 1 mm2;
+- la circuitele secundare ale transformatoarelor de curent, unde secţiunea minimă este de 1,5mm2;
+- la circuitele funcţionând la tensiuni de serviciu până la 60V (cu excepţia alineatului precedent)
+la care se admit conductoare cu diametrul minim de 0,5mm
+- la cablurile de teleconducere, cu conductoare din cupru, diametrul minim al conductorului va fi
+Pagina 27 din 73
+
+-- 27 of 73 --
+
+NTE 007/08/00
+de 0,5 mm în cazul cablurilor pozate numai în interiorul clădirilor şi de 0,8 mm în cazul
+cablurilor pozate în pământ sau în canalizări exterioare.
+VI.3.2. Rezistenţa mecanică a cablurilor
+Art.33. Rezistenţa mecanică a cablurilor se asigură de învelişurile situate peste izolaţia
+conductoarelor cablurilor (a se vedea Art. 7).
+Cablurile se pozează pe trasee ferite de solicitări mecanice, astfel încât să nu necesite, de regulă,
+armături metalice sau protecţii mecanice exterioare (tuburi, cărămizi etc.).
+Situaţiile în care pentru asigurarea unei protecţii mecanice suplimentare este necesară prevederea
+de cabluri armate sau protecţii mecanice exterioare apar în următoarele cazuri de pozare:
+a) pozare aeriană (deschisă), când există pericole de deteriorări mecanice;
+b) pozare în terenuri supuse alunecărilor sau lăsărilor,
+c) pozare sub apă;
+d) pozare în locuri supuse trepidaţiilor puternice;
+e) pozarea cablurilor de teleconducere supuse influenţelor instalaţiilor de energie; de regulă,
+aceste cabluri vor fi ecranate;
+f) în medii cu pericol de explozie, în cazurile indicate în prescripţiile de proiectare specifice
+acestor medii;
+g) în zone unde traseul de cabluri nu este marcat (de exemplu: în zone aglomerate, în
+instalaţii edilitare şi în trasee izolate).
+Utilizarea cablurilor armate trebuie justificată prin proiect.
+Cablurile nearmate cu înveliş exterior din PVC, şi anume cele de circuite secundare şi de joasă
+tensiune, precum şi cele de medie tensiune prevăzute cu ecran metalic legat la pământ peste fiecare
+conductor izolat (cabluri cu câmp radial), pot fi pozate direct în pământ, fără protecţie mecanică
+complementară (tuburi, cărămizi etc.), dacă sunt garantate de furnizorul cablului pentru acest mod de
+pozare şi nu sunt susceptibile de a fi supuse la eforturi mecanice deosebite, de felul celor arătate la literele
+a ÷ g de mai sus, care să depăşească rezistenţa cablului.
+În locurile expuse trepidaţiilor (de exemplu: poduri rutiere sau de căi ferate) nu se prevăd cabluri
+cu înveliş de plumb decât dacă sunt garantate de furnizor pentru acest mod de pozare (cazul armăturilor
+cu adaosuri care împiedică recristalizarea plumbului la trepidaţii).
+NOTĂ. Protecţia mecanică suplimentară a cablurilor monopolare nearmate utilizate în curent alternativ,
+atunci când rezultă ca necesară, se va realiza prin dispozitive de protecţie mecanică exterioară cablului,
+din materiale nemagnetice.
+VI.3.3. Eforturi mecanice în caz de scurtcircuit
+Art.34. Cerinţele privind eforturile mecanice în caz de scurtcircuit sunt următoarele:
+Pagina 28 din 73
+
+-- 28 of 73 --
+
+NTE 007/08/00
+a) în cazul cablurilor cu mai multe conductoare, valorile de vârf ale curentului de scurtcircuit nu
+trebuie să depăşească valorile garantate de fabricant;
+b) în cazul cablurilor monopolare pozate în aer, datorită eforturilor electrodinamice care se pot
+dezvolta între conductoarele fazelor şi care pot provoca deplasări importante şi brutale ale
+cablurilor, se vor lua măsuri corespunzătoare de fixare.
+Distanţele între punctele de fixare ale cablurilor se determină în funcţie de valoarea eforturilor
+electrodinamice între cabluri şi natura izolaţiei, conform indicaţiilor din Anexa 3. Piesele de fixare trebuie
+să fie din materiale izolante, iar dacă sunt din metal acestea nu trebuie să formeze spire închise în jurul
+cablurilor şi nu trebuie să deterioreze învelişul cablului.
+VI. 4 Condiţii speciale
+VI. 4.1. Condiţii privind comportarea la foc
+Art.35. Condiţiile privind comportarea la foc a cablurilor electrice utilizate la realizarea
+obiectivelor se recomandă să fie cele prevăzute în SR EN 60332 (standard pe părţi), SR EN 50266
+(standard pe părţi) şi CEI 60331 (standard pe părţi).
+1. În interiorul construcţiilor se utilizează, de regulă, cabluri cu întârziere la propagarea flăcării.
+Cablurile cu întârziere la propagarea flăcării, dar care pozate în mănunchi nu îndeplinesc condiţia cerută
+de SR EN 50266 (standard pe părţi), pot fi folosite în interiorul încăperilor de cabluri, a nivelurilor
+închise (numai în tuneluri, subsoluri, poduri), a nivelurilor deschise de cabluri, precum şi în subsoluri
+tehnologice, cu condiţia realizării de separări transversale, pentru limitarea propagării focului pe fluxurile
+de cabluri (conform Art. 66).
+În cazuri excepţionale, justificate, se admite folosirea de cabluri fără întârziere la propagarea
+flăcării, cu condiţia tratării corespunzătoare a învelişului exterior (de exemplu: acoperirea cu vopsea care
+măreşte rezistenţa la foc, acoperirea cu nisip sau cu alte materiale adecvate a cablurilor în canale).
+Cablurile care trebuie să asigure funcţionarea temporară a unor instalaţii în condiţii de foc vor fi
+alese din categoria „rezistente la foc”.
+2. În construcţiile deschise de cabluri se vor utiliza cabluri cu întârziere la propagarea flăcării, fără
+realizarea separărilor transversale definite la Art. 66.
+3. În cazul pozării în pământ sau în apă, nu se impun condiţii speciale în ceea ce priveşte
+propagarea flăcării sau rezistenţa la foc a cablurilor.
+În cazul în care traseele se continuă în interiorul construcţiilor, pe porţiunea de pozare liberă,
+cablurile trebuie să îndeplinească condiţiile arătate la literele a) sau b) de mai sus.
+VI. 4.2. Pozarea în soluri agresive
+Art.36. În cazul pozării în soluri care conţin substanţe agresive, cablurile vor fi protejate conform
+prevederilor Normativului pentru protecţia contra coroziunii a construcţiilor metalice îngropate - I 14.
+Pagina 29 din 73
+
+-- 29 of 73 --
+
+NTE 007/08/00
+VI. 4.3. Pozarea în medii cu temperaturi ridicate
+Art.37. În cazul pozării în medii cu temperaturi ridicate, în zonele utilajelor tehnologice, unde
+temperatura mediului ambiant depăşeşte permanent +40°C (măsurată în imediata apropiere a fluxurilor de
+cabluri) şi nu se poate asigura o protecţie termică corespunzătoare, se vor prevedea cabluri rezistente la
+temperatura respectivă.
+VI. 4.4. Pozarea în zone expuse razelor solare
+Art.38. În cazul pozării cablurilor în aer liber (pe estacade, pe construcţii etc.), în zone expuse
+razelor solare, trebuie să se prevadă cabluri cu înveliş exterior rezistent la acţiunea razelor solare (referitor
+la reducerea încărcării, conform indicaţiilor din Anexa 1).
+VI. 4.5. Pozarea pe trasee cu denivelări importante
+Art.39. La pozarea pe trasee cu denivelări importante, verticale sau înclinate, se utilizează, de
+preferinţă, cabluri cu izolaţie uscată (sau când se justifică tehnico-economic se pot folosi şi cabluri cu
+izolaţie de hârtie impregnată cu mase nemigratoare). Cablurile cu izolaţie de hârtie impregnată cu masă
+migratoare, atunci când se justifică tehnico-economic se pot utiliza numai dacă diferenţa maximă de nivel
+pe traseu nu depăşeşte limitele admise de producător sau dacă se montează manşoane de stopare.
+Pentru cazurile în care lipsesc date de la producătorul de cabluri, se admite folosirea valorilor
+diferenţelor maxime de nivel admise, indicate în Anexa 4.
+VI. 4.6. Pozarea pe trasee cu medii diferite
+Art.40. Alegerea şi verificarea cablurilor care trec prin zone cu condiţii de mediu diferite
+(temperatură, trepidaţii, pericol de explozie, agresivităţi diferite etc.) se face după condiţiile impuse de
+sectorul cel mai greu, cu excepţia cazurilor când este posibilă şi rezultă justificat tehnico-economic
+tronsonarea diferenţiată după condiţiile de mediu în care se pozează tronsoanele respective de cabluri.
+În cazurile în care sunt numai condiţii de răcire diferite, se admite ca dimensionarea să se facă
+după condiţiile de răcire ale traseului cel mai lung, când zona cu temperaturi ridicate reprezintă cel mult
+10 m, dar nu mai mult de 20 % din lungimea totală a cablului (cazul cablurilor care se pozează în pământ
+şi pe o scurtă porţiune în aer - de exemplu pe stâlpul unei LEA).
+VI. 4.7. Condiţii specifice cablurilor de circuite secundare
+Art.41. (1) Determinarea numărului de conductoare: cablurile de circuite secundare nu se prevăd cu
+conductoare de rezervă în cazul cablurilor cu până la patru conductoare inclusiv şi nici în cazul cablurilor
+care deservesc receptoare individuale (motoare, vane, clapete etc.); în celelalte cazuri, numărul de fire de
+Pagina 30 din 73
+
+-- 30 of 73 --
+
+NTE 007/08/00
+rezervă este acela care rezultă din adoptarea cablului normalizat cu un număr de fire (sau de perechi sau
+cuarte la cablurile de teleconducere) imediat superior numărului de fire (perechi, cuarte) utilizate efectiv.
+Pentru circuitele aferente diferitelor instalaţii distincte (celulă, agregat etc.) trebuie să se utilizeze
+cabluri separate. Se exceptează de la această prevedere următoarele situaţii în care diverse circuite se vor
+reuni într-un acelaşi cablu:
+1. circuitele destinate pentru un ansamblu de instalaţii îndeplinind o aceeaşi funcţiune (de exemplu,
+circuitele pentru protecţii de bare, buclele de alimentare, buclele de blocare etc.);
+2. circuitele de comandă indirectă (treapta de tensiune de serviciu sub 60 V) sau circuite secundare la
+alegere pentru un grup de instalaţii (circuite primare);
+3. circuitele de teleconducere.
+(2) Influenţele perturbatoare pot fi:
+a) de origine internă (cuplaj mutual între circuitele aceluiaşi cablu); se evită, pe cât posibil,
+reunirea în acelaşi cablu a circuitelor funcţionând la tensiuni sub şi peste 60V, datorită
+pericolului de a se induce tensiuni electromotoare prin cuplaj capacitiv sau inductiv care să
+perturbe corecta funcţionare a instalaţiilor (în special a instalaţiilor de comutaţie statică şi
+telemăsură). Pentru reducerea perturbaţilor de origine internă, când totuşi se adoptă astfel
+de soluţii, trebuie alese cabluri adecvate, cu grupări şi ecranări convenabile ale circuitelor,
+b) de origine externă (cuplaj datorat instalaţiilor de energie).
+Instalaţiile de energie aflate în apropierea cablurilor de circuite secundare pot induce tensiuni
+periculoase pentru instalaţii sau pentru personal prin cuplaj capacitiv, inductiv sau rezistiv (galvanic).
+Pentru reducerea tensiunilor induse în cablurile de circuite secundare amplasate în incinte în apropierea
+instalaţiilor de energie (de exemplu, în staţii de înaltă tensiune de 110 ÷ 400kV) se iau următoarele
+măsuri:
+a) utilizarea cablurilor ecranate sau armate;
+b) asigurarea echipolenţializării traseului de cabluri;
+c) dispunerea în acelaşi cablu şi pe cât posibil simetric, din punctul de vedere al geometriei
+cablului, a conductoarelor de polarităţi diferite (sensuri de parcurgere a curentului) aparţinând
+aceloraşi circuite;
+d) evitarea traseelor paralele, pe lungimi mari, cu instalaţiile de energie.
+Cablurile de circuite secundare (inclusiv cele de teleconducere) care părăsesc incintele
+instalaţiilor electrice de înaltă tensiune sau sunt amplasate în apropierea liniilor de energie trebuie alese şi
+verificate la tensiunile induse prin cuplaj (inductiv, capacitiv, rezistiv), potrivit prevederilor STAS 832 şi
+a instrucţiunilor de proiectare a cablurilor pilot.
+VI.4.8. Pozarea pe trasee cu pericol de coroziune prin curenţi de dispersie
+Pagina 31 din 73
+
+-- 31 of 73 --
+
+NTE 007/08/00
+Art.42. La alegerea traseelor de cabluri în localităţi având reţea de tracţiune electrică în curent
+continuu, trebuie ţinut cont de pericolul coroziunii prin curenţi de dispersie. Acest pericol apare la
+cablurile cu ecran metalic, în special din zonele apropiate staţiilor de redresare şi anume, acolo unde
+cablurile se află în apropierea căilor de întoarcere a curentului de la şină spre polul negativ al
+redresorului.
+În consecinţă, pentru aceste zone trebuie evitată pozarea cablurilor cu ecran metalic.
+De asemenea, trebuie evitată pozarea cablurilor cu ecran metalic paralel cu liniile de tracţiune de
+curent continuu.
+Dacă din motive energetice sau de sistematizare stradală este obligatorie pozarea unor cabluri cu
+ecran metalic în zonele menţionate mai sus, atunci trebuie luate măsurile prevăzute în prescripţiile
+referitoare la protecţia contra coroziunii a construcţiilor metalice îngropate (normativului I 14 şi STAS
+7335 – standard pe părţi) şi se vor utiliza numai cabluri cu manta exterioară din PVC sau din alt
+material rezistent faţă de mediu.
+VII. INSTALAREA CABLURILOR
+VII.1 Condiţii generale
+Art.43. Soluţia de instalare a cablurilor (în aer, în pământ, în tuburi sau pe trasee speciale) se
+stabileşte în baza regulilor de realizare a diverselor tipuri de reţele (indicate în capitolul anterior).
+Art.44. În gospodăriile de cabluri ale obiectivelor energetice cablurile aferente fiecărui obiect
+distinct din punct de vedere funcţional (blocuri sau grupuri energetice, transformatoare de putere din staţii
+electrice etc.) se dispun, de regulă, în fluxuri separate.
+Cablurile care constituie alimentarea de rezervă a fiecărui obiect distinct sau a dispozitivelor de
+prevenire şi stingere a incendiilor se dispun în fluxuri separate faţă de cele aparţinând alimentării de bază.
+Se admite gruparea în acelaşi flux a cablurilor aferente a două sau mai multe obiecte distincte, în
+condiţiile în care cablurile care asigură alimentarea de rezervă sunt pozate în fluxuri separate de cele
+aparţinând alimentării de bază. În aceste cazuri, dacă există şi posibilitatea unei exploatări locale,
+cablurile de circuite secundare se pot poza în fluxuri comune pe porţiunile dintre punctele de exploatare
+locală şi punctul central de comandă.
+Art. 45. Se recomandă pozarea cablurilor de circuite secundare, inclusiv a celor aferente
+instalaţiilor şi dispozitivelor de prevenire şi stingere a incendiilor, în fluxuri separate faţă de cele ale
+cablurilor de energie, precum şi realizarea de fluxuri separate pentru cablurile de energie de tensiuni
+diferite.
+În situaţia în care realizarea de fluxuri separate nu este posibilă, grupurile de cabluri prevăzute la
+alineatul precedent pot fi dispuse şi în acelaşi flux (stelaj, şanţ etc), cu respectarea prevederilor de la
+Art.55 şi Art. 59.
+Pagina 32 din 73
+
+-- 32 of 73 --
+
+NTE 007/08/00
+Art.46. La pozarea cablurilor de energie şi de circuite secundare se prevede o rezervă de cablu
+pentru compensarea deformărilor şi pentru a permite înlocuirea terminalelor şi a manşoanelor, în
+următoarele cazuri:
+a) la toate manşoanele cablurilor, indiferent de locul de pozare, tensiunea nominală sau tipul
+cablului;
+b) la capetele traseului cablurilor cu tensiunea nominală de 6 kV şi mai mare, indiferent de tipul
+cablului;
+c) la capetele traseului cablurilor de joasă tensiune cu izolaţie din hârtie impregnată.
+Pentru rezerve, se prevăd următoarele lungimi minime:
+a) la manşoane, lungimea necesară refacerii de două ori a manşonului respectiv;
+b) la terminale, lungimea necesară refacerii o singură dată a terminalului respectiv.
+Art.47. La folosirea cablurilor de energie monoconductoare trebuie luate următoarele măsuri:
+c) în circuitele trifazate se asigură o distribuţie simetrică a sarcinilor pe cele trei faze, iar la
+execuţie se utilizează tehnologii care să asigure rezistenţe de contact egale la îmbinările
+conductoarelor fazelor;
+d) pozarea celor trei faze se va face, de reguli, în triunghi (treflă);
+e) cablurile nu montează individual în tuburi feromagnetice şi nu încastrează în beton cu armături
+ce formează spire închise în jurul fiecărei faze;
+f) cablurile pozate în aer şi piesele de fixare se verifică la solicitările electrodinamice în caz de
+scurtcircuit, conform Art. 34;
+g) în cazul în care pentru asigurarea unei capacităţi mari de transport se folosesc mai multe
+legături în paralel, se utilizează cabluri având secţiuni şi lungimi identice; se vor grupa
+împreună câte trei cabluri aparţinând unor faze diferite şi se vor distanţa grupele între ele; în
+cazul fiecărei grupe se va proceda la traspunerea fazelor între ele la intervale egale;
+h) de regulă, ecranele metalice ale cablurilor se leagă între ele şi la pământ la ambele capete.
+Fac excepţie cazurile în care ecranele nu sunt stabile termic la curenţii monofazaţi de scurtcircuit,
+când se admite legarea lor la pământ numai la un singur capăt, cu condiţia ca, în acest caz, tensiunile faţă
+de pământ induse în ecran la celălalt capăt - în regim normal şi de scurtcircuit - să nu depăşească valorile
+admise indicate în STAS 2612.
+În cazul în care, prin legarea la pământ a ecranului la un singur capăt, tensiunile faţă de pământ
+induse în ecran la celălalt capăt depăşesc valorile admise, se adoptă soluţia de legare la pământ a
+ecranului la ambele capete, cu luarea unor măsuri de asigurare a stabilităţii sale termice (alegerea de
+cabluri cu o secţiune mai marc a ecranului, prevederea unor conductoare în paralel).
+Art.48. Razele minime de curbură ale cablurilor, care trebuie respectate la manevrări şi la fixare,
+se indică de către fabrica producătoare.
+Pagina 33 din 73
+
+-- 33 of 73 --
+
+NTE 007/08/00
+În cazul în care aceste date lipsesc, se pot folosi cele din Anexa 5.
+Art.49. Liniile de cabluri trebuie să fie protejate împotriva curenţilor de suprasarcină şi de
+scurtcircuit cu siguranţe fuzibile sau cu instalaţii de protecţie prin relee, conform Normativului pentru
+proiectarea şi executarea instalaţiilor electrice cu tensiuni până la 1000 V c.a. şi 1500 V c.c. - I 7 şi
+Normativului privind proiectarea protecţiilor prin relee şi automatizărilor electrice ale centralelor şi
+staţiilor - PE 501.
+Art.50. Nu se admite montarea cablurilor care alimentează consumatori deţinând echipamente cu
+risc de explozii în caz de întreruperi direct pe clementele combustibile (clasele C3 şi C4 conform Normelor
+tehnice de proiectare şi realizare a construcţiilor privind protecţia la acţiunea focului - P 118) ale
+construcţiilor. Pentru alte cazuri, cablurile se montează interpunând materiale incombustibile între ele şi
+materialul combustibil.
+Se pot folosi, de exemplu:
+a) straturi incombustibile (din zidărie, beton, tencuială de minim 1cm grosime sau plici de azbest de
+minim 0, 5 cm grosime) cu o lăţime care depăşeşte cu cel puţin 3 cm periferia cablurilor,
+b) cablurile se montează pe elemente din materiale incombustibile (de ex. console metalice etc.) care
+distanţează cablurile la cel puţin 3 cm faţă de materialul combustibil.
+Art.51. Pozarea cablurilor se face după ce sunt montate şi vopsite toate construcţiile metalice, sunt
+executate legăturile la pământ şi s-au realizat, acolo unde sunt necesare conform normelor, circuitele
+instalaţiilor de semnalizare şi instalaţiile de stingere aferentă, acestea din urmă trebuind să fie în stare de
+funcţionare la punerea în funcţiune a gospodăriei de cabluri.
+În gospodăriile de cabluri, lucrări de sudură sau cu foc deschis se execută numai pe baza
+permisului de lucru cu foc.
+După pozarea cablurilor, nu sunt admise astfel de lucrări decât în cazuri de strictă necesitate şi cu
+luarea unor masuri suplimentare de protecţie.
+Art.52. Desfăşurarea cablurilor de pe tambur şi pozarea lor se face numai în condiţiile în care
+temperatura mediului ambiant este superioară limitelor minime indicate în standardele şi normele interne
+de fabricaţie ale cablurilor.
+În cazul în care este necesară desfăşurarea şi pozarea cablului la temperaturi mai scăzute decât
+cele indicate de fabricile furnizoare, cablurile trebuie să fie încălzite.
+Art.53. Condiţiile specifice de instalare pentru cablurile de energie cu tensiuni de 110 kV, 220
+kV, 400 kV, ca de exemplu: distanţe de montaj, apropieri şi intersecţii cu alte conducte şi instalaţii,
+transpoziţii etc., se stabilesc pe baza indicaţiilor fabricantului şi a normelor referitoare la calculul
+influenţelor liniilor de energie.
+Art.54. Legarea la pământ a conductoarelor de protecţie şi a învelişurilor metalice ale cablurilor
+(cu asigurarea continuităţilor pe traseu), precum şi a construcţiilor metalice de susţinere se recomandă să
+Pagina 34 din 73
+
+-- 34 of 73 --
+
+NTE 007/08/00
+fie conform SR EN 61140:2002 şi SR HD 637 S1:2004. Se recomandă legarea la pământ a mantalelor
+cablurilor la ambele capete.
+VII.2 Instalarea cablurilor în aer
+VII.2.1. Distanţe prescrise
+Art.55. La instalarea cablurilor în aer se normează următoarele categorii de distanţe: distanţe de
+rezemare şi de fixare a cablurilor, distanţele de pozare pe rastele, pe pereţi şi pe pardoseli, distanţe privind
+culoarele de circulare şi spaţiile de montaj, distanţe de protejare mecanică, distanţe faţă de instalaţii
+tehnologice.
+(1) Distanţele de rezemare şi de fixare a cablurilor sunt distanţele între două puncte succesive de
+rezemare a cablurilor la montarea pe orizontală şi, respectiv, de fixare la montarea pe verticală se aleg în
+funcţie de caracteristicile cablurilor, în conformitate cu indicaţiile furnizorului.
+În lipsa acestor indicaţii, distanţele nu le vor depăşi pe cele din Tabelul 2.
+Tabelul 2. Distanţe maxime de rezemare şi fixare a cablurilor.
+Tipul cablului Distanţa (cm)
+Montaj orizontal Montaj vertical
+Nearmat 50 100
+Armat 80 150
+Notă. Se consideră cabluri montate pe verticală cele care fac un unghi mai mare de 450 cu orizontala.
+(2) Distanţele de pozare pe rastele, pe pereţi şi pe pardoseli, recomandate din punct de vedere al
+încărcării cablurilor, la care se consideră că sunt eliminate influenţele tehnice reciproce dintre cablurile de
+energie pozate pe rastele, pe pereţi, pe pardoseli sau pe fundul canalelor, precum şi ordinea de aşezare a
+acestora, sunt cele indicate în Fig. 1.a, Fig. 2.a şi respectiv Fig. 3.a.
+În cazul în care spaţiul disponibil pentru pozarea cablurilor nu permite realizarea acestor distanţe,
+se pot adopta distanţe mai reduse, şi anume până la valorile minime indicate în Fig.1.b, Fig.2.b, şi
+respectiv Fig. 3.b, cu reducerea corespunzătoare a încărcării cablurilor de energie (a se vedea Anexa 1,
+Tabelele A.1.22 şi A.1.23).
+Cablurile aparţinând fiecărei grupe distincte de tensiune sau de utilizare (de energie respectiv de
+circuite secundare) se amplasează, de regulă, pe rastele diferite, ordinea de aşezare recomandată pe
+rastelele unui aceluiaşi stelaj fiind cea din Fig. 1. Tot pe rastele distincte se amplasează, de regulă, şi
+cablurile fără întârziere la propagarea flăcării admise a fi pozată în interiorul clădirilor, în condiţiile
+indicate la Art. 35, lit. a.
+În cazul cablurilor cu întârziere la propagarea flăcării, la stabilirea numărului de cabluri pe un
+rastel (într-un mănunchi) se ţine seama şi de categoria în care se încadrează mănunchiul de cabluri folosit
+Pagina 35 din 73
+
+-- 35 of 73 --
+
+NTE 007/08/00
+(A, B sau C) determinată conform standardului SR EN 50266 (standard pe părţi); categoria cablului
+folosit se indică de către furnizorul de cabluri (a se vedea Art. 66 lit h.).
+În cazuri obligate, se admite amplasarea pe acelaşi rastel, perete sau pardoseala a cablurilor cu
+tensiuni sau utilizări diferite (exemplu cabluri de energie de diverse tensiuni sau cabluri de energie şi
+cabluri de circuite secundare), precum şi a grupelor de cabluri cu comportări diferite la propagarea
+flăcării, în condiţiile în care între grupele respective de cabluri se asigură o distanţă minimă „A”, având
+valoarea:
+a) A = 25 cm - în cazul grupelor de cabluri cu tensiuni sau utilizări diferite
+b) A =15 cm - în cazul grupelor de cabluri cu şi fără întârziere la propagarea flăcării.
+Se admite reducerea distanţei „A” în următoarele situaţii:
+a) pe fluxurile mari de cabluri, atunci când se pot lua măsuri eficiente de izolare sau separare a
+grupelor de cabluri;
+b) pe derivaţiile din fluxurile mari de cabluri, spre receptoarele individuale;
+c) pe fluxurile de cabluri prin ale căror conductoare nu trec curenţi maximi de durată peste 10A.
+Pozarea în straturi a cablurilor de energie sau a cablurilor de energie împreună cu cablurile de
+circuite secundare sau de teleconducere este admisă într-una din următoarele situaţii:
+a) dacă curenţii maximi de durată în conductoarele cablurilor de energie nu depăşesc 10A
+b) în cazuri obligate, pe distanţe scurte (sub 2m), indiferent de valorile curenţilor prin cablurile de
+energie, cu condiţia ca între straturi să se intercaleze materiale rezistente la foc 30 minute.
+(3) Distanţele pe orizontală şi pe verticală faţă de culoarele de circulaţie din spaţiile de producţie nu
+trebuie să fie mai mici decât cele indicate în Fig. 4.a.
+În spaţiile de producţie cablurile se pot monta liber numai în locurile în care nu există pericole de
+deteriorări mecanice prin obiecte manevrate, dispozitive de lucru sau utilaje în mişcare.
+În mediile cu pericol de incendiu sau explozie se vor respecta prevederile specifice acestor medii .
+În construcţiile circulabile pentru cabluri (galerii, poduri sau subsoluri de cabluri), dimensiunile
+culoarelor de circulaţie nu vor fi, de regulă, mai mici decât cele indicate în Fig. 4.b; zonele de protecţie şi
+de siguranţă ale LEC în aceaste cazuri coincid şi sunt delimitate la limita culoarelor de circulaţie.
+În construcţiile necirculabile de cabluri (canale, estacade etc.). precum şi în spaţiile situate
+deasupra culoarelor de circulaţie (cabluri montate sub tavane etc.) trebuie asigurate distanţe
+minime/indicate în fig. 4.c) necesare pentru montajul şi mentenanţa cablurilor. Zonele de protecţie şi de
+siguranţă al LEC montate în construcţii necirculabile pentru cabluri coincid şi se delimitează la limita
+acestor construcţii.
+(4) La trecerea cablurilor prin planşee (la montarea în interior) sau la trecerea din pământ în aer (la
+montarea în exterior), cablurile trebuie protejate mecanic pe o înălţime minimă de:
+Pagina 36 din 73
+
+-- 36 of 73 --
+
+NTE 007/08/00
+a) 0,5 m, în spaţii tehnologice, în cazul utilizării cablurilor armate, precum şi în spaţii fără pericole
+de deteriorări mecanice (de exemplu, în staţii electrice sau la distanţe de minim 0,75 m faţă de
+culoarele de circulaţie din încăperi tehnologice fig. 4.a), în cazul utilizării cablurilor nearmate;
+b) 2 m, în spaţii tehnologice sau spaţii cu pericole de deteriorări mecanice (de exemplu, la distanţe
+mai mici de 0,75 m faţă de culoarele de circulaţie - vezi fig. 4.a) în cazul utilizării cablurilor
+nearmate, precum şi în exteriorul incintelor (de exemplu, pe stâlpii de linii electrice).
+Se recomandă ca trecerea prin planşee să se realizeze fără tuburi de protecţie, în cazul când
+utilajele la care se racordează cablurile asigură protecţia mecanică a lor (de exemplu, racordarea
+cablurilor la tablouri sau celule montate pe pardoseală).
+(5) Distanţele de siguranţă ale LEC faţă de instalaţii tehnologice din spaţiile de producţie sunt
+egale cu cele din Tabelul 3.
+VII.2.2. Reguli de instalare în interiorul construcţiilor
+Art.56. Instalarea cablurilor în interiorul construcţiilor (încăperi tehnologice, depozite, spaţii de
+circulaţie etc.), cu excepţia celor din construcţiile speciale de cabluri care sunt tratate la Art. 57, se face în
+conformitate cu prevederile de la Art.20, Art.43 ÷ 55, Art. 55, cu următoarele precizări:
+a) amplasarea cablurilor se face astfel încât să fie posibilă intervenţia pentru întreţinere, precum
+şi în caz de incendii şi avarii, evitându-se realizarea de fluxuri mari de cabluri în spaţii greu
+accesibile;
+b) cablurile se instalează, de regulă, pe stelaje, pe pereţi, în tuburi de protecţie, în jgheaburi,
+precum şi pe conducte sau instalaţii tehnologice, în condiţiile Art. 55; la alegerea traseelor
+orizontale se recomandă folosirea spaţiilor ferite de sub pasarele şi platforme, iar pentru
+traseele verticale-zonele ferite din jurul stâlpilor;
+c) în încăperile tehnologice, în zonele în care pot apărea scurgeri de păcură, ulei sau alte fluide
+combustibile, nu construiesc canale de cabluri sub nivelul pardoselii, în afara acestor zone se
+pot amenaja canale de cabluri, luându-se măsuri de evitare a pătrunderii fluidelor în zona de
+pozare a cablurilor;
+d) cablurile care se instalează în încăperi tehnologice în care se vehiculează fluide combustibile
+(staţii pompe păcură, gospodării de ulei etc.) trebuie să deservească exclusiv instalaţiile
+tehnologice din aceste încăperi, luându-se şi următoarele măsuri:
+1. cablurile se montează, de regulă, aparent sau în ţevi de protecţie aşezate sub pardoseală cu
+măsuri de împiedicare a pătrunderii fluidelor;
+2. se pot utiliza cabluri nearmate, dacă sunt omologate pentru pozarea în medii cu pericol de
+explozii şi nu există pericole de deteriorări mecanice; în caz contrar, ele trebuie să fie
+protejate în tuburi metalice;
+Pagina 37 din 73
+
+-- 37 of 73 --
+
+NTE 007/08/00
+3. trecerea cablurilor prin pereţii şi prin planşeele încăperilor se etanşează cu izolări
+rezistente la foc şi care să nu permită scurgerea fluidelor în spaţiile învecinate.
+e) pozarea cablurilor în spaţii cu depuneri solide de combustibil se face, de preferinţă, în
+canalizări etanşe (jgheaburi pentru cablurile de circuite secundare, tuburi pentru cablurile de
+energie); în cazul în care se adoptă trasee deschise, trebuie luate măsuri de limitare şi de
+înlăturare a depunerilor;
+f) în canale sau galerii tehnologice pot fi montate numai cablurile care deservesc exclusiv
+instalaţiile din canale sau galerii (de exemplu, acţionări vane, clapete, pompe, transmisii de
+măsurători, semnalizări etc.) sau sunt destinate instalaţiilor deservite prin aceste canale sau
+galerii; la ieşirea cablurilor din canale sau galerii, se prevăd etanşări transversale rezistente la
+foc;
+a. Distanţe recomandate din punct de
+vedere al încărcării cablurilor de energie b. Distanţe minime
+Fig. 1. Distanţe de pozare pe rastele (în cm).
+NOTĂ: Pentru cablurile de 110 kV , 220 kV, 400 kV se respectă indicaţiile furnizorului cablului.
+a) Distanţe recomandate din punct de
+vedere al încărcării cablurilor de energie b. Distanţe minime
+Fig. 2. Distanţe de pozare pe pereţi
+Pagina 38 din 73
+
+-- 38 of 73 --
+
+NTE 007/08/00
+a) Distanţe recomandate din punct de vedere al
+încărcării cablurilor de energie b. Distanţe minime
+Fig. 3. Distanţe de pozare pe pardoseală
+g) la instalarea cablurilor de circuite secundare se aplică prevederile Normativului pentru
+proiectarea instalaţiilor interioare de telecomunicaţii în clădiri civile şi industriale - I 18;
+h) în depozite şi în spaţii de circulaţie se evită trecerea cablurilor care nu deservesc în mod direct
+consumatorii din spaţiile respective; în cazul când acest lucru nu este posibil, este necesar a se
+lua măsuri de protejare împotriva loviturilor şi deteriorărilor mecanice, iar dacă există pericol
+de incendiu se iau şi măsuri de protecţie împotriva efectului unui eventual incendiu, prin
+acoperirea cablurilor cu elemente incombustibile având rezistenţa la foc de minim 1,5 ore;
+protecţia cablurilor împotriva incendiilor în depozite nu este necesară în cazul în care
+depozitele sunt prevăzute cu instalaţii automate de semnalizare şi de stingere a incendiilor.
+VII.2.3. Reguli de instalare în construcţii speciale pentru cabluri
+Art.57. Instalarea cablurilor în construcţiile special amenajate pentru cabluri (poduri, subsoluri,
+galerii, canale, puţuri, podeţe etc.) se face în conformitate cu prevederile Art.16, Art. 21, Art. 43 ÷ 54,
+Art. 55 cu următoarele precizări:
+a) în podurile şi subsolurile de cabluri, cablurile se pozează pe rastele sau paturi de cabluri, pe pereţi sau
+pe pardoseală, în ultimul caz cu protejarea mecanică corespunzătoare (prin podeţ de cabluri); în
+podurile şi în subsolurile de cabluri se pot monta numai instalaţii de iluminat, ventilaţie, semnalizare
+şi stingere a incendiilor care deservesc direct construcţia respectivă, precum şi următoarele
+echipamente şi materiale:
+1. cleme de şir şi reglete de conexiuni din materiale necombustibile sau greu combustibile (cu
+RI ≥ 2, conform STAS 4002, în care RI este rezistenţa la incandescenţă conform SR ISO
+181:1998);
+2. dulapuri încinse eu aparataj de comandă control;
+3. căi de curent sau aparataj de comutaţie, separate de cabluri prin construcţii rezistenţe la arc
+electric;
+4. conducte de aer comprimat pentru deservirea aparatajului electric sau pentru încercarea
+instalaţiilor fixe de stingere cu apă;
+b) în canale şi galerii (tuneluri) de cabluri, cablurile se pozează pe rastele sau paturi de cabluri;
+Pagina 39 din 73
+
+-- 39 of 73 --
+
+NTE 007/08/00
+cablurile de circuite de circuite secundare şi de teleconducere pot fi pozate şi în straturi suprapuse în
+canale fără rastele. De asemenea, cablurile pot fi montate şi pe fundul canalelor cu rastele, dar nu în
+canale cu adâncimi mai mari de 1m şi nu pe porţiunea liberă care serveşte pentru acces în timpul
+montajului şi al lucrărilor de mentenanţă.
+A = 0,75m – în cazul cablurilor neprotejate
+mecanic
+A = 0 – în cazul cablurilor protejate mecanic
+NOTĂ: Cabluri protejate mecanic se consideră
+cablurile armate, cablurile de energie ecranate sau
+cu nul concentric, precum şi cablurile nearmate la
+care accesul este împiedicat (ex: îngrădiri, acoperiri)
+sau care sunt montate în tuburi de protecţie.
+a) Distanţe minime faţă de culoarele de circulaţie în spaţiile de producţie
+Stelaje pe ambele părţi Stelaje pe o singură parte
+NOTĂ: Se admite reducerea
+locală a lăţimii de 0,8m. dar
+nu sub 0,6m, lungimea
+însumată a îngustărilor nu
+trebuie să reprezinte mai mult
+de 20% din lungimea
+culoarului de circulaţie.
+b) Dimensiunile culoarelor de circulaţie în galerii, poduri sau subsoluri de cabluri
+H (cm) <45 45+60 >60
+L (cm) 25 30 50
+NOTĂ: În cazul canalelor da cabluri, H
+reprezintă adâncimea liberă a canalului.
+c) Distanţe minime de montaj (în canale, pe estacade şi deasupra spaţiilor de circulaţie)
+Fig.4. Distanţe privind culoarele de circulaţie şi spaţiile de montaj
+Pagina 40 din 73
+
+-- 40 of 73 --
+
+NTE 007/08/00
+Tabelul 3. Distanţe de siguranţă ale LEC faţă de instalaţii tehnologice
+Nr.
+cri. Denumirea instalaţiei tehnologice Distanţa minimă, cm
+Intersecţii Apropieri Observaţii
+1
+Conducte sau
+rezervoare cu fluide
+reci (t ≤ 40oC)
+incombustibile 3 5
+combustibile 50 100
+Distanţele se pot reduce până
+la montarea pe conductă sau
+rezervor, când cablul este
+armat sau protejat în ţeavă
+metalică
+2 Conducte sau instalaţii cu suprafeţe
+calde (tizolaţie > + 40oC) 50 100
+Distanţele se pot reduce în
+condiţiile în care cablurile
+sunt rezistente la temperatura
+respectivă sau sunt protejate
+termic (paravane termice,
+izolare în azbest etc.).
+3 Conducte de aer comprimat 20 20
+Distanţele nu se normează în
+cazul conductelor cu
+presiunea aerului sub
+12daN/cm2 care deservesc
+instalaţiile electrice
+4
+Instalaţii care prelucrează materiale
+combustibile solide, inclusiv
+depozitarea materialelor respective
+100 100
+În funcţie de condiţiile locale
+distanţele se majorează
+conform prevederilor din
+normele specifice tehnologiei
+sau mediului respectiv.
+NOTĂ. Distanţele indicate la pct. 4 nu se aplică pe porţiunea de intrare a cablurilor pentru alimentarea
+instalaţiilor respective.
+În canalele şi în galeriile de cabluri se pot monta numai instalaţiile necesare (după caz) de
+iluminat, ventilaţie, semnalizare şi stingere a incendiilor, care deservesc direct construcţia respectivă,
+precum şi conductele de aer comprimat pentru deservirea aparatajului electric sau pentru încercarea
+instalaţiilor fixe de stingere cu apă (în canale aceste conducte se montează în partea superioară).
+În cazuri excepţionale, se pot monta conducte tehnologice numai pe porţiunea de traversare, cu
+măsuri de protejare a cablurilor; se interzic atât montarea de flanşe, robinete sau racorduri pentru aparate
+de măsură, căi şi realizarea de suduri pe conductele tehnologice în zona de traversare; conductele cu
+fluide combustibile vor fi protejate prin introducerea lor în tuburi de protecţie.
+Pagina 41 din 73
+
+-- 41 of 73 --
+
+NTE 007/08/00
+VII.2.4. Reguli de instalare aeriană în exteriorul construcţiilor
+Art.58. Instalarea aeriană a cablurilor în exteriorul construcţiilor, în incintele obiectivelor
+energetice, se efectuează în conformitate cu prevederile Art. 15 ÷ 18 şi Art. 55, ţinând seama de
+precizările care se fac în continuare.
+1. Pozarea aeriană a cablurilor în incintele obiectivelor energetice se poate face pe elemente de
+construcţie cu altă destinaţie decât montarea cablurilor (de exemplu, sub sau pe partea laterală a podurilor
+şi pasarelelor, pe pereţi de clădiri, pe estacade comune cu alte instalaţii, pe conducte tehnologice etc.), dar
+care se verifică - din punct de vedere mecanic şi al pericolului de incendiu - dacă sunt potrivite acestui
+scop, sau pe construcţii special amenajate pentru pozarea cablurilor (estacade cu stelaje de cabluri,
+jgheaburi metalice închise, plase de sârmă, cabluri purtătoare etc.).
+În cazul instalării cablurilor pe estacade comune, se vor prevedea măsuri de protejare a cablurilor
+pozate sub conducte în dreptul ventilelor, purjelor şi flanşelor, precum şi în zona de mufare a cablurilor.
+Cablurile pozate sub conducte cu fluide inflamabile se protejează împotriva eventualelor scurgeri
+de fluide pe toată lungimea de coexistenţă.
+Se evită traseele de cabluri care alimentează consumatori vitali în apropierea unor construcţii care,
+în caz de incendiu, pot afecta fluxurile de cabluri. În cazul când traseul acestor cabluri nu poate evita
+apropierea de construcţii cu pericol de incendiu, este necesar a se asigura o distanţă minimă de protecţie
+împotriva efectelor unui eventual incendiu - determinată pe bază de calcul - sau se adoptă măsuri speciale
+de protecţie (ecrane incombustibile, trasee în afara suprafeţelor vitrate etc.).
+2. În cazul pozării pe construcţii special amenajate, se asigură, la supratraversările căilor de circulaţie,
+gabaritele de transport din zonă, precum şi gabaritul necesar vehiculelor de stingere a incendiilor
+(4,2 m înălţime şi 3,5 m lăţime). La intersecţia estacadelor cu LEA se montează dispozitive de gardă
+sub linie, pentru a se preîntâmpina o eventuală cădere a unui conductor al liniei peste estacadă.
+3. Legarea la pământ a elementelor de susţinere a cablurilor se poate face folosind părţile metalice ale
+construcţiilor, cu excepţia cazului conductelor care transportă fluide inflamabile.
+4. În cazul cablurilor al căror traseu trece din pământ pe stâlpi de linii electrice sau pe ziduri cablurile
+se protejează mecanic conform Art. 55, alin. (4), urmărindu-se să fie amplasate ferit de zonele de
+circulaţie şi, pe cât posibil, de acţiunea razelor solare; în cazul cablurilor cu înveliş exterior combustibil,
+acesta este curăţat de materialele de protecţie combustibile (iută, bitum) şi apoi este protejat anticorosiv
+prin vopsire. La baza stâlpului se asigură o rezervă de cablu prin pozare ondulată sau în buclă.
+Pozarea cablurilor în nivelurile deschise de cabluri (definite la Art. 7) se poate face cu respectarea
+următoarelor condiţii:
+a) lăţimea nivelului deschis de cabluri să nu depăşească 10 m;
+b) distanţele de pozare a cablurilor, precum şi distanţele de circulaţie şi de montaj vor fi cele
+prevăzute la Art. 55.
+Pagina 42 din 73
+
+-- 42 of 73 --
+
+NTE 007/08/00
+VII.3 Instalarea cablurilor în pământ
+VII.3.1. Distanţe prescrise
+Art.59. (1) Distanţele de pozare a cablurilor în şanţuri sunt cele prezentate în continuare.
+Adâncimea de pozare „H” în condiţii normale nu este, de regulă, mai mică de:
+a) în cazul cablurilor cu tensiune nominală până la 20 kV inclusiv............(0,7 ÷ 0,8) m;
+b) în cazul cablurilor cu tensiune nominală peste 20 kV...............................(1 ÷ 1,2) m.
+Adâncimea de pozare se poate reduce până la 0,5 m în incinta staţiilor de conexiuni şi de
+transformare, pe porţiuni scurte (sub 5 m lungime) la intrarea cablurilor în clădiri, la pozarea sub planşee
+de beton şi la pozarea în tuburi de protecţie.
+Adâncimea de pozare a cablurilor pe trasee paralele sau în zona de intersecţie cu linii electrice
+aeriene de 110 ÷ 750 kV se poate mări (până la 1,5 m), dacă rezultă necesar pentru reducerea influenţelor
+(a se vedea şi Tabelul 5, poz. 9).
+Distanţa liberă pe orizontală „L” între cabluri pozate în acelaşi şanţ sau între cabluri pozate în
+şanţuri separate nu este mai mică decât valorile minime indicate în Tabelul 4.
+Tabelul 4. Distanţe de siguranţă ale cablurilor de energie, în cm, pe orizontală, faţă de alte cabluri pozate
+în pământ
+Tipuri de cabluri Circuite secundare Energie:
+1-20 kV
+Ale altor unităţi (telecomunicaţii1),
+tracţiune urbană) sau fluxuri separate
+Circuite secundare Nenormat 101) 502)
+Energie: 1-20 kV 101) 73) 502)
+Note:
+1) În cazul paralelismului cu cabluri de energie de peste 1 kV, distanţele se stabilesc sau se
+verifică pe baza calculelor de influenţă conform STAS 832.
+2) Distanţa de 50 cm se măreşte la 60 cm în cazul adâncimilor de îngropare mai mari de 1,5 m.
+3) Distanţa de 7 cm (între două sisteme trifazate) se măreşte la 25 cm în cazul cablurilor
+monofazate pozate în treflă; a se vedea şi Anexa 1, tabelele A.1.15 ÷ A.1.17.
+(2) Distanţele de siguranţă ale cablurilor de energie electrică pozate în pământ faţă de diverse reţele,
+construcţii sau obiecte nu vor fi, de regulă, mai mici decât cele indicate în Tabelul 5.
+VII.3.2. Reguli de pozare în pământ
+Art.60. Cablurile se pozează în pământ în conformitate cu prevederile Art. 18 ÷ 20, Art. 43, Art.
+53 ÷ 54 şi Art. 59, cu următoarele precizări:
+Pagina 43 din 73
+
+-- 43 of 73 --
+
+NTE 007/08/00
+1. Cablurile se pozează în şanţuri între două straturi de nisip de circa 10cm fiecare, peste care se
+pune un dispozitiv avertizor (de exemplu, benzi avertizoare şi/sau plăci avertizoare) şi pământ rezultat din
+săpătură (din care s-au îndepărtat toate corpurile care ar putea produce deteriorarea cablurilor).
+Se admite acoperirea cablurilor din şanţ cu pământ prelucrat (selecţionat din stratul superficial al
+taluzului, astfel încât granulaţia să nu depăşească 30 mm, fără pietre, bolovani sau alte corpuri străine) şi
+compactat prin burare până ne obţine o grosime de 10 – 15 cm şi o suprafaţă netedă şi fără fisuri; stratul
+de deasupra dispozitivului avertizor va fi, de asemenea, bine compactat prin burare.
+Utilizarea plăcilor avertizoare este recomandată în următoarele situaţii:
+a) în situaţiile în care este necesară o protecţie mecanică suplimentară (vezi Art. 33);
+b) în cazul profilelor de şanţuri cu cabluri etajate (între straturile de cabluri);
+c)deasupra manşoanelor.
+Se evită pozarea cablurilor în straturi suprapuse (etajate) atât din cauza influenţelor termice
+defavorabile, cât şi a unei intervenţii ulterioare dificile la cablurile inferioare. Se admite adoptarea acestui
+mod de pozare pe bază de justificare tehnico-economica (inclusiv calculul termic), atunci când soluţia
+rezultă ca favorabilă faţa de cea de pozare într-un singur strat.
+Între cablurile cu tensiuni diferite sau între cablurile de medie tensiune (de aceeaşi tensiune)
+pozate în acelaşi şanţ la distanţe între ele de până la 10 cm (a se vedea Tabelul 4), se montează distanţoare
+(de exemplu, din mase plastice din cauciuc) amplasate pe traseu la intervale care să asigure distanţele
+minim prescrise între cabluri.
+2. În oraşe şi în zone locuite, reţelele de cabluri trebuie pozate, de regulă, pe partea necarosabilă
+a străzilor (sub trotuare) sau în anumite condiţii, în zonele verzi din cartierele de locuinţe.
+Cablurile pozate pe partea carosabilă a străzilor trebuie să aibă o protecţie mecanică
+corespunzătoare.
+Ordinea de aşezare a cablurilor electrice sub trotuare, dinspre partea cu clădiri înspre zona
+carosabilă (cu păstrarea distanţelor indicate la Art. 60) este:
+a) de distribuţie de joasă tensiune;
+b) cabluri de distribuţie de medie tensiune;
+c) cabluri fir-pilot pentru teleconducere;
+d) cabluri de iluminat public.
+După pozare, pe planul reţelei de cabluri al localităţii sau al incintelor industriale, se vor trece în
+mod obligatoriu orice modificări de traseu faţă de proiect.
+VII.4. Instalarea cablurilor în tuburi
+VII.4.1. Distanţe prescrise
+Pagina 44 din 73
+
+-- 44 of 73 --
+
+NTE 007/08/00
+Art.61. Adâncimea de pozare în pământ a tuburilor sau a blocurilor de cabluri trebuie aleasă
+conform condiţiilor locale.
+VII.4.2. Reguli de instalare a cablurilor în tuburi sau blocuri de cabluri
+Art.62. (1) Adoptarea soluţiei de instalare a cablurilor în tuburi se face, de regulă, pe tronsoanele
+în care este necesar a se asigura:
+a) evitarea lucrărilor de desfacere a trotuarelor, carosabilului sau a altor suprafeţe pavate sau
+betonate pentru eventualele intervenţii ulterioare;
+b)o protecţie mecanică ridicată a cablurilor.
+În sensul arătat, instalarea în tuburi se utilizează, de regulă, pentru legăturile de teleconducere şi
+de telecomunicaţii în localităţi, precum şi pentru subtraversarea căilor de circulaţie de către cablurile de
+energie.
+Numărul de tuburi se va stabili ţinând seama de perspectiva de dezvoltare a reţelelor de cabluri în
+zona respectivă.
+De asemenea, trecerea cablurilor din pământ prin pereţii de clădiri, canale, galerii va fi protejată
+prin tuburi încastrate în construcţii.
+Cablurile cu funcţiuni diferite (de exemplu: energie, circuite secundare, telecomunicaţii) se
+instalează în tuburi diferite.
+Se admite să fie instalate în acelaşi tub numai cablurile care deservesc acelaşi aparat sau receptor,
+şi numai dacă sunt asigurate condiţiile de compatibilitate electromagnetică (CEM).
+Este interzisă instalarea în acelaşi tub a cablurilor care se rezervă reciproc sau care alimentează
+aparate sau receptoare care se rezervă reciproc.
+(2) Materialul tubului se alege în flecare caz în parte, ţinând seama de următoarele recomandări:
+a) tuburile din materiale termoplastice (PVC) se vor folosi în cea mai mare parte a cazurilor
+curente datorită avantajelor multiple pe care te prezintă: caracteristici mecanice bune,
+coeficient de frecare redus, rezistenţă la coroziune, cost redus, posibilităţi de livrare în lungimi
+importante;
+b) tuburile sau blocurile din beton, ciment sau alte materiale similare prezintă un coeficient
+de frecare mai mare şi riscul de deteriorare a învelişului exterior al cablului; se pot folosi,
+cu măsuri speciale, pe porţiuni relativ scurte cu mai multe cabluri în secţiune;
+c) tuburile din oţel sau fontă se vor folosi în cazuri speciale cu eforturi mecanice foarte mari;
+nu necesită încastrări de protecţie.
+Pagina 45 din 73
+
+-- 45 of 73 --
+
+NTE 007/08/00
+Datorită naturii magnetice a tubului nu se instalează cablul monopolar aparţinând unei singure
+faze într-un tub (a se vedea şi Art. 47).
+(3) Diametrul tubului trebuit să permită tragerea cablurilor fără risc de gripate. Raportul dintre diametrul
+interior al tubului şi diametrul exterior al unui cablu trebuie şi fie:
+a) minimum 2,8 - în carul tragerii a trei cabluri monofazate în acelaşi tub;
+b) minimum 1,5 - în cazul tragerii unui singur cablu în tub.
+(4) Traseul parcursului în tub (lungimea, schimbările de direcţie, razele de curbură) nu trebuie să conducă
+la solicitări de tracţiune dăunătoare cablului în timpul tragerii.
+Metodele de calcul al efortului de tragere şi valorile tracţiunii admise pentru diferitele tipuri de
+cabluri sunt indicate în Anexa 6.
+(5) La dispunerea tuburilor se respectă următoarele prevederi:
+a) racordarea tuburilor între ele trebuie să fie realizată fără bavuri sau asperităţi care să
+conducă la deteriorarea cablului.
+b) în cazul subtraversării căilor de circulaţie, trebuie să se asigure rezistenţa mecanică şi
+stabilitatea necesară; se verifică ca tuburile în care sunt instalate cabluri monofazate să nu fie
+înconjurate de armături metalice.
+c) extremităţile tuburilor se obturează, cu interpunerea, în cazul cablurilor nearmate, a unui
+strat elastic între cablu şi materialul de obturare.
+VII.5. Instalarea cablurilor pe trasee speciale
+VII.5.1. Instalarea cablurilor sub apă
+Art.63. La instalarea cablurilor sub apă se respectă următoarele prevederi:
+1. La subtraversarea râurilor, canalelor navigabile, canalelor hidrotehnice, lacurilor etc., cablurile
+trebuie pozate în zone supuse cât mai puţin la eroziune;
+2. Se interzice pozarea cablurilor în zona debarcaderelor, danelor de acostare în porturi, în porturi
+de transbordare cu bacuri sau în locurile de parcare pentru iernare a vapoarelor şi a şlepurilor,
+3. Pozarea cablurilor trebuie făcută pe fundul apei în aşa fel, încât în porţiunile accidentate ale
+fundului apei cablurile să nu rămână suspendate; bancurile de nisip, pragurile de nisip,
+pragurile de piatră şi alte obstacole subacvatice de pe traseu trebuie ocolite sau trebuie
+amenajate în ele tranşee sau treceri;
+Tabelul 5. Distanţe de siguranţă ale cablurilor pozate în pământ faţă de diverse reţele, construcţii sau
+obiecte.
+Pagina 46 din 73
+
+-- 46 of 73 --
+
+NTE 007/08/00
+Nr.
+crt.
+Denumirea reţelei,
+construcţiilor sau
+obiectelor
+Distanţa de siguranţă,
+m
+în plan
+orizontal
+(apropieri)
+în plan
+vertical
+(intersecţii)
+Observaţii
+1
+2
+3
+4
+Conducte, canale
+ 
+Apă şi canalizare 0,5*) 0,25 *) La adâncimi peste 1,5m distanţa minimă
+este de 0,6m.
+Termice
+cu abur 1,5 0,5
+cu apă
+fierbinte 0,5 0,2
+Distanţele se măsoară până la marginea
+canalului termic. Ele pot fi reduse cu 50%
+cu măsuri de protecţie termică a cablului
+(de exemplu, prin montarea în tub la
+intersecţii sau prin reducerea încărcării în
+situaţii de apropieri).
+Lichide
+combustibile 1,0 0,5*)
+*) Distanţa poate fi redusă până la 0,25m,
+în cazul protejării cablurilor în tuburi pe
+toată lungimea intersecţiei plus câte 0,5m
+pe fiecare parte.
+Gaze 0,6*) 0,25**)
+*) În cazul protejării cablurilor în tuburi,
+distanţa se măreşte la:
+- 1,5 m, în cazul conductelor de gaze
+pentru presiune joasă sau medie;
+- 2 m, în cazul conductelor de gaze pentru
+presiune înaltă.
+**) De regulă, conducta de gaze deasupra.
+În caz contrar, fie conducta, fie cablul (de
+regulă, ultima instalaţie care se pozează) se
+introduc în tub de protecţie pe o lungime de
+0,8 m de fiecare parte a intersecţiei. Tubul
+va fi prevăzut în capete cu răsuflători
+conform normativului I 6. Unghiul minim
+de traversare 60o.
+5 Fundaţii de clădiri 0,6 - Cu condiţia verificării stabilităţii
+construcţiei.
+6 Arbori (axul acestora) 1,0 - Se admite reducerea distanţei cu condiţia
+protejării cablurilor în tuburi.
+Pagina 47 din 73
+
+-- 47 of 73 --
+
+NTE 007/08/00
+Nr.
+crt.
+Denumirea reţelei,
+construcţiilor sau
+obiectelor
+Distanţa de siguranţă,
+m
+în plan
+orizontal
+(apropieri)
+în plan
+vertical
+(intersecţii)
+Observaţii
+1
+2
+3
+4
+Conducte, canale
+ 
+Apă şi canalizare 0,5*) 0,25 *) La adâncimi peste 1,5m distanţa minimă
+este de 0,6m.
+Termice
+cu abur 1,5 0,5
+cu apă
+fierbinte 0,5 0,2
+Distanţele se măsoară până la marginea
+canalului termic. Ele pot fi reduse cu 50%
+cu măsuri de protecţie termică a cablului
+(de exemplu, prin montarea în tub la
+intersecţii sau prin reducerea încărcării în
+situaţii de apropieri).
+Lichide
+combustibile 1,0 0,5*)
+*) Distanţa poate fi redusă până la 0,25m,
+în cazul protejării cablurilor în tuburi pe
+toată lungimea intersecţiei plus câte 0,5m
+pe fiecare parte.
+Gaze 0,6*) 0,25**)
+*) În cazul protejării cablurilor în tuburi,
+distanţa se măreşte la:
+- 1,5 m, în cazul conductelor de gaze
+pentru presiune joasă sau medie;
+- 2 m, în cazul conductelor de gaze pentru
+presiune înaltă.
+**) De regulă, conducta de gaze deasupra.
+În caz contrar, fie conducta, fie cablul (de
+regulă, ultima instalaţie care se pozează) se
+introduc în tub de protecţie pe o lungime de
+0,8 m de fiecare parte a intersecţiei. Tubul
+va fi prevăzut în capete cu răsuflători
+conform normativului I 6. Unghiul minim
+de traversare 60o.
+7
+8
+9
+LEA
+≤ 1kV 0,5 - Distanţa se măsoară de la marginea
+stâlpului sau fundaţiei.
+1 ÷ 20kV
+neutru
+izolat sau
+tratat
+1,0 -
+110 ÷ 400kV
+neutru
+legat la
+pământ
+5,0 -
+Distanţa se măsoară de la conductorul
+extrem al LEA (protecţia pe orizontală).
+Pentru cablurile de circuite secundare şi de
+teleconducere, precum şi pentru adoptarea
+unor distanţe mai reduse se vor face calcule
+de influenţă.
+Pagina 48 din 73
+
+-- 48 of 73 --
+
+NTE 007/08/00
+Nr.
+crt.
+Denumirea reţelei,
+construcţiilor sau
+obiectelor
+Distanţa de siguranţă,
+m
+în plan
+orizontal
+(apropieri)
+în plan
+vertical
+(intersecţii)
+Observaţii
+1
+2
+3
+4
+Conducte, canale
+ 
+Apă şi canalizare 0,5*) 0,25 *) La adâncimi peste 1,5m distanţa minimă
+este de 0,6m.
+Termice
+cu abur 1,5 0,5
+cu apă
+fierbinte 0,5 0,2
+Distanţele se măsoară până la marginea
+canalului termic. Ele pot fi reduse cu 50%
+cu măsuri de protecţie termică a cablului
+(de exemplu, prin montarea în tub la
+intersecţii sau prin reducerea încărcării în
+situaţii de apropieri).
+Lichide
+combustibile 1,0 0,5*)
+*) Distanţa poate fi redusă până la 0,25m,
+în cazul protejării cablurilor în tuburi pe
+toată lungimea intersecţiei plus câte 0,5m
+pe fiecare parte.
+Gaze 0,6*) 0,25**)
+*) În cazul protejării cablurilor în tuburi,
+distanţa se măreşte la:
+- 1,5 m, în cazul conductelor de gaze
+pentru presiune joasă sau medie;
+- 2 m, în cazul conductelor de gaze pentru
+presiune înaltă.
+**) De regulă, conducta de gaze deasupra.
+În caz contrar, fie conducta, fie cablul (de
+regulă, ultima instalaţie care se pozează) se
+introduc în tub de protecţie pe o lungime de
+0,8 m de fiecare parte a intersecţiei. Tubul
+va fi prevăzut în capete cu răsuflători
+conform normativului I 6. Unghiul minim
+de traversare 60o.
+10 Şină de tramvai (cea mai
+apropiată) 2*) 1**)
+*) Se admite reducerea până la 1m în cazul
+cablurilor cu înveliş din PVC sau pozate în
+tuburi.
+**) Cablurile se montează în tuburi de
+protecţie: unghi minim de traversare 60o
+(recomandat 75o ÷ 90o).
+Pagina 49 din 73
+
+-- 49 of 73 --
+
+NTE 007/08/00
+Nr.
+crt.
+Denumirea reţelei,
+construcţiilor sau
+obiectelor
+Distanţa de siguranţă,
+m
+în plan
+orizontal
+(apropieri)
+în plan
+vertical
+(intersecţii)
+Observaţii
+1
+2
+3
+4
+Conducte, canale
+ 
+Apă şi canalizare 0,5*) 0,25 *) La adâncimi peste 1,5m distanţa minimă
+este de 0,6m.
+Termice
+cu abur 1,5 0,5
+cu apă
+fierbinte 0,5 0,2
+Distanţele se măsoară până la marginea
+canalului termic. Ele pot fi reduse cu 50%
+cu măsuri de protecţie termică a cablului
+(de exemplu, prin montarea în tub la
+intersecţii sau prin reducerea încărcării în
+situaţii de apropieri).
+Lichide
+combustibile 1,0 0,5*)
+*) Distanţa poate fi redusă până la 0,25m,
+în cazul protejării cablurilor în tuburi pe
+toată lungimea intersecţiei plus câte 0,5m
+pe fiecare parte.
+Gaze 0,6*) 0,25**)
+*) În cazul protejării cablurilor în tuburi,
+distanţa se măreşte la:
+- 1,5 m, în cazul conductelor de gaze
+pentru presiune joasă sau medie;
+- 2 m, în cazul conductelor de gaze pentru
+presiune înaltă.
+**) De regulă, conducta de gaze deasupra.
+În caz contrar, fie conducta, fie cablul (de
+regulă, ultima instalaţie care se pozează) se
+introduc în tub de protecţie pe o lungime de
+0,8 m de fiecare parte a intersecţiei. Tubul
+va fi prevăzut în capete cu răsuflători
+conform normativului I 6. Unghiul minim
+de traversare 60o.
+11
+12
+Căi ferate neelectrificate
+Uzinale 1 1*)
+SNCFR 3 2*)
+*) Unghi minim de traversare 75o. Cablurile
+vor fi protejate în tuburi până la limita
+zonei de expropriere, dar minimum 2m de
+la şina externă.
+Pagina 50 din 73
+
+-- 50 of 73 --
+
+NTE 007/08/00
+Nr.
+crt.
+Denumirea reţelei,
+construcţiilor sau
+obiectelor
+Distanţa de siguranţă,
+m
+în plan
+orizontal
+(apropieri)
+în plan
+vertical
+(intersecţii)
+Observaţii
+1
+2
+3
+4
+Conducte, canale
+ 
+Apă şi canalizare 0,5*) 0,25 *) La adâncimi peste 1,5m distanţa minimă
+este de 0,6m.
+Termice
+cu abur 1,5 0,5
+cu apă
+fierbinte 0,5 0,2
+Distanţele se măsoară până la marginea
+canalului termic. Ele pot fi reduse cu 50%
+cu măsuri de protecţie termică a cablului
+(de exemplu, prin montarea în tub la
+intersecţii sau prin reducerea încărcării în
+situaţii de apropieri).
+Lichide
+combustibile 1,0 0,5*)
+*) Distanţa poate fi redusă până la 0,25m,
+în cazul protejării cablurilor în tuburi pe
+toată lungimea intersecţiei plus câte 0,5m
+pe fiecare parte.
+Gaze 0,6*) 0,25**)
+*) În cazul protejării cablurilor în tuburi,
+distanţa se măreşte la:
+- 1,5 m, în cazul conductelor de gaze
+pentru presiune joasă sau medie;
+- 2 m, în cazul conductelor de gaze pentru
+presiune înaltă.
+**) De regulă, conducta de gaze deasupra.
+În caz contrar, fie conducta, fie cablul (de
+regulă, ultima instalaţie care se pozează) se
+introduc în tub de protecţie pe o lungime de
+0,8 m de fiecare parte a intersecţiei. Tubul
+va fi prevăzut în capete cu răsuflători
+conform normativului I 6. Unghiul minim
+de traversare 60o.
+13
+14
+Căi ferate electrificate
+Uzinale 1,5*) **)
+*) Cu măsuri de
+protecţie pentru
+cabluri
+SNCFR 10*)
+**)
+*) Se admite
+reducerea până la
+3m pe bază de
+calcul, cu măsuri
+de protecţie pentru
+- Idem, dar minim 3m.
+*)
+- Traversarea la 10m
+de ace sau cablu de
+întoarcere**)
+- 1,4m - tub izolat
+(PVC, beton etc.)
+Pagina 51 din 73
+
+-- 51 of 73 --
+
+NTE 007/08/00
+Nr.
+crt.
+Denumirea reţelei,
+construcţiilor sau
+obiectelor
+Distanţa de siguranţă,
+m
+în plan
+orizontal
+(apropieri)
+în plan
+vertical
+(intersecţii)
+Observaţii
+1
+2
+3
+4
+Conducte, canale
+ 
+Apă şi canalizare 0,5*) 0,25 *) La adâncimi peste 1,5m distanţa minimă
+este de 0,6m.
+Termice
+cu abur 1,5 0,5
+cu apă
+fierbinte 0,5 0,2
+Distanţele se măsoară până la marginea
+canalului termic. Ele pot fi reduse cu 50%
+cu măsuri de protecţie termică a cablului
+(de exemplu, prin montarea în tub la
+intersecţii sau prin reducerea încărcării în
+situaţii de apropieri).
+Lichide
+combustibile 1,0 0,5*)
+*) Distanţa poate fi redusă până la 0,25m,
+în cazul protejării cablurilor în tuburi pe
+toată lungimea intersecţiei plus câte 0,5m
+pe fiecare parte.
+Gaze 0,6*) 0,25**)
+*) În cazul protejării cablurilor în tuburi,
+distanţa se măreşte la:
+- 1,5 m, în cazul conductelor de gaze
+pentru presiune joasă sau medie;
+- 2 m, în cazul conductelor de gaze pentru
+presiune înaltă.
+**) De regulă, conducta de gaze deasupra.
+În caz contrar, fie conducta, fie cablul (de
+regulă, ultima instalaţie care se pozează) se
+introduc în tub de protecţie pe o lungime de
+0,8 m de fiecare parte a intersecţiei. Tubul
+va fi prevăzut în capete cu răsuflători
+conform normativului I 6. Unghiul minim
+de traversare 60o.
+15 Drumuri 0,5*) 1**) *) Măsurată de la
+bordură spre
+trotuar (în
+localităţi) sau de la
+ampriză spre zona
+de protecţie (în
+afara localităţilor)
+**) Măsurată în axul
+drumului; tubul de
+protecţie va depăşi
+bordura, respectiv
+ampriza, cu circa
+0,5m.
+- Unghiul minim de
+Pagina 52 din 73
+
+-- 52 of 73 --
+
+NTE 007/08/00
+Nr.
+crt.
+Denumirea reţelei,
+construcţiilor sau
+obiectelor
+Distanţa de siguranţă,
+m
+în plan
+orizontal
+(apropieri)
+în plan
+vertical
+(intersecţii)
+Observaţii
+1
+2
+3
+4
+Conducte, canale
+ 
+Apă şi canalizare 0,5*) 0,25 *) La adâncimi peste 1,5m distanţa minimă
+este de 0,6m.
+Termice
+cu abur 1,5 0,5
+cu apă
+fierbinte 0,5 0,2
+Distanţele se măsoară până la marginea
+canalului termic. Ele pot fi reduse cu 50%
+cu măsuri de protecţie termică a cablului
+(de exemplu, prin montarea în tub la
+intersecţii sau prin reducerea încărcării în
+situaţii de apropieri).
+Lichide
+combustibile 1,0 0,5*)
+*) Distanţa poate fi redusă până la 0,25m,
+în cazul protejării cablurilor în tuburi pe
+toată lungimea intersecţiei plus câte 0,5m
+pe fiecare parte.
+Gaze 0,6*) 0,25**)
+*) În cazul protejării cablurilor în tuburi,
+distanţa se măreşte la:
+- 1,5 m, în cazul conductelor de gaze
+pentru presiune joasă sau medie;
+- 2 m, în cazul conductelor de gaze pentru
+presiune înaltă.
+**) De regulă, conducta de gaze deasupra.
+În caz contrar, fie conducta, fie cablul (de
+regulă, ultima instalaţie care se pozează) se
+introduc în tub de protecţie pe o lungime de
+0,8 m de fiecare parte a intersecţiei. Tubul
+va fi prevăzut în capete cu răsuflători
+conform normativului I 6. Unghiul minim
+de traversare 60o.
+traversare 60o
+(recomandat 75o ÷ 90o).
+16 Cabluri electrice (inclusiv
+tracţiune urbană şi
+telefonie)
+*) 0,5**) *) A se vedea
+Tabelul 4
+**) Se admite
+reducerea până la
+0,25m cu condiţia
+protejării mecanice a
+cablului traversat, pe o
+Pagina 53 din 73
+
+-- 53 of 73 --
+
+NTE 007/08/00
+Nr.
+crt.
+Denumirea reţelei,
+construcţiilor sau
+obiectelor
+Distanţa de siguranţă,
+m
+în plan
+orizontal
+(apropieri)
+în plan
+vertical
+(intersecţii)
+Observaţii
+1
+2
+3
+4
+Conducte, canale
+ 
+Apă şi canalizare 0,5*) 0,25 *) La adâncimi peste 1,5m distanţa minimă
+este de 0,6m.
+Termice
+cu abur 1,5 0,5
+cu apă
+fierbinte 0,5 0,2
+Distanţele se măsoară până la marginea
+canalului termic. Ele pot fi reduse cu 50%
+cu măsuri de protecţie termică a cablului
+(de exemplu, prin montarea în tub la
+intersecţii sau prin reducerea încărcării în
+situaţii de apropieri).
+Lichide
+combustibile 1,0 0,5*)
+*) Distanţa poate fi redusă până la 0,25m,
+în cazul protejării cablurilor în tuburi pe
+toată lungimea intersecţiei plus câte 0,5m
+pe fiecare parte.
+Gaze 0,6*) 0,25**)
+*) În cazul protejării cablurilor în tuburi,
+distanţa se măreşte la:
+- 1,5 m, în cazul conductelor de gaze
+pentru presiune joasă sau medie;
+- 2 m, în cazul conductelor de gaze pentru
+presiune înaltă.
+**) De regulă, conducta de gaze deasupra.
+În caz contrar, fie conducta, fie cablul (de
+regulă, ultima instalaţie care se pozează) se
+introduc în tub de protecţie pe o lungime de
+0,8 m de fiecare parte a intersecţiei. Tubul
+va fi prevăzut în capete cu răsuflători
+conform normativului I 6. Unghiul minim
+de traversare 60o.
+distanţă de 0,5m de o
+parte şi de alta a
+traversării.
+4. În locurile de trecere sub apă a cablului, pe ambele maluri, trebuie prevăzute rezerve cu
+lungimea de cel puţin 10 m la pozarea în râuri, respectiv de cel puţin 30 m la pozarea în fluvii;
+Pagina 54 din 73
+
+-- 54 of 73 --
+
+NTE 007/08/00
+5. În locurile unde albia şi malul sunt supuse la eroziune trebuie luate măsuri împotriva dezvelirii
+cablurilor în timpul curgerii gheţii şi în timpul viiturilor, prin consolidarea malurilor (pavaje,
+diguri de abataj, piloni, palplanşe, plăci etc.);
+6. Se interzic încrucişările cablurilor pozate sub apă;
+7. Trecerile cablurilor sub apă trebuie marcate pe maluri cu repere (borne) de semnalizare;.
+8. Pentru liniile de cabluri cu tensiuni peste 1 kV, care se pozează sub apă, se stabileşte o zonă de
+protecţie şi siguranţă având o lăţime de 200m (câte 100 m de fiecare parte a traversării), în
+limitele căreia se interzic:
+a) amenajarea debarcaderelor pentru vase şi şlepuri, aruncarea ancorelor şi a
+plaselor de pescuit, repartizarea terenurilor piscicole;
+b) efectuarea lucrărilor de adâncire a fundului şi de dragare.
+Zonele de protecţie şi siguranţă (comune), în cazul trecerilor de cabluri sub râuri, lacuri şi canale
+navigabile, trebuie să fie marcate cu instalaţii de balizaj (stabilite de comun acord cu organele
+coordonatoare ale navigaţiei fluviale).
+9. Distanţa de siguranţă între cabluri cu tensiuni sub 110 kV este de 250 mm.
+10. Soluţia de instalare a cablurilor sub apă se stabileşte în funcţie de deschiderea şi adâncimea
+traversării, conform indicaţiilor din fig. 5.
+a. Subtraversarea canalelor navigabile, a
+râurilor şi canalelor cu adâncimi mici
+b. Subtraversarea râurilor (fluviilor)
+navigabile de adâncimi mari
+Fig. 5. Pozarea cablurilor sub apă
+Pe canalele navigabile, unde în mod periodic se execută lucrări de adâncire a fundului acestora,
+cablurile se coboară până la cota fixată de organizaţiile transportului fluvial.
+VII.5.2. Instalarea cablurilor în galeriile cu apă din instalaţiile hidrotehnice
+Art.64. La instalarea cablurilor în galeriile cu apă din instalaţiile hidrotehnice se respectă
+următoarele prevederi:
+1. Se consideră galerii cu apă galeriile aflate permanent sau accidental sub apă (inundabile);
+2. În cazul galeriilor cu apă, nu se admite pozarea cablurilor acolo unde curentul hidraulic
+este prea puternic şi ar putea crea solicitări mecanice asupra cablurilor sau dacă instalaţiile
+de susţinere a cablurilor ar modifica scurgerea apei;
+Pagina 55 din 73
+
+-- 55 of 73 --
+
+NTE 007/08/00
+3. Se admite pozarea cablurilor în galerii cu apă numai dacă este posibilă verificarea lor şi a
+punctelor de suspendare, prin golirea galeriei; se recomandă evitarea manşoanelor de
+legătură în aceste galerii;
+4. La trecerea prin pereţii galeriilor cu apă, cablurile se prevăd cu dispozitive speciale de
+etanşare (ţevi cu presetupă sau alte dispozitive asemănătoare).
+5. În galeriile aflate permanent sub apă, prinderea cablurilor pe pereţi se face cu bride
+protejate împotriva coroziunii; nu se admit rastele sau suporturi pentru mai multe cabluri în
+consolă;
+6. În galeriile care se pot afla accidental sub apă, pozarea cablurilor se poate face pe console
+sau pe rastele, la fel ca şi pe alte trasee, cu respectarea aceloraşi reguli de montare; în
+cazurile în care există posibilitatea ca apa să se găsească în mişcare, se prevăd consolidări
+pentru traseul de cabluri;
+7. În galeriile cu apă, marcarea cablurilor se face prin benzi colorate diferit;
+8. Suporturile de prindere şi bridele se leagă la pământ prin armătura construcţiei sau printr-o
+centură specială.
+VII.5.3. Instalarea cablurilor în galerii şi puţuri de acces la centrale subterane sau la alte instalaţii
+energetice subterane
+Art.65. La instalarea cablurilor în galerii şi puţuri de acces la centrale subterane sau la alte
+instalaţii energetice subterane se respectă următoarele prevederi:
+1. Instalarea cablurilor de legătură la centralele electrice subterane sau la alte instalaţii
+energetice subterane se face, de regulă, în galeriile de cabluri destinate acestui scop (cu
+respectarea prevederilor de la Art. 57); se permite instalarea cablurilor şi în galerii de acces
+(auto, pietonal sau auto şi pietonal), în tuneluri cu acces public sau în puţuri de acces, cu
+măsurile de protecţie indicate în continuare.
+2. Instalarea cablurilor în galeriile de acces este permisă în următoarele condiţii:
+a) în galeriile pentru accesul autocamioanelor şi în cele pentru accesul auto şi al pietonilor
+nu se admite instalarea cablurilor decât dacă traseul acestora este separat de calea rutieră,
+cu pereţi sau membrane de protecţie rezistente la acţiuni mecanice şi la foc (1,5 ore) sau
+dacă traseul este ferit de deteriorări mecanice; în cazul realizării acestor separaţii, la
+instalare se respectă indicaţiile de la Art. 55;
+b) în galeriile pentru accesul persoanelor se admite instalarea cablurilor, cu respectarea
+indicaţiilor de la Art. 55, cu precizarea că, în cazul în care lungimea galeriei (a unui
+tronson de galerie) depăşeşte 100 m, lăţimea spaţiului de circulaţie pe lângă console sau
+rastele va fi de minimum 1500 mm.
+Pagina 56 din 73
+
+-- 56 of 73 --
+
+NTE 007/08/00
+3. În tuneluri sau în alte spaţii similare cu acces public se admite pozarea cablurilor numai cu
+condiţia luării de măsuri de protecţie suplimentare (de exemplu: pozarea cablurilor în nişe,
+este necesară separarea traseelor de cabluri cu plase de sârmă etc.); în cazul unor fluxuri
+mari de cabluri pozate în spaţii în care există pericol de incendiu, se prevăd şi protecţii
+(închideri) prin elemente rezistente la foc 1,5 ore, dacă în spaţiul respectiv nu sunt
+prevăzute instalaţii automate de semnalizare sau instalaţii de stingere a incendiilor.
+4. În puţurile de acces cu scări sau lift, se permite instalarea cablurilor pe rastele special
+amenajate în acest scop şi cu măsuri de separare cu elemente rezistente la foc 1,5 ore.
+Pagina 57 din 73
+
+-- 57 of 73 --
+
+NTE 007/08/00
+VIII. AMENAJĂRI CONSTRUCTIVE ŞI INSTALAŢII ANEXE ÎN GOSPODĂRIILE DE
+CABLURI
+VIII.1. Reguli privind realizarea gospodăriilor de cabluri
+VIII.1.1. Condiţii generale
+Art.66. Realizarea gospodăriilor de cabluri trebuie să respecte următoarele condiţii generale:
+1. Construcţiile (încăperile) reţelelor şi gospodăriilor de cabluri se proiectează având în vedere şi
+viitoarele extinderi; se recomandă ca în situaţiile în care nu sunt extinderi previzibile,
+construcţiile să asigure pozarea suplimentară a 15% din cablurile prevăzute iniţial.
+2. Mărimea fiecărei încăperi pentru cabluri este determinată, de regulă, astfel încât să nu
+depăşească:
+- suprafaţa de 700 m2 - la poduri şi subsoluri pentru cabluri;
+- lungimea de 100 m - la tuneluri şi galerii pentru cabluri (pentru fiecare tronson);
+- înălţimea de 25 m - la puţuri pentru cabluri.
+De la prevederile de mai sus fac excepţie tunelurile, galeriile şi puţurile pentru cabluri din
+amenajările hidrotehnice subterane, a căror lungime, respectiv înălţime nu se normează.
+Se admite ca subsolurile pentru cabluri să fie compartimentate în încăperi de cel mult 2000 m2,
+iar în cazuri excepţionale, justificate, de cel mult 4000 m2. Subsolurile pentru cabluri cu o
+suprafaţă mai mare de 2000 m2 sunt prevăzute cu căi suplimentare de acces pentru maşinile de
+intervenţie pentru stingerea incendiilor.
+3. Construcţiile pentru cabluri (poduri, subsoluri, puţuri şi tuneluri) sunt separate de alte încăperi
+adiacente prin elemente incombustibile cu limita minimă de rezistenţă la foc conform
+Tabelului 6.
+4. Galeriile (tunelurile), puţurile şi podurile de cabluri trebuie să fie accesibile numai
+personalului de deservire a instalaţiilor electrice.
+Pagina 58 din 73
+
+-- 58 of 73 --
+
+NTE 007/08/00
+Tabelul 6.
+Nr. crt. Condiţia de separare Limita de rezistenţă la foc
+pereţi planşee uşi, trape, obloane etc.
+1 Separări faţă de încăperi sau spaţii: 3 h 1 h 30’ 1 h 30’
+a) cu pericol de incendiu Conform notei 1
+b) fără pericol de incendiu Conform notei 1
+2 Separări în interiorul construcţiilor de
+cabluri (conform notei 2) sau faţă de
+spaţii cu echipament electric, suprafaţa
+fiecărei încăperi de cablu fiind:
+a) mai mare de 700 m2 3h 1 h 30' 1 h 30’
+b) între 400m2 şi 700 m2 1 h 30' 1 h 30' 45'
+c) până la 400 m2 1 h 30' 1 h 30' 15'
+3 Spre exterior (conform notei 3) 1 h 30' 1 h 30' nenormal
+Note:
+1) Limita de rezistenţă la foc a elementelor de separare a încăperilor de cabluri faţă de spaţii fără
+pericol de incendiu se va adopta în funcţie de densitatea sarcinii termice din încăperea de
+cabluri, importanta spaţiilor adiacente şi pericolul pentru viaţa oamenilor.
+2) Porţiunile de canalizări verticale (puţuri) sau foarte înclinate vor fi prevăzute la capetele lor cu
+închideri rezistente la foc de minimum 1 oră şi 30 de minute. Suplimentar, puţurile - cu excepţia
+celor din amenajările hidrotehnice subterane - vor fi prevăzute cu separări transversale la fiecare
+palier, dar nu mai mult de în m, rezistente la foc 30 minute, care vor obtura complet secţiunea.
+Golurile de acces în aceste spaţii (uşi, trape) vor fi protejate cu clemente rezistente la foc
+minimum 30 minute.
+3) În cazul în care în exterior există construcţii sau instalaţii la distanţe care impun alte condiţii
+decât cele din tabel, vor fi respectate prescripţiile specifice acestor construcţii şi instalaţii sau se
+vor lua măsuri suplimentare de proiecţie.
+5. Construcţiile pentru cabluri (cele cu spaţii circulabile) trebuie să fie prevăzute cu cel puţin
+două căi de acces. Numărul şi dispunerea căilor de acces se determină astfel, încât lungimea
+traseului din orice punct al încăperii la o ieşire să nu depăşească 50 m, cu excepţia tunelurilor,
+galeriilor şi puţurilor din centralele hidrotehnice subterane la care căile de acces se realizează,
+de regulă, numai la capete.
+Una dintre căile de acces, şi anume aceea care serveşte la evacuare, se poate realiza prin
+plafon, prin chepeng sau trapă sau direct spre exterior, eventual la o scară de incendiu.
+Se admite realizarea unei singure căi de acces în următoarele cazuri:
+a) la tuneluri, subsoluri sau poduri de cabluri cil o lungime de evacuare maximă de 10m;
+b) la puţuri pentru cabluri cu o înălţime mai mică de 6 m.
+Pagina 59 din 73
+
+-- 59 of 73 --
+
+NTE 007/08/00
+6. Se interzice construirea de căi de acces sau guri de vizitare în zonele în care există pericol
+de inundare cu apă, păcură, ulei sau alte fluide.
+7. Uşile construcţiilor pentru cabluri se confecţionează din materiale incombustibile (metalice),
+cu limită de rezistenţă la foc conform Art. 66, lit. c) de mai sus; deschiderea uşilor se
+realizează în sensul normal de evacuare indicat în proiect (a se vedea şi Art. 85). În vederea
+facilitării evacuări din construcţiile pentru cabluri uşile de evacuare se prevăd cu sisteme de
+închidere care nu necesită cheie de închidere din interiorul construcţiei (exemplu, sistem yale).
+8. Pe fluxurile care conţin cabluri cu întârziere la propagarea flăcării, care în mănunchi nu
+satisfac condiţiile cerute de standardul SR CEI 332-3, se prevăd separări transversale
+rezistente la foc cel puţin 20 minute, pentru limitarea propagării flăcării, dispuse la distanţe de
+cel mult 25 m şi la ramificaţiile din fluxurile principale.
+Se admite renunţarea la prevederea separărilor transversale menţionate mai sus, dacă se prevăd
+alte măsuri împotriva propagării flăcării (de exemplu, acoperii cu vopsele care măresc
+rezistenţa la foc a cablului).
+Separările transversale împotriva propagării focului se prevăd la toate cablurile situate în
+aceeaşi secţiune transversală a fluxului de cabluri şi se execută conform detaliilor tipizate.
+9. Golurile pentru trecerea cablurilor prin planşee, pardoseli sau pereţi, inclusiv cele prevăzute
+pentru extinderi vor fi etanşate în vederea evitării propagării flăcărilor, trecerii fumului sau a
+gazelor. Limita de rezistenţă la foc a elementelor de etanşare a golurilor trebuie să fie cel puţin
+egală cu cea a elementului străbătut. La canalele de cabluri protejarea golurilor se va face la
+intrarea în construcţie şi la ramificaţiile din canalele principale.
+10. Ca regulă generală, în condiţiile respectării pe traseul cablului (exceptând unele încrucişări) a
+distanţelor minime între rastele de cabluri prevăzute la Art. 55, nu se recomandă montarea de
+plăci de protecţie între rastele, întrucât acestea împiedică răcirea normală a cablurilor, reduc
+eficienţa stropirii, în cazul instalaţiilor de stingere cu apă pulverizată, şi se deteriorează uşor la
+manipulări de cabluri sau la temperaturi ridicate.
+11. Se iau măsuri pentru evitarea pătrunderii unor eventuale scăpări de ulei în canalele de cabluri
+de la aparate care conţin o cantitate de ulei mai mare de 60 kg pe cuvă şi la distanţe mai mici
+de 5 m între marginea canalului şi axul aparatului prin colectoare, praguri de reţinere a
+scurgerilor de ulei accidentale, reborduri la canale etc.
+12. În construcţiile pentru cabluri se asigură spaţii necesare pentru supraveghere, întreţinere şi
+intervenţii în caz de incendiu; de la caz la caz, se asigură şi spaţii pentru amplasarea
+instalaţiilor speciale de stingere a incendiilor sau spaţii de acces a maşinilor de intervenţie
+Pagina 60 din 73
+
+-- 60 of 73 --
+
+NTE 007/08/00
+pentru stingerea incendiilor (a se vedea şi Art. 79); în timpul montajului şi exploatării, se
+interzice ca aceste spaţii să fie ocupate cu orice fel de echipamente sau materiale de montaj
+sau exploatare.
+13. La punerea în funcţiune a unui obiectiv trebuie să fie în funcţiune toate instalaţiile de iluminat,
+de ventilaţie, de stingere şi semnalizare a incendiilor aferente gospodăriilor de cabluri;
+14. Construcţiile speciale de cabluri în care pot apărea infiltraţii de apă, în special cu agresivitate
+mărită, trebuie să fie prevăzute cu posibilităţi de drenare şi de evacuare a acestora.
+VIII.1.2. Amenajarea galeriilor (tunelurilor) şi a canalelor de cabluri
+Art.67. La amenajarea galeriilor (tunelurilor) şi canalelor de cabluri se respectă următoarele
+prevederi:
+1. Instalarea cablurilor în galeriile şi canalele de cabluri se va face cu respectarea distanţelor
+menţionate la Art. 55 şi a regulilor indicate la Art. 57, lit. b.
+2. În obiective industriale se recomandă folosirea canalelor de cabluri cu dimensiuni tipizate;
+canalele de cabluri pot fi prefabricate în zona unde acest lucru este posibil şi economic
+(canalizări lungi); se evită canalele de cabluri cu adâncimi, respectiv lăţimi mai mari de 1200
+mm.
+3. Pentru cablurile de comandă şi control se pot construi canale de cabluri prefabricate fără
+rastele, în care cablurile sunt pozate în straturi suprapuse.
+4. De regulă, nu se construiesc canale de cabluri sub celulele interioare de medie şi înaltă
+tensiune şi sub panourile şi dulapurile de distribuţie de joasă tensiune sau cele de comandă şi
+control; canalele de cabluri se amplasează, de regulă, în faţa sau în spatele celulelor,
+panourilor sau dulapurilor; intrarea cablurilor din canale la acestea se face prin ţevi de
+protecţie montate pe pereţii canalului sau prin mici canale de derivaţie, precum şi prin fante;
+toate trecerile se etanşează faţă de canalul principal.
+Tablourile capsulate confecţionate din materiale incombustibile precum şi stelaje cu
+echipamente care deservesc un singur circuit primar, pot fi amplasate deasupra canalelor de
+cabluri acoperite.
+Se permite amplasarea canalelor de cabluri parţial şi sub celule şi panouri, cu condiţia
+asigurării unei bune separaţii între celule (panouri) şi canalul de cabluri prin planşee rezistente
+la foc, cu trecerile de cabluri bine etanşate împotriva propagării, conform Art. 66, lit. i.
+5. La proiectarea plăcilor de acoperire a canalelor de cabluri se au în vedere următoarele cerinţe:
+Pagina 61 din 73
+
+-- 61 of 73 --
+
+NTE 007/08/00
+a) plăcile trebuie să reziste la sarcinile ce apar în exploatare normală în zona
+respectivă; pentru transportul unor piese mai grele, se vor realiza consolidări
+provizorii în zona de traversare;
+b) plăcile se realizează din materiale incombustibile;
+c) greutatea plăcilor şi construcţia lor trebuie să permită o manipulare uşoară de către
+un singur om sau, în mod excepţional, de către doi oameni; în cazul canalelor cu
+lăţimi foarte mari (peste 1,2 m) se admite ca greutatea plăcilor să fie mai mare (până
+la 120 kg), cu condiţia prevederii de mânere pentru manipulări şi a unei dale uşoare
+(maximum 30 kg), la intervale de maximum 15 m, pentru controale şi intervenţii
+rapide.
+Plăcile de acoperire a canalelor se realizează, de preferinţă, astfel:
+a) din tablă striată: în încăperi sau zone fără pericol de incendiu;
+b) din dale de beton armat: în exterior, precum şi în încăperi sau zone cu pericol de
+incendiu.
+6. În cazul canalelor de cabluri care se construiesc în exteriorul clădirilor şi care sunt
+amplasate deasupra nivelului apelor subterane (freatice) se admite ca fundul canalului să
+fie din pământ bătătorit şi acoperit cu un strat de drenaj din pietriş.
+7. Galeriile (tunelurile) şi canalele de cabluri aşezate sub nivelul apelor subterane (freatice)
+trebuie să aibă pereţii şi radierele dintr-un material impermeabil sau hidroizolant.
+8. Radierele canalelor, galeriilor, precum şi ale blocurilor de cabluri trebuie să aibă o pantă în
+direcţia drenajelor de cel puţin 0,5%; radierele nu trebuie să aibă praguri, ieşituri sau alte
+obstacole constructive similare care să îngreuieze scurgerile, ventilaţia sau să împiedice
+circulaţia libera a personalului de exploatare.
+9. La obiectivele amplasate în subteran nu trebuie utilizate galerii de cabluri în scopul
+vehiculării aerului de ventilaţie necesar altor spaţii decât cel al galeriei de cabluri
+respective.
+VIII.1.3. Amenajarea podurilor şi a subsolurilor de cabluri
+Art.68. La amenajarea podurilor şi subsolurilor de cabluri se respecta următoarele prevederi:
+1. Instalarea cablurilor în podurile şi subsolurile de cabluri se face cu respectarea distanţelor
+stabilite la Art. 55 şi a regulilor de la Art. 57, lit. a.
+2. Pentru realizarea, în cadrul podurilor şi a subsolurilor de cabluri, de fluxuri separate de
+cabluri, se pot prevedea compartimentări între fluxuri cu pereţi având rezistenţă la foc de
+minimum 1,5 ore.
+Pagina 62 din 73
+
+-- 62 of 73 --
+
+NTE 007/08/00
+3. Pentru a evita aglomerările fluxurilor de cabluri în zonele de ieşire din podurile de cabluri,
+se recomandă construirea unui număr suficient de puţuri, goluri şi fante de ieşire,
+amplasate corespunzător.
+VIII.1.4. Amenajarea puţurilor de cabluri
+Art.69. La amenajarea puţurilor de cabluri se respectă următoarele reguli:
+1. Se recomandă ca puţurile de cabluri care trec prin mai multe niveluri să fie prevăzute cu
+uşi de vizitare în dreptul fiecărui nivel (a se vedea şi Art. 66, lit. c).
+2. În interiorul puţurilor de cabluri, în dreptul uşilor de vizitare, se montează platforme de
+montaj din tablă striată, grătare sau beton.
+3. Spaţiul liber pentru montaj trebuie să fie de cel puţin 700 mm, măsurat pe orizontală.
+4. În cazul puţurilor care nu au acces la fiecare nivel sau când distanţa dintre două uşi de
+vizitare este mai mare de 6 m, se montează pentru acces scări de intervenţie verticale,
+fixate pe pereţii interiori ai puţului.
+VIII.1.5. Amenajarea căminelor de cabluri
+Art.70. La amenajarea căminelor de cabluri se respectă următoarele reguli:
+1. Căminele pentru tragerea cablurilor în tuburi trebuie realizate din beton sau cărămidă; în
+cazul în care există cel mult 10 cabluri, trecerea cablurilor din blocurile de cabluri sau din
+tuburi în pământ poate fi realizată în cămine săpate direct în pământ şi umplute ulterior cu
+argilă impermeabil.
+2. Capacele căminelor de cabluri trebuie să corespundă sarcinii ce poate să apară în mod
+normal pe capac (pentru situaţii speciale se vor executa consolidări).
+3. În podeaua căminului trebuie amenajai un puţ colector pentru colectarea apelor subterane
+şi a celor provenite din ploi torenţiale; de asemenea, în cămine mari de cabluri trebuie
+prevăzută o instalaţie de golire.
+4. Căminul de cabluri trebuie prevăzut cu una sau două scări metalice.
+VIII.2. Reguli privind iluminarea gospodăriilor de cabluri
+VIII.2.1. Tipuri de iluminat
+Art.71. Încăperile de cabluri sunt prevăzute cu:
+a) iluminat normal de lucru,
+b) iluminat de siguranţă pentru continuarea lucrului, pentru intervenţii şi pentru evacuare.
+Iluminatul de siguranţă pentru continuarea lucrului se prevede în camerele de comandă, staţii
+electrice, cabine de relee, grup Diesel şi alte încăperi cu receptoare, în care se află construcţii speciale de
+Pagina 63 din 73
+
+-- 63 of 73 --
+
+NTE 007/08/00
+cabluri.
+Iluminatul de siguranţă pentru intervenţie se prevede în locurile în care sunt montate vane,
+robinete şi dispozitive de comandă şi control ale unor instalaţii sau utilaje care trebuie acţionate în caz de
+incendiu în gospodăria de cabluri.
+Iluminatul de siguranţă de evacuare asigură iluminatul punctelor de acces şi evacuare în cazul
+stingerii accidentale a iluminatului normal.
+În cazul galeriilor (tunelurilor) şi puţurilor de cabluri, cu excepţia celor din centralele
+hidroelectrice subterane, se admite ca în locul iluminatului de siguranţă de evacuare să se utilizeze lămpi
+portative cu acumulator.
+VIII.2.2. Tensiuni de alimentare a corpurilor de iluminat
+Art.72. Tensiunile de alimentare a corpurilor de iluminat sunt cele indicate în STAS 2612, în
+funcţie de tipul iluminatului (fix, portabil), de amplasarea corpurilor de iluminat, de gradul de pericol al
+locului de instalare şi de măsurile de protecţie prevăzute împotriva electrocutării.
+VIII.2.3. Nivelul mediu de iluminare
+Art.73. Nivelul mediu de iluminare trebuie să respecte următoarele reguli:
+a) Iluminatul normal de lucru:
+1. în poduri şi în subsoluri de cabluri:
+- în general ................................................................................20 lx
+- în zona repartitoarelor sau a echipamentelor electrice admise a fi
+montate conform Art. 57, lit. a..............................................150 lx
+2. în galerii şi în puţuri de cabluri ..........................................................20 lx
+b) Iluminatul de siguranţă:
+1. pentru continuarea lucrului .................................... după necesitate
+2. pentru evacuare (la nivelul pardoselii căilor de evacuare) ................ 0,3 lx
+VIII. 2 .4. Comanda iluminatului
+Art.74. Comanda iluminatului trebuie săse facă după următoarele reguli:
+a) în cazul iluminatului normal de lucru, comanda se face din exteriorul încăperilor, galeriilor sau
+puţurilor de cabluri, de regulă, de lângă intrările în aceste încăperi;
+b) în cazul iluminatului de siguranţă, comanda se realizează automat la căderea iluminatului
+normal de lucru.
+Pagina 64 din 73
+
+-- 64 of 73 --
+
+NTE 007/08/00
+VIII.3. Reguli privind ventilarea gospodăriilor de cabluri
+VIII. 3.1. Ventilarea tehnologică
+Art.75. Proiectarea instalaţiilor de ventilare tehnologice se face conform Normativului pentu
+proiectarea şi executarea instalaţiilor de ventilare - I 5.
+În cazul în care se adoptă soluţia de ventilare tehnologică prin lăsarea deschisă a uşilor dintre
+diverse compartimente de cabluri, este necesar ca în situaţia de incendiu să se comande automat
+închiderea lor (de exemplu, prin semnale primite de la detectoarele de incendiu montate în zona
+respectivă sau prin declanşarea unor legături fuzibile).
+În încăperile şi galeriile de cabluri trebuie asigurată o ventilare corespunzătoare a cablurilor, astfel
+încât să nu se depăşească, în regim de durată, temperatura maximă de lucru a conductoarelor indicată în
+Anexa 1, pe tipuri de cabluri.
+Valoarea maximă a temperaturii ambiante se stabileşte pe bază de calcul tehnico-economic, ţinând
+seama pe de o parte de costul majorării secţiunii conductoarelor cablului la depăşirea temperaturii
+ambiante de calcul de +30 oC, iar pe de altă parte de costul instalaţiei de ventilare.
+Valoarea maximă a temperaturii ambiante nu va fi, de regulă, mai mare de +40oC.
+VIII. 3.2. Ventilarea de avarie
+Art.76. În construcţiile speciale închise pentru cabluri şi anume: tuneluri, subsoluri sau poduri de
+cabluri blindate (fără ferestre) care au o arie mai mare de 700 m2 şi subsoluri sau poduri de cabluri (cu
+ferestre) cu arii libere mai mari de 10400 m2, se prevăd dispozitive de evacuate directă în exterior a
+turnului şi gazelor fierbinţi rezultate în caz de incendiu. Dispozitivele trebuie să aibă suprafaţa liberă
+însumată de cel puţin 0,2% din aria spaţiului sau compartimentul respectiv.
+În cazurile în care rezultă ca fiind necesar atât sistemul de ventilare tehnologică, cât şi cel de
+avarie, acestea pot fi realizate într-un singur sistem de ventilaţie care să asigure condiţiile de
+dimensionare prevăzute la Art. 75 şi 76.
+Ventilarea se asigură, de regulă, pe cale naturală în cazul în care, datorită amplasamentului
+încăperilor pentru cabluri sau al traseelor de introducere sau evacuare, se va prevedea montarea unei
+instalaţii de ventilare mecanică, realizată corespunzător temperaturii gazelor ce trebuie evacuate în caz de
+incendiu (ventilatoarele vor fi amplasate în afara încăperilor deservite).
+În situaţia în care sistemul de ventilare este comun pentru mai multe încăperi legate tehnologic
+între ele, se vor lua măsuri care să împiedice propagarea focului sau fumului dintr-o încăpere în alta.
+Comanda ventilării mecanice trebuie să se facă din afara încăperii de cabluri, prin butoane amplasate în
+apropierea intrărilor în încăpere şi în camera de comandă.
+Cablurile pentru alimentarea ventilatoarelor de avarie se pozează astfel, încât să nu fie afectate de
+un eventual incendiu în încăperile pe care le deservesc.
+Pagina 65 din 73
+
+-- 65 of 73 --
+
+NTE 007/08/00
+IX. DOTAREA GOSPODĂRIILOR DE CABLURI CU MIJLOACE ŞI INSTALAŢII DE
+PREVENIRE ŞI STINGERE A INCENDIILOR
+IX.1. Criterii de dotare a gospodăriilor de cabluri cu mijloace şi instalaţii de prevenire şi stingere a
+incendiilor
+Art.77. Prevederea mijloacelor şi instalaţiilor de prevenire şi stingere a incendiilor în gospodăriile
+de cabluri se face diferenţiat, respectând prevederile din normele generale de protecţie împotriva
+incendiilor şi din normele de dotare având în vedete importanţa obiectivelor, deservite şi concentrarea de
+cabluri în încăperile respective, ţinând seama de prevederile din acest capitol.
+Art.78. La încăperile normale pentru cabluri se prevăd, conform normelor departamentale de
+dotare împotriva incendiilor, următoarele mijloace şi instalaţii de prevenire şi stingerea incendiilor:
+a) mijloace de primă intervenţie pentru stingerea începuturilor de incendiu;
+b) hidranţi de incendiu, la obiectivele prevăzute cu instalaţii de apă de incendiu, amplasaţi în
+afara încăperilor de cabluri; ţevile de refulare ale hidranţilor utilizaţi pentru stingerea
+incendiilor în gospodăriile de cabluri vor fi echipate cu utilaje de pulverizare;
+c) butoane de semnalizare manuală a incendiilor la obiectivele prevăzute ai instalaţii de
+semnalizare a incendiilor.
+Art.79. La încăperile închise de cabluri (Art. 7) din cadrul gospodăriilor importante se prevăd, în
+plus faţă de mijloacele şi instalaţiile menţionate la Art. 78 şi următoarele:
+a) instalaţii de semnalizare automată a incendiilor: în cazul încăperilor de cabluri cu suprafeţe
+mai mari de 2000 m2, se prevăd legături de comunicaţie directe, prin telefon sau radio, de
+lângă aceste încăperi la încăperea unde se află centrala de semnalizarea a incendiilor.
+b) instalaţii speciale de stingere pe fluxurile de cabluri; se aplică la fluxurile de cabluri care au
+materiale combustibile măi mult de 3,5 litri/m.
+În încăperile cu cabluri cu o suprafaţă mai mare de 2000 m2 trebuie să se asigure şi posibilitatea
+stingerii incendiilor cu maşini de intervenţie.
+Art.80. În cazuri justificate, în podurile de cabluri de sub camerele de comandă din gospodăriile
+importante de cabluri se pot prevedea numai mijloace iniţiale de stingere (stingătoare) şi stingere cu apă
+de la hidranţi (fără instalaţii speciale de stingere a incendiilor) atunci când sunt îndeplinite următoarele
+condiţii:
+a) nu se periclitează viaţa oamenilor datorită întreruperilor alimentării cu energie electrică;
+b) este asigurată deservirea locală pentru continuarea sau reluarea lucrului ori oprirea în condiţii
+de siguranţă a utilajelor.
+Pagina 66 din 73
+
+-- 66 of 73 --
+
+NTE 007/08/00
+În cazul în care în podul de cabluri sunt structuri metalice de rezistenţă (stâlpi, grinzi) neprotejate
+la foc, trebuie să se prevadă o instalaţie fixă de stingere cu apă pulverizată, astfel încât să se evite
+afectarea structurilor metalice respective (temperatura maximă 300oC).
+Art.81. În încăperile tehnologice, în canalele de cabluri şi la pozarea aeriană în exteriorul
+construcţiei, stabilirea mijloacelor şi instalaţiilor pentru prevenirea şi stingerea incendiilor la cablurile
+electrice se face ţinând seama şi de cele stabilite pentru restul de instalaţii din spaţiile respective.
+Nivelurile deschise şi estacadele pentru cabluri se dotează cu mijloacele şi instalaţiile de prevenire
+şi stingere a incendiilor menţionate la Art. 78, lit. a şi lit. b.
+Art.82. Gospodăriile de cabluri în funcţiune, la care din cauze tehnice nu este posibilă aplicarea
+întocmai a prevederilor din prezentul normativ, referitoare la prevenirea şi stingerea incendiilor, pot
+continua să funcţioneze sau pot fi puse în funcţiune numai cu luarea următoarelor măsuri:
+a) aplicarea în construcţiile de cabluri de separări transversale pe fluxurile de cabluri sub limita
+prevăzută la Art. 66, lit. h;
+b) protejarea cablurilor împotriva propagării flăcării, conform Art. 35, lit. a şi 66, lit. h;
+c) dotarea gospodăriilor de cabluri în funcţiune cu mijloacele de prevenire şi de stingere a
+incendiilor, prevăzute în Normele de prevenire şi stingere a incendiilor - PE 009.
+IX.2. Instalaţii de semnalizare
+Art.83. Instalaţiile de semnalizare automată a incendiilor se realizează cu detectoare de fum sau
+de temperatură; detectoarele de temperatură se prevăd numai în cazul în care nu sunt condiţii de
+funcţionare normală pentru detectoarele de fum.
+Art.84. Centrala de semnalizare se amplasează, după caz, la formaţia civilă de pompieri sau într-o
+încăpere unde există în permanenţă personal de tură care are în atribuţii şi deservirea gospodăriei de
+cabluri, ca de exemplu: în camera de comanda, de dispecer etc.
+Art.85. Între încăperea în care se amplasează centrala de semnalizare şi formaţia civilă de
+pompieri se asigură alarmarea automată şi se realizează legături de comunicaţie directe prin telefon, radio
+sau alte mijloace.
+IX.3. Instalaţii speciale de stingere a incendiilor
+Art.86. În gospodăriile de cabluri se realizează următoarele tipuri de instalaţii speciale de stingere
+a incendiilor :
+a) instalaţii fixe de stingere cu apă pulverizată;
+Pagina 67 din 73
+
+-- 67 of 73 --
+
+NTE 007/08/00
+b) instalaţii de stingere cu spumă cu coeficient mare de înfoiere (de peste 400:1); în cazul unor
+fluxuri mici de cabluri aşezate concentrat pe pardoseală sau pe perete, se pot utiliza şi spume
+cu coeficient mediu de înfoiere;
+c) instalaţii de stingere cu bioxid de carbon, în spaţii cu volum limitat; folosirea altor soluţii de
+prevenire şi stingere a incendiilor în gospodăriile de cabluri poate fi adoptată, de la caz la caz,
+numai cu aprobarea forului tutelar al unităţii beneficiare şi numai în cazurile în care acele
+soluţii prezintă o eficienţă tehnico-economică şi condiţii de siguranţă corespunzătoare faţă de
+cele prevăzute în prezentul normativ.
+Art.87. Punerea în funcţiune a instalaţiilor de stingere se face, de regulă, manual (local şi/sau de la
+distanţă), numai după verificarea corectei semnalizări a începutului de incendiu şi stabilirea cat mai
+exactă a zonei unde s-a produs incendiul.
+Instalaţiile de stingere sunt astfel concepute, încât să se asigure punerea în funcţiune a acestora de
+către personalul de deservire într-un timp care, de regulă, să nu depăşească 5 minute din momentul
+semnalizării începutului de incendiu şi până la începerea operaţiei de stingere.
+Art.88. Punerea în funcţiune a instalaţiilor se face din afara încăperilor afectate, şi anume din
+locuri care prezintă siguranţă pentru personalul de deservire sau din încăperi special amenajate în acest
+scop. Pentru instalaţiile de stingere cu spumă se asigură posibilităţi de racordare la instalaţia de alimentare
+cu apă şi cu energie electrică în cazul generatoarelor cu acţionare electrică.
+Cablurile de alimentare a generatoarelor se pozează pe trasee separate de încăperea sau încăperile
+de cabluri protejate.
+Cablurile de alimentare a pompelor care deservesc instalaţiile fixe de stingere cu apă pulverizată
+se pozează cu respectarea prevederilor din Normativul privind proiectarea şi executarea instalaţiilor
+electrice la consumatori cu tensiuni până la 1000V - I 7.
+Art.89. Stabilirea numărului de generatoare cu spumă şi dimensionarea instalaţiei de alimentare
+cu apă se face astfel, încât să se asigure umplerea cu spumă a întregului compartiment de cabluri într-un
+timp care, de regulă, nu va depăşi 5 minute, în cazuri justificate, şi anume în subsoluri sau poduri mari de
+cabluri, se admite ca acest timp să fie de cel mult 10 minute.
+Art.90. În construcţiile în care există prevăzute instalaţii de aer comprimat, se recomandă ca
+încercările profilactice ale instalaţiilor fixe de stingere cu apă pulverizată să se facă cu aer comprimat în
+acele încăperi pentru cabluri care conţin şi echipamente electrice de tipul admis la Art. 57. lit. a sau sunt
+situate deasupra unor încăperi cu echipament electric.
+Art.91. Mijloace de primă intervenţie şi hidranţi de incendiu. Dotarea gospodăriei de cabluri cu
+mijloace de primă intervenţie şi hidranţi se face în conformitate cu Normele de prevenire şi stingere a
+incendiilor - PE 009.
+Pagina 68 din 73
+
+-- 68 of 73 --
+
+NTE 007/08/00
+X. ACCESORII PENTRU CABLURI. MARCAREA Şl ÎNCERCAREA CABLURILOR
+X.1. Terminale şi manşoane
+Art.92. Terminalele şi manşoanele trebuie să asigure protecţia cablurilor împotriva pătrunderii
+umezelii şi a altor substanţe cu acţiune nocivă din mediul înconjurător.
+Art.93. Terminale şi manşoanele de legătură şi de derivaţie ale cablurilor trebuie să reziste la
+tensiunile de încercare prescrise pentru cabluri.
+Art.94. Manşoanele de legătură ale cablurilor trebuie să asigure:
+a) continuitatea perfectă a conductoarelor din cablu;
+b) continuitatea circulaţiei de ulei la cablurile cu ulei sub presiune;
+c) continuitatea electrică a mantalei metalice şi a mantalei de plumb şi a conductoarelor (din
+aluminiu sau cupru);
+d) continuitatea electrică a benzilor metalice de armare şi a ecranelor metalice;
+e) nivelul de izolaţie;
+f) protecţie mecanică similară cu cea a cablului.
+În cazul îmbinărilor cablurilor cu izolaţie din hârtie impregnată, cu cabluri cu izolaţie uscată,
+trebuie să se ia măsuri pentru împiedicarea pătrunderii masei izolante în cablul cu izolaţie uscată.
+Se recomandă ca numărul de manşoane de legătura pe 1 km de linie nou construită, pentru cabluri
+cu o tensiune de 1-30 kV, să fie de maximum 4 bucăţi; un număr mai mare de manşoane (până la 6
+bucăţi) se admite numai pe baza unei aprobări de la societatea care exploatează linia în cablu.
+Art.95. Înnădirea cablurilor de comandă şi control se permite numai în următoarele cazuri:
+a) când lungimea traseului este mai mare decât lungimea de fabricaţie a cablului respectiv;
+b) pentru înlăturarea deranjamentelor cablurilor în funcţiune.
+Art.96. Cablurile electrice pozate în pământ, situate în apropierea manşoanelor, trebuie protejate
+faţă de acestea prin amplasarea lor la o distanţă minimă de 25 cm; când este necesară micşorarea acestei
+distanţe, cablurile cele mai apropiate de manşoane trebuie protejate cu cărămizi, plăci din beton etc.
+Nu se realizează, de regulă, manşoane în subsoluri, poduri de cabluri, încăperi tehnologice,
+depozite şi alte spaţii cu pericol de incendiu; cablurile de energie care necesită joncţionare se manşonează
+în exteriorul acestor spaţii sau se protejează pe porţiunea de joncţionare cu elemente rezistente mecanic şi
+la foc (minimum 30 minute).
+X.2. Marcarea cablurilor
+Art.97. Cablurile pozate în încăperi, canale, galerii, poduri şi puţuri de cabluri se marchează cu
+etichete de identificare la capete, la trecerile dintr-o construcţie de cabluri în alta, la încrucişări cu alte
+cabluri etc. Cablurile pozate în pământ se marchează şi pe traseu, din zece în zece metri.
+Pagina 69 din 73
+
+-- 69 of 73 --
+
+NTE 007/08/00
+Art.98. Cablurile pozate în jgheaburi: se marchează numai la capete.
+Art.99. Etichetele pentru cabluri se confecţionează din plumb, material plastic, cupru sau
+aluminiu (materialul se alege în funcţie de mediul de pozare) şi trebuie să aibă înscris pe ele:
+- tensiunea (kV);
+- marca de identificare a cablului din jurnalul de cabluri;
+- anul de pozare.
+Art.100. Toate manşoanele de legătură sau de derivaţie, precum şi terminalele trebuie să fie
+prevăzute, de asemenea, cu etichete de identificare.
+Art.101. Traseele subterane de cabluri se marchează prin borne de marcare la suprafaţă sau prin
+tăbliţe de marcaj pe clădiri, atunci când în desenele de execuţie, traseele de cabluri nu pot fi indicate pe
+plan prin cote faţă de construcţii fixe.
+Distanţa dintre bornele de marcaj pe traseele rectilinii în afara zonelor locuite din localităţi este de
+100 m.
+Se marchează prin borne schimbările de direcţie, traversările de şosele şi intersecţiile cu alte
+canalizări subterane (cabluri, conducte de fluide etc.).
+Bornele se fixează lateral de cablu, la 0, 8m de axul lui, cu placa de inscripţie orientată spre cablu.
+Art.102. Marcarea şi repararea reţelelor de cabluri în localităţi se face în conformitate cu
+prevederile STAS 9570/1.
+Art.103. Marcarea cablurilor la traversările căilor de navigaţie fluviale: cablurile trebuie să fie
+reperate la ambele maluri prin plăci indicatoare vizibile pentru navigatori.
+La traversarea unei căi ferate, reperarea cablurilor se face prin tăbliţe indicatoare, pe ambele părţi
+ale acesteia.
+X.3. Încercarea cablurilor
+Art.104. Încercările cablurilor la recepţie sau în etape intermediare, înainte de montaj, se fac
+conform indicaţiilor furnizorului de cabluri (standarde, norme interne, caiete de sarcini etc.); încercările
+după montaj şi în timpul exploatării se fac conform prevederilor din Normativul de încercări şi măsurători
+la echipamente şi instalaţii electrice - PE 116.
+XI. MĂSURI PRIVIND PROTECŢIA MEDIULUI
+Art. 105. La proiectarea, construcţia, retehnologizarea şi mentenanţa liniilor electrice în cablu se iau
+măsuri pentru reducerea impactului negativ al liniilor asupra mediului.
+Pagina 70 din 73
+
+-- 70 of 73 --
+
+NTE 007/08/00
+Art. 106. Măsurile privind protecţia mediului au în vedere următoarele:
+a) impactul asupra aşezărilor umane;
+b) ocuparea terenului (trasee, accesorii);
+c) impactul asupra rezervaţiilor naturale şi culturale;
+d) fragmentarea habitatelor faunei sălbatice;
+e) afectarea peisajului (impactul vizual, acolo unde este cazul);
+f) câmpul electromagnetic;
+g) subtraversarea apelor;
+h) impactul chimic (vopsele, solvenţi, ulei etc.);
+i) depozitarea deşeurilor;
+j) monitorizarea impacturilor asupra mediului pe durata exploatării.
+Art. 107. Documentaţia pentru realizarea LEC trebuie să cuprindă toate datele şi informaţiile necesare,
+inclusiv planul de management şi monitoring care va include acţiuni de reducere a impactului, sub
+aspectele:
+a) electromagnetic;
+b) fizic;
+c) chimic;
+d) mecanic;
+e) sonor;
+f) vizual;
+g) psihic;
+h) socio-economic etc.
+asupra factorilor de mediu atât pe perioada eliberării traseului, construcţiei, exploatării/mentenanţei
+precum şi la dezafectarea acestora, în vederea obţinerii acordului de mediu. În documentaţie se vor trata,
+la solicitarea beneficiarului, şi cerinţele cuprinse în procedurile proprii ale acestuia.
+Pagina 71 din 73
+
+-- 71 of 73 --
+
+NTE 007/08/00
+BIBLIOGRAFIE
+1. Clarke, D. J., Soth, I.P. Cross bonding single core power cables. BICC, London, 1975.
+2. Lang, V. L'échauffement des conducteurs câblés des lignes aériennes. In: Bull. de
+A.S.E., nr. 14, 1956, p. 631-641.
+3. Endrenyi. J., Murllie, Mc. Détermination de l'intensité de courant admissible dans les
+conducteurs par simulation numérique de la charge, des conditions atmosphériques et
+du vieillissement des conducteurs. CIGRE, 1968, Rapport 23-04.
+4. Gorub,I. C., Woll,E. F. Load Capabitity of Bare ACSR and All-Aluminium Conductor
+Based on Long time Outdoor Temperature Rise-Tests. I.E.E. Trans. P.A.S. vol. 82 nr.
+12, 1963, p. 73-82.
+5. Davis, M. W. Nomographic computation of the ampacity rating of aerial conductors.
+I.E.E.E. Trans. Power Apparatus und Systems, vol. PAS 89, p. 387-399, Mart., 1970.
+6. V.D.E. 0.103/1.61. Leitsätze de Bemessung von Starkstromanlagen auf mechanische und
+termische Kurzschlussfestigkeit.
+7. Goossens. R. F. Rapport sur les travaux du comité d'études nr. 2. (Câbles á haute tension).
+CIGRE-ref. 233, 1964.
+8. C.E.I. Calcul du courant admissible dans Ies cables en regime permanent (facteur de charge
+100%). Recomandation de la Commision Electrotechnique Internationale (C.E.I.), Publication
+287, 1969, Bureau de la C.E.I., Geneve.
+9. Nehet, John, H. Procedures for calculating the temperature yise of pipe cable and buried
+cables for sinusoidal and rectangular loss cycles. A. I.E.E. Transactions, vol. 72, pt. III
+(June 1953), pag. 541-545; 535; 539-560.
+10. Buller. F. H., Woodrow, CA. Load factor equivalent-Hour values compared. În: Electrical
+World, vol. 92, Nr. 2, 1928, pp. 59-60.
+11. Van Wormer F. C. An improved approximate technique for calculating cable
+temperature transients. În: A.I.E.E. Trans. vol. 74, pt. 3, pp. 277-281, 1955.
+12. Comission Electrotechnque International. Calcul de courent admissible dans la cablu en regim
+permanent (facteur de charge 100%). Suisse, Geneve 1969 avec modification No. 1 avril 1971,
+modification No. 2 avril 1972.
+13. Jocteur, R., Osly, M. Recherche et developpement en France dans le domaine des cables haut
+tension isolés au polyéthyène extrudé. Silec, France.
+14. Conte, G. – IMPIANTI ELETTRICI. Componenti e sistemi elettrici – Normativa – Sicurezza –
+Progettazione. Seconda edizione. Editore Ulrico Hoepli, Milano, 1996.
+15. Bercovici, M., Arie, A. A., Poeată, Al. Reţele Electrice. Calculul electric. Bucureşti, Editura
+Tehnică. 1974.
+16. Sufrim, M., Iszák, E., Dabija, D. – Protecţia împotriva incendiilor în gospodăriile de cabluri din
+întreprinderile industriale. Editura tehnică, Bucureşti, 1984;
+17. Meculescu, M., Dian, G. Metode pentru calculul curenţilor maxim admisibili ai liniilor electrice
+aeriene. Studiul I.S.P.E., 1957.
+18. Boţan, N., Poeată, A., Constantinescu, E. Reţele electrice. Calculul electric. Editura tehnică.
+Bucureşti, 1960.
+19. Iacobescu, Gh. ş.a. Reţele electrice. Probleme. Editura Didactică şi Pedagogică, Bucureşti, 1975
+20. Ioniţă. Georgeta, Bucea, Gh. Montarea şi exploatarea cablurilor electrice de înaltă tensiune.
+Editura Tehnică, Bucureşti, 1979.
+21. Siemens Memoratorul inginerului electrician. Traducere din limba germană cu adaptări la
+condiţiile din România. Editura Tehnică, Bucureşti, 1975.
+22. Baciu, A., Laszlo, T. Exploatarea şi repararea reţelelor electrice. Bucureşti, Editura tehnică,
+1969.
+23. Militaru, P., Petre, N. Consideraţiuni şi propuneri privind calculul stabilităţii termice la
+scurtcircuit a conductorilor şi aparatelor. A şasea sesiune de comunicări tehnico-ştiinţifice a
+Institutului de Studii şi Proiectări Energetice. 5-7. XII, 1966, vol. I, p. 55-80.
+24. Avramescu, A. Temperaturabhangigkeit der wakren spezifischen Warme von Leitungskupfer und
+Pagina 72 din 73
+
+-- 72 of 73 --
+
+NTE 007/08/00
+Leitungsaluminium bis sunt Schmelpsunkt. Z. tehn. Physik, 1959.
+25. Avramescu, A. Încăzirea la scurtcircuit a conductoarelor de aluminiu. în: Studii şi cercetări
+energetice, nr. 3, 1953.
+26. Avramescu, A. Încălzirea adiabatică a conductorilor de cupru, aluminiu şi argint. In studii şi
+cercetări energetice, nr. 3-4, 1955.
+27. Cruceru, C. Consideraţii teoretice şi experimentale cu privire la determinarea
+temperaturilor cablurilor de energie care funcţionează sub sarcină variabilă. Lucrările
+I.C.P.E., nr. 24, 1970.
+28. Iacobescu, Gh., Iordănescu, I., Ţenovici, R. Reţele electrice pentru secţiile de subingineri.
+Bucureşti, Editura Didactică şi Pedagogică, 1975.
+29. Siemens. Memoratorul Inginerului Electrician. Traducere din limba germană. Bucureşti, Editura
+Tehnică, 1971.
+30. Curelaru, Al. Probleme de staţii şi reţele electrice. Scrisul romanesc, Craiova, 1979.
+31. Pietrăreanu, E. Agenda electricianului. Bucureşti, Editura Tehnica, 1986.
+32. Arhipov, N. K. Calculul curenţilor de scurtcircuit. Bucureşti, Editura Tehnică. 1958.
+33. Racoţi, E. Table şi nomograme pentru calculul conductoarelor. Bucureşti, Editura Tehnică, 1988.
+34. Ioniţă Georgeta, Mazilu, Gh. Linii electrice subterane de 1-220kV. Îndreptar de calcul şi
+proiectare. Editura Tehnică, 1990, Bucureşti.
+35. Iacobescu, Gh., Iordănescu, I., Eremia, M., Ţenovici, R., Dumitriu, C. - Reţele electrice.
+Probleme. Bucureşti, Editura Didactică şi Pedagogică, 1977.
+36. Iacobescu, Gh., Iordănescu, I., Eremia, M., Toader, C., Ţenovici, R., Dumitriu, C. - Reţele
+electrice. Bucureşti, Editura Didactică şi Pedagogică, 1981.
+37. Mircea, I. - Instalaţii şi echipamente electrice. Ghid teoretic şi practice. Ediţia a doua. Editura
+Didactică şi Pedagogică, Bucureşti, 2002.
+38. Angelescu, M. – Reţele edilitare urbane. Editura Didactică şi Pedagogică, R.A. Bucureşti, 1996.
+Pagina 73 din 73
+
+-- 73 of 73 --
+

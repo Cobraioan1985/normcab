@@ -7,3 +7,9 @@ Arhiva/
 # Conversatii Chat - exclude doar fisiere redundante
 Conversatii Chat/Aplicatie.txt
 Conversatii Chat/nte007_app_29.html
+
+# Design-new — artefacte design tool (păstrăm doar sursele necesare)
+Design-new/uploads/
+Design-new/screenshots/
+Design-new/NormCab application/
+Design-new/export/
