@@ -74,6 +74,31 @@
         <span style="font-size:14.5px;font-weight:600;color:#fff;white-space:nowrap">{{ moduleTitle }}</span>
       </div>
       <div style="display:flex;align-items:center;gap:12px">
+        <div style="position:relative">
+          <button onClick="{{ toggleScope }}" style="display:flex;align-items:center;gap:7px;height:32px;padding:0 13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);color:#cfe0f5;border-radius:7px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            Module
+          </button>
+          <sc-if value="{{ scopeOpen }}" hint-placeholder-val="{{ false }}">
+            <div onClick="{{ toggleScope }}" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:40;background:transparent"></div>
+            <div style="position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid #d3dbe7;border-radius:10px;box-shadow:0 6px 24px rgba(13,32,58,.18);padding:12px;width:280px;z-index:50">
+              <div style="font-size:11.5px;color:#0d2a52;font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px">Module active</div>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <sc-for list="{{ scopeMods }}" as="sm" hint-placeholder-count="8">
+                  <div onClick="{{ sm.toggle }}" style="{{ sm.rowStyle }}">
+                    <span style="{{ sm.boxStyle }}">{{ sm.checkLabel }}</span>
+                    <span style="font-size:12.5px;flex:1">{{ sm.label }}</span>
+                    <span style="font-size:10.5px;color:#9aa5b8">{{ sm.hint }}</span>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="border-top:1px solid #eef1f6;margin-top:8px;padding-top:8px;display:flex;justify-content:space-between;align-items:center">
+                <button onClick="{{ scopeSelectAll }}" style="height:28px;padding:0 11px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:5px;font-size:11.5px;font-weight:600;cursor:pointer;font-family:inherit">Selectează tot</button>
+                <button onClick="{{ toggleScope }}" style="height:28px;padding:0 11px;background:#0d2a52;color:#fff;border:none;border-radius:5px;font-size:11.5px;font-weight:600;cursor:pointer;font-family:inherit">Închide</button>
+              </div>
+            </div>
+          </sc-if>
+        </div>
         <button onClick="{{ openModal }}" style="display:flex;align-items:center;gap:7px;height:32px;padding:0 13px;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.4);color:#f5c97a;border-radius:7px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="16"></line><circle cx="12" cy="7.6" r=".8" fill="currentColor"></circle></svg>
           Diagramă calcul
@@ -106,7 +131,7 @@
         <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
             <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52">▸ Parametri de intrare</div>
-            <button onClick="{{ runT1btn }}" style="height:32px;padding:0 18px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">RUN ▸</button>
+            <button onClick="{{ runT1btn }}" style="height:32px;padding:0 18px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">Începe ▸</button>
           </div>
           <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:11px 12px">
             <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Uo/U [kV]</label><select value="{{ t1.uou }}" onChange="{{ t1h.uou }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"><option>0,6/1</option><option>3,6/6</option><option>6/10</option><option>12/20</option><option>18/30</option></select></div>
@@ -134,6 +159,11 @@
 
         <sc-if value="{{ t1Ok }}" hint-placeholder-val="{{ false }}">
          <div>
+          <div style="background:#eef4fb;border:1px solid #c9dbef;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <label style="font-size:11px;color:#0d2a52;font-weight:600">Secțiune utilizată:</label>
+            <select value="{{ secCur }}" onChange="{{ secSet }}" style="height:30px;border:1px solid #cdd6e4;border-radius:5px;background:#fff;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52;min-width:200px"><sc-for list="{{ secOpts }}" as="o" hint-placeholder-count="3"><option value="{{ o.value }}">{{ o.label }}</option></sc-for></select>
+            <span style="font-size:11px;color:#6a7b96">Secțiunile listate respectă criteriul termic.</span>
+          </div>
           <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;margin-bottom:16px">
             <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
               <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Secțiune recomandată</div>
@@ -182,40 +212,46 @@
       <!-- ===== T3 CĂDERI DE TENSIUNE ===== -->
       <sc-if value="{{ m_t3 }}" hint-placeholder-val="{{ false }}">
        <div>
+        <div style="background:#eef4fb;border:1px solid #c9dbef;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <label style="font-size:11px;color:#0d2a52;font-weight:600">Secțiune utilizată:</label>
+          <select value="{{ secCur }}" onChange="{{ secSet }}" style="height:30px;border:1px solid #cdd6e4;border-radius:5px;background:#fff;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52;min-width:200px"><sc-for list="{{ secOpts }}" as="o" hint-placeholder-count="3"><option value="{{ o.value }}">{{ o.label }}</option></sc-for></select>
+          <span style="font-size:11px;color:#6a7b96">Recomandat termic: <span class="mono" style="color:#0d2a52;font-weight:600">{{ secRecT1Disp }}</span></span>
+        </div>
         <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
           <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Parametri rețea</div>
           <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Un</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">20 kV</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Secțiune</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">95 mm²</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Curent I</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">280 A</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Lungime</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">300 m</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">cos φ</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,90</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">ΔU max</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">3,0 %</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Un (din Sarcină)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px;color:#0d2a52">{{ t3c.Un_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Secțiune (din Sarcină)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px;color:#0d2a52">{{ t3c.S_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Curent I (din Sarcină)</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">{{ t3c.I_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Lungime [m]</label><input value="{{ t3.L }}" onChange="{{ t3h.L }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">cos φ</label><input value="{{ t3.cosPhi }}" onChange="{{ t3h.cosPhi }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">ΔU max [%]</label><input value="{{ t3.deltaUMax }}" placeholder="{{ t3DeltaMaxPh }}" onChange="{{ t3h.deltaUMax }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;margin-bottom:16px">
           <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
             <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Cădere de tensiune</div>
-            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">1,9</span><span style="font-size:16px;color:#9fb2d0">%</span></div>
-            <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">ΔU = 11,4 V · limită 3,0 %</div>
-            <div style="margin-top:auto;padding-top:16px"><span style="display:block;text-align:center;background:#15803d;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px">✓ SUB LIMITĂ</span></div>
+            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">{{ t3c.dU_pct }}</span><span style="font-size:16px;color:#9fb2d0">%</span></div>
+            <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">{{ t3c.dU_sub }}</div>
+            <div style="margin-top:auto;padding-top:16px"><span style="{{ t3c.verdictStyle }}">{{ t3c.verdictTxt }}</span></div>
           </div>
           <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden">
-            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">ΔU pe secțiuni · L=300 m · I=280 A</div>
+            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">{{ t3c.tableLabel }}</div>
             <table style="width:100%;border-collapse:collapse;font-size:12.5px" class="mono">
               <thead><tr style="background:#f6f8fb"><th style="text-align:left;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">S mm²</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">R Ω/km</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">ΔU V</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">ΔU %</th><th style="text-align:center;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Stare</th></tr></thead>
               <tbody>
-                <tr style="border-top:1px solid #eef1f6;background:#fef6e2"><td style="padding:9px 14px;font-weight:700;color:#8a5a06">95 ★</td><td style="text-align:right;padding:9px 10px">0,193</td><td style="text-align:right;padding:9px 10px;font-weight:700">11,4</td><td style="text-align:right;padding:9px 10px;font-weight:700">1,90</td><td style="text-align:center;padding:9px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
-                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">120</td><td style="text-align:right;padding:7px 10px">0,153</td><td style="text-align:right;padding:7px 10px">9,1</td><td style="text-align:right;padding:7px 10px">1,52</td><td style="text-align:center;padding:7px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
-                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">150</td><td style="text-align:right;padding:7px 10px">0,124</td><td style="text-align:right;padding:7px 10px">7,4</td><td style="text-align:right;padding:7px 10px">1,24</td><td style="text-align:center;padding:7px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
+                <sc-for list="{{ t3c.rows }}" as="row" hint-placeholder-count="6">
+                  <tr style="{{ row.rowStyle }}"><td style="{{ row.cellStyle }}">{{ row.sectiune }}</td><td style="{{ row.numStyle }}">{{ row.R }}</td><td style="{{ row.numStyle }}">{{ row.dU }}</td><td style="{{ row.numStyle }}">{{ row.dUpct }}</td><td style="{{ row.stareStyle }}">{{ row.stareText }}</td></tr>
+                </sc-for>
               </tbody>
             </table>
           </div>
         </div>
-        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:flex-end;gap:9px">
-          <button style="height:36px;padding:0 16px;background:#0d2a52;color:#fff;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">+ Salvează în proiect</button>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:9px">
+          <button onClick="{{ t3BackBtn }}" style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">◂ Înapoi</button>
+          <div style="display:flex;gap:9px;align-items:center"><button onClick="{{ t3RunBtn }}" style="height:36px;padding:0 16px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">Continuă ▸</button>
           <button style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">Raport PDF</button>
-          <button style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">XLSX</button>
+          <button style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit">XLSX</button></div>
         </div>
        </div>
       </sc-if>
@@ -223,35 +259,44 @@
       <!-- ===== TE SECȚIUNE ECONOMICĂ ===== -->
       <sc-if value="{{ m_te }}" hint-placeholder-val="{{ false }}">
        <div>
+        <div style="background:#eef4fb;border:1px solid #c9dbef;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <label style="font-size:11px;color:#0d2a52;font-weight:600">Secțiune utilizată:</label>
+          <select value="{{ secCur }}" onChange="{{ secSet }}" style="height:30px;border:1px solid #cdd6e4;border-radius:5px;background:#fff;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52;min-width:200px"><sc-for list="{{ secOpts }}" as="o" hint-placeholder-count="3"><option value="{{ o.value }}">{{ o.label }}</option></sc-for></select>
+          <span style="font-size:11px;color:#6a7b96">Recomandat termic: <span class="mono" style="color:#0d2a52;font-weight:600">{{ secRecT1Disp }}</span></span>
+        </div>
         <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
           <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Date economice</div>
           <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Curent I</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">280 A</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Conductor</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Cupru</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Durată utiliz.</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">4000 h/an</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Cost energie</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,60 lei/kWh</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">j economic</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">2,3 A/mm²</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Curent I (din Sarcină)</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">{{ tec.I_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Conductor (din Sarcină)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ tec.mat_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Durată utiliz. [h/an]</label><input value="{{ te.oraPeAn }}" onChange="{{ teh.oraPeAn }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Cost energie [lei/kWh]</label><input value="{{ te.costKWh }}" onChange="{{ teh.costKWh }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">j economic [A/mm²]</label><input value="{{ te.jEc }}" onChange="{{ teh.jEc }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;margin-bottom:16px">
           <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
             <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Secțiune economică</div>
-            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:54px;font-weight:700;line-height:.9;color:#f59e0b">120</span><span style="font-size:16px;color:#9fb2d0">mm²</span></div>
-            <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">S_ec = I / j_ec = 280 / 2,3</div>
-            <div style="margin-top:auto;padding-top:16px"><span style="display:block;text-align:center;background:#1a4ba3;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px">↑ peste minimul termic (95)</span></div>
+            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:54px;font-weight:700;line-height:.9;color:#f59e0b">{{ tec.S_ec_disp }}</span><span style="font-size:16px;color:#9fb2d0">mm²</span></div>
+            <div class="mono" style="font-size:11.5px;color:#9fb2d0;margin-top:4px">{{ tec.formula }}</div>
+            <div style="margin-top:auto;padding-top:16px"><span style="{{ tec.badgeStyle }}">{{ tec.badgeText }}</span></div>
           </div>
           <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden">
-            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">Cost total pe 30 ani (investiție + pierderi)</div>
+            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">{{ tec.tableLabel }}</div>
             <table style="width:100%;border-collapse:collapse;font-size:12.5px" class="mono">
-              <thead><tr style="background:#f6f8fb"><th style="text-align:left;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">S mm²</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Investiție</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Pierderi/30 ani</th><th style="text-align:right;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Total</th></tr></thead>
+              <thead><tr style="background:#f6f8fb"><th style="text-align:left;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">S mm²</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Investiție</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Pierderi/durată</th><th style="text-align:right;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Total</th></tr></thead>
               <tbody>
-                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">95</td><td style="text-align:right;padding:7px 10px">128 000</td><td style="text-align:right;padding:7px 10px">96 400</td><td style="text-align:right;padding:7px 14px">224 400</td></tr>
-                <tr style="border-top:1px solid #d8b45a;background:#fef6e2"><td style="padding:9px 14px;font-weight:700;color:#8a5a06">120 ★</td><td style="text-align:right;padding:9px 10px">152 000</td><td style="text-align:right;padding:9px 10px">76 300</td><td style="text-align:right;padding:9px 14px;font-weight:700;color:#10243f">228 300</td></tr>
-                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">150</td><td style="text-align:right;padding:7px 10px">181 000</td><td style="text-align:right;padding:7px 10px">61 200</td><td style="text-align:right;padding:7px 14px">242 200</td></tr>
+                <sc-for list="{{ tec.rows }}" as="row" hint-placeholder-count="3">
+                  <tr style="{{ row.rowStyle }}"><td style="{{ row.cellStyle }}">{{ row.sectiune }}</td><td style="{{ row.numStyle }}">{{ row.invest }}</td><td style="{{ row.numStyle }}">{{ row.pierderi }}</td><td style="{{ row.totalStyle }}">{{ row.total }}</td></tr>
+                </sc-for>
               </tbody>
             </table>
-            <div style="font-size:11.5px;color:#6a7b96;padding:10px 14px;line-height:1.5">Notă: secțiunea economică (120 mm²) reduce pierderile pe durata de viață; minimul tehnic rămâne 95 mm². Alegerea finală ține cont de ambele.</div>
+            <div style="font-size:11.5px;color:#6a7b96;padding:10px 14px;line-height:1.5">Notă: S_ec reduce pierderile pe durata de viață; minimul tehnic e dat de Sarcină admisibilă. Alegerea finală ține cont de ambele. Constantele de cost (pozare, manoperă) sunt orientative — vor migra în <span class="mono">/data/constante.json</span>.</div>
           </div>
+        </div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:9px">
+          <button onClick="{{ teBackBtn }}" style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">◂ Înapoi</button>
+          <div style="display:flex;gap:9px;align-items:center"><button onClick="{{ teRunBtn }}" style="height:36px;padding:0 16px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">Continuă ▸</button></div>
         </div>
        </div>
       </sc-if>
@@ -259,32 +304,43 @@
       <!-- ===== TP PROTECȚIE SUPRASARCINĂ ===== -->
       <sc-if value="{{ m_tp }}" hint-placeholder-val="{{ false }}">
        <div>
+        <div style="background:#eef4fb;border:1px solid #c9dbef;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <label style="font-size:11px;color:#0d2a52;font-weight:600">Secțiune utilizată:</label>
+          <select value="{{ secCur }}" onChange="{{ secSet }}" style="height:30px;border:1px solid #cdd6e4;border-radius:5px;background:#fff;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52;min-width:200px"><sc-for list="{{ secOpts }}" as="o" hint-placeholder-count="3"><option value="{{ o.value }}">{{ o.label }}</option></sc-for></select>
+          <span style="font-size:11px;color:#6a7b96">Recomandat termic: <span class="mono" style="color:#0d2a52;font-weight:600">{{ secRecT1Disp }}</span></span>
+        </div>
         <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
           <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Coordonare protecție (IB ≤ IN ≤ IZ)</div>
           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">IB curent utilizare</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">280 A</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">IN disjunctor</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">300 A</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">IZ cablu (95mm²)</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">298 A</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">I2 declanșare</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">435 A</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">IB (din Sarcină)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ tpc.IB_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">IN disjunctor [A]</label><input value="{{ tp.IN }}" placeholder="auto" onChange="{{ tph.IN }}" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;font-size:12.5px;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#10243f"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">IZ cablu (din Sarcină)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ tpc.IZ_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Factor I2/IN</label><select value="{{ tp.i2Factor }}" onChange="{{ tph.i2Factor }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 6px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"><option value="1.45">1,45 (MCB IEC 60898)</option><option value="1.30">1,30 (MCCB IEC 60947)</option><option value="1.60">1,60 (siguranță gG)</option></select></div>
           </div>
         </div>
         <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden;margin-bottom:16px">
           <div style="padding:18px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid #eef1f6">
             <div style="display:flex;align-items:center;gap:12px" class="mono">
-              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">IB</div><div style="font-size:22px;font-weight:700;color:#10243f">280</div></div>
+              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">IB</div><div style="font-size:22px;font-weight:700;color:#10243f">{{ tpc.IB_disp }}</div></div>
               <div style="font-size:20px;color:#15803d;font-weight:700">≤</div>
-              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">IN</div><div style="font-size:22px;font-weight:700;color:#f59e0b">300</div></div>
+              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">IN</div><div style="font-size:22px;font-weight:700;color:#f59e0b">{{ tpc.IN_disp }}</div></div>
               <div style="font-size:20px;color:#15803d;font-weight:700">≤</div>
-              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">IZ</div><div style="font-size:22px;font-weight:700;color:#10243f">298</div></div>
+              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">IZ</div><div style="font-size:22px;font-weight:700;color:#10243f">{{ tpc.IZ_disp }}</div></div>
+              <div style="width:1px;height:36px;background:#d8e0ed;margin:0 8px"></div>
+              <div style="text-align:center"><div style="font-size:9.5px;color:#6a7b96;text-transform:uppercase">I2</div><div style="font-size:22px;font-weight:700;color:#10243f">{{ tpc.I2_disp }}</div></div>
             </div>
-            <div style="flex:1;min-width:200px"></div>
-            <span style="background:#fee2e2;color:#b42318;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:8px">✕ IN (300) &gt; IZ (298) — necesită secțiune mai mare</span>
+            <div style="flex:1;min-width:80px"></div>
+            <span style="{{ tpc.chainStyle }}">{{ tpc.chainText }}</span>
           </div>
           <div style="padding:14px 20px;display:flex;flex-direction:column;gap:10px">
-            <div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#33455f"><span style="width:8px;height:8px;border-radius:50%;background:#dc2626"></span><b>Condiția 1:</b> IB ≤ IN ≤ IZ &nbsp;→&nbsp; 280 ≤ 300 ≤ 298 &nbsp;<span style="color:#b42318;font-weight:600">NU este îndeplinită</span></div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#33455f"><span style="width:8px;height:8px;border-radius:50%;background:#15803d"></span><b>Condiția 2:</b> I2 ≤ 1,45·IZ &nbsp;→&nbsp; 435 ≤ 432 &nbsp;<span style="color:#b42318;font-weight:600">la limită</span></div>
-            <div style="background:#eff6ff;border:1px solid #bfd7f5;border-radius:8px;padding:10px 13px;font-size:12.5px;color:#1a4ba3;margin-top:4px">Recomandare: treci la <b>120 mm²</b> (IZ = 339 A) → 280 ≤ 300 ≤ 339 ✓ și 435 ≤ 492 ✓</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#33455f"><span style="width:8px;height:8px;border-radius:50%;background:{{ tpc.cond1Color }}"></span><b>Condiția 1:</b> {{ tpc.cond1Text }} <span style="{{ tpc.cond1Style }}">{{ tpc.cond1Verdict }}</span></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#33455f"><span style="width:8px;height:8px;border-radius:50%;background:{{ tpc.cond2Color }}"></span><b>Condiția 2:</b> {{ tpc.cond2Text }} <span style="{{ tpc.cond2Style }}">{{ tpc.cond2Verdict }}</span></div>
+            <sc-if value="{{ tpc.hasSuggest }}" hint-placeholder-val="{{ false }}"><div style="background:#eff6ff;border:1px solid #bfd7f5;border-radius:8px;padding:10px 13px;font-size:12.5px;color:#1a4ba3;margin-top:4px">{{ tpc.suggestText }}</div></sc-if>
           </div>
+        </div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:9px">
+          <button onClick="{{ tpBackBtn }}" style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">◂ Înapoi</button>
+          <div style="display:flex;gap:9px;align-items:center"><button onClick="{{ tpRunBtn }}" style="height:36px;padding:0 16px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">Continuă ▸</button></div>
         </div>
        </div>
       </sc-if>
@@ -292,34 +348,43 @@
       <!-- ===== T4 STABILITATE TERMICĂ ===== -->
       <sc-if value="{{ m_t4 }}" hint-placeholder-val="{{ false }}">
        <div>
+        <div style="background:#eef4fb;border:1px solid #c9dbef;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <label style="font-size:11px;color:#0d2a52;font-weight:600">Secțiune utilizată:</label>
+          <select value="{{ secCur }}" onChange="{{ secSet }}" style="height:30px;border:1px solid #cdd6e4;border-radius:5px;background:#fff;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52;min-width:200px"><sc-for list="{{ secOpts }}" as="o" hint-placeholder-count="3"><option value="{{ o.value }}">{{ o.label }}</option></sc-for></select>
+          <span style="font-size:11px;color:#6a7b96">Recomandat termic: <span class="mono" style="color:#0d2a52;font-weight:600">{{ secRecT1Disp }}</span></span>
+        </div>
         <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
           <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Parametri scurtcircuit (integrala Joule I²t)</div>
           <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Ik scurtcircuit</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">12,5 kA</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Durată tk</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,5 s</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Material</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Cu · k=143</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Izolație</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">XLPE</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Secțiune</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">95 mm²</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Ik scurtcircuit [kA]</label><input value="{{ t4.Ik }}" onChange="{{ t4h.Ik }}" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;font-size:12.5px;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#10243f"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Durată tk [s]</label><input value="{{ t4.tk }}" onChange="{{ t4h.tk }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Material (din Sarcină)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ t4c.mat_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Izolație (din Sarcină)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ t4c.izol_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Secțiune (din Sarcină)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ t4c.S_disp }}</div></div>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:300px 1fr;gap:16px">
+        <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;margin-bottom:16px">
           <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
             <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Secțiune minimă termică</div>
-            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:54px;font-weight:700;line-height:.9;color:#f59e0b">62</span><span style="font-size:16px;color:#9fb2d0">mm²</span></div>
-            <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">S_min = Ik·√tk / k</div>
-            <div style="margin-top:auto;padding-top:16px"><span style="display:block;text-align:center;background:#15803d;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px">✓ 95 ≥ 62 — STABIL</span></div>
+            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:54px;font-weight:700;line-height:.9;color:#f59e0b">{{ t4c.Smin_disp }}</span><span style="font-size:16px;color:#9fb2d0">mm²</span></div>
+            <div class="mono" style="font-size:11.5px;color:#9fb2d0;margin-top:4px">{{ t4c.formula }}</div>
+            <div style="margin-top:auto;padding-top:16px"><span style="{{ t4c.badgeStyle }}">{{ t4c.badgeText }}</span></div>
           </div>
           <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;overflow:hidden">
-            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">Verificare I²t ≤ k²·S²</div>
+            <div class="mono" style="font-size:10.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#0d2a52;padding:11px 14px;background:#eef2f7;border-bottom:1px solid #d3dbe7">{{ t4c.tableLabel }}</div>
             <table style="width:100%;border-collapse:collapse;font-size:12.5px" class="mono">
               <thead><tr style="background:#f6f8fb"><th style="text-align:left;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">S mm²</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">I²t cerut</th><th style="text-align:right;padding:7px 10px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">k²·S² admis</th><th style="text-align:center;padding:7px 14px;font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:700">Stare</th></tr></thead>
               <tbody>
-                <tr style="border-top:1px solid #eef1f6;color:#a0aab8"><td style="padding:7px 14px">50</td><td style="text-align:right;padding:7px 10px">78,1·10⁶</td><td style="text-align:right;padding:7px 10px">51,1·10⁶</td><td style="text-align:center;padding:7px 14px"><span style="color:#dc2626;font-weight:600">✕ NU</span></td></tr>
-                <tr style="border-top:1px solid #eef1f6;color:#33455f"><td style="padding:7px 14px">70</td><td style="text-align:right;padding:7px 10px">78,1·10⁶</td><td style="text-align:right;padding:7px 10px">100,2·10⁶</td><td style="text-align:center;padding:7px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
-                <tr style="border-top:1px solid #d8b45a;background:#fef6e2"><td style="padding:9px 14px;font-weight:700;color:#8a5a06">95 ★</td><td style="text-align:right;padding:9px 10px">78,1·10⁶</td><td style="text-align:right;padding:9px 10px;font-weight:700">184,5·10⁶</td><td style="text-align:center;padding:9px 14px"><span style="color:#15803d;font-weight:600">✓ OK</span></td></tr>
+                <sc-for list="{{ t4c.rows }}" as="row" hint-placeholder-count="3">
+                  <tr style="{{ row.rowStyle }}"><td style="{{ row.cellStyle }}">{{ row.sectiune }}</td><td style="{{ row.numStyle }}">{{ row.I2t }}</td><td style="{{ row.numStyle }}">{{ row.limit }}</td><td style="{{ row.stareStyle }}">{{ row.stareText }}</td></tr>
+                </sc-for>
               </tbody>
             </table>
           </div>
+        </div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:9px">
+          <button onClick="{{ t4BackBtn }}" style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">◂ Înapoi</button>
+          <div style="display:flex;gap:9px;align-items:center"><button onClick="{{ t4RunBtn }}" style="height:36px;padding:0 16px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">Continuă ▸</button></div>
         </div>
        </div>
       </sc-if>
@@ -327,30 +392,39 @@
       <!-- ===== T5 FORȚE ELECTRODINAMICE ===== -->
       <sc-if value="{{ m_t5 }}" hint-placeholder-val="{{ false }}">
        <div>
+        <div style="background:#eef4fb;border:1px solid #c9dbef;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <label style="font-size:11px;color:#0d2a52;font-weight:600">Secțiune utilizată:</label>
+          <select value="{{ secCur }}" onChange="{{ secSet }}" style="height:30px;border:1px solid #cdd6e4;border-radius:5px;background:#fff;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52;min-width:200px"><sc-for list="{{ secOpts }}" as="o" hint-placeholder-count="3"><option value="{{ o.value }}">{{ o.label }}</option></sc-for></select>
+          <span style="font-size:11px;color:#6a7b96">Recomandat termic: <span class="mono" style="color:#0d2a52;font-weight:600">{{ secRecT1Disp }}</span></span>
+        </div>
         <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
-          <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Forțe electrodinamice (Anexa 3)</div>
+          <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Forțe electrodinamice (sistem trifazat)</div>
           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">ip curent de șoc</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">31,5 kA</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Distanță a</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">70 mm</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Diametru D</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">35 mm</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Sistem</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Trifazat</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">ip [kA] curent de șoc</label><input value="{{ t5.ip }}" onChange="{{ t5h.ip }}" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;font-size:12.5px;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#10243f"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Distanță a [mm]</label><input value="{{ t5.a }}" onChange="{{ t5h.a }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Diametru D (estimat)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ t5c.D_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">F admisibil [N/bridă]</label><input value="{{ t5.F_adm }}" onChange="{{ t5h.F_adm }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:300px 1fr;gap:16px">
+        <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;margin-bottom:16px">
           <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff;display:flex;flex-direction:column">
             <div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Forță maximă pe conductor</div>
-            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">245</span><span style="font-size:15px;color:#9fb2d0">N/m</span></div>
-            <div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">F = 0,17·ip²/a</div>
-            <div style="margin-top:auto;padding-top:16px"><span style="display:block;text-align:center;background:#15803d;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px">✓ SUB ADMISIBIL</span></div>
+            <div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:42px;font-weight:700;line-height:.9;color:#f59e0b">{{ t5c.F_disp }}</span></div>
+            <div class="mono" style="font-size:11.5px;color:#9fb2d0;margin-top:4px">{{ t5c.formula }}</div>
+            <div style="margin-top:auto;padding-top:16px"><span style="{{ t5c.badgeStyle }}">{{ t5c.badgeText }}</span></div>
           </div>
           <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:12px">
-            <div style="font-size:12.5px;color:#33455f;line-height:1.6">Forța electrodinamică între conductoarele paralele determină <b>distanța minimă între cleme/bride</b> de fixare astfel încât solicitarea mecanică să rămână sub limita admisibilă a cablului și a suporților.</div>
+            <div style="font-size:12.5px;color:#33455f;line-height:1.6">Forța electrodinamică între conductoarele paralele determină <b>distanța maximă între bride</b> de fixare astfel încât forța pe fiecare bridă să rămână sub limita admisibilă.</div>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
-              <div style="background:#f6f8fb;border:1px solid #e2e8f2;border-radius:8px;padding:10px 12px"><div style="font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:600">Distanță bride</div><div class="mono" style="font-size:16px;font-weight:600;color:#10243f">≤ 0,80 m</div></div>
-              <div style="background:#f6f8fb;border:1px solid #e2e8f2;border-radius:8px;padding:10px 12px"><div style="font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:600">Forță/bridă</div><div class="mono" style="font-size:16px;font-weight:600;color:#10243f">196 N</div></div>
-              <div style="background:#f6f8fb;border:1px solid #e2e8f2;border-radius:8px;padding:10px 12px"><div style="font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:600">F admisibil</div><div class="mono" style="font-size:16px;font-weight:600;color:#15803d">450 N</div></div>
+              <div style="background:#f6f8fb;border:1px solid #e2e8f2;border-radius:8px;padding:10px 12px"><div style="font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:600">Distanță bride max</div><div class="mono" style="font-size:16px;font-weight:600;color:#10243f">{{ t5c.Lbride_disp }}</div></div>
+              <div style="background:#f6f8fb;border:1px solid #e2e8f2;border-radius:8px;padding:10px 12px"><div style="font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:600">Forță/bridă (la max)</div><div class="mono" style="font-size:16px;font-weight:600;color:#10243f">{{ t5c.Fbride_disp }}</div></div>
+              <div style="background:#f6f8fb;border:1px solid #e2e8f2;border-radius:8px;padding:10px 12px"><div style="font-size:9.5px;text-transform:uppercase;color:#6a7b96;font-weight:600">F admisibil</div><div class="mono" style="font-size:16px;font-weight:600;color:#15803d">{{ t5c.Fadm_disp }}</div></div>
             </div>
           </div>
+        </div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:9px">
+          <button onClick="{{ t5BackBtn }}" style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">◂ Înapoi</button>
+          <div style="display:flex;gap:9px;align-items:center"><button onClick="{{ t5RunBtn }}" style="height:36px;padding:0 16px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">Continuă ▸</button></div>
         </div>
        </div>
       </sc-if>
@@ -358,21 +432,30 @@
       <!-- ===== TL PIERDERI ===== -->
       <sc-if value="{{ m_tl }}" hint-placeholder-val="{{ false }}">
        <div>
+        <div style="background:#eef4fb;border:1px solid #c9dbef;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <label style="font-size:11px;color:#0d2a52;font-weight:600">Secțiune utilizată:</label>
+          <select value="{{ secCur }}" onChange="{{ secSet }}" style="height:30px;border:1px solid #cdd6e4;border-radius:5px;background:#fff;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52;min-width:200px"><sc-for list="{{ secOpts }}" as="o" hint-placeholder-count="3"><option value="{{ o.value }}">{{ o.label }}</option></sc-for></select>
+          <span style="font-size:11px;color:#6a7b96">Recomandat termic: <span class="mono" style="color:#0d2a52;font-weight:600">{{ secRecT1Disp }}</span></span>
+        </div>
         <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
           <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Pierderi de putere și energie</div>
           <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Curent I</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">280 A</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">R (95mm²)</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,193 Ω/km</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Lungime</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">300 m</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Timp pierderi τ</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">2200 h/an</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Cost energie</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">0,60 lei/kWh</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Curent I (din Sarcină)</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">{{ tlc.I_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">R (din S+material)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ tlc.R_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Lungime (din Căderi)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ tlc.L_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">τ timp pierderi [h/an]</label><input value="{{ tl.tau }}" onChange="{{ tlh.tau }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Cost energie [lei/kWh]</label><input value="{{ tl.costKWh }}" onChange="{{ tlh.costKWh }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 9px;font-size:12.5px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"></div>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
-          <div style="background:#0d2a52;border-radius:10px;padding:18px;color:#fff"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Pierdere putere ΔP</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#f59e0b">13,6</span><span style="font-size:13px;color:#9fb2d0">kW</span></div><div style="font-size:11px;color:#9fb2d0;margin-top:4px">3·R·I²</div></div>
-          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:18px"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6a7b96;margin-bottom:8px">Energie anuală</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#10243f">29 900</span><span style="font-size:13px;color:#6a7b96">kWh</span></div><div style="font-size:11px;color:#6a7b96;margin-top:4px">ΔP·τ</div></div>
-          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:18px"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6a7b96;margin-bottom:8px">Cost anual</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#10243f">17 940</span><span style="font-size:13px;color:#6a7b96">lei</span></div><div style="font-size:11px;color:#6a7b96;margin-top:4px">energie · tarif</div></div>
-          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:18px"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6a7b96;margin-bottom:8px">Cost / 30 ani</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#10243f">538 k</span><span style="font-size:13px;color:#6a7b96">lei</span></div><div style="font-size:11px;color:#6a7b96;margin-top:4px">actualizat</div></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px">
+          <div style="background:#0d2a52;border-radius:10px;padding:18px;color:#fff"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Pierdere putere ΔP</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#f59e0b">{{ tlc.dP_disp }}</span><span style="font-size:13px;color:#9fb2d0">kW</span></div><div style="font-size:11px;color:#9fb2d0;margin-top:4px">3·R·I²</div></div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:18px"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6a7b96;margin-bottom:8px">Energie anuală</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#10243f">{{ tlc.energy_disp }}</span><span style="font-size:13px;color:#6a7b96">kWh</span></div><div style="font-size:11px;color:#6a7b96;margin-top:4px">ΔP·τ</div></div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:18px"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6a7b96;margin-bottom:8px">Cost anual</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#10243f">{{ tlc.costYear_disp }}</span><span style="font-size:13px;color:#6a7b96">lei</span></div><div style="font-size:11px;color:#6a7b96;margin-top:4px">energie · tarif</div></div>
+          <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:18px"><div class="mono" style="font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6a7b96;margin-bottom:8px">{{ tlc.costTotalLabel }}</div><div style="display:flex;align-items:baseline;gap:5px"><span class="mono" style="font-size:30px;font-weight:700;color:#10243f">{{ tlc.costTotal_disp }}</span><span style="font-size:13px;color:#6a7b96">lei</span></div><div style="font-size:11px;color:#6a7b96;margin-top:4px">cost/an × ani</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:9px">
+          <button onClick="{{ tlBackBtn }}" style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">◂ Înapoi</button>
+          <div style="display:flex;gap:9px;align-items:center"><button onClick="{{ tlRunBtn }}" style="height:36px;padding:0 16px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">Continuă ▸</button></div>
         </div>
        </div>
       </sc-if>
@@ -380,18 +463,27 @@
       <!-- ===== T6 POZARE TRAGERE ===== -->
       <sc-if value="{{ m_t6 }}" hint-placeholder-val="{{ false }}">
        <div>
+        <div style="background:#eef4fb;border:1px solid #c9dbef;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <label style="font-size:11px;color:#0d2a52;font-weight:600">Secțiune utilizată:</label>
+          <select value="{{ secCur }}" onChange="{{ secSet }}" style="height:30px;border:1px solid #cdd6e4;border-radius:5px;background:#fff;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52;min-width:200px"><sc-for list="{{ secOpts }}" as="o" hint-placeholder-count="3"><option value="{{ o.value }}">{{ o.label }}</option></sc-for></select>
+          <span style="font-size:11px;color:#6a7b96">Recomandat termic: <span class="mono" style="color:#0d2a52;font-weight:600">{{ secRecT1Disp }}</span></span>
+        </div>
         <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:16px 18px;margin-bottom:16px">
           <div class="mono" style="font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:#0d2a52;margin-bottom:13px">▸ Pozare · raze de curbură (A.5) și tragere (A.6)</div>
           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#f59e0b;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Diametru cablu d</label><div class="mono" style="height:33px;border:1.5px solid #0d2a52;border-radius:5px;background:#fff;padding:0 9px;display:flex;align-items:center;font-size:12.5px;font-weight:700">35 mm</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Construcție</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Mono XLPE</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Metodă tragere</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Cap de tragere</div></div>
-            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Material</label><div class="mono" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">Cupru</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Diametru cablu d (estimat)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ t6c.d_disp }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Construcție</label><select value="{{ t6.constructie }}" onChange="{{ t6h.constructie }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"><option value="">(auto din Sarcină)</option><option value="jt-mono">JT mono ≤1 kV (k=12)</option><option value="mt-mono">MT mono &gt;1 kV (k=15)</option><option value="multi">Multifilar (k=12)</option><option value="hartie">Hârtie impregnată (k=20)</option><option value="plumb">Manta plumb (k=25)</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#0d6cb4;font-weight:700;text-transform:uppercase;letter-spacing:.4px">Metodă tragere</label><select value="{{ t6.metoda }}" onChange="{{ t6h.metoda }}" style="height:33px;border:1px solid #cdd6e4;border-radius:5px;background:#eef4fb;padding:0 6px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#0d2a52"><option value="cap">Cap de tragere (σ_Cu=50, σ_Al=30)</option><option value="ciorap">Ciorap (σ=10)</option><option value="manual">Manual (σ=15)</option></select></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:9.5px;color:#6a7b96;font-weight:600;text-transform:uppercase;letter-spacing:.4px">Material (din Sarcină)</label><div class="mono" style="height:33px;border:1px dashed #cdd6e4;border-radius:5px;background:#f7f9fc;padding:0 9px;display:flex;align-items:center;font-size:12.5px">{{ t6c.mat_disp }}</div></div>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff"><div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Rază minimă de curbură</div><div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">525</span><span style="font-size:15px;color:#9fb2d0">mm</span></div><div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">15·d (mono MT)</div></div>
-          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff"><div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Forță de tragere admisibilă</div><div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">4275</span><span style="font-size:15px;color:#9fb2d0">N</span></div><div style="font-size:12.5px;color:#9fb2d0;margin-top:4px">σ·S = 45·95 (cap de tragere Cu)</div></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff"><div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Rază minimă de curbură</div><div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">{{ t6c.Rmin_disp }}</span><span style="font-size:15px;color:#9fb2d0">mm</span></div><div class="mono" style="font-size:11.5px;color:#9fb2d0;margin-top:4px">{{ t6c.RminFormula }}</div></div>
+          <div style="background:#0d2a52;border-radius:10px;padding:20px;color:#fff"><div class="mono" style="font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#7d93b5;margin-bottom:8px">Forță de tragere admisibilă</div><div style="display:flex;align-items:baseline;gap:6px"><span class="mono" style="font-size:46px;font-weight:700;line-height:.9;color:#f59e0b">{{ t6c.Fadm_disp }}</span><span style="font-size:15px;color:#9fb2d0">N</span></div><div class="mono" style="font-size:11.5px;color:#9fb2d0;margin-top:4px">{{ t6c.FadmFormula }}</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid #d3dbe7;border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:9px">
+          <button onClick="{{ t6BackBtn }}" style="height:36px;padding:0 16px;background:#fff;color:#0d2a52;border:1px solid #b9c4d6;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">◂ Înapoi</button>
+          <div style="display:flex;gap:9px;align-items:center"><button onClick="{{ t6RunBtn }}" style="height:36px;padding:0 16px;background:#0d2a52;color:#f59e0b;border:none;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px">Continuă ▸</button></div>
         </div>
        </div>
       </sc-if>
@@ -560,9 +652,61 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:820}}">
 class Component extends DCLogic {
-  state = { module: 'tv', nav: 'collapsed', modal: false, role: 'editor', tableId: 'A.1.22', verifyId: 'A.1.4', showSummary: false, vLayout: 'split', t1: { izolatie:'XLPE', manta:'—', tensiune:'C.A.', pozare:'treflă', cablu:'monofilar', material:'cupru', pozareTabel:'pamant', uou:'0,6/1', temp:'', colPick:'', tub:'nu', tubFactor:0.85, I:280, tempSol:20, rho:1.0, grad:0.70, nrSisteme:1 }, t1res: null, t1err: null, verif: (function(){ try { return JSON.parse(localStorage.getItem('normcab_verif') || '{}'); } catch(e){ return {}; } })() };
+  state = { module: 't1', nav: 'collapsed', modal: false, role: 'editor', tableId: 'A.1.22', verifyId: 'A.1.4', showSummary: false, vLayout: 'split', t1: { izolatie:'XLPE', manta:'—', tensiune:'C.A.', pozare:'treflă', cablu:'monofilar', material:'cupru', pozareTabel:'pamant', uou:'0,6/1', temp:'', colPick:'', tub:'nu', tubFactor:0.85, I:280, tempSol:20, rho:1.0, grad:0.70, nrSisteme:1 }, t1res: null, t1err: null, t3: { L:300, cosPhi:0.9, tip:'3~', deltaUMax:'' }, t3res: null, te: { jEc:2.3, costKWh:0.60, oraPeAn:4000, ani:30 }, teres: null, tp: { IN:'', i2Factor:1.45 }, tpres: null, t4: { Ik:12.5, tk:0.5 }, t4res: null, t5: { ip:31.5, a:70, F_adm:450 }, t5res: null, tl: { tau:2200, costKWh:0.60, ani:30 }, tlres: null, t6: { constructie:'', metoda:'cap' }, t6res: null, sectiuneSelectata: null, modScope: (function(){ const def={t1:true,t3:true,te:true,tp:true,t4:true,t5:true,tl:true,t6:true}; try { const s=localStorage.getItem('normcab_scope'); if(!s) return def; const p=JSON.parse(s); return Object.assign({}, def, p, {t1:true}); } catch(e){ return def; } })(), scopeOpen: false, verif: (function(){ try { return JSON.parse(localStorage.getItem('normcab_verif') || '{}'); } catch(e){ return {}; } })() };
 
   set(id) { this.setState({ module: id }); }
+
+  // — navigare în lanț, sare peste module neselectate (§4a)
+  _calcOrder = ['t1','t3','te','tp','t4','t5','tl','t6'];
+  _nextActive(currentId) {
+    const i = this._calcOrder.indexOf(currentId);
+    if (i < 0) return null;
+    for (let j = i+1; j < this._calcOrder.length; j++) {
+      if (this.state.modScope[this._calcOrder[j]]) return this._calcOrder[j];
+    }
+    return null;
+  }
+  _prevActive(currentId) {
+    const i = this._calcOrder.indexOf(currentId);
+    if (i < 0) return null;
+    for (let j = i-1; j >= 0; j--) {
+      if (this.state.modScope[this._calcOrder[j]]) return this._calcOrder[j];
+    }
+    return null;
+  }
+  _goNext(currentId) {
+    const n = this._nextActive(currentId);
+    if (n) this.setState({ module: n });
+    else this.setState({ module: 'tb' }); // după ultimul activ → Tabele
+  }
+  _goPrev(currentId) {
+    const p = this._prevActive(currentId);
+    if (p) this.setState({ module: p });
+  }
+
+  // — scope module
+  setModScope(id, val) {
+    if (id === 't1') return; // t1 mereu activă (sursa datelor comune)
+    const ms = Object.assign({}, this.state.modScope, { [id]: !!val });
+    try { localStorage.setItem('normcab_scope', JSON.stringify(ms)); } catch(e) {}
+    const updates = { modScope: ms };
+    // Dacă userul tocmai a dezactivat tab-ul curent, redirecționează spre vecin activ
+    if (!val && this.state.module === id) {
+      const order = this._calcOrder;
+      const i = order.indexOf(id);
+      let target = null;
+      for (let j = i+1; j < order.length && !target; j++) if (ms[order[j]]) target = order[j];
+      for (let j = i-1; j >= 0 && !target; j--) if (ms[order[j]]) target = order[j];
+      updates.module = target || 't1';
+    }
+    this.setState(updates);
+  }
+  setModScopeAll() {
+    const ms = {t1:true,t3:true,te:true,tp:true,t4:true,t5:true,tl:true,t6:true};
+    try { localStorage.setItem('normcab_scope', JSON.stringify(ms)); } catch(e) {}
+    this.setState({ modScope: ms });
+  }
+  toggleScope() { this.setState(s => ({ scopeOpen: !s.scopeOpen })); }
 
   async componentDidMount() {
     try {
@@ -579,10 +723,53 @@ class Component extends DCLogic {
       this.runT1();
     } catch (e) { this.setState({ t1err: 'Motor indisponibil: ' + e.message }); }
   }
+  // — comun: parametrii moșteniți de modulele dependente (spec §4)
+  // Secțiunea efectivă = sectiuneSelectata (user pick) || t1res.recomandat
+  _comun(t1, t1res, t3) {
+    t1 = t1 || this.state.t1; t1res = t1res || this.state.t1res; t3 = t3 || this.state.t3;
+    const recommended = (t1res && t1res.recomandat) || null;
+    const Ssel = this.state.sectiuneSelectata != null ? +this.state.sectiuneSelectata : recommended;
+    const row = (Ssel != null && t1res && t1res.rows) ? t1res.rows.find(x => x.sectiune === Ssel) : null;
+    return {
+      uou: t1.uou, material: t1.material, I: t1.I,
+      sectiune: Ssel,
+      sectiuneRec: recommended,
+      IZ: row ? row.izCor : null,
+      izolatie: t1res ? t1res.izolatie : t1.izolatie,
+      rows: t1res ? t1res.rows : null,
+      L_m: +t3.L || 0
+    };
+  }
+  setSec(val) {
+    const v = (val === '' || val === 'auto') ? null : (parseFloat(String(val).replace(',','.')) || null);
+    this.setState({ sectiuneSelectata: v }, () => {
+      if (this._eng) this.setState(this._recomputeAll());
+    });
+  }
+  // — recompute toate modulele dependente după o schimbare în t1
+  _recomputeAll(t1, t1res, t3, te, tp, t4, t5, tl, t6) {
+    t1 = t1 || this.state.t1; t1res = t1res || this.state.t1res;
+    t3 = t3 || this.state.t3; te = te || this.state.te;
+    tp = tp || this.state.tp; t4 = t4 || this.state.t4;
+    t5 = t5 || this.state.t5; tl = tl || this.state.tl; t6 = t6 || this.state.t6;
+    const c = this._comun(t1, t1res, t3);
+    let t3res = this.state.t3res, teres = this.state.teres, tpres = this.state.tpres, t4res = this.state.t4res, t5res = this.state.t5res, tlres = this.state.tlres, t6res = this.state.t6res;
+    try { t3res = this._eng.computeCaderi(c, t3); } catch (e) {}
+    try { teres = this._eng.computeEconomic(c, te); } catch (e) {}
+    try { tpres = this._eng.computeProtectie(c, tp); } catch (e) {}
+    try { t4res = this._eng.computeTermica(c, t4); } catch (e) {}
+    try { t5res = this._eng.computeForte(c, t5); } catch (e) {}
+    try { tlres = this._eng.computePierderi(c, tl); } catch (e) {}
+    try { t6res = this._eng.computePozare(c, t6); } catch (e) {}
+    return { t3res, teres, tpres, t4res, t5res, tlres, t6res };
+  }
   runT1() {
     if (!this._eng || !this._data) return;
-    try { this.setState({ t1res: this._eng.computeSarcina(this._data, this.state.t1), t1err: null }); }
-    catch (e) { this.setState({ t1err: 'Eroare calcul: ' + e.message }); }
+    try {
+      const t1res = this._eng.computeSarcina(this._data, this.state.t1);
+      const dep = this._recomputeAll(this.state.t1, t1res);
+      this.setState({ t1res, ...dep, t1err: null });
+    } catch (e) { this.setState({ t1err: 'Eroare calcul: ' + e.message }); }
   }
   setT1(key, val) {
     const numK = ['I','tempSol','rho','grad','nrSisteme','tubFactor'];
@@ -592,9 +779,65 @@ class Component extends DCLogic {
     if (key === 'temp') t1.colPick = '';
     if (key === 'izolatie' && !/Hârtie/i.test(val)) t1.manta = '—';
     if (key === 'izolatie' && /Hârtie/i.test(val) && !/Plumb|Aluminiu/i.test(t1.manta)) t1.manta = 'Plumb';
-    let res = this.state.t1res, err = null;
-    if (this._eng && this._data) { try { res = this._eng.computeSarcina(this._data, t1); } catch (e) { err = 'Eroare calcul: ' + e.message; } }
-    this.setState({ t1: t1, t1res: res, t1err: err });
+    let res = this.state.t1res, err = null, dep = {};
+    if (this._eng && this._data) {
+      try { res = this._eng.computeSarcina(this._data, t1); } catch (e) { err = 'Eroare calcul: ' + e.message; }
+      dep = this._recomputeAll(t1, res);
+    }
+    this.setState({ t1: t1, t1res: res, ...dep, t1err: err });
+  }
+  setT3(key, val) {
+    const numK = ['L','cosPhi','deltaUMax'];
+    const v = numK.includes(key) ? (val==='' ? '' : (parseFloat(String(val).replace(',','.')) || 0)) : val;
+    const t3 = Object.assign({}, this.state.t3, { [key]: v });
+    const dep = this._recomputeAll(null, null, t3);   // L din t3 afectează și te
+    this.setState({ t3, ...dep });
+  }
+  setTe(key, val) {
+    const numK = ['jEc','costKWh','oraPeAn','ani'];
+    const v = numK.includes(key) ? (parseFloat(String(val).replace(',','.')) || 0) : val;
+    const te = Object.assign({}, this.state.te, { [key]: v });
+    let teres = this.state.teres;
+    if (this._eng) { try { teres = this._eng.computeEconomic(this._comun(), te); } catch (e) {} }
+    this.setState({ te, teres });
+  }
+  setTp(key, val) {
+    const numK = ['IN','i2Factor'];
+    const v = numK.includes(key) ? (val==='' ? '' : (parseFloat(String(val).replace(',','.')) || 0)) : val;
+    const tp = Object.assign({}, this.state.tp, { [key]: v });
+    let tpres = this.state.tpres;
+    if (this._eng) { try { tpres = this._eng.computeProtectie(this._comun(), tp); } catch (e) {} }
+    this.setState({ tp, tpres });
+  }
+  setT4(key, val) {
+    const numK = ['Ik','tk'];
+    const v = numK.includes(key) ? (parseFloat(String(val).replace(',','.')) || 0) : val;
+    const t4 = Object.assign({}, this.state.t4, { [key]: v });
+    let t4res = this.state.t4res;
+    if (this._eng) { try { t4res = this._eng.computeTermica(this._comun(), t4); } catch (e) {} }
+    this.setState({ t4, t4res });
+  }
+  setT5(key, val) {
+    const numK = ['ip','a','F_adm'];
+    const v = numK.includes(key) ? (parseFloat(String(val).replace(',','.')) || 0) : val;
+    const t5 = Object.assign({}, this.state.t5, { [key]: v });
+    let t5res = this.state.t5res;
+    if (this._eng) { try { t5res = this._eng.computeForte(this._comun(), t5); } catch (e) {} }
+    this.setState({ t5, t5res });
+  }
+  setTl(key, val) {
+    const numK = ['tau','costKWh','ani'];
+    const v = numK.includes(key) ? (parseFloat(String(val).replace(',','.')) || 0) : val;
+    const tl = Object.assign({}, this.state.tl, { [key]: v });
+    let tlres = this.state.tlres;
+    if (this._eng) { try { tlres = this._eng.computePierderi(this._comun(), tl); } catch (e) {} }
+    this.setState({ tl, tlres });
+  }
+  setT6(key, val) {
+    const t6 = Object.assign({}, this.state.t6, { [key]: val });
+    let t6res = this.state.t6res;
+    if (this._eng) { try { t6res = this._eng.computePozare(this._comun(), t6); } catch (e) {} }
+    this.setState({ t6, t6res });
   }
   TABLE_IDS = ['A.1.1','A.1.2','A.1.3','A.1.4','A.1.5','A.1.6','A.1.7','A.1.8','A.1.9','A.1.10','A.1.11','A.1.12','A.1.13','A.1.14','A.1.15','A.1.16','A.1.17','A.1.18','A.1.19','A.1.20','A.1.21','A.1.22','A.1.23','A.1.24','A.1.25','A.1.26'];
   VERIFY_TITLES = {
@@ -985,20 +1228,24 @@ class Component extends DCLogic {
     const titles = {};
     mods.forEach(m => titles[m.id] = m.label);
 
+    const scopeable = ['t3','te','tp','t4','t5','tl','t6'];
     const navStyles = {}, labelStyles = {}, icoStyle = {}, h = {};
     mods.forEach(m => {
       const active = cur === m.id;
-      navStyles[m.id] = 'display:flex;align-items:center;width:100%;cursor:pointer;border:none;font-family:inherit;border-radius:9px;transition:background .12s;'
+      const inScope = !scopeable.includes(m.id) || !!this.state.modScope[m.id];
+      const dimStyle = inScope ? '' : 'opacity:.35;cursor:not-allowed;pointer-events:none;';
+      navStyles[m.id] = 'display:flex;align-items:center;width:100%;border:none;font-family:inherit;border-radius:9px;transition:background .12s;cursor:pointer;'
         + (exp
             ? 'flex-direction:row;gap:11px;padding:9px 12px;text-align:left;'
             : 'flex-direction:column;gap:4px;padding:8px 4px;text-align:center;justify-content:center;')
         + (active
             ? 'background:rgba(245,158,11,.15);color:#ffffff;' + (exp ? 'box-shadow:inset 3px 0 0 #f59e0b;' : 'border:1px solid rgba(245,158,11,.4);')
-            : 'background:transparent;color:#8fa3c4;');
+            : 'background:transparent;color:#8fa3c4;')
+        + dimStyle;
       labelStyles[m.id] = (exp ? 'font-size:13px;line-height:1.2;' : 'font-size:9px;line-height:1.1;text-align:center;')
         + 'font-weight:' + (active ? '600' : '500') + ';' + (exp ? '' : 'letter-spacing:-.1px;');
       icoStyle[m.id] = 'flex-shrink:0;display:flex;align-items:center;justify-content:center;';
-      h[m.id] = () => this.set(m.id);
+      h[m.id] = inScope ? (() => this.set(m.id)) : (() => {});
     });
 
     const tableTitles = {
@@ -1110,6 +1357,259 @@ class Component extends DCLogic {
       };
     } else t1c = { ok:false, err:null, loading:true, rows:[] };
 
+    // ----- Scope module (§4a) -----
+    const ms = this.state.modScope || {};
+    const scopeMods = [
+      { id:'t1', label:'Sarcină admisibilă',     locked:true,  checked:true     },
+      { id:'t3', label:'Căderi de tensiune',     locked:false, checked: !!ms.t3 },
+      { id:'te', label:'Secțiune economică',     locked:false, checked: !!ms.te },
+      { id:'tp', label:'Protecție suprasarcină', locked:false, checked: !!ms.tp },
+      { id:'t4', label:'Stabilitate termică',    locked:false, checked: !!ms.t4 },
+      { id:'t5', label:'Forțe electrodinamice',  locked:false, checked: !!ms.t5 },
+      { id:'tl', label:'Pierderi P / energie',   locked:false, checked: !!ms.tl },
+      { id:'t6', label:'Pozare · tragere',       locked:false, checked: !!ms.t6 },
+    ].map(m => ({
+      id: m.id, label: m.label, hint: m.locked ? 'mereu activă' : '',
+      checkLabel: m.checked ? '✓' : '',
+      boxStyle: 'width:18px;height:18px;border-radius:4px;border:1.5px solid '+(m.checked?'#15803d':'#cdd6e4')+';background:'+(m.checked?'#15803d':'#fff')+';color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:700;'+(m.locked?'opacity:.6;':''),
+      rowStyle: 'display:flex;align-items:center;gap:9px;padding:6px 8px;border-radius:6px;'+(m.locked?'background:#f6f8fb;color:#6a7b96;':'color:#10243f;'),
+      toggle: m.locked ? (() => {}) : (() => this.setModScope(m.id, !m.checked)),
+    }));
+
+    // ----- Selector secțiune global (propagat în toate tab-urile) -----
+    const secRecT1 = (rr && rr.recomandat) || null;
+    const secCur = this.state.sectiuneSelectata != null
+      ? +this.state.sectiuneSelectata
+      : secRecT1;
+    const secOpts = (rr && rr.rows) ? rr.rows.filter(x => x.ok).map(x => ({
+      value: String(x.sectiune),
+      label: x.sectiune + ' mm²' + (x.sectiune === secRecT1 ? ' — recomandat' : '')
+    })) : [];
+    const secCurStr = secCur != null ? String(secCur) : '';
+    const secSet = (e) => this.setSec(e.target.value);
+    const secOverride = this.state.sectiuneSelectata != null && this.state.sectiuneSelectata !== secRecT1;
+
+    // ----- Tab 3 (Căderi de tensiune) live calc -----
+    const t3 = this.state.t3;
+    const t3h = {};
+    ['L','cosPhi','tip','deltaUMax'].forEach(k => t3h[k] = (e) => this.setT3(k, e.target.value));
+    const r3 = this.state.t3res;
+    let t3c;
+    if (!r3) t3c = { ok:false, loading:true, rows:[], Un_disp:'—', limit_disp:'—', S_disp:'—', I_disp:'—', dU_pct:'—', dU_sub:'(calculează…)', verdictTxt:'…', verdictStyle:'display:block;text-align:center;background:#6a7b96;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px', tableLabel:'(calculează…)' };
+    else {
+      const Un_kV = r3.Un / 1000;
+      const Un_disp = (Un_kV % 1 === 0 ? Un_kV : String(Un_kV).replace('.',',')) + ' kV';
+      const limit_disp = String(r3.limit).replace('.',',') + ' %';
+      const sel = r3.sel;
+      const verdictBg = sel ? (sel.ok ? '#15803d' : '#dc2626') : '#6a7b96';
+      const verdictTxt = sel ? (sel.ok ? '✓ SUB LIMITĂ' : '✕ PESTE LIMITĂ') : 'INFO';
+      const rows = r3.rows.map(x => {
+        const isSel = sel && x.sectiune === sel.sectiune;
+        return {
+          sectiune: isSel ? (x.sectiune + ' ★') : x.sectiune,
+          R: String(x.R).replace('.',','),
+          dU: String(x.dU).replace('.',','),
+          dUpct: String(x.dUpct).replace('.',','),
+          stareText: x.ok ? '✓ OK' : '✕ NU',
+          rowStyle: 'border-top:1px solid #eef1f6;' + (isSel ? 'background:#fef6e2;' : 'color:#33455f;'),
+          cellStyle: 'padding:'+(isSel?'9px 14px':'7px 14px')+';' + (isSel ? 'font-weight:700;color:#8a5a06' : ''),
+          numStyle: 'text-align:right;padding:'+(isSel?'9px 10px':'7px 10px')+';' + (isSel ? 'font-weight:700;color:#10243f' : (x.ok ? '' : 'color:#a7b0bd')),
+          stareStyle: 'text-align:center;padding:'+(isSel?'9px 14px':'7px 14px')+';' + (x.ok ? 'color:#15803d;font-weight:600' : 'color:#a7b0bd;font-weight:600'),
+        };
+      });
+      t3c = {
+        ok:true, Un_disp, limit_disp,
+        S_disp: sel ? (sel.sectiune + ' mm²') : '— (rulează Sarcină)',
+        I_disp: r3.I + ' A',
+        dU_pct: sel ? String(sel.dUpct).replace('.',',') : '—',
+        dU_sub: sel ? ('ΔU = ' + String(sel.dU).replace('.',',') + ' V · limită ' + String(r3.limit).replace('.',',') + ' %') : ('alege secțiune (rulează tab Sarcină) · limită ' + String(r3.limit).replace('.',',') + ' %'),
+        verdictTxt,
+        verdictStyle: 'display:block;text-align:center;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px;background:'+verdictBg,
+        tableLabel: 'ΔU pe secțiuni · L=' + r3.L_m + ' m · I=' + r3.I + ' A',
+        rows,
+      };
+    }
+
+    // ----- Tab te (Secțiune economică) live calc -----
+    const te = this.state.te;
+    const teh = {};
+    ['jEc','costKWh','oraPeAn','ani'].forEach(k => teh[k] = (e) => this.setTe(k, e.target.value));
+    const rEc = this.state.teres;
+    let tec;
+    if (!rEc) tec = { ok:false, loading:true, rows:[], I_disp:'—', mat_disp:'—', jEc_disp:'—', tau_disp:'—', cost_disp:'—', ani_disp:'—', S_ec_disp:'—', formula:'(se calculează…)', badgeText:'', badgeStyle:'display:none' };
+    else {
+      const matCap = (rEc.material||'cupru').charAt(0).toUpperCase() + (rEc.material||'cupru').slice(1);
+      const rows = rEc.rows.map(x => ({
+        sectiune: x.isEc ? (x.sectiune + ' ★') : x.sectiune,
+        invest: x.invest.toLocaleString('ro-RO'),
+        pierderi: x.pierderi.toLocaleString('ro-RO'),
+        total: x.total.toLocaleString('ro-RO'),
+        rowStyle: 'border-top:1px solid '+(x.isEc?'#d8b45a':'#eef1f6')+';'+(x.isEc?'background:#fef6e2;':'color:#33455f;'),
+        cellStyle: 'padding:'+(x.isEc?'9px 14px':'7px 14px')+';'+(x.isEc?'font-weight:700;color:#8a5a06':''),
+        numStyle: 'text-align:right;padding:'+(x.isEc?'9px 10px':'7px 10px')+';'+(x.isEc?'':''),
+        totalStyle: 'text-align:right;padding:'+(x.isEc?'9px 14px':'7px 14px')+';'+(x.isEc?'font-weight:700;color:#10243f':''),
+      }));
+      let badgeText, badgeBg;
+      if (rEc.Smin == null) { badgeText = '— (rulează Sarcină pentru minimul termic)'; badgeBg = '#6a7b96'; }
+      else if (rEc.overMin) { badgeText = '↑ peste minimul termic ('+rEc.Smin+')'; badgeBg = '#1a4ba3'; }
+      else if (rEc.S_ec === rEc.Smin) { badgeText = '= cu minimul termic ('+rEc.Smin+')'; badgeBg = '#15803d'; }
+      else { badgeText = '↓ sub minimul termic ('+rEc.Smin+') — folosește '+rEc.Smin; badgeBg = '#dc2626'; }
+      tec = {
+        ok:true,
+        I_disp: rEc.I + ' A',
+        mat_disp: matCap,
+        jEc_disp: String(rEc.j_ec).replace('.',',') + ' A/mm²',
+        S_ec_disp: rEc.S_ec,
+        formula: 'S_ec = I / j_ec = ' + rEc.I + ' / ' + String(rEc.j_ec).replace('.',',') + ' = ' + String(rEc.S_ec_raw).replace('.',',') + ' mm²',
+        badgeText, badgeStyle: 'display:block;text-align:center;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px;background:'+badgeBg,
+        tableLabel: 'Cost total pe ' + rEc.ani + ' ani (investiție + pierderi)',
+        rows,
+      };
+    }
+
+    // ----- Tab tp (Protecție suprasarcină) live calc -----
+    const tp = this.state.tp;
+    const tph = {};
+    ['IN','i2Factor'].forEach(k => tph[k] = (e) => this.setTp(k, e.target.value));
+    const rTp = this.state.tpres;
+    let tpc;
+    if (!rTp) tpc = { ok:false, loading:true, IB_disp:'—', IN_disp:'—', IZ_disp:'—', I2_disp:'—', chainStyle:'background:#6a7b96;color:#fff', chainText:'…', cond1Color:'#cbd3df', cond1Text:'—', cond1Verdict:'—', cond1Style:'color:#6a7b96', cond2Color:'#cbd3df', cond2Text:'—', cond2Verdict:'—', cond2Style:'color:#6a7b96', hasSuggest:false, suggestText:'' };
+    else {
+      const okBoth = rTp.cond1 && rTp.cond2;
+      const chainBg = okBoth ? '#dcfce7' : '#fee2e2';
+      const chainColor = okBoth ? '#15803d' : '#b42318';
+      const chainText = okBoth
+        ? '✓ Coordonare corectă: ' + rTp.IB + ' ≤ ' + rTp.IN + ' ≤ ' + rTp.IZ
+        : (rTp.IN > rTp.IZ ? '✕ IN (' + rTp.IN + ') > IZ (' + rTp.IZ + ') — necesită secțiune mai mare' : '✕ Coordonare invalidă');
+      tpc = {
+        ok: okBoth,
+        IB_disp: rTp.IB + ' A',
+        IN_disp: rTp.INauto ? (rTp.IN + ' A (auto)') : (rTp.IN + ' A'),
+        IZ_disp: (rTp.IZ || '—') + ' A',
+        I2_disp: rTp.I2 + ' A',
+        chainStyle: 'background:'+chainBg+';color:'+chainColor+';font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:8px',
+        chainText,
+        cond1Color: rTp.cond1 ? '#15803d' : '#dc2626',
+        cond1Text: 'IB ≤ IN ≤ IZ → ' + rTp.IB + ' ≤ ' + rTp.IN + ' ≤ ' + rTp.IZ,
+        cond1Verdict: rTp.cond1 ? '✓ îndeplinită' : '✕ NU îndeplinită',
+        cond1Style: 'font-weight:600;color:' + (rTp.cond1 ? '#15803d' : '#b42318'),
+        cond2Color: rTp.cond2 ? '#15803d' : '#dc2626',
+        cond2Text: 'I2 ≤ 1,45·IZ → ' + rTp.I2 + ' ≤ ' + rTp.limit2,
+        cond2Verdict: rTp.cond2 ? '✓ îndeplinită' : '✕ NU îndeplinită',
+        cond2Style: 'font-weight:600;color:' + (rTp.cond2 ? '#15803d' : '#b42318'),
+        hasSuggest: !!rTp.suggested,
+        suggestText: rTp.suggested ? ('Recomandare: treci la ' + rTp.suggested.sectiune + ' mm² (IZ = ' + rTp.suggested.IZ + ' A)') : '',
+      };
+    }
+
+    // ----- Tab t4 (Stabilitate termică) live calc -----
+    const t4 = this.state.t4;
+    const t4h = {};
+    ['Ik','tk'].forEach(k => t4h[k] = (e) => this.setT4(k, e.target.value));
+    const r4 = this.state.t4res;
+    let t4c;
+    const fmtE6 = (x) => (x/1e6).toFixed(1).replace('.',',') + '·10⁶';
+    if (!r4) t4c = { ok:false, loading:true, Ik_disp:'—', tk_disp:'—', mat_disp:'—', izol_disp:'—', S_disp:'—', Smin_disp:'—', formula:'(se calculează…)', badgeText:'', badgeStyle:'display:none', tableLabel:'…', rows:[] };
+    else {
+      const matCap = (r4.material||'cupru').charAt(0).toUpperCase()+(r4.material||'cupru').slice(1);
+      const rows = r4.rows.map(x => ({
+        sectiune: x.isStar ? (x.sectiune + ' ★') : x.sectiune,
+        I2t: fmtE6(x.I2t_req),
+        limit: fmtE6(x.limit),
+        stareText: x.ok ? '✓ OK' : '✕ NU',
+        rowStyle: 'border-top:1px solid '+(x.isStar?'#d8b45a':'#eef1f6')+';' + (x.isStar?'background:#fef6e2;':(x.ok?'color:#33455f;':'color:#a0aab8;')),
+        cellStyle: 'padding:'+(x.isStar?'9px 14px':'7px 14px')+';'+(x.isStar?'font-weight:700;color:#8a5a06':''),
+        numStyle: 'text-align:right;padding:'+(x.isStar?'9px 10px':'7px 10px')+';'+(x.isStar?'font-weight:700;color:#10243f':''),
+        stareStyle: 'text-align:center;padding:'+(x.isStar?'9px 14px':'7px 14px')+';' + (x.ok?'color:#15803d;font-weight:600':'color:#dc2626;font-weight:600'),
+      }));
+      let badgeText, badgeBg;
+      if (r4.Sused == null) { badgeText = '— (rulează Sarcină pentru secțiune)'; badgeBg = '#6a7b96'; }
+      else if (r4.stable) { badgeText = '✓ ' + r4.Sused + ' ≥ ' + r4.S_min_std + ' — STABIL'; badgeBg = '#15803d'; }
+      else { badgeText = '✕ ' + r4.Sused + ' < ' + r4.S_min_std + ' — INSTABIL termic'; badgeBg = '#dc2626'; }
+      t4c = {
+        ok: r4.stable === true,
+        Ik_disp: String(r4.Ik).replace('.',',') + ' kA',
+        tk_disp: String(r4.tk).replace('.',',') + ' s',
+        mat_disp: matCap + ' · k=' + r4.k,
+        izol_disp: r4.izolatie || '—',
+        S_disp: r4.Sused ? (r4.Sused + ' mm²') : '—',
+        Smin_disp: r4.S_min_std,
+        formula: 'S_min = Ik·√tk / k = ' + String(r4.Ik).replace('.',',') + '·√' + String(r4.tk).replace('.',',') + ' / ' + r4.k + ' = ' + String(r4.S_min_raw).replace('.',',') + ' mm²',
+        badgeText, badgeStyle: 'display:block;text-align:center;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px;background:'+badgeBg,
+        tableLabel: 'Verificare I²t ≤ k²·S²  (I²t cerut = ' + fmtE6(r4.I2t) + ' A²·s)',
+        rows,
+      };
+    }
+
+    // ----- Tab t5 (Forțe electrodinamice) live calc -----
+    const t5 = this.state.t5;
+    const t5h = {};
+    ['ip','a','F_adm'].forEach(k => t5h[k] = (e) => this.setT5(k, e.target.value));
+    const r5 = this.state.t5res;
+    let t5c;
+    if (!r5) t5c = { ok:false, loading:true, ip_disp:'—', a_disp:'—', D_disp:'—', F_disp:'—', Fbride_disp:'—', Fadm_disp:'—', Lbride_disp:'—', formula:'(se calculează…)', badgeText:'', badgeStyle:'display:none' };
+    else {
+      // F/bridă la distanța sugerată (L_bride_max) — la limita admisibilă
+      const F_per_bride = r5.F * r5.L_bride_max;
+      const safe = r5.F_adm > 0 && r5.F > 0;
+      t5c = {
+        ok: safe,
+        ip_disp: String(r5.ip).replace('.',',') + ' kA',
+        a_disp: r5.a_mm + ' mm',
+        D_disp: r5.D_mm ? (r5.D_mm + ' mm (est.)') : '—',
+        F_disp: String(r5.F).replace('.',',') + ' N/m',
+        Lbride_disp: '≤ ' + String(r5.L_bride_max).replace('.',',') + ' m',
+        Fbride_disp: String(+F_per_bride.toFixed(0)) + ' N',
+        Fadm_disp: r5.F_adm + ' N',
+        formula: 'F = 0,17·ip²/a = 0,17·' + String(r5.ip).replace('.',',') + '² / ' + (r5.a_mm/1000).toFixed(3).replace('.',',') + ' = ' + String(r5.F).replace('.',',') + ' N/m',
+        badgeText: safe ? '✓ SUB ADMISIBIL — bride la ' + String(r5.L_bride_max).replace('.',',') + ' m' : '✕ recalculează parametrii',
+        badgeStyle: 'display:block;text-align:center;color:#fff;font-size:12px;font-weight:700;padding:8px;border-radius:6px;letter-spacing:.5px;background:'+(safe?'#15803d':'#dc2626'),
+      };
+    }
+
+    // ----- Tab tl (Pierderi P / energie) live calc -----
+    const tl = this.state.tl;
+    const tlh = {};
+    ['tau','costKWh','ani'].forEach(k => tlh[k] = (e) => this.setTl(k, e.target.value));
+    const rL = this.state.tlres;
+    let tlc;
+    if (!rL || !rL.ready) tlc = { ok:false, loading:true, I_disp:'—', R_disp:'—', L_disp:'—', dP_disp:'—', energy_disp:'—', costYear_disp:'—', costTotal_disp:'—', costTotalLabel:'Cost / —ani' };
+    else {
+      const fmtThousand = (n) => Math.round(n).toLocaleString('ro-RO');
+      const costTotalK = rL.cost_total >= 100000 ? (Math.round(rL.cost_total/1000) + ' k') : fmtThousand(rL.cost_total);
+      tlc = {
+        ok:true,
+        I_disp: rL.I + ' A',
+        R_disp: String(rL.R_km).replace('.',',') + ' Ω/km',
+        L_disp: rL.L_m + ' m',
+        dP_disp: String(rL.dP_kW).replace('.',','),
+        energy_disp: fmtThousand(rL.energy_kWh),
+        costYear_disp: fmtThousand(rL.cost_year),
+        costTotal_disp: costTotalK,
+        costTotalLabel: 'Cost / ' + rL.ani + ' ani',
+      };
+    }
+
+    // ----- Tab t6 (Pozare · tragere) live calc -----
+    const t6 = this.state.t6;
+    const t6h = {};
+    ['constructie','metoda'].forEach(k => t6h[k] = (e) => this.setT6(k, e.target.value));
+    const r6 = this.state.t6res;
+    let t6c;
+    if (!r6 || !r6.ready) t6c = { ok:false, loading:true, d_disp:'—', mat_disp:'—', Rmin_disp:'—', Fadm_disp:'—', RminFormula:'—', FadmFormula:'—' };
+    else {
+      const matCap = (r6.material||'cupru').charAt(0).toUpperCase() + (r6.material||'cupru').slice(1);
+      t6c = {
+        ok:true,
+        d_disp: r6.D_mm + ' mm (est.)',
+        mat_disp: matCap,
+        Rmin_disp: r6.R_min,
+        Fadm_disp: r6.F_adm.toLocaleString('ro-RO'),
+        RminFormula: r6.k + '·d (' + r6.constructieLabel + ')',
+        FadmFormula: 'σ·S = ' + r6.sigma + '·' + r6.Sused + ' (' + r6.metodaLabel + ' ' + matCap + ')',
+      };
+    }
+
     return {
       mods, exp,
       railStyle: 'width:' + (exp ? '218px' : '92px') + ';flex-shrink:0;background:#0a1f3d;display:flex;flex-direction:column;align-items:stretch;padding:14px ' + (exp ? '12px' : '9px') + ';gap:4px;overflow-y:auto;overflow-x:hidden',
@@ -1122,7 +1622,7 @@ class Component extends DCLogic {
       collapseIcoStyle: 'font-family:monospace;font-size:13px;' + (exp ? '' : 'transform:rotate(180deg)'),
       moduleTitle: titles[cur] || '',
       m_t1: cur === 't1', m_t3: cur === 't3', m_te: cur === 'te', m_tp: cur === 'tp',
-      t1: this.state.t1, t1h: t1h, t1c: t1c, runT1btn: () => this.runT1(),
+      t1: this.state.t1, t1h: t1h, t1c: t1c, runT1btn: () => { this.runT1(); this._goNext('t1'); },
       t1TableLabel: ((rr && rr.table) ? rr.table + ' · ' : '') + (t1.pozareTabel === 'aer' ? 'aer' : 'pământ') + ' · ' + t1.uou + ' kV',
       t1ThetaDisp: (rr && rr.theta) ? (rr.theta + ' °C') : '—',
       t1Temps: (rr && rr.availTemps) ? rr.availTemps : [],
@@ -1134,6 +1634,15 @@ class Component extends DCLogic {
       t1TubDa: this.state.t1.tub === 'da',
       t1Ok: t1c.ok, t1Err: !!t1c.err, t1ErrMsg: t1c.err || '', t1Loading: !!t1c.loading, t1Rows: t1c.rows,
       t1NeedChoice: !!t1c.needChoice, t1Choices: t1c.choices || [],
+      t3: t3, t3h: t3h, t3c: t3c, t3DeltaMaxPh: '(auto ' + String((r3 && r3.isJT) ? '5' : '3') + ')',
+      te: te, teh: teh, tec: tec, t3RunBtn: () => this._goNext('t3'), t3BackBtn: () => this._goPrev('t3'),
+      tp: tp, tph: tph, tpc: tpc, teRunBtn: () => this._goNext('te'), teBackBtn: () => this._goPrev('te'), tpRunBtn: () => this._goNext('tp'), tpBackBtn: () => this._goPrev('tp'),
+      t4: t4, t4h: t4h, t4c: t4c, t4RunBtn: () => this._goNext('t4'), t4BackBtn: () => this._goPrev('t4'),
+      t5: t5, t5h: t5h, t5c: t5c, t5RunBtn: () => this._goNext('t5'), t5BackBtn: () => this._goPrev('t5'),
+      tl: tl, tlh: tlh, tlc: tlc, tlRunBtn: () => this._goNext('tl'), tlBackBtn: () => this._goPrev('tl'),
+      t6: t6, t6h: t6h, t6c: t6c, t6RunBtn: () => this._goNext('t6'), t6BackBtn: () => this._goPrev('t6'),
+      secCur: secCurStr, secOpts, secSet, secOverride, secRecT1Disp: secRecT1 != null ? (secRecT1 + ' mm²') : '—',
+      scopeMods, scopeOpen: !!this.state.scopeOpen, toggleScope: () => this.toggleScope(), scopeSelectAll: () => this.setModScopeAll(),
       m_t4: cur === 't4', m_t5: cur === 't5', m_tl: cur === 'tl', m_t6: cur === 't6',
       m_tb: cur === 'tb', m_tpr: cur === 'tpr',
       openModal: () => this.setState({ modal: true }),

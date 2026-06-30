@@ -5,6 +5,8 @@ Găzduită local pe un VM Proxmox (Debian). Pe același VM vor sta și alte apli
 
 > **Notă de stare (actualizat).** Prototipul `NormCab.dc.html` conține deja, funcțional:
 > - modulul **Sarcină admisibilă** cu **motor de lookup complet** (selecție tabel + coloană + factori f₁/f₂/f₃ + recomandare secțiune);
+> - **selecția modulelor de lucru** (modal „Proiect nou" + dropdown „⚙ Module"; Sarcină admisibilă mereu activă — §4a);
+> - **workflow „Începe / Continuă / Înapoi"** cu **selector de secțiune cross-tabs** (recomandat by default, override din dropdown, propagare în lanț — §4b);
 > - modulul **Verificare tabele** (parcurgere A.1.1–A.1.26, status verificat/probleme, note salvate, editare orice celulă);
 > - toate tabelele NTE 007 **extrase în JSON** și **verificate** față de normativ (PDF Anexe).
 >
@@ -123,12 +125,26 @@ Un **circuit** = un set de date comune introduse o dată, partajate de toate tab
 
 1. **Tab „Sarcină admisibilă" = sursa datelor comune.** User introduce parametrii din §3.
 2. Selector **Iz bază**: `NTE 007` (lookup automat) **sau** `Utilizator` (valoare manuală). Factorii se aplică în **ambele** cazuri.
-3. **RUN** → `Iz_cor = Iz_bază · f_total` pentru toate secțiunile; recomandă cea mai mică S cu `Iz_cor ≥ I`.
-4. **Nimic nu se propagă automat.** Userul **selectează** o secțiune (poate alta decât recomandarea, ex. 120 în loc de 95 pentru rezervă).
-5. La selecție → mesaj **informativ** (neutru). De aici pornește propagarea.
-6. **Se propagă datele comune + secțiunea selectată** către taburile următoare.
+3. **„Începe ▸"** (butonul din tabul Sarcină admisibilă, fost „RUN") → `Iz_cor = Iz_bază · f_total` pentru toate secțiunile; recomandă cea mai mică S cu `Iz_cor ≥ I`; **avansează** la primul tab de calcul activ.
+4. **Selector de secțiune cross-tabs (vezi §4b).** Secțiunea propagată e, implicit, **recomandatul** din Sarcină admisibilă; userul poate alege oricare altă secțiune validă din dropdown. Selecția persistă în toate taburile.
+5. La selecție → mesaj **informativ** (neutru). Propagarea folosește secțiunea curentă (selectată sau recomandat).
+6. **Se propagă datele comune + secțiunea curentă** către taburile următoare.
 7. În taburile următoare, editabili **doar parametrii noi**; cei moșteniți apar **read-only** („din Sarcină admisibilă"). Schimbarea lor se face în tabul-sursă (→ taburile dependente se marchează „de recalculat").
-8. **Salvare per tab** independentă. Taburile neparcurse sunt **excluse din raport**.
+8. Navigare în lanț: **„Continuă ▸"** (tab următor activ) și **„◂ Înapoi"** (tab anterior activ), sărind peste modulele neselectate (§4a).
+9. **Salvare per tab** independentă. Taburile neparcurse / module neselectate sunt **excluse din raport**.
+
+### 4a. Selecția modulelor de lucru (scope)
+- La **crearea unui proiect nou** (buton „+ Proiect nou" → modal): câmp **denumire** + listă de module de calcul bifabile. **Sarcină admisibilă** e mereu activă (obligatoriu, sursa datelor comune) și apare fixă. Buton **„Selectează tot"**.
+- Scope-ul e re-editabil oricând din header prin butonul **„⚙ Module"** (dropdown cu aceeași listă + „Selectează tot"; fără Sarcină admisibilă, mereu activă).
+- Persistă (în prototip: `localStorage 'normcab_scope'`; în producție: pe circuit/proiect în DB).
+- Modulele neselectate sunt **estompate în rail**, **nenavigabile**, sărite de „Continuă/Înapoi" și **excluse din calcul + raport**.
+
+### 4b. Selector de secțiune în fiecare tab de calcul
+- Bară sus în fiecare tab de calcul (fundal albastru deschis `#eef4fb`, border `#c9dbef`): label „Secțiune utilizată" + **dropdown** + indicator „Recomandat termic: X mm²".
+- Opțiuni dropdown: **„Auto (recomandat)"** + toate secțiunile standard care **trec criteriul termic** din Sarcină admisibilă (`t1res.rows[i].ok === true`); recomandatul e marcat „— recomandat".
+- Stare: `sectiuneSelectata` (null = folosește recomandatul; număr = override user). Helper `setSec(val)` declanșează recalcul în lanț pe toate modulele dependente.
+- `comun.sectiune = sectiuneSelectata ?? t1res.recomandat`; toate compute-urile celorlalte module folosesc această valoare.
+- **De rafinat (slice-uri viitoare):** filtrare per-tab (fiecare tab listează doar secțiunile care trec criteriul lui propriu, cu ✓/✕), „recomandat de acest tab" distinct de cel termic, buton „🔄 Auto" de reset la null, avertizare când secțiunea aleasă iese din lista validă după schimbarea parametrilor.
 
 ### Harta de proprietate a parametrilor
 | Tab | Moștenește (blocat) | Nou & editabil |
@@ -303,7 +319,10 @@ CREATE INDEX idx_members_user ON project_members(user_id);
   },
   // parametrii „comuni" derivați, citiți read-only de celelalte module:
   "comun": { "uou": "6/10", "material": "cupru", "izolatie": "XLPE",
-             "I": 280, "sectiune": 120 }
+             "I": 280, "sectiune": 120 },
+  // scope module ales la crearea proiectului (§4a); modulele false sunt excluse din calcul + raport:
+  "modScope": { "t1": true, "t3": true, "te": false, "tp": true, "t4": true,
+                "t5": false, "tl": false, "t6": false }
 }
 ```
 Regulă: `comun` se recompune la fiecare RUN + selecție secțiune în tabul Sarcină. Modificarea lui marchează `calculations.stare='de_recalculat'` pentru modulele dependente.
@@ -360,6 +379,6 @@ Fiecare modul: **moștenește** din `comun` (read-only) + are **inputuri noi**; 
 1. Portează `/data/*.json` + `lookup-engine.js` + test de neregresie (§3).
 2. Frontend static: shell + tab Sarcină admisibilă funcțional (din prototip) → validare cu expertul.
 3. Restul modulelor (§13) ca funcții pure în `lookup-engine.js`/`calc-*.js` + taburi.
-4. „Dosar de circuit": propagare + read-only moștenit + „de recalculat".
+4. „Dosar de circuit": **selecția modulelor (§4a)** + selector secțiune cross-tabs (§4b) + propagare + read-only moștenit + „de recalculat".
 5. SQLite + Express + auth + lock; salvare calcule.
 6. Rapoarte PDF/XLSX. Modulul Verificare tabele (port din prototip).
